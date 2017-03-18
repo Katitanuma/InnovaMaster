@@ -101,6 +101,19 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Datos\DatosCargo.vb" />
+    <Compile Include="Datos\DatosCategoria.vb" />
+    <Compile Include="Datos\DatosCliente.vb" />
+    <Compile Include="Datos\DatosDepartamento.vb" />
+    <Compile Include="Datos\DatosEmpleado.vb" />
+    <Compile Include="Datos\DatosMarca.vb" />
+    <Compile Include="Datos\DatosModelo.vb" />
+    <Compile Include="Datos\DatosMunicipio.vb" />
+    <Compile Include="Datos\DatosPais.vb" />
+    <Compile Include="Datos\DatosProducto.vb" />
+    <Compile Include="Datos\DatosProfesiones.vb" />
+    <Compile Include="Datos\DatosUsuario.vb" />
+    <Compile Include="Datos\DatosVenta.vb" />
     <Compile Include="Formularios\FrmPresentacion.Designer.vb">
       <DependentUpon>FrmPresentacion.vb</DependentUpon>
     </Compile>
@@ -216,6 +229,21 @@
     <Compile Include="Formularios\MenuPrincipal.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Funciones\Conexion.vb" />
+    <Compile Include="Funciones\FCargo.vb" />
+    <Compile Include="Funciones\Fcategoria.vb" />
+    <Compile Include="Funciones\Fcliente.vb" />
+    <Compile Include="Funciones\FDepartamento.vb" />
+    <Compile Include="Funciones\Fempleado.vb" />
+    <Compile Include="Funciones\FMarca.vb" />
+    <Compile Include="Funciones\FModelo.vb" />
+    <Compile Include="Funciones\FMunicipio.vb" />
+    <Compile Include="Funciones\FPaís.vb" />
+    <Compile Include="Funciones\Fproducto.vb" />
+    <Compile Include="Funciones\FProfesiones.vb" />
+    <Compile Include="Funciones\Fusuario.vb" />
+    <Compile Include="Funciones\Fventa.vb" />
+    <Compile Include="Modulos\Modulo1.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
