@@ -75,7 +75,7 @@ Public Class FrmProducto
         TxtIdProducto.Clear()
         TxtDescripcion.Clear()
         TxtCosto.Clear()
-        TxtGravado.Clear()
+        TxtGravado.Value = 0
         TxtPrecioUnitario.Clear()
         TxtPrecioMayorista.Clear()
         NumericUpDown1.Value = 0
@@ -97,7 +97,7 @@ Public Class FrmProducto
             TxtDescripcion.Clear()
             TxtCosto.Clear()
 
-            TxtGravado.Clear()
+            TxtGravado.Value = 0
             TxtPrecioUnitario.Clear()
             TxtPrecioMayorista.Clear()
             NumericUpDown1.Value = 0
@@ -155,7 +155,7 @@ Public Class FrmProducto
                 If TxtGravado.Text = Nothing Then
                     datos.gGravado = 0
                 Else
-                    datos.gGravado = CDbl(TxtGravado.Text)
+                    datos.gGravado = CDbl(TxtGravado.Value)
                 End If
 
                 datos.gPrecioUnitario = CDbl(TxtPrecioUnitario.Text)
@@ -217,7 +217,7 @@ Public Class FrmProducto
                     TxtIdProducto.Clear()
                     TxtDescripcion.Clear()
                     TxtCosto.Clear()
-                    TxtGravado.Clear()
+                    TxtGravado.Value = 0
                     TxtPrecioUnitario.Clear()
                     TxtPrecioMayorista.Clear()
                     NumericUpDown1.Value = 0
@@ -306,8 +306,13 @@ Public Class FrmProducto
                 datos.gIdProducto = TxtIdProducto.Text
                 datos.gDescripcion = TxtDescripcion.Text
                 datos.gCosto = CDbl(TxtCosto.Text)
+                If TxtGravado.Text = Nothing Then
+                    datos.gGravado = 0
+                Else
+                    datos.gGravado = CDbl(TxtGravado.Value)
+                End If
 
-                datos.gGravado = CDbl(TxtGravado.Text)
+
                 datos.gPrecioUnitario = CDbl(TxtPrecioUnitario.Text)
                 datos.gPrecioMayorista = CDbl(TxtPrecioMayorista.Text)
                 datos.gExistecia = Int(NumericUpDown1.Value)
@@ -367,7 +372,7 @@ Public Class FrmProducto
                     TxtDescripcion.Clear()
                     TxtCosto.Clear()
 
-                    TxtGravado.Clear()
+                    TxtGravado.Value = 0
                     TxtPrecioUnitario.Clear()
                     TxtPrecioMayorista.Clear()
                     NumericUpDown1.Value = 0

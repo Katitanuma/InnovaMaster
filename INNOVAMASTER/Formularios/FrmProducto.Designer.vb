@@ -42,7 +42,6 @@ Partial Class FrmProducto
         Me.CboCategoria = New System.Windows.Forms.ComboBox()
         Me.TxtPrecioMayorista = New System.Windows.Forms.TextBox()
         Me.TxtPrecioUnitario = New System.Windows.Forms.TextBox()
-        Me.TxtGravado = New System.Windows.Forms.TextBox()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
@@ -65,6 +64,7 @@ Partial Class FrmProducto
         Me.BtnInsertar = New System.Windows.Forms.Button()
         Me.BtnEditar = New System.Windows.Forms.Button()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
+        Me.TxtGravado = New DevExpress.XtraEditors.CalcEdit()
         Me.GbProducto.SuspendLayout()
         CType(Me.PbProducto, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
@@ -73,6 +73,7 @@ Partial Class FrmProducto
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TxtGravado.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'OpenFileDialog1
@@ -122,6 +123,7 @@ Partial Class FrmProducto
         'GbProducto
         '
         Me.GbProducto.BackColor = System.Drawing.Color.Transparent
+        Me.GbProducto.Controls.Add(Me.TxtGravado)
         Me.GbProducto.Controls.Add(Me.BtnBusquedaCliente)
         Me.GbProducto.Controls.Add(Me.PbProducto)
         Me.GbProducto.Controls.Add(Me.Panel1)
@@ -133,7 +135,6 @@ Partial Class FrmProducto
         Me.GbProducto.Controls.Add(Me.CboCategoria)
         Me.GbProducto.Controls.Add(Me.TxtPrecioMayorista)
         Me.GbProducto.Controls.Add(Me.TxtPrecioUnitario)
-        Me.GbProducto.Controls.Add(Me.TxtGravado)
         Me.GbProducto.Controls.Add(Me.Label10)
         Me.GbProducto.Controls.Add(Me.Label9)
         Me.GbProducto.Controls.Add(Me.Label6)
@@ -281,14 +282,6 @@ Partial Class FrmProducto
         Me.TxtPrecioUnitario.Name = "TxtPrecioUnitario"
         Me.TxtPrecioUnitario.Size = New System.Drawing.Size(98, 21)
         Me.TxtPrecioUnitario.TabIndex = 5
-        '
-        'TxtGravado
-        '
-        Me.TxtGravado.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtGravado.Location = New System.Drawing.Point(145, 134)
-        Me.TxtGravado.Name = "TxtGravado"
-        Me.TxtGravado.Size = New System.Drawing.Size(98, 21)
-        Me.TxtGravado.TabIndex = 4
         '
         'Label10
         '
@@ -537,6 +530,14 @@ Partial Class FrmProducto
         Me.BtnEditar.UseVisualStyleBackColor = False
         Me.BtnEditar.Visible = False
         '
+        'TxtGravado
+        '
+        Me.TxtGravado.Location = New System.Drawing.Point(145, 135)
+        Me.TxtGravado.Name = "TxtGravado"
+        Me.TxtGravado.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.TxtGravado.Size = New System.Drawing.Size(158, 20)
+        Me.TxtGravado.TabIndex = 51
+        '
         'FrmProducto
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -571,6 +572,7 @@ Partial Class FrmProducto
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TxtGravado.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -600,7 +602,6 @@ Partial Class FrmProducto
     Friend WithEvents CboCategoria As ComboBox
     Friend WithEvents TxtPrecioMayorista As TextBox
     Friend WithEvents TxtPrecioUnitario As TextBox
-    Friend WithEvents TxtGravado As TextBox
     Friend WithEvents Label10 As Label
     Friend WithEvents Label9 As Label
     Friend WithEvents Label6 As Label
@@ -617,4 +618,5 @@ Partial Class FrmProducto
     Friend WithEvents DgvProducto As DataGridView
     Friend WithEvents BtnBusquedaCliente As Button
     Friend WithEvents ToolTip1 As ToolTip
+    Friend WithEvents TxtGravado As DevExpress.XtraEditors.CalcEdit
 End Class

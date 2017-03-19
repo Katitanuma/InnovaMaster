@@ -46,7 +46,7 @@ Partial Class FrmPresentacion
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackgroundImage = Global.INNOVAMASTER.My.Resources.Resources.FLASERTst
+        Me.BackgroundImage = Global.INNOVAMASTER.My.Resources.Resources.FLASERTsds
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(670, 389)
         Me.Controls.Add(Me.LblProgreso)

@@ -413,6 +413,16 @@ Namespace My.Resources
         '''<summary>
         '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property FLASERTsds() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("FLASERTsds", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property FLASERTst() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("FLASERTst", resourceCulture)
@@ -586,6 +596,16 @@ Namespace My.Resources
         Friend ReadOnly Property login21() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("login21", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property login22() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("login22", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
