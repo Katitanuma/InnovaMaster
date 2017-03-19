@@ -23,6 +23,7 @@
     ''' </summary>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MenuPrincipal))
         Me.mainRibbonControl = New DevExpress.XtraBars.Ribbon.RibbonControl()
         Me.bbiSave = New DevExpress.XtraBars.BarButtonItem()
         Me.bbiSaveAndClose = New DevExpress.XtraBars.BarButtonItem()
@@ -445,6 +446,7 @@
         Me.Controls.Add(Me.LblIdUsuario)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.mainRibbonControl)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.IsMdiContainer = True
         Me.Name = "MenuPrincipal"
         Me.Ribbon = Me.mainRibbonControl
