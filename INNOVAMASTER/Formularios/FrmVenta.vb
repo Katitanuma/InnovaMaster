@@ -191,7 +191,7 @@ Public Class FrmVenta
                 datos.gIdUsuario = Int(MenuPrincipal.LblIdUsuario.Text)
 
                 If funcion.InsertarVenta(datos) Then
-                    MsgBox("Venta Ingresada con éxito", MsgBoxStyle.Information, "Registro con Exito")
+                    MsgBox("Venta Ingresada con éxito, ahora hay que ingresar los Productos a la Venta", MsgBoxStyle.Information, "Registro con Exito")
                     FrmDetalleVenta.LblCodigoVenta.Text = TxtIdVenta.Text
                     FrmDetalleVenta.LblCliente.Text = LblNombre.Text
                     FrmDetalleVenta.LblFormaVenta.Text = CboFormaVenta.Text

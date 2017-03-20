@@ -41,7 +41,7 @@ Public Class FrmDetalleVenta
                                 DgvDetalle.Rows(e.RowIndex).Cells(5).Value = 0
                                 DgvDetalle.Rows(e.RowIndex).Cells(6).Value = FormatCurrency(0)
                                 DgvDetalle.Rows(e.RowIndex).Cells(7).Value = FormatCurrency(CDbl(dr.GetValue(1)), 2)
-                                DgvDetalle.Rows(e.RowIndex).Cells(8).Value = FormatCurrency((DgvDetalle.Rows(e.RowIndex).Cells(3).Value) * CDbl(dr(3)), 2)
+                                DgvDetalle.Rows(e.RowIndex).Cells(8).Value = FormatCurrency((DgvDetalle.Rows(e.RowIndex).Cells(3).Value) * CDbl(DgvDetalle.Rows(e.RowIndex).Cells(4).Value), 2)
                             End If
                         Else
                             MsgBox("El estado del producto está inactivo", MsgBoxStyle.Exclamation)
@@ -66,8 +66,18 @@ Public Class FrmDetalleVenta
                 Conec.Desconectarse()
             End Try
         ElseIf column = 3 Then
+            Conec.Conectarse()
+            Dim dr2 As SqlDataReader
 
-            DgvDetalle.Rows(e.RowIndex).Cells(7).Value = FormatCurrency(CDbl(DgvDetalle.Rows(e.RowIndex).Cells(3).Value) * CDbl(DgvDetalle.Rows(e.RowIndex).Cells(7).Value), 2)
+            cmd = New SqlCommand("Select Gravado from Producto Where IdProducto='" & DgvDetalle.Rows(e.RowIndex).Cells(1).Value & "'")
+            cmd.CommandType = CommandType.Text
+            cmd.Connection = Conec.Con
+            dr2 = cmd.ExecuteReader
+            If dr2.Read() Then
+                DgvDetalle.Rows(e.RowIndex).Cells(7).Value = FormatCurrency(CDbl(DgvDetalle.Rows(e.RowIndex).Cells(3).Value) * CDbl(dr2.GetValue(0)), 2)
+            End If
+
+
             DgvDetalle.Rows(e.RowIndex).Cells(8).Value = FormatCurrency(CDbl(DgvDetalle.Rows(e.RowIndex).Cells(3).Value) * CDbl(DgvDetalle.Rows(e.RowIndex).Cells(4).Value), 2)
             If DgvDetalle.CurrentRow.Cells(3).Value = Nothing Or DgvDetalle.CurrentRow.Cells(3).Value = 0 Then
                 DgvDetalle.Rows(e.RowIndex).Cells(3).Value = 1
@@ -99,7 +109,8 @@ Public Class FrmDetalleVenta
             dr.Close()
 
             DgvDetalle.Rows(e.RowIndex).Cells(8).Value = FormatCurrency(CDbl(DgvDetalle.Rows(e.RowIndex).Cells(3).Value) * CDbl(DgvDetalle.Rows(e.RowIndex).Cells(4).Value), 2)
-            DgvDetalle.Rows(e.RowIndex).Cells(7).Value = FormatCurrency(CDbl(DgvDetalle.Rows(e.RowIndex).Cells(3).Value) * CDbl(DgvDetalle.Rows(e.RowIndex).Cells(7).Value), 2)
+            DgvDetalle.Rows(e.RowIndex).Cells(7).Value = FormatCurrency(CDbl(DgvDetalle.Rows(e.RowIndex).Cells(3).Value) * CDbl(dr2.GetValue(0)), 2)
+            dr2.Close()
             DgvDetalle.Rows(e.RowIndex).Cells(6).Value = FormatCurrency((DgvDetalle.Rows(e.RowIndex).Cells(5).Value / 100) * DgvDetalle.CurrentRow.Cells(8).Value)
         ElseIf column = 5 Then
             If DgvDetalle.CurrentRow.Cells(5).Value = Nothing Then
@@ -301,8 +312,13 @@ Public Class FrmDetalleVenta
             Catch ex As Exception
                 MsgBox(ex.Message)
             End Try
-            MsgBox("Productos facturados con éxito", MsgBoxStyle.Information)
-            Me.Close()
+            MsgBox("Productos facturados con éxito, Vamos a Imprimir la Factura", MsgBoxStyle.Information)
+            FrmFactura.MdiParent = MenuPrincipal
+            FrmFactura.Dock = DockStyle.Fill
+            FrmFactura.Show()
+
+
+
         End If
     End Sub
 

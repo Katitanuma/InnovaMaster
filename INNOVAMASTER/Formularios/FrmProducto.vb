@@ -69,6 +69,7 @@ Public Class FrmProducto
 
     End Sub
     Private Sub BtnNuevo_Click(sender As Object, e As EventArgs) Handles BtnNuevo.Click
+        TxtIdProducto.Enabled = True
         LlenarCombos()
         ChkEstado.Checked = True
         GbProducto.Enabled = True
