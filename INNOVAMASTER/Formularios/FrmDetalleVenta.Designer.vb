@@ -26,6 +26,15 @@ Partial Class FrmDetalleVenta
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.DgvDetalle = New System.Windows.Forms.DataGridView()
+        Me.Eliminar = New System.Windows.Forms.DataGridViewButtonColumn()
+        Me.Codigo = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Descripcion = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Cantidad = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Precio = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Descuento = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TotalDescuento = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ISV = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Total = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TxtSubtotal = New System.Windows.Forms.TextBox()
         Me.TxtDescuento = New System.Windows.Forms.TextBox()
@@ -52,15 +61,9 @@ Partial Class FrmDetalleVenta
         Me.BtnFacturar = New System.Windows.Forms.Button()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.Eliminar = New System.Windows.Forms.DataGridViewButtonColumn()
-        Me.Codigo = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Descripcion = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Cantidad = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Precio = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Descuento = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.TotalDescuento = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ISV = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Total = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.LblCant = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Label7 = New System.Windows.Forms.Label()
         CType(Me.DgvDetalle, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         CType(Me.TxtDescuentoExtra.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -95,6 +98,70 @@ Partial Class FrmDetalleVenta
         Me.DgvDetalle.RowsDefaultCellStyle = DataGridViewCellStyle3
         Me.DgvDetalle.Size = New System.Drawing.Size(1302, 352)
         Me.DgvDetalle.TabIndex = 0
+        '
+        'Eliminar
+        '
+        Me.Eliminar.Frozen = True
+        Me.Eliminar.HeaderText = "Eliminar"
+        Me.Eliminar.Name = "Eliminar"
+        Me.Eliminar.Text = "Eliminar"
+        Me.Eliminar.ToolTipText = "Eliminar"
+        Me.Eliminar.UseColumnTextForButtonValue = True
+        '
+        'Codigo
+        '
+        Me.Codigo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
+        Me.Codigo.Frozen = True
+        Me.Codigo.HeaderText = "Código"
+        Me.Codigo.Name = "Codigo"
+        Me.Codigo.Width = 163
+        '
+        'Descripcion
+        '
+        Me.Descripcion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
+        Me.Descripcion.Frozen = True
+        Me.Descripcion.HeaderText = "Descripción"
+        Me.Descripcion.Name = "Descripcion"
+        Me.Descripcion.Width = 163
+        '
+        'Cantidad
+        '
+        Me.Cantidad.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.Cantidad.HeaderText = "Cantidad"
+        Me.Cantidad.Name = "Cantidad"
+        Me.Cantidad.Width = 82
+        '
+        'Precio
+        '
+        Me.Precio.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.Precio.HeaderText = "Precio"
+        Me.Precio.Name = "Precio"
+        Me.Precio.ReadOnly = True
+        '
+        'Descuento
+        '
+        Me.Descuento.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.Descuento.HeaderText = "Descuento %"
+        Me.Descuento.Name = "Descuento"
+        '
+        'TotalDescuento
+        '
+        Me.TotalDescuento.HeaderText = "Total Descuento"
+        Me.TotalDescuento.Name = "TotalDescuento"
+        '
+        'ISV
+        '
+        Me.ISV.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.ISV.HeaderText = "ISV"
+        Me.ISV.Name = "ISV"
+        Me.ISV.ReadOnly = True
+        '
+        'Total
+        '
+        Me.Total.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.Total.HeaderText = "Total"
+        Me.Total.Name = "Total"
+        Me.Total.ReadOnly = True
         '
         'Label1
         '
@@ -389,66 +456,36 @@ Partial Class FrmDetalleVenta
         Me.PictureBox2.TabIndex = 57
         Me.PictureBox2.TabStop = False
         '
-        'Eliminar
+        'LblCant
         '
-        Me.Eliminar.Frozen = True
-        Me.Eliminar.HeaderText = "Eliminar"
-        Me.Eliminar.Name = "Eliminar"
-        Me.Eliminar.Text = "Eliminar"
-        Me.Eliminar.ToolTipText = "Eliminar"
-        Me.Eliminar.UseColumnTextForButtonValue = True
+        Me.LblCant.AutoSize = True
+        Me.LblCant.Location = New System.Drawing.Point(1135, 32)
+        Me.LblCant.Name = "LblCant"
+        Me.LblCant.Size = New System.Drawing.Size(39, 13)
+        Me.LblCant.TabIndex = 58
+        Me.LblCant.Text = "Label7"
+        Me.LblCant.Visible = False
         '
-        'Codigo
+        'Button1
         '
-        Me.Codigo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.Codigo.HeaderText = "Código"
-        Me.Codigo.Name = "Codigo"
+        Me.Button1.BackColor = System.Drawing.Color.White
+        Me.Button1.Font = New System.Drawing.Font("Comic Sans MS", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.Location = New System.Drawing.Point(1204, 527)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(123, 27)
+        Me.Button1.TabIndex = 59
+        Me.Button1.Text = "&Cancelar Venta"
+        Me.Button1.UseVisualStyleBackColor = False
         '
-        'Descripcion
+        'Label7
         '
-        Me.Descripcion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.Descripcion.HeaderText = "Descripción"
-        Me.Descripcion.Name = "Descripcion"
-        Me.Descripcion.ReadOnly = True
-        '
-        'Cantidad
-        '
-        Me.Cantidad.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
-        Me.Cantidad.HeaderText = "Cantidad"
-        Me.Cantidad.Name = "Cantidad"
-        Me.Cantidad.Width = 82
-        '
-        'Precio
-        '
-        Me.Precio.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.Precio.HeaderText = "Precio"
-        Me.Precio.Name = "Precio"
-        Me.Precio.ReadOnly = True
-        '
-        'Descuento
-        '
-        Me.Descuento.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.Descuento.HeaderText = "Descuento %"
-        Me.Descuento.Name = "Descuento"
-        '
-        'TotalDescuento
-        '
-        Me.TotalDescuento.HeaderText = "Total Descuento"
-        Me.TotalDescuento.Name = "TotalDescuento"
-        '
-        'ISV
-        '
-        Me.ISV.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.ISV.HeaderText = "ISV"
-        Me.ISV.Name = "ISV"
-        Me.ISV.ReadOnly = True
-        '
-        'Total
-        '
-        Me.Total.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.Total.HeaderText = "Total"
-        Me.Total.Name = "Total"
-        Me.Total.ReadOnly = True
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(1032, 32)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(13, 13)
+        Me.Label7.TabIndex = 60
+        Me.Label7.Text = "0"
+        Me.Label7.Visible = False
         '
         'FrmDetalleVenta
         '
@@ -456,6 +493,9 @@ Partial Class FrmDetalleVenta
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.LightSeaGreen
         Me.ClientSize = New System.Drawing.Size(1354, 571)
+        Me.Controls.Add(Me.Label7)
+        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.LblCant)
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.BtnFacturar)
@@ -469,7 +509,7 @@ Partial Class FrmDetalleVenta
         Me.Controls.Add(Me.TxtSubtotal)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.DgvDetalle)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "FrmDetalleVenta"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Detalle de la Venta"
@@ -520,4 +560,7 @@ Partial Class FrmDetalleVenta
     Friend WithEvents TotalDescuento As DataGridViewTextBoxColumn
     Friend WithEvents ISV As DataGridViewTextBoxColumn
     Friend WithEvents Total As DataGridViewTextBoxColumn
+    Friend WithEvents LblCant As Label
+    Friend WithEvents Button1 As Button
+    Friend WithEvents Label7 As Label
 End Class
