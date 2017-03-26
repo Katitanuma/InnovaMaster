@@ -278,6 +278,7 @@
       <DependentUpon>ReporteVenta.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Settings.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Formularios\FrmFactura.resx">

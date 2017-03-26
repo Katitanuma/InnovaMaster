@@ -47,6 +47,7 @@ Partial Class FrmLogin
         Me.BtnConfiguracion.TabIndex = 34
         Me.BtnConfiguracion.Text = "&Configuración"
         Me.BtnConfiguracion.UseVisualStyleBackColor = False
+        Me.BtnConfiguracion.Visible = False
         '
         'ChkVer
         '

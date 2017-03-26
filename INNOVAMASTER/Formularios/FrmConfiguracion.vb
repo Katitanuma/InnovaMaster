@@ -1,5 +1,6 @@
 ﻿Imports System.ComponentModel
 Imports System.Data.SqlClient
+Imports System.Configuration
 Public Class FrmConfiguracion
     Dim conec As New Conexion
     Dim EC As Estado_Conexion
@@ -33,15 +34,24 @@ Public Class FrmConfiguracion
             Cnx.Open()
             EC = Estado_Conexion.Establecida
             lblConnStatus.Text = "Conexión establecida exitosamente."
-            Dim nuevaCadenaConexion As String = "Data Source=" & txtServer.Text & ";Initial Catalog=" & txtDB.Text & ";Persist Security Info=True;User ID=" & txtUsername.Text & ";Password=" & txtPassword.Text & ""
-            My.Settings.CadenaConexion = nuevaCadenaConexion
+            Dim nuevaCadenaConexion As String = "Data Source=" & txtServer.Text & ";Initial Catalog=" & txtDB.Text & ";User ID=" & txtUsername.Text & ";Password=" & txtPassword.Text & ""
+            Dim config As Configuration = ConfigurationManager.OpenExeConfiguration(Application.ExecutablePath)
 
-            My.Settings.Servidor = txtServer.Text
-            My.Settings.BaseDatos = txtDB.Text
-            My.Settings.Usuario = txtUsername.Text
-            My.Settings.Contraseña = txtPassword.Text
+            Dim connectionStringsSection As ConnectionStringsSection = DirectCast(config.GetSection("connectionStrings"), ConnectionStringsSection)
+
+            connectionStringsSection.ConnectionStrings("INNOVAMASTER.My.MySettings.Conect").ConnectionString = nuevaCadenaConexion
+
+            config.Save(ConfigurationSaveMode.Modified, False)
+
+            My.Settings.Conect1 = nuevaCadenaConexion
             My.Settings.Save()
-            My.Settings.Reload()
+
+            If Label5.Text = "1" Then
+                Label5.Text = "0"
+                FrmLogin.Show()
+                Me.Close()
+
+            End If
         Catch ex As Exception
             MessageBox.Show(ex.ToString, "Error en la conexión", MessageBoxButtons.OK, MessageBoxIcon.Error)
             EC = Estado_Conexion.NoEstablecida
@@ -54,10 +64,14 @@ Public Class FrmConfiguracion
     End Sub
     Private Sub FrmConfiguracion_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         My.Settings.Reload()
-        txtServer.Text = My.Settings.Servidor
-        txtDB.Text = My.Settings.BaseDatos
-        txtUsername.Text = My.Settings.Usuario
-        txtPassword.Text = My.Settings.Contraseña
+        Dim cadena As String = My.Settings.Conect1.ToString
+
+        Dim c As String() = cadena.Split(";")
+        txtServer.Text = Replace(c(0), "Data Source=", "")
+        txtDB.Text = Replace(c(1), "Initial Catalog=", "")
+        Dim n As String = Replace(c(2), "User ID=", "")
+        txtUsername.Text = Replace(n, " ", "")
+        txtPassword.Text = Replace(c(3), "Password=", "")
     End Sub
     Private Sub FrmConfiguracion_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
         My.Settings.Save()

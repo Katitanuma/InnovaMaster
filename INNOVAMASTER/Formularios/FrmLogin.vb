@@ -30,6 +30,13 @@ Public Class FrmLogin
         Return estado
     End Function
     Private Sub FrmLogin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Dim cone As New Conexion
+        If cone.Conectarse() = False Then
+            FrmConfiguracion.Label5.Text = "1"
+            FrmConfiguracion.Show()
+            Me.Close()
+            Exit Sub
+        End If
         Me.Focus()
     End Sub
 

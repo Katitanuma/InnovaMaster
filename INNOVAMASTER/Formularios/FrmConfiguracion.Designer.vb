@@ -36,6 +36,7 @@ Partial Class FrmConfiguracion
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.Label5 = New System.Windows.Forms.Label()
         Me.gbConnConfig.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -190,12 +191,23 @@ Partial Class FrmConfiguracion
         Me.PictureBox2.TabIndex = 55
         Me.PictureBox2.TabStop = False
         '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(231, 9)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(39, 13)
+        Me.Label5.TabIndex = 56
+        Me.Label5.Text = "Label5"
+        Me.Label5.Visible = False
+        '
         'FrmConfiguracion
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.LightSeaGreen
         Me.ClientSize = New System.Drawing.Size(441, 366)
+        Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.gbConnConfig)
         Me.Controls.Add(Me.Label13)
@@ -225,4 +237,5 @@ Partial Class FrmConfiguracion
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents Label13 As Label
     Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents Label5 As Label
 End Class

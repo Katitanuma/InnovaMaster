@@ -176,7 +176,7 @@ Public Class FrmDetalleVenta
             If dr.Read Then
                 existencia = CInt(dr.GetValue(0)) - 5
                 existencia2 = CInt(dr.GetValue(0)) - 10
-                If DgvDetalle.Rows(e.RowIndex).Cells(3).Value > existencia Then
+                If (DgvDetalle.Rows(e.RowIndex).Cells(3).Value - CDbl(LblCant.Text)) > existencia Then
                     MsgBox("Se sobrepasa de la existencia estimada. Existencia= " + Str(existencia), MsgBoxStyle.Critical)
                     DgvDetalle.Rows(e.RowIndex).Cells(3).Value = existencia
 
@@ -454,8 +454,14 @@ Public Class FrmDetalleVenta
             End Try
             Label7.Text = "1"
             MsgBox("Productos facturados con éxito, Vamos a Imprimir la Factura", MsgBoxStyle.Information)
+            Dim r As DialogResult = MessageBox.Show("¿Desea Visualizar la Factura", "INNOVAMASTER", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+            If r = DialogResult.Yes Then
+                FrmFactura.ShowDialog()
+            Else
+                MsgBox("Esto no Esta Programado")
+            End If
 
-            FrmFactura.ShowDialog()
+
 
 
 

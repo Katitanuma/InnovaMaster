@@ -57,61 +57,24 @@ Namespace My
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.DefaultSettingValueAttribute("")>  _
-        Public Property CadenaConexion() As String
+        Public Property Conect1() As String
             Get
-                Return CType(Me("CadenaConexion"),String)
+                Return CType(Me("Conect1"),String)
             End Get
             Set
-                Me("CadenaConexion") = value
+                Me("Conect1") = value
             End Set
         End Property
         
-        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
-        Public Property Servidor() As String
+         Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=MARCIOMARTINEZ\SQLEXPRESS;Initial Catalog=djsadjdksad;User ID=Usuario"& _ 
+            ";Password=master17")>  _
+        Public ReadOnly Property Conect() As String
             Get
-                Return CType(Me("Servidor"),String)
+                Return CType(Me("Conect"),String)
             End Get
-            Set
-                Me("Servidor") = value
-            End Set
-        End Property
-        
-        <Global.System.Configuration.UserScopedSettingAttribute(),  _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
-        Public Property BaseDatos() As String
-            Get
-                Return CType(Me("BaseDatos"),String)
-            End Get
-            Set
-                Me("BaseDatos") = value
-            End Set
-        End Property
-        
-        <Global.System.Configuration.UserScopedSettingAttribute(),  _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
-        Public Property Usuario() As String
-            Get
-                Return CType(Me("Usuario"),String)
-            End Get
-            Set
-                Me("Usuario") = value
-            End Set
-        End Property
-        
-        <Global.System.Configuration.UserScopedSettingAttribute(),  _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
-        Public Property Contraseña() As String
-            Get
-                Return CType(Me("Contraseña"),String)
-            End Get
-            Set
-                Me("Contraseña") = value
-            End Set
         End Property
     End Class
 End Namespace

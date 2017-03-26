@@ -4,6 +4,8 @@
         Timer1.Interval = 200
         Timer1.Start()
         i = 0
+        My.Settings.Conect1 = My.Settings.Item("Conect").ToString
+        My.Settings.Save()
     End Sub
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick

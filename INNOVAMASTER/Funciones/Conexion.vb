@@ -3,16 +3,12 @@ Public Class Conexion
     Public Con As New SqlConnection
     Public Function Conectarse()
         Try
-
-            Con = New SqlConnection(My.Settings.CadenaConexion)
+            Con = New SqlConnection(My.Settings.Conect1)
             Con.Open()
-
-
             Return True
-
         Catch ex As Exception
-            MsgBox(ex.ToString)
-            Return True
+
+            Return False
         End Try
     End Function
     Public Function Desconectarse()
