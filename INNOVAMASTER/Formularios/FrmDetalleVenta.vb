@@ -177,8 +177,8 @@ Public Class FrmDetalleVenta
                 existencia = CInt(dr.GetValue(0)) - 5
                 existencia2 = CInt(dr.GetValue(0)) - 10
                 If (DgvDetalle.Rows(e.RowIndex).Cells(3).Value - CDbl(LblCant.Text)) > existencia Then
-                    MsgBox("Se sobrepasa de la existencia estimada. Existencia= " + Str(existencia), MsgBoxStyle.Critical)
-                    DgvDetalle.Rows(e.RowIndex).Cells(3).Value = existencia
+                    MsgBox("Se sobrepasa de la existencia estimada. Existencia= " + Str(existencia + CDbl(LblCant.Text)), MsgBoxStyle.Critical)
+                    DgvDetalle.Rows(e.RowIndex).Cells(3).Value = existencia + CDbl(LblCant.Text)
 
                 ElseIf DgvDetalle.Rows(e.RowIndex).Cells(3).Value > existencia2 Then
 
