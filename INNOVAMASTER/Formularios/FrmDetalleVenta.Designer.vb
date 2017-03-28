@@ -64,6 +64,7 @@ Partial Class FrmDetalleVenta
         Me.LblCant = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Label7 = New System.Windows.Forms.Label()
+        Me.Button2 = New System.Windows.Forms.Button()
         CType(Me.DgvDetalle, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         CType(Me.TxtDescuentoExtra.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -487,12 +488,24 @@ Partial Class FrmDetalleVenta
         Me.Label7.Text = "0"
         Me.Label7.Visible = False
         '
+        'Button2
+        '
+        Me.Button2.BackColor = System.Drawing.Color.White
+        Me.Button2.Font = New System.Drawing.Font("Comic Sans MS", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.Location = New System.Drawing.Point(992, 527)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(206, 27)
+        Me.Button2.TabIndex = 61
+        Me.Button2.Text = "&Eliminar Todos los Productos"
+        Me.Button2.UseVisualStyleBackColor = False
+        '
         'FrmDetalleVenta
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.LightSeaGreen
         Me.ClientSize = New System.Drawing.Size(1354, 571)
+        Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.LblCant)
@@ -563,4 +576,5 @@ Partial Class FrmDetalleVenta
     Friend WithEvents LblCant As Label
     Friend WithEvents Button1 As Button
     Friend WithEvents Label7 As Label
+    Friend WithEvents Button2 As Button
 End Class

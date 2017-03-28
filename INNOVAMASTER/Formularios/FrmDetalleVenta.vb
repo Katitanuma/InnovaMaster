@@ -44,6 +44,8 @@ Public Class FrmDetalleVenta
                                 DgvDetalle.Rows(e.RowIndex).Cells(7).Value = FormatCurrency(CDbl(dr.GetValue(1)), 2)
                                 DgvDetalle.Rows(e.RowIndex).Cells(8).Value = FormatCurrency((DgvDetalle.Rows(e.RowIndex).Cells(3).Value) * CDbl(DgvDetalle.Rows(e.RowIndex).Cells(4).Value), 2)
                                 dr.Close()
+                                DgvDetalle.CurrentRow.Cells(1).ErrorText = ""
+                                DgvDetalle.CurrentRow.Cells(2).ErrorText = ""
                                 cmd = New SqlCommand("ReducirInventario", Conec.Con)
                                 cmd.CommandType = CommandType.StoredProcedure
                                 cmd.Parameters.AddWithValue("@IdProducto", DgvDetalle.Rows(e.RowIndex).Cells(1).Value.ToString)
@@ -58,12 +60,13 @@ Public Class FrmDetalleVenta
                         End If
 
                     Else
+                        DgvDetalle.Rows(e.RowIndex).Cells(1).Value = Nothing
                         MsgBox("Producto no registrado", MsgBoxStyle.Information)
-
+                        DgvDetalle.Rows(e.RowIndex).Cells(1).ErrorText = "Producto No Registrado"
                     End If
                     dr.Close()
                 Else
-
+                    DgvDetalle.Rows(e.RowIndex).Cells(1).ErrorText = "Ingrese el Codigo del Producto"
 
                 End If
 
@@ -117,6 +120,8 @@ Public Class FrmDetalleVenta
                                 DgvDetalle.Rows(e.RowIndex).Cells(6).Value = FormatCurrency(0)
                                 DgvDetalle.Rows(e.RowIndex).Cells(7).Value = FormatCurrency(CDbl(dr.GetValue(1)), 2)
                                 DgvDetalle.Rows(e.RowIndex).Cells(8).Value = FormatCurrency((DgvDetalle.Rows(e.RowIndex).Cells(3).Value) * CDbl(DgvDetalle.Rows(e.RowIndex).Cells(4).Value), 2)
+                                DgvDetalle.CurrentRow.Cells(1).ErrorText = ""
+                                DgvDetalle.CurrentRow.Cells(2).ErrorText = ""
                                 dr.Close()
                                 cmd = New SqlCommand("ReducirInventario", Conec.Con)
                                 cmd.CommandType = CommandType.StoredProcedure
@@ -132,18 +137,23 @@ Public Class FrmDetalleVenta
                         End If
 
                     Else
-                        DgvDetalle.Rows(e.RowIndex).Cells(1).Value = Nothing
-                        MsgBox("Producto no registrado", MsgBoxStyle.Information)
 
+                        DgvDetalle.Rows(e.RowIndex).Cells(1).Value = Nothing
+                        DgvDetalle.Rows(e.RowIndex).Cells(2).Value = Nothing
+                        MsgBox("Producto no registrado", MsgBoxStyle.Information)
+                        DgvDetalle.Rows(e.RowIndex).Cells(2).ErrorText = "Producto No Registrado"
                     End If
                     dr.Close()
                 Else
-
+                    DgvDetalle.Rows(e.RowIndex).Cells(2).ErrorText = "Ingrese el Nombre del Producto"
 
                 End If
 
             Catch ex As Exception
-                MsgBox(ex.ToString)
+                DgvDetalle.Rows(e.RowIndex).Cells(1).Value = Nothing
+                DgvDetalle.Rows(e.RowIndex).Cells(2).Value = Nothing
+                DgvDetalle.Rows(e.RowIndex).Cells(2).ErrorText = "Producto No Registrado"
+
             Finally
                 Conec.Desconectarse()
             End Try
@@ -241,6 +251,13 @@ Public Class FrmDetalleVenta
                 Dim DataCollection As New AutoCompleteStringCollection()
                 addItems(DataCollection)
                 autoText.AutoCompleteCustomSource = DataCollection
+                If DgvDetalle.CurrentRow.Cells(1).Value = Nothing Then
+                    DgvDetalle.CurrentRow.Cells(1).ErrorText = "Ingrese el Codigo del Producto"
+                Else
+                    DgvDetalle.CurrentRow.Cells(1).ErrorText = ""
+
+                End If
+
             End If
         ElseIf column = 2 Then
 
@@ -251,6 +268,14 @@ Public Class FrmDetalleVenta
                 Dim DataCollection2 As New AutoCompleteStringCollection()
                 addItems2(DataCollection2)
                 autoText2.AutoCompleteCustomSource = DataCollection2
+
+
+                If DgvDetalle.CurrentRow.Cells(2).Value = Nothing Then
+                    DgvDetalle.CurrentRow.Cells(2).ErrorText = "Ingrese el Nombre del Producto"
+                Else
+                    DgvDetalle.CurrentRow.Cells(2).ErrorText = ""
+
+                End If
             End If
 
         Else
@@ -315,15 +340,22 @@ Public Class FrmDetalleVenta
         If e.ColumnIndex = 0 Then
             If (DgvDetalle.CurrentRow.Cells(1).Value <> Nothing Or (DgvDetalle.CurrentRow.Cells(2).Value <> Nothing)) Then
                 If ((DgvDetalle.CurrentRow.Cells(1) IsNot Nothing)) Then
+                    If DgvDetalle.CurrentCell.Value <> Nothing Then
+                        Conec.Conectarse()
+                        cmd = New SqlCommand("AumentarInventario", Conec.Con)
+                        cmd.CommandType = CommandType.StoredProcedure
+                        cmd.Parameters.AddWithValue("@IdProducto", DgvDetalle.Rows(e.RowIndex).Cells(1).Value.ToString)
+                        cmd.Parameters.AddWithValue("@Cantidad", CDbl(DgvDetalle.Rows(e.RowIndex).Cells(3).Value))
+                        cmd.ExecuteNonQuery()
+                        DgvDetalle.Rows.Remove(DgvDetalle.CurrentRow)
+                        LlenarTextBox()
 
-                    Conec.Conectarse()
-                    cmd = New SqlCommand("AumentarInventario", Conec.Con)
-                    cmd.CommandType = CommandType.StoredProcedure
-                    cmd.Parameters.AddWithValue("@IdProducto", DgvDetalle.Rows(e.RowIndex).Cells(1).Value.ToString)
-                    cmd.Parameters.AddWithValue("@Cantidad", CDbl(DgvDetalle.Rows(e.RowIndex).Cells(3).Value))
-                    cmd.ExecuteNonQuery()
-                    DgvDetalle.Rows.Remove(DgvDetalle.CurrentRow)
-                    LlenarTextBox()
+                    Else
+                        DgvDetalle.Rows.Remove(DgvDetalle.CurrentRow)
+                        LlenarTextBox()
+
+                    End If
+
                 End If
             End If
 
@@ -414,9 +446,11 @@ Public Class FrmDetalleVenta
 
         Else
             Conec.Conectarse()
+            Dim estado As Boolean = True
+            DgvDetalle.AllowUserToAddRows = False
             For Each fila As DataGridViewRow In DgvDetalle.Rows
                 Try
-                    If fila.Cells(1).Value <> Nothing Then
+                    If fila.Cells(1).Value <> Nothing And fila.Cells(1).ErrorText = "" Then
                         cmd = New SqlCommand("InsertarDetalleVenta", Conec.Con)
                         cmd.CommandType = CommandType.StoredProcedure
                         cmd.Parameters.AddWithValue("@IdVenta", LblCodigoVenta.Text.ToString)
@@ -427,7 +461,9 @@ Public Class FrmDetalleVenta
                         cmd.Parameters.AddWithValue("@Impuesto", CDbl(fila.Cells(7).Value))
                         cmd.ExecuteNonQuery()
 
-
+                    Else
+                        estado = False
+                        fila.Cells(1).ErrorText = "Ingrese el Codigo del Producto"
                     End If
 
                 Catch ex As Exception
@@ -436,29 +472,42 @@ Public Class FrmDetalleVenta
 
 
             Next
+            If estado = True Then
 
-            Try
-                cmd = New SqlCommand("ActualizarDescuentoExtra", Conec.Con)
-                cmd.CommandType = CommandType.StoredProcedure
-                cmd.Parameters.AddWithValue("@IdVenta", LblCodigoVenta.Text.ToString)
-                If TxtDescuentoExtra.Value = Nothing Then
-                    cmd.Parameters.AddWithValue("@DescuentoExtra", CDbl(0))
+                Try
+                    cmd = New SqlCommand("ActualizarDescuentoExtra", Conec.Con)
+                    cmd.CommandType = CommandType.StoredProcedure
+                    cmd.Parameters.AddWithValue("@IdVenta", LblCodigoVenta.Text.ToString)
+                    If TxtDescuentoExtra.Value = Nothing Then
+                        cmd.Parameters.AddWithValue("@DescuentoExtra", CDbl(0))
+                    Else
+                        cmd.Parameters.AddWithValue("@DescuentoExtra", CDbl(TxtDescuentoExtra.Value))
+                    End If
+
+                    cmd.ExecuteNonQuery()
+
+                Catch ex As Exception
+                    MsgBox(ex.Message)
+                End Try
+                Label7.Text = "1"
+                MsgBox("Productos facturados con éxito, Vamos a Imprimir la Factura", MsgBoxStyle.Information)
+                Dim r As DialogResult = MessageBox.Show("¿Desea Visualizar la Factura", "INNOVAMASTER", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+                If r = DialogResult.Yes Then
+                    FrmFactura.ShowDialog()
                 Else
-                    cmd.Parameters.AddWithValue("@DescuentoExtra", CDbl(TxtDescuentoExtra.Value))
+                    Dim rpt As New ReporteVenta
+                    rpt.SetParameterValue("@IdVenta", LblCodigoVenta.Text)
+                    rpt.PrintToPrinter(1, False, 0, 0)
+                    Me.Close()
                 End If
 
-                cmd.ExecuteNonQuery()
 
-            Catch ex As Exception
-                MsgBox(ex.Message)
-            End Try
-            Label7.Text = "1"
-            MsgBox("Productos facturados con éxito, Vamos a Imprimir la Factura", MsgBoxStyle.Information)
-            Dim r As DialogResult = MessageBox.Show("¿Desea Visualizar la Factura", "INNOVAMASTER", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
-            If r = DialogResult.Yes Then
-                FrmFactura.ShowDialog()
+
             Else
-                MsgBox("Esto no Esta Programado")
+
+                DgvDetalle.AllowUserToAddRows = True
+                MsgBox("Tiene que Ingresar algunos Códigos de Producto", MsgBoxStyle.Critical, "INNOVAMASTER")
+
             End If
 
 
@@ -486,9 +535,8 @@ Public Class FrmDetalleVenta
     Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
         Dim r As DialogResult = MessageBox.Show("¿Desea Cancelar la Venta?", "INNOVAMASTER", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
         If r = DialogResult.Yes Then
-            If DgvDetalle.RowCount = 1 Then
-            Else
-                Conec.Conectarse()
+
+            Conec.Conectarse()
                 For Each fila As DataGridViewRow In DgvDetalle.Rows
                     Try
                         If fila.Cells(1).Value <> Nothing Then
@@ -504,25 +552,24 @@ Public Class FrmDetalleVenta
                     Catch ex As Exception
                         MsgBox(ex.Message)
                     End Try
-                    Me.Close()
-
-                Next
 
 
+            Next
+            cmd = New SqlCommand("Delete from Venta Where IdVenta= '" & LblCodigoVenta.Text & "'", Conec.Con)
+            cmd.CommandType = CommandType.Text
+            cmd.ExecuteNonQuery()
+            Me.Close()
 
-
-
-            End If
         End If
+
 
     End Sub
 
     Private Sub FrmDetalleVenta_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
         If Label7.Text = "0" Then
 
-            If DgvDetalle.RowCount = 1 Then
-                Else
-                    Conec.Conectarse()
+
+            Conec.Conectarse()
                     For Each fila As DataGridViewRow In DgvDetalle.Rows
                         Try
                             If fila.Cells(1).Value <> Nothing Then
@@ -541,14 +588,43 @@ Public Class FrmDetalleVenta
 
 
                 Next
+            cmd = New SqlCommand("Delete from Venta Where IdVenta= '" & LblCodigoVenta.Text & "'", Conec.Con)
+            cmd.CommandType = CommandType.Text
+            cmd.ExecuteNonQuery()
 
 
 
 
 
 
-            End If
+        End If
 
+
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Dim r As DialogResult = MessageBox.Show("¿Desea Eliminar Todos los Productos de la Venta?", "INNOVAMASTER", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+        If r = DialogResult.Yes Then
+            Conec.Conectarse()
+            For Each fila As DataGridViewRow In DgvDetalle.Rows
+                Try
+                    If fila.Cells(1).Value <> Nothing Then
+
+
+                        cmd = New SqlCommand("AumentarInventario", Conec.Con)
+                        cmd.CommandType = CommandType.StoredProcedure
+                        cmd.Parameters.AddWithValue("@IdProducto", fila.Cells(1).Value.ToString)
+                        cmd.Parameters.AddWithValue("@Cantidad", CDbl(fila.Cells(3).Value))
+                        cmd.ExecuteNonQuery()
+                    End If
+
+                Catch ex As Exception
+                    MsgBox(ex.Message)
+                End Try
+
+
+            Next
+            DgvDetalle.Rows.Clear()
         End If
     End Sub
 End Class

@@ -17,7 +17,7 @@ Public Class FrmProducto
             If dt.Rows.Count <> 0 Then
                 LblFilas.Visible = False
                 DgvProducto.DataSource = dt
-                DgvProducto.Columns(11).Visible = False
+                DgvProducto.Columns(10).Visible = False
                 CboBusqueda.Enabled = True
                 TxtBusqueda.Enabled = True
             Else
@@ -31,6 +31,7 @@ Public Class FrmProducto
         End Try
     End Sub
     Private Sub DgvProducto_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DgvProducto.CellClick
+        DgvProducto.Columns(10).Visible = False
         TxtIdProducto.Text = DgvProducto.SelectedCells.Item(0).Value
         TxtDescripcion.Text = DgvProducto.SelectedCells.Item(1).Value
         TxtCosto.Text = DgvProducto.SelectedCells.Item(2).Value
@@ -48,7 +49,7 @@ Public Class FrmProducto
         Else
             ChkEstado.Checked = False
         End If
-
+        DgvProducto.Columns(10).Visible = False
     End Sub
     Private Sub TxtBusqueda_TextChanged(sender As Object, e As EventArgs) Handles TxtBusqueda.TextChanged
         Dim ds As New DataSet

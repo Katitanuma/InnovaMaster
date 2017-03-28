@@ -120,6 +120,25 @@ Partial Public Class MenuPrincipal
     End Sub
 
     Private Sub MenuPrincipal_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
-        Application.Exit()
+
+        If EstaAbierto(FrmDetalleVenta) Then
+            FrmDetalleVenta.Button1.PerformClick()
+            e.Cancel = True
+        Else
+            Application.Exit()
+        End If
+
+
     End Sub
+    Public Function EstaAbierto(ByVal Myform As Form)
+        Dim objForm As Form
+        Dim blnAbierto As Boolean = False
+        blnAbierto = False
+        For Each objForm In My.Application.OpenForms
+            If (Trim(objForm.Name) = Trim(Myform.Name)) Then
+                blnAbierto = True
+            End If
+        Next
+        Return blnAbierto
+    End Function
 End Class
