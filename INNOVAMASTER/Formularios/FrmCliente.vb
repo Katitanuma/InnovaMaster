@@ -106,7 +106,7 @@ Public Class FrmCliente
         Next
     End Sub
     Private Sub BtnNuevo_Click(sender As Object, e As EventArgs) Handles BtnNuevo.Click
-
+        TxtIdCliente.Enabled = True
         GbCliente.Enabled = True
         BtnNuevo.Visible = False
         BtnInsertar.Visible = True

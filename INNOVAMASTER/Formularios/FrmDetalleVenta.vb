@@ -355,8 +355,13 @@ Public Class FrmDetalleVenta
                         LlenarTextBox()
 
                     End If
-
+                Else
+                    DgvDetalle.Rows.Remove(DgvDetalle.CurrentRow)
+                    LlenarTextBox()
                 End If
+            Else
+                DgvDetalle.Rows.Remove(DgvDetalle.CurrentRow)
+                LlenarTextBox()
             End If
 
         End If
