@@ -471,6 +471,11 @@ Public Class FrmCliente
             FrmVenta.TxtIdCliente.Text = DgvCliente.CurrentRow.Cells(0).Value.ToString
             LblRelacionClienteVenta.Text = "0"
             Me.Close()
+        ElseIf LblRelacionClienteVenta.Text = "2" Then
+            FrmFacturacionVenta.TxtIdCliente.Text = DgvCliente.CurrentRow.Cells(0).Value.ToString
+            LblRelacionClienteVenta.Text = "0"
+            Me.Close()
+
         End If
     End Sub
     Private Sub FrmCliente_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing

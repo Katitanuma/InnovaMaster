@@ -132,6 +132,12 @@
     <Compile Include="Formularios\FrmFactura.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Formularios\FrmFacturacionVenta.Designer.vb">
+      <DependentUpon>FrmFacturacionVenta.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmFacturacionVenta.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Formularios\FrmPresentacion.Designer.vb">
       <DependentUpon>FrmPresentacion.vb</DependentUpon>
     </Compile>
@@ -288,6 +294,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Formularios\FrmFactura.resx">
       <DependentUpon>FrmFactura.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmFacturacionVenta.resx">
+      <DependentUpon>FrmFacturacionVenta.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmPresentacion.resx">
       <DependentUpon>FrmPresentacion.vb</DependentUpon>
