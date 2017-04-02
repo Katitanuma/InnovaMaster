@@ -108,6 +108,11 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Conjunto de Datos\DsReportes.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DsReportes.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Datos\DatosCargo.vb" />
     <Compile Include="Datos\DatosCategoria.vb" />
     <Compile Include="Datos\DatosCliente.vb" />
@@ -357,6 +362,17 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Conjunto de Datos\DsReportes.xsc">
+      <DependentUpon>DsReportes.xsd</DependentUpon>
+    </None>
+    <None Include="Conjunto de Datos\DsReportes.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DsReportes.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Conjunto de Datos\DsReportes.xss">
+      <DependentUpon>DsReportes.xsd</DependentUpon>
+    </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>

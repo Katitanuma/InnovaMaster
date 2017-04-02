@@ -94,7 +94,7 @@ Public Class ReporteVenta
     
     <Browsable(false),  _
      DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)>  _
-    Public ReadOnly Property Parameter_IdVenta() As CrystalDecisions.[Shared].IParameterField
+    Public ReadOnly Property Parameter_Cambio() As CrystalDecisions.[Shared].IParameterField
         Get
             Return Me.DataDefinition.ParameterFields(0)
         End Get

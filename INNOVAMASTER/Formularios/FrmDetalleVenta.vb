@@ -450,76 +450,111 @@ Public Class FrmDetalleVenta
             MsgBox("Ingresar al menos un producto para facturar la venta", MsgBoxStyle.Information, "INNOVAMASTER")
 
         Else
+            Dim re As Object = InputBox("Ingrese el Monto de Pago:", "INNOVAMASTER", "0")
+            Dim monto As Double
+            If re = vbNullString Then
+
+                MsgBox("Campo no Valido", MsgBoxStyle.Critical, "INNOVAMASTER")
+                Exit Sub
+            ElseIf IsNumeric(re) Then
+                monto = CDbl(re)
+            Else
+
+                MsgBox("Campo no Valido", MsgBoxStyle.Critical, "INNOVAMASTER")
+                Exit Sub
+            End If
+            If monto < CDbl(TxtTotal.Text) Then
+
+                MsgBox("El Monto de Pago es muy bajo para Facturar", MsgBoxStyle.Critical, "INNOVAMASTER")
+                Exit Sub
+            Else
+                LblCambio.Text = monto - CDbl(TxtTotal.Text)
+            End If
             Conec.Conectarse()
-            Dim estado As Boolean = True
-            DgvDetalle.AllowUserToAddRows = False
-            For Each fila As DataGridViewRow In DgvDetalle.Rows
-                Try
-                    If fila.Cells(1).Value <> Nothing And fila.Cells(1).ErrorText = "" Then
-                        cmd = New SqlCommand("InsertarDetalleVenta", Conec.Con)
+                Dim estado As Boolean = True
+                DgvDetalle.AllowUserToAddRows = False
+                For Each fila As DataGridViewRow In DgvDetalle.Rows
+                    Try
+                        If fila.Cells(1).Value <> Nothing And fila.Cells(1).ErrorText = "" Then
+                            cmd = New SqlCommand("InsertarDetalleVenta", Conec.Con)
+                            cmd.CommandType = CommandType.StoredProcedure
+                            cmd.Parameters.AddWithValue("@IdVenta", LblCodigoVenta.Text.ToString)
+                            cmd.Parameters.AddWithValue("@IdProducto", fila.Cells(1).Value.ToString)
+                            cmd.Parameters.AddWithValue("@Cantidad", CDbl(fila.Cells(3).Value))
+                            cmd.Parameters.AddWithValue("@Precio", CDbl(fila.Cells(4).Value))
+                            cmd.Parameters.AddWithValue("@DescuentoProducto", CDbl(fila.Cells(6).Value))
+                            cmd.Parameters.AddWithValue("@Impuesto", CDbl(fila.Cells(7).Value))
+                            cmd.ExecuteNonQuery()
+
+                        Else
+                            estado = False
+                            fila.Cells(1).ErrorText = "Ingrese el Codigo del Producto"
+                        End If
+
+                    Catch ex As Exception
+                        MsgBox(ex.Message)
+                    End Try
+
+
+                Next
+                If estado = True Then
+
+                    Try
+                        cmd = New SqlCommand("ActualizarDescuentoExtra", Conec.Con)
                         cmd.CommandType = CommandType.StoredProcedure
                         cmd.Parameters.AddWithValue("@IdVenta", LblCodigoVenta.Text.ToString)
-                        cmd.Parameters.AddWithValue("@IdProducto", fila.Cells(1).Value.ToString)
-                        cmd.Parameters.AddWithValue("@Cantidad", CDbl(fila.Cells(3).Value))
-                        cmd.Parameters.AddWithValue("@Precio", CDbl(fila.Cells(4).Value))
-                        cmd.Parameters.AddWithValue("@DescuentoProducto", CDbl(fila.Cells(6).Value))
-                        cmd.Parameters.AddWithValue("@Impuesto", CDbl(fila.Cells(7).Value))
+                        If TxtDescuentoExtra.Value = Nothing Then
+                            cmd.Parameters.AddWithValue("@DescuentoExtra", CDbl(0))
+                        Else
+                            cmd.Parameters.AddWithValue("@DescuentoExtra", CDbl(TxtDescuentoExtra.Value))
+                        End If
+
                         cmd.ExecuteNonQuery()
 
-                    Else
-                        estado = False
-                        fila.Cells(1).ErrorText = "Ingrese el Codigo del Producto"
-                    End If
+                    Catch ex As Exception
+                        MsgBox(ex.Message)
+                    End Try
+                    Label7.Text = "1"
 
-                Catch ex As Exception
-                    MsgBox(ex.Message)
-                End Try
-
-
-            Next
-            If estado = True Then
-
-                Try
-                    cmd = New SqlCommand("ActualizarDescuentoExtra", Conec.Con)
-                    cmd.CommandType = CommandType.StoredProcedure
-                    cmd.Parameters.AddWithValue("@IdVenta", LblCodigoVenta.Text.ToString)
-                    If TxtDescuentoExtra.Value = Nothing Then
-                        cmd.Parameters.AddWithValue("@DescuentoExtra", CDbl(0))
-                    Else
-                        cmd.Parameters.AddWithValue("@DescuentoExtra", CDbl(TxtDescuentoExtra.Value))
-                    End If
-
-                    cmd.ExecuteNonQuery()
-
-                Catch ex As Exception
-                    MsgBox(ex.Message)
-                End Try
-                Label7.Text = "1"
-                MsgBox("Productos facturados con éxito, Vamos a Imprimir la Factura", MsgBoxStyle.Information)
-                Dim r As DialogResult = MessageBox.Show("¿Desea Visualizar la Factura", "INNOVAMASTER", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+                    MsgBox("Productos facturados con éxito, Vamos a Imprimir la Factura", MsgBoxStyle.Information)
+                    Dim r As DialogResult = MessageBox.Show("¿Desea Visualizar la Factura", "INNOVAMASTER", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
                 If r = DialogResult.Yes Then
                     FrmFactura.ShowDialog()
                 Else
+                    Dim ds As New DsReportes
                     Dim rpt As New ReporteVenta
-                    rpt.SetParameterValue("@IdVenta", LblCodigoVenta.Text)
-                    rpt.PrintToPrinter(1, False, 0, 0)
-                    Me.Close()
+                    Try
+                        Conec.Conectarse()
+                        cmd = New SqlCommand("ReporteVenta", Conec.Con)
+                        cmd.CommandType = CommandType.StoredProcedure
+                        cmd.Parameters.Add("@IdVenta", SqlDbType.NVarChar, 50).Value = LblCodigoVenta.Text
+                        cmd.ExecuteNonQuery()
+                        Dim da As New SqlDataAdapter(cmd)
+                        da.Fill(ds, "ReporteVenta")
+                        rpt.SetDataSource(ds)
+                        rpt.SetParameterValue("Cambio", LblCambio.Text)
+                        rpt.PrintToPrinter(1, False, 0, 0)
+                        Me.Close()
+                    Catch ex As Exception
+
+                    End Try
+
                 End If
 
 
 
-            Else
+                Else
 
-                DgvDetalle.AllowUserToAddRows = True
-                MsgBox("Tiene que Ingresar algunos Códigos de Producto", MsgBoxStyle.Critical, "INNOVAMASTER")
+                    DgvDetalle.AllowUserToAddRows = True
+                    MsgBox("Tiene que Ingresar algunos Códigos de Producto", MsgBoxStyle.Critical, "INNOVAMASTER")
+
+                End If
+
+
+
+
 
             End If
-
-
-
-
-
-        End If
     End Sub
 
     Private Sub FrmDetalleVenta_Load(sender As Object, e As EventArgs) Handles MyBase.Load
