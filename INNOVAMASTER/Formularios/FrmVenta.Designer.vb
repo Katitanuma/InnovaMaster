@@ -25,6 +25,7 @@ Partial Class FrmVenta
         Me.Label11 = New System.Windows.Forms.Label()
         Me.DgvVenta = New System.Windows.Forms.DataGridView()
         Me.GbVenta = New System.Windows.Forms.GroupBox()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.BtnBusquedaCliente = New System.Windows.Forms.Button()
         Me.LblNombre = New System.Windows.Forms.Label()
         Me.TxtIdCliente = New System.Windows.Forms.TextBox()
@@ -93,6 +94,7 @@ Partial Class FrmVenta
         '
         Me.GbVenta.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.GbVenta.BackColor = System.Drawing.Color.Transparent
+        Me.GbVenta.Controls.Add(Me.Button1)
         Me.GbVenta.Controls.Add(Me.BtnBusquedaCliente)
         Me.GbVenta.Controls.Add(Me.LblNombre)
         Me.GbVenta.Controls.Add(Me.TxtIdCliente)
@@ -117,6 +119,15 @@ Partial Class FrmVenta
         Me.GbVenta.Size = New System.Drawing.Size(430, 319)
         Me.GbVenta.TabIndex = 31
         Me.GbVenta.TabStop = False
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(328, 146)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(61, 21)
+        Me.Button1.TabIndex = 40
+        Me.Button1.Text = "15 Días"
+        Me.Button1.UseVisualStyleBackColor = True
         '
         'BtnBusquedaCliente
         '
@@ -541,4 +552,5 @@ Partial Class FrmVenta
     Friend WithEvents Label12 As Label
     Friend WithEvents TxtBusqueda As TextBox
     Friend WithEvents CboBusqueda As ComboBox
+    Friend WithEvents Button1 As Button
 End Class

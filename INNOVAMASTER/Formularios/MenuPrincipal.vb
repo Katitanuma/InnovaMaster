@@ -42,9 +42,9 @@ Partial Public Class MenuPrincipal
         FrmProducto.Show()
     End Sub
     Private Sub BarButtonItem11_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BtnRegistroVenta.ItemClick
-        FrmFacturacionVenta.MdiParent = Me
-        FrmFacturacionVenta.Dock = DockStyle.Fill
-        FrmFacturacionVenta.Show()
+        FrmVenta.MdiParent = Me
+        FrmVenta.Dock = DockStyle.Fill
+        FrmVenta.Show()
     End Sub
     Private Sub BarButtonItem14_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BarButtonItem14.ItemClick
 
@@ -141,4 +141,10 @@ Partial Public Class MenuPrincipal
         Next
         Return blnAbierto
     End Function
+
+    Private Sub BtnF_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BtnF.ItemClick
+        FrmFacturacionVenta.MdiParent = Me
+        FrmFacturacionVenta.Dock = DockStyle.Fill
+        FrmFacturacionVenta.Show()
+    End Sub
 End Class

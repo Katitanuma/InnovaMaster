@@ -664,7 +664,9 @@ Public Class FrmDetalleVenta
 
 
             Next
+            LlenarTextBox()
             DgvDetalle.Rows.Clear()
+
         End If
     End Sub
 End Class

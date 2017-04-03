@@ -896,6 +896,7 @@ Public Class FrmFacturacionVenta
 
 
             Next
+            LlenarTextBox()
             DgvDetalle.Rows.Clear()
         End If
     End Sub
