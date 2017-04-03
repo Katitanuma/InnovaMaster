@@ -22,9 +22,9 @@ Partial Class FrmFacturacionVenta
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.LblCambio = New System.Windows.Forms.Label()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Label7 = New System.Windows.Forms.Label()
@@ -33,17 +33,24 @@ Partial Class FrmFacturacionVenta
         Me.Label6 = New System.Windows.Forms.Label()
         Me.BtnFacturar = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.TxtDescuentoExtra = New DevExpress.XtraEditors.CalcEdit()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.RdbCantidad = New System.Windows.Forms.RadioButton()
+        Me.RdbPorcentaje = New System.Windows.Forms.RadioButton()
+        Me.TxtP = New System.Windows.Forms.TextBox()
+        Me.LblP = New System.Windows.Forms.Label()
+        Me.CboTipoVenta = New System.Windows.Forms.ComboBox()
+        Me.CboFormaVenta = New System.Windows.Forms.ComboBox()
+        Me.Label14 = New System.Windows.Forms.Label()
+        Me.Label15 = New System.Windows.Forms.Label()
+        Me.TxtFechaVencimientos = New System.Windows.Forms.DateTimePicker()
+        Me.Label11 = New System.Windows.Forms.Label()
         Me.TxtFechaVenta = New System.Windows.Forms.TextBox()
         Me.BtnBusquedaCliente = New System.Windows.Forms.Button()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.TxtIdCliente = New System.Windows.Forms.TextBox()
         Me.TxtIdVenta = New System.Windows.Forms.TextBox()
-        Me.LblP = New System.Windows.Forms.Label()
-        Me.TxtP = New System.Windows.Forms.TextBox()
-        Me.RdbPorcentaje = New System.Windows.Forms.RadioButton()
-        Me.RdbCantidad = New System.Windows.Forms.RadioButton()
-        Me.TxtDescuentoExtra = New DevExpress.XtraEditors.CalcEdit()
-        Me.Label13 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.TxtTotal = New System.Windows.Forms.TextBox()
@@ -65,19 +72,14 @@ Partial Class FrmFacturacionVenta
         Me.ISV = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Total = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.TxtFechaVencimientos = New System.Windows.Forms.DateTimePicker()
-        Me.Label11 = New System.Windows.Forms.Label()
-        Me.CboTipoVenta = New System.Windows.Forms.ComboBox()
-        Me.CboFormaVenta = New System.Windows.Forms.ComboBox()
-        Me.Label14 = New System.Windows.Forms.Label()
-        Me.Label15 = New System.Windows.Forms.Label()
-        Me.Panel1 = New System.Windows.Forms.Panel()
         Me.LblNombre = New System.Windows.Forms.Label()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.Button3 = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
+        Me.Panel1.SuspendLayout()
         CType(Me.TxtDescuentoExtra.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DgvDetalle, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'LblCambio
@@ -157,6 +159,7 @@ Partial Class FrmFacturacionVenta
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.Button3)
         Me.GroupBox1.Controls.Add(Me.Panel1)
         Me.GroupBox1.Controls.Add(Me.CboTipoVenta)
         Me.GroupBox1.Controls.Add(Me.CboFormaVenta)
@@ -176,6 +179,159 @@ Partial Class FrmFacturacionVenta
         Me.GroupBox1.Size = New System.Drawing.Size(1300, 102)
         Me.GroupBox1.TabIndex = 72
         Me.GroupBox1.TabStop = False
+        '
+        'Panel1
+        '
+        Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Panel1.Controls.Add(Me.TxtDescuentoExtra)
+        Me.Panel1.Controls.Add(Me.Label13)
+        Me.Panel1.Controls.Add(Me.RdbCantidad)
+        Me.Panel1.Controls.Add(Me.RdbPorcentaje)
+        Me.Panel1.Controls.Add(Me.TxtP)
+        Me.Panel1.Controls.Add(Me.LblP)
+        Me.Panel1.Location = New System.Drawing.Point(426, 19)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(570, 74)
+        Me.Panel1.TabIndex = 81
+        '
+        'TxtDescuentoExtra
+        '
+        Me.TxtDescuentoExtra.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.TxtDescuentoExtra.Location = New System.Drawing.Point(3, 34)
+        Me.TxtDescuentoExtra.Name = "TxtDescuentoExtra"
+        Me.TxtDescuentoExtra.Properties.Appearance.BackColor = System.Drawing.Color.White
+        Me.TxtDescuentoExtra.Properties.Appearance.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtDescuentoExtra.Properties.Appearance.Options.UseBackColor = True
+        Me.TxtDescuentoExtra.Properties.Appearance.Options.UseFont = True
+        Me.TxtDescuentoExtra.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.TxtDescuentoExtra.Size = New System.Drawing.Size(179, 22)
+        Me.TxtDescuentoExtra.TabIndex = 35
+        '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.Font = New System.Drawing.Font("Comic Sans MS", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label13.Location = New System.Drawing.Point(9, 9)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(113, 19)
+        Me.Label13.TabIndex = 12
+        Me.Label13.Text = "Descuento Extra"
+        '
+        'RdbCantidad
+        '
+        Me.RdbCantidad.AutoSize = True
+        Me.RdbCantidad.Font = New System.Drawing.Font("Comic Sans MS", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RdbCantidad.Location = New System.Drawing.Point(191, 33)
+        Me.RdbCantidad.Name = "RdbCantidad"
+        Me.RdbCantidad.Size = New System.Drawing.Size(108, 23)
+        Me.RdbCantidad.TabIndex = 36
+        Me.RdbCantidad.TabStop = True
+        Me.RdbCantidad.Text = "Por Cantidad"
+        Me.RdbCantidad.UseVisualStyleBackColor = True
+        '
+        'RdbPorcentaje
+        '
+        Me.RdbPorcentaje.AutoSize = True
+        Me.RdbPorcentaje.Font = New System.Drawing.Font("Comic Sans MS", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RdbPorcentaje.Location = New System.Drawing.Point(304, 33)
+        Me.RdbPorcentaje.Name = "RdbPorcentaje"
+        Me.RdbPorcentaje.Size = New System.Drawing.Size(119, 23)
+        Me.RdbPorcentaje.TabIndex = 37
+        Me.RdbPorcentaje.TabStop = True
+        Me.RdbPorcentaje.Text = "Por Porcentaje"
+        Me.RdbPorcentaje.UseVisualStyleBackColor = True
+        '
+        'TxtP
+        '
+        Me.TxtP.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtP.Location = New System.Drawing.Point(420, 34)
+        Me.TxtP.Name = "TxtP"
+        Me.TxtP.Size = New System.Drawing.Size(54, 21)
+        Me.TxtP.TabIndex = 38
+        Me.TxtP.Text = "0"
+        Me.TxtP.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        Me.TxtP.Visible = False
+        '
+        'LblP
+        '
+        Me.LblP.AutoSize = True
+        Me.LblP.Font = New System.Drawing.Font("Comic Sans MS", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblP.Location = New System.Drawing.Point(476, 35)
+        Me.LblP.Name = "LblP"
+        Me.LblP.Size = New System.Drawing.Size(20, 19)
+        Me.LblP.TabIndex = 39
+        Me.LblP.Text = "%"
+        Me.LblP.Visible = False
+        '
+        'CboTipoVenta
+        '
+        Me.CboTipoVenta.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.CboTipoVenta.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.CboTipoVenta.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CboTipoVenta.FormattingEnabled = True
+        Me.CboTipoVenta.Items.AddRange(New Object() {"Contado", "Crédito"})
+        Me.CboTipoVenta.Location = New System.Drawing.Point(233, 74)
+        Me.CboTipoVenta.Name = "CboTipoVenta"
+        Me.CboTipoVenta.Size = New System.Drawing.Size(167, 23)
+        Me.CboTipoVenta.TabIndex = 88
+        '
+        'CboFormaVenta
+        '
+        Me.CboFormaVenta.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.CboFormaVenta.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.CboFormaVenta.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CboFormaVenta.FormattingEnabled = True
+        Me.CboFormaVenta.Items.AddRange(New Object() {"Mayoreo", "Unitario"})
+        Me.CboFormaVenta.Location = New System.Drawing.Point(234, 30)
+        Me.CboFormaVenta.Name = "CboFormaVenta"
+        Me.CboFormaVenta.Size = New System.Drawing.Size(167, 23)
+        Me.CboFormaVenta.TabIndex = 87
+        '
+        'Label14
+        '
+        Me.Label14.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.Label14.AutoSize = True
+        Me.Label14.Font = New System.Drawing.Font("Comic Sans MS", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label14.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.Label14.Location = New System.Drawing.Point(228, 55)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(99, 19)
+        Me.Label14.TabIndex = 86
+        Me.Label14.Text = "Tipo de Venta"
+        '
+        'Label15
+        '
+        Me.Label15.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.Label15.AutoSize = True
+        Me.Label15.Font = New System.Drawing.Font("Comic Sans MS", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label15.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.Label15.Location = New System.Drawing.Point(230, 11)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(110, 19)
+        Me.Label15.TabIndex = 85
+        Me.Label15.Text = "Forma de Venta"
+        '
+        'TxtFechaVencimientos
+        '
+        Me.TxtFechaVencimientos.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.TxtFechaVencimientos.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtFechaVencimientos.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.TxtFechaVencimientos.Location = New System.Drawing.Point(1008, 32)
+        Me.TxtFechaVencimientos.Name = "TxtFechaVencimientos"
+        Me.TxtFechaVencimientos.Size = New System.Drawing.Size(155, 21)
+        Me.TxtFechaVencimientos.TabIndex = 84
+        '
+        'Label11
+        '
+        Me.Label11.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.Label11.AutoSize = True
+        Me.Label11.Font = New System.Drawing.Font("Comic Sans MS", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.Label11.Location = New System.Drawing.Point(1002, 14)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(148, 19)
+        Me.Label11.TabIndex = 83
+        Me.Label11.Text = "Fecha de Vencimiento"
         '
         'TxtFechaVenta
         '
@@ -232,75 +388,6 @@ Partial Class FrmFacturacionVenta
         Me.TxtIdVenta.Size = New System.Drawing.Size(126, 21)
         Me.TxtIdVenta.TabIndex = 40
         Me.TxtIdVenta.Tag = ""
-        '
-        'LblP
-        '
-        Me.LblP.AutoSize = True
-        Me.LblP.Font = New System.Drawing.Font("Comic Sans MS", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblP.Location = New System.Drawing.Point(476, 35)
-        Me.LblP.Name = "LblP"
-        Me.LblP.Size = New System.Drawing.Size(20, 19)
-        Me.LblP.TabIndex = 39
-        Me.LblP.Text = "%"
-        Me.LblP.Visible = False
-        '
-        'TxtP
-        '
-        Me.TxtP.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtP.Location = New System.Drawing.Point(420, 34)
-        Me.TxtP.Name = "TxtP"
-        Me.TxtP.Size = New System.Drawing.Size(54, 21)
-        Me.TxtP.TabIndex = 38
-        Me.TxtP.Text = "0"
-        Me.TxtP.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-        Me.TxtP.Visible = False
-        '
-        'RdbPorcentaje
-        '
-        Me.RdbPorcentaje.AutoSize = True
-        Me.RdbPorcentaje.Font = New System.Drawing.Font("Comic Sans MS", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RdbPorcentaje.Location = New System.Drawing.Point(304, 33)
-        Me.RdbPorcentaje.Name = "RdbPorcentaje"
-        Me.RdbPorcentaje.Size = New System.Drawing.Size(119, 23)
-        Me.RdbPorcentaje.TabIndex = 37
-        Me.RdbPorcentaje.TabStop = True
-        Me.RdbPorcentaje.Text = "Por Porcentaje"
-        Me.RdbPorcentaje.UseVisualStyleBackColor = True
-        '
-        'RdbCantidad
-        '
-        Me.RdbCantidad.AutoSize = True
-        Me.RdbCantidad.Font = New System.Drawing.Font("Comic Sans MS", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RdbCantidad.Location = New System.Drawing.Point(191, 33)
-        Me.RdbCantidad.Name = "RdbCantidad"
-        Me.RdbCantidad.Size = New System.Drawing.Size(108, 23)
-        Me.RdbCantidad.TabIndex = 36
-        Me.RdbCantidad.TabStop = True
-        Me.RdbCantidad.Text = "Por Cantidad"
-        Me.RdbCantidad.UseVisualStyleBackColor = True
-        '
-        'TxtDescuentoExtra
-        '
-        Me.TxtDescuentoExtra.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.TxtDescuentoExtra.Location = New System.Drawing.Point(3, 34)
-        Me.TxtDescuentoExtra.Name = "TxtDescuentoExtra"
-        Me.TxtDescuentoExtra.Properties.Appearance.BackColor = System.Drawing.Color.White
-        Me.TxtDescuentoExtra.Properties.Appearance.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtDescuentoExtra.Properties.Appearance.Options.UseBackColor = True
-        Me.TxtDescuentoExtra.Properties.Appearance.Options.UseFont = True
-        Me.TxtDescuentoExtra.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.TxtDescuentoExtra.Size = New System.Drawing.Size(179, 22)
-        Me.TxtDescuentoExtra.TabIndex = 35
-        '
-        'Label13
-        '
-        Me.Label13.AutoSize = True
-        Me.Label13.Font = New System.Drawing.Font("Comic Sans MS", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.Location = New System.Drawing.Point(9, 9)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(113, 19)
-        Me.Label13.TabIndex = 12
-        Me.Label13.Text = "Descuento Extra"
         '
         'Label8
         '
@@ -409,29 +496,29 @@ Partial Class FrmFacturacionVenta
         'DgvDetalle
         '
         Me.DgvDetalle.BackgroundColor = System.Drawing.Color.White
-        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle4.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.White
-        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Blue
-        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DgvDetalle.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle7.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.White
+        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Blue
+        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DgvDetalle.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle7
         Me.DgvDetalle.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DgvDetalle.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Eliminar, Me.Codigo, Me.Descripcion, Me.Cantidad, Me.Precio, Me.Descuento, Me.TotalDescuento, Me.ISV, Me.Total})
         Me.DgvDetalle.Location = New System.Drawing.Point(20, 153)
         Me.DgvDetalle.Name = "DgvDetalle"
-        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle5.BackColor = System.Drawing.Color.Gray
-        DataGridViewCellStyle5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle5.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DgvDetalle.RowHeadersDefaultCellStyle = DataGridViewCellStyle5
-        DataGridViewCellStyle6.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White
-        Me.DgvDetalle.RowsDefaultCellStyle = DataGridViewCellStyle6
+        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle8.BackColor = System.Drawing.Color.Gray
+        DataGridViewCellStyle8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle8.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DgvDetalle.RowHeadersDefaultCellStyle = DataGridViewCellStyle8
+        DataGridViewCellStyle9.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.White
+        Me.DgvDetalle.RowsDefaultCellStyle = DataGridViewCellStyle9
         Me.DgvDetalle.Size = New System.Drawing.Size(1302, 343)
         Me.DgvDetalle.TabIndex = 63
         '
@@ -510,90 +597,6 @@ Partial Class FrmFacturacionVenta
         Me.PictureBox2.TabIndex = 75
         Me.PictureBox2.TabStop = False
         '
-        'TxtFechaVencimientos
-        '
-        Me.TxtFechaVencimientos.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.TxtFechaVencimientos.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtFechaVencimientos.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.TxtFechaVencimientos.Location = New System.Drawing.Point(1008, 32)
-        Me.TxtFechaVencimientos.Name = "TxtFechaVencimientos"
-        Me.TxtFechaVencimientos.Size = New System.Drawing.Size(155, 21)
-        Me.TxtFechaVencimientos.TabIndex = 84
-        '
-        'Label11
-        '
-        Me.Label11.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.Label11.AutoSize = True
-        Me.Label11.Font = New System.Drawing.Font("Comic Sans MS", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label11.Location = New System.Drawing.Point(1002, 14)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(148, 19)
-        Me.Label11.TabIndex = 83
-        Me.Label11.Text = "Fecha de Vencimiento"
-        '
-        'CboTipoVenta
-        '
-        Me.CboTipoVenta.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.CboTipoVenta.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.CboTipoVenta.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CboTipoVenta.FormattingEnabled = True
-        Me.CboTipoVenta.Items.AddRange(New Object() {"Contado", "Crédito"})
-        Me.CboTipoVenta.Location = New System.Drawing.Point(233, 74)
-        Me.CboTipoVenta.Name = "CboTipoVenta"
-        Me.CboTipoVenta.Size = New System.Drawing.Size(167, 23)
-        Me.CboTipoVenta.TabIndex = 88
-        '
-        'CboFormaVenta
-        '
-        Me.CboFormaVenta.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.CboFormaVenta.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.CboFormaVenta.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CboFormaVenta.FormattingEnabled = True
-        Me.CboFormaVenta.Items.AddRange(New Object() {"Mayoreo", "Unitario"})
-        Me.CboFormaVenta.Location = New System.Drawing.Point(234, 30)
-        Me.CboFormaVenta.Name = "CboFormaVenta"
-        Me.CboFormaVenta.Size = New System.Drawing.Size(167, 23)
-        Me.CboFormaVenta.TabIndex = 87
-        '
-        'Label14
-        '
-        Me.Label14.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.Label14.AutoSize = True
-        Me.Label14.Font = New System.Drawing.Font("Comic Sans MS", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label14.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label14.Location = New System.Drawing.Point(228, 55)
-        Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(99, 19)
-        Me.Label14.TabIndex = 86
-        Me.Label14.Text = "Tipo de Venta"
-        '
-        'Label15
-        '
-        Me.Label15.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.Label15.AutoSize = True
-        Me.Label15.Font = New System.Drawing.Font("Comic Sans MS", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label15.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label15.Location = New System.Drawing.Point(230, 11)
-        Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(110, 19)
-        Me.Label15.TabIndex = 85
-        Me.Label15.Text = "Forma de Venta"
-        '
-        'Panel1
-        '
-        Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Panel1.Controls.Add(Me.TxtDescuentoExtra)
-        Me.Panel1.Controls.Add(Me.Label13)
-        Me.Panel1.Controls.Add(Me.RdbCantidad)
-        Me.Panel1.Controls.Add(Me.RdbPorcentaje)
-        Me.Panel1.Controls.Add(Me.TxtP)
-        Me.Panel1.Controls.Add(Me.LblP)
-        Me.Panel1.Location = New System.Drawing.Point(426, 19)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(570, 74)
-        Me.Panel1.TabIndex = 81
-        '
         'LblNombre
         '
         Me.LblNombre.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
@@ -603,12 +606,32 @@ Partial Class FrmFacturacionVenta
         Me.LblNombre.Size = New System.Drawing.Size(0, 13)
         Me.LblNombre.TabIndex = 89
         '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Location = New System.Drawing.Point(636, 29)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(45, 13)
+        Me.Label10.TabIndex = 90
+        Me.Label10.Text = "Label10"
+        Me.Label10.Visible = False
+        '
+        'Button3
+        '
+        Me.Button3.Location = New System.Drawing.Point(1169, 31)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(89, 21)
+        Me.Button3.TabIndex = 89
+        Me.Button3.Text = "15 Dias"
+        Me.Button3.UseVisualStyleBackColor = True
+        '
         'FrmFacturacionVenta
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.LightSeaGreen
         Me.ClientSize = New System.Drawing.Size(1338, 563)
+        Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.LblNombre)
         Me.Controls.Add(Me.LblCambio)
         Me.Controls.Add(Me.Button2)
@@ -634,11 +657,11 @@ Partial Class FrmFacturacionVenta
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
+        Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
         CType(Me.TxtDescuentoExtra.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DgvDetalle, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Panel1.ResumeLayout(False)
-        Me.Panel1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -692,4 +715,6 @@ Partial Class FrmFacturacionVenta
     Friend WithEvents Label14 As Label
     Friend WithEvents Label15 As Label
     Friend WithEvents LblNombre As Label
+    Friend WithEvents Label10 As Label
+    Friend WithEvents Button3 As Button
 End Class
