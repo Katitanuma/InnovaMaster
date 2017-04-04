@@ -565,7 +565,7 @@ Public Class FrmFacturacionVenta
                     MsgBox("Productos facturados con éxito, Vamos a Imprimir la Factura", MsgBoxStyle.Information)
                     Dim r As DialogResult = MessageBox.Show("¿Desea Visualizar la Factura", "INNOVAMASTER", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
                     If r = DialogResult.Yes Then
-                        FrmFactura.Label1.Text = "1"
+                        Label12.Text = "1"
                         FrmFactura.ShowDialog()
                     Else
                         Dim ds As New DsReportes
@@ -682,6 +682,7 @@ Public Class FrmFacturacionVenta
                         MsgBox("Productos facturados con éxito, Vamos a Imprimir la Factura", MsgBoxStyle.Information)
                         Dim r As DialogResult = MessageBox.Show("¿Desea Visualizar la Factura", "INNOVAMASTER", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
                         If r = DialogResult.Yes Then
+                            Label12.Text = "1"
                             FrmFactura.ShowDialog()
                         Else
                             Dim ds As New DsReportes

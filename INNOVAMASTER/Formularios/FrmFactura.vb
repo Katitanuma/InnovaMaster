@@ -6,7 +6,7 @@ Public Class FrmFactura
 
     Private Sub FrmFactura_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
 
-        If Label1.Text = "1" Then
+        If FrmFacturacionVenta.Label12.Text = "1" Then
             FrmFacturacionVenta.Close()
         Else
             FrmDetalleVenta.Close()
@@ -15,7 +15,7 @@ Public Class FrmFactura
     End Sub
 
     Private Sub FrmFactura_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        If Label1.Text = "1" Then
+        If FrmFacturacionVenta.Label12.Text = "1" Then
             Dim cmd As SqlCommand
             Dim ds As New DsReportes
             Dim rpt As New ReporteVenta

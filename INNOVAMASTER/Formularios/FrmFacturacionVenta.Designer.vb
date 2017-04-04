@@ -75,6 +75,7 @@ Partial Class FrmFacturacionVenta
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.LblNombre = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
+        Me.Label12 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         Me.Panel1.SuspendLayout()
         CType(Me.TxtDescuentoExtra.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -626,12 +627,23 @@ Partial Class FrmFacturacionVenta
         Me.Label10.Text = "Label10"
         Me.Label10.Visible = False
         '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Location = New System.Drawing.Point(590, 24)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(45, 13)
+        Me.Label12.TabIndex = 91
+        Me.Label12.Text = "Label12"
+        Me.Label12.Visible = False
+        '
         'FrmFacturacionVenta
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.LightSeaGreen
         Me.ClientSize = New System.Drawing.Size(1338, 563)
+        Me.Controls.Add(Me.Label12)
         Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.LblNombre)
         Me.Controls.Add(Me.LblCambio)
@@ -718,4 +730,5 @@ Partial Class FrmFacturacionVenta
     Friend WithEvents LblNombre As Label
     Friend WithEvents Label10 As Label
     Friend WithEvents Button3 As Button
+    Friend WithEvents Label12 As Label
 End Class
