@@ -51,6 +51,8 @@ Public Class FrmDetalleVenta
                                 cmd.Parameters.AddWithValue("@IdProducto", DgvDetalle.Rows(e.RowIndex).Cells(1).Value.ToString)
                                 cmd.Parameters.AddWithValue("@Cantidad", CDbl(DgvDetalle.Rows(e.RowIndex).Cells(3).Value))
                                 cmd.ExecuteNonQuery()
+                                DgvDetalle.CurrentRow.Cells(1).ReadOnly = True
+                                DgvDetalle.CurrentRow.Cells(2).ReadOnly = True
                             End If
                         Else
                             MsgBox("El estado del producto está inactivo", MsgBoxStyle.Exclamation)
@@ -128,6 +130,8 @@ Public Class FrmDetalleVenta
                                 cmd.Parameters.AddWithValue("@IdProducto", DgvDetalle.Rows(e.RowIndex).Cells(1).Value.ToString)
                                 cmd.Parameters.AddWithValue("@Cantidad", CDbl(DgvDetalle.Rows(e.RowIndex).Cells(3).Value))
                                 cmd.ExecuteNonQuery()
+                                DgvDetalle.CurrentRow.Cells(1).ReadOnly = True
+                                DgvDetalle.CurrentRow.Cells(2).ReadOnly = True
                             End If
                         Else
                             MsgBox("El estado del producto está inactivo", MsgBoxStyle.Exclamation)
@@ -338,7 +342,7 @@ Public Class FrmDetalleVenta
     End Sub
     Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DgvDetalle.CellContentClick
         If e.ColumnIndex = 0 Then
-            If (DgvDetalle.CurrentRow.Cells(1).Value <> Nothing Or (DgvDetalle.CurrentRow.Cells(2).Value <> Nothing)) Then
+            If (DgvDetalle.CurrentRow.Cells(1).Value <> Nothing And (DgvDetalle.CurrentRow.Cells(2).Value <> Nothing)) Then
                 If ((DgvDetalle.CurrentRow.Cells(1) IsNot Nothing)) Then
                     If DgvDetalle.CurrentCell.Value <> Nothing Then
                         Conec.Conectarse()
@@ -360,12 +364,19 @@ Public Class FrmDetalleVenta
                     LlenarTextBox()
                 End If
             Else
-                DgvDetalle.Rows.Remove(DgvDetalle.CurrentRow)
-                LlenarTextBox()
+                Dim a, b As Integer
+                a = DgvDetalle.Rows.Count
+                b = e.RowIndex + 1
+
+                If a = b Then
+                Else
+                    DgvDetalle.Rows.Remove(DgvDetalle.CurrentRow)
+                    LlenarTextBox()
+                End If
+
             End If
 
         End If
-
     End Sub
     Private Sub LlenarTextBox()
         TxtTotal.Clear()

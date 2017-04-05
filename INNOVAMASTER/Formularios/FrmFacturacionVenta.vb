@@ -54,6 +54,8 @@ Public Class FrmFacturacionVenta
                                     cmd.Parameters.AddWithValue("@IdProducto", DgvDetalle.Rows(e.RowIndex).Cells(1).Value.ToString)
                                     cmd.Parameters.AddWithValue("@Cantidad", CDbl(DgvDetalle.Rows(e.RowIndex).Cells(3).Value))
                                     cmd.ExecuteNonQuery()
+                                    DgvDetalle.CurrentRow.Cells(1).ReadOnly = True
+                                    DgvDetalle.CurrentRow.Cells(2).ReadOnly = True
                                 End If
                             Else
                                 MsgBox("El estado del producto está inactivo", MsgBoxStyle.Exclamation)
@@ -144,6 +146,8 @@ Public Class FrmFacturacionVenta
                                     cmd.Parameters.AddWithValue("@IdProducto", DgvDetalle.Rows(e.RowIndex).Cells(1).Value.ToString)
                                     cmd.Parameters.AddWithValue("@Cantidad", CDbl(DgvDetalle.Rows(e.RowIndex).Cells(3).Value))
                                     cmd.ExecuteNonQuery()
+                                    DgvDetalle.CurrentRow.Cells(1).ReadOnly = True
+                                    DgvDetalle.CurrentRow.Cells(2).ReadOnly = True
                                 End If
                             Else
                                 MsgBox("El estado del producto está inactivo", MsgBoxStyle.Exclamation)
