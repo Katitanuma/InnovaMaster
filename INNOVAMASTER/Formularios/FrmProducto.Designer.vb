@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class FrmProducto
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class FrmProducto
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
@@ -29,6 +29,7 @@ Partial Class FrmProducto
         Me.CboBusqueda = New System.Windows.Forms.ComboBox()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.GbProducto = New System.Windows.Forms.GroupBox()
+        Me.TxtGravado = New DevExpress.XtraEditors.CalcEdit()
         Me.BtnBusquedaCliente = New System.Windows.Forms.Button()
         Me.PbProducto = New System.Windows.Forms.PictureBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
@@ -64,8 +65,8 @@ Partial Class FrmProducto
         Me.BtnInsertar = New System.Windows.Forms.Button()
         Me.BtnEditar = New System.Windows.Forms.Button()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
-        Me.TxtGravado = New DevExpress.XtraEditors.CalcEdit()
         Me.GbProducto.SuspendLayout()
+        CType(Me.TxtGravado.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PbProducto, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -73,7 +74,6 @@ Partial Class FrmProducto
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.TxtGravado.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'OpenFileDialog1
@@ -154,6 +154,14 @@ Partial Class FrmProducto
         Me.GbProducto.Size = New System.Drawing.Size(470, 387)
         Me.GbProducto.TabIndex = 70
         Me.GbProducto.TabStop = False
+        '
+        'TxtGravado
+        '
+        Me.TxtGravado.Location = New System.Drawing.Point(145, 135)
+        Me.TxtGravado.Name = "TxtGravado"
+        Me.TxtGravado.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.TxtGravado.Size = New System.Drawing.Size(158, 20)
+        Me.TxtGravado.TabIndex = 51
         '
         'BtnBusquedaCliente
         '
@@ -530,14 +538,6 @@ Partial Class FrmProducto
         Me.BtnEditar.UseVisualStyleBackColor = False
         Me.BtnEditar.Visible = False
         '
-        'TxtGravado
-        '
-        Me.TxtGravado.Location = New System.Drawing.Point(145, 135)
-        Me.TxtGravado.Name = "TxtGravado"
-        Me.TxtGravado.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.TxtGravado.Size = New System.Drawing.Size(158, 20)
-        Me.TxtGravado.TabIndex = 51
-        '
         'FrmProducto
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -565,6 +565,7 @@ Partial Class FrmProducto
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.GbProducto.ResumeLayout(False)
         Me.GbProducto.PerformLayout()
+        CType(Me.TxtGravado.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PbProducto, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -572,7 +573,6 @@ Partial Class FrmProducto
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.TxtGravado.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

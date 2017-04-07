@@ -429,4 +429,6 @@ Public Class FrmProducto
     Private Sub CboCategoria_DropDown(sender As Object, e As EventArgs) Handles CboCategoria.DropDown
         LlenarCombos()
     End Sub
+
+
 End Class
