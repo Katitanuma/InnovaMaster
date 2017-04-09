@@ -14,6 +14,7 @@ Public Class Fusuario
             cmd.Parameters.AddWithValue("@Contrasena", Datos.gContrasena)
             cmd.Parameters.AddWithValue("@IdEmpleado", Datos.gIdEmpleado)
             cmd.Parameters.AddWithValue("@IdTipoAcceso", Datos.gIdTipoAcceso)
+            cmd.Parameters.AddWithValue("@Estado", Datos.gEstado)
             If cmd.ExecuteNonQuery Then
                 Return True
             Else
@@ -41,7 +42,7 @@ Public Class Fusuario
             cmd.Parameters.AddWithValue("@Contrasena", Datos.gContrasena)
             cmd.Parameters.AddWithValue("@IdEmpleado", Datos.gIdEmpleado)
             cmd.Parameters.AddWithValue("@IdTipoAcceso", Datos.gIdTipoAcceso)
-
+            cmd.Parameters.AddWithValue("@Estado", Datos.gEstado)
             If cmd.ExecuteNonQuery Then
                 Return True
             Else

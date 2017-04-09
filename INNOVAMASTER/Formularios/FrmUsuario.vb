@@ -36,6 +36,11 @@ Public Class FrmUsuario
         CboEmpleado.Text = DgvUsuario.SelectedCells.Item(3).Value
         CboTipoAcceso.Text = DgvUsuario.SelectedCells.Item(4).Value
         LblRespaldo.Text = DgvUsuario.SelectedCells.Item(2).Value
+        If DgvUsuario.SelectedCells.Item(5).Value.ToString = "Activo" Then
+            RdbActivo.Checked = True
+        Else
+            RdbInactivo.Checked = True
+        End If
     End Sub
     Private Sub TxtBusqueda_TextChanged(sender As Object, e As EventArgs) Handles TxtBusqueda.TextChanged
         Dim ds As New DataSet
@@ -69,6 +74,7 @@ Public Class FrmUsuario
         BtnNuevoEditar.Visible = False
         BtnNuevo.Visible = False
         DgvUsuario.Enabled = True
+        RdbActivo.Checked = True
     End Sub
     Private Sub BtnCancelar_Click(sender As Object, e As EventArgs) Handles BtnCancelar.Click
         Dim r As DialogResult = MessageBox.Show("¿Desea Cancelar el Proceso?", "INNOVAMASTER", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
@@ -140,6 +146,11 @@ Public Class FrmUsuario
                 datos.gUsuario = TxtUsuario.Text
                 datos.gContrasena = SHA1(TxtContra.Text)
                 datos.gIdEmpleado = CboId.Items(CboEmpleado.SelectedIndex)
+                If RdbActivo.Checked = True Then
+                    datos.gEstado = "Activo"
+                Else
+                    datos.gEstado = "Inactivo"
+                End If
                 Conec.Conectarse()
                 Try
 
@@ -245,6 +256,11 @@ Public Class FrmUsuario
                     datos.gContrasena = TxtContra.Text
                 End If
                 datos.gIdEmpleado = CboId.Items(CboEmpleado.SelectedIndex)
+                If RdbActivo.Checked = True Then
+                    datos.gEstado = "Activo"
+                Else
+                    datos.gEstado = "Inactivo"
+                End If
                 Conec.Conectarse()
                 Try
                     Dim dr2 As SqlDataReader

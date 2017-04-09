@@ -59,38 +59,43 @@ Public Class FrmLogin
 
                 dr = cmd.ExecuteReader
                 If dr.Read Then
-                    MenuPrincipal.LblIdUsuario.Text = dr.GetValue(0).ToString
-                    If dr.GetValue(1).ToString = "Administrador" Then
-                        MenuPrincipal.PagEmpleados.Enabled = True
-                        MenuPrincipal.PagUsuarios.Enabled = True
-                        MenuPrincipal.PagProductos.Enabled = True
-                        MenuPrincipal.PagUbicacion.Enabled = True
-                        MenuPrincipal.PagConfiguracion.Enabled = True
+                    If dr("Estado").ToString = "Activo" Then
+                        MenuPrincipal.LblIdUsuario.Text = dr.GetValue(0).ToString
+                        If dr.GetValue(1).ToString = "Administrador" Then
+                            MenuPrincipal.PagEmpleados.Enabled = True
+                            MenuPrincipal.PagUsuarios.Enabled = True
+                            MenuPrincipal.PagProductos.Enabled = True
+                            MenuPrincipal.PagUbicacion.Enabled = True
+                            MenuPrincipal.PagConfiguracion.Enabled = True
+                        Else
+                            MenuPrincipal.PagEmpleados.Enabled = False
+                            MenuPrincipal.PagUsuarios.Enabled = False
+                            MenuPrincipal.PagProductos.Enabled = False
+                            MenuPrincipal.PagUbicacion.Enabled = False
+                            MenuPrincipal.PagConfiguracion.Enabled = False
+                            frmCargo.Close()
+                            FrmBackup.Close()
+                            FrmConfiguracion.Close()
+                            FrmMunicipio.Close()
+                            FrmDepartamento.Close()
+                            FrmPais.Close()
+                            FrmProducto.Close()
+                            FrmCategoria.Close()
+                            FrmMarca.Close()
+                            FrmModelo.Close()
+                            FrmUsuario.Close()
+                            FrmEmpleado.Close()
+                            FrmProfesiones.Close()
+                        End If
+
+                        Me.Hide()
+                        MenuPrincipal.Show()
                     Else
-                        MenuPrincipal.PagEmpleados.Enabled = False
-                        MenuPrincipal.PagUsuarios.Enabled = False
-                        MenuPrincipal.PagProductos.Enabled = False
-                        MenuPrincipal.PagUbicacion.Enabled = False
-                        MenuPrincipal.PagConfiguracion.Enabled = False
-                        frmCargo.Close()
-                        FrmBackup.Close()
-                        FrmConfiguracion.Close()
-                        FrmMunicipio.Close()
-                        FrmDepartamento.Close()
-                        FrmPais.Close()
-                        FrmProducto.Close()
-                        FrmCategoria.Close()
-                        FrmMarca.Close()
-                        FrmModelo.Close()
-                        FrmUsuario.Close()
-                        FrmEmpleado.Close()
-                        FrmProfesiones.Close()
+                        MsgBox("Usuario Inactivo", MsgBoxStyle.Exclamation)
                     End If
 
-                    Me.Hide()
-                    MenuPrincipal.Show()
                 Else
-                    MsgBox("Usuario o Contraseña No Valido", MsgBoxStyle.Critical)
+                        MsgBox("Usuario o Contraseña No Valido", MsgBoxStyle.Critical)
                 End If
 
             Catch ex As Exception

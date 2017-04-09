@@ -52,6 +52,9 @@ Partial Class FrmUsuario
         Me.BtnInsertar = New System.Windows.Forms.Button()
         Me.BtnEditar = New System.Windows.Forms.Button()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.RdbActivo = New System.Windows.Forms.RadioButton()
+        Me.RdbInactivo = New System.Windows.Forms.RadioButton()
         Me.GbUsuario.SuspendLayout()
         CType(Me.DgvUsuario, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -120,6 +123,9 @@ Partial Class FrmUsuario
         'GbUsuario
         '
         Me.GbUsuario.BackColor = System.Drawing.Color.Transparent
+        Me.GbUsuario.Controls.Add(Me.RdbInactivo)
+        Me.GbUsuario.Controls.Add(Me.RdbActivo)
+        Me.GbUsuario.Controls.Add(Me.Label6)
         Me.GbUsuario.Controls.Add(Me.ChkVer)
         Me.GbUsuario.Controls.Add(Me.CboTipoAcceso)
         Me.GbUsuario.Controls.Add(Me.CboEmpleado)
@@ -138,7 +144,7 @@ Partial Class FrmUsuario
         Me.GbUsuario.ForeColor = System.Drawing.Color.Black
         Me.GbUsuario.Location = New System.Drawing.Point(30, 74)
         Me.GbUsuario.Name = "GbUsuario"
-        Me.GbUsuario.Size = New System.Drawing.Size(435, 268)
+        Me.GbUsuario.Size = New System.Drawing.Size(435, 296)
         Me.GbUsuario.TabIndex = 69
         Me.GbUsuario.TabStop = False
         '
@@ -411,6 +417,38 @@ Partial Class FrmUsuario
         Me.PictureBox2.TabIndex = 72
         Me.PictureBox2.TabStop = False
         '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Comic Sans MS", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(82, 254)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(51, 19)
+        Me.Label6.TabIndex = 22
+        Me.Label6.Text = "Estado"
+        '
+        'RdbActivo
+        '
+        Me.RdbActivo.AutoSize = True
+        Me.RdbActivo.Location = New System.Drawing.Point(142, 254)
+        Me.RdbActivo.Name = "RdbActivo"
+        Me.RdbActivo.Size = New System.Drawing.Size(62, 20)
+        Me.RdbActivo.TabIndex = 23
+        Me.RdbActivo.TabStop = True
+        Me.RdbActivo.Text = "Activo"
+        Me.RdbActivo.UseVisualStyleBackColor = True
+        '
+        'RdbInactivo
+        '
+        Me.RdbInactivo.AutoSize = True
+        Me.RdbInactivo.Location = New System.Drawing.Point(210, 254)
+        Me.RdbInactivo.Name = "RdbInactivo"
+        Me.RdbInactivo.Size = New System.Drawing.Size(73, 20)
+        Me.RdbInactivo.TabIndex = 24
+        Me.RdbInactivo.TabStop = True
+        Me.RdbInactivo.Text = "Inactivo"
+        Me.RdbInactivo.UseVisualStyleBackColor = True
+        '
         'FrmUsuario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -480,4 +518,7 @@ Partial Class FrmUsuario
     Friend WithEvents Label1 As Label
     Friend WithEvents LblFilas As Label
     Friend WithEvents DgvUsuario As DataGridView
+    Friend WithEvents RdbInactivo As RadioButton
+    Friend WithEvents RdbActivo As RadioButton
+    Friend WithEvents Label6 As Label
 End Class

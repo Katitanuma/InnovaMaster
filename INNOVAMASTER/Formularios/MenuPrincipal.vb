@@ -124,7 +124,10 @@ Partial Public Class MenuPrincipal
         If EstaAbierto(FrmDetalleVenta) Then
             FrmDetalleVenta.Button1.PerformClick()
             e.Cancel = True
+        ElseIf MessageBox.Show("¿Desea Salir del Sistema?", "INNOVAMASTER", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) = DialogResult.No Then
+            e.Cancel = True
         Else
+
             Application.Exit()
         End If
 
