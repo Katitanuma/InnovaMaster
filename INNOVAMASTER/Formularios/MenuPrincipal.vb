@@ -150,4 +150,10 @@ Partial Public Class MenuPrincipal
         FrmFacturacionVenta.Dock = DockStyle.Fill
         FrmFacturacionVenta.Show()
     End Sub
+
+    Private Sub BarButtonItem1_ItemClick_1(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BarButtonItem1.ItemClick
+        FrmProveedor.MdiParent = Me
+        FrmProveedor.Dock = DockStyle.Fill
+        FrmProveedor.Show()
+    End Sub
 End Class

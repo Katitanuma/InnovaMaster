@@ -67,12 +67,14 @@ Public Class FrmLogin
                             MenuPrincipal.PagProductos.Enabled = True
                             MenuPrincipal.PagUbicacion.Enabled = True
                             MenuPrincipal.PagConfiguracion.Enabled = True
+                            MenuPrincipal.PgProveedores.Enabled = True
                         Else
                             MenuPrincipal.PagEmpleados.Enabled = False
                             MenuPrincipal.PagUsuarios.Enabled = False
                             MenuPrincipal.PagProductos.Enabled = False
                             MenuPrincipal.PagUbicacion.Enabled = False
                             MenuPrincipal.PagConfiguracion.Enabled = False
+                            MenuPrincipal.PgProveedores.Enabled = False
                             frmCargo.Close()
                             FrmBackup.Close()
                             FrmConfiguracion.Close()
@@ -86,6 +88,7 @@ Public Class FrmLogin
                             FrmUsuario.Close()
                             FrmEmpleado.Close()
                             FrmProfesiones.Close()
+                            FrmProveedor.Close()
                         End If
 
                         Me.Hide()
