@@ -57,7 +57,7 @@ Public Class FrmEmpleado
             DgvEmpleado.DataSource = Nothing
         End If
     End Sub
-    Private Sub LlenarComboMunicipio()
+    Public Sub LlenarComboMunicipio()
         CmbMunicipio.Items.Clear()
         Try
             conec.Conectarse()
@@ -101,7 +101,7 @@ Public Class FrmEmpleado
             conec.Desconectarse()
         End Try
     End Sub
-    Private Sub LlenarComboCargo()
+    Public Sub LlenarComboCargo()
         CboCargo.Items.Clear()
         Try
             conec.Conectarse()
@@ -123,7 +123,7 @@ Public Class FrmEmpleado
             conec.Desconectarse()
         End Try
     End Sub
-    Private Sub LlenarComboProfesion()
+    Public Sub LlenarComboProfesion()
         CboProfesion.Items.Clear()
         Try
             conec.Conectarse()
@@ -796,21 +796,11 @@ Public Class FrmEmpleado
     End Sub
 
 
-    Private Sub CmbMunicipio_DropDown(sender As Object, e As EventArgs) Handles CmbMunicipio.DropDown
-        LlenarComboMunicipio()
-    End Sub
 
-    Private Sub CboCargo_DropDown(sender As Object, e As EventArgs) Handles CboCargo.DropDown
-        LlenarComboCargo()
-    End Sub
-
-
-    Private Sub CboProfesion_DropDown(sender As Object, e As EventArgs) Handles CboProfesion.DropDown
-        LlenarComboProfesion()
-    End Sub
 
     Private Sub BtnBusquedaCliente_Click(sender As Object, e As EventArgs) Handles BtnBusquedaCliente.Click
         With FrmMunicipio
+            FrmMunicipio.var = 2
             .MdiParent = MenuPrincipal
             .Dock = DockStyle.Fill
             .Show()
@@ -819,6 +809,7 @@ Public Class FrmEmpleado
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         With frmCargo
+            frmCargo.var = 1
             .MdiParent = MenuPrincipal
             .Dock = DockStyle.Fill
             .Show()
@@ -827,9 +818,12 @@ Public Class FrmEmpleado
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         With FrmProfesiones
+            FrmProfesiones.var = 1
             .MdiParent = MenuPrincipal
             .Dock = DockStyle.Fill
             .Show()
         End With
     End Sub
+
+
 End Class

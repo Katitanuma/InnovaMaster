@@ -325,15 +325,16 @@ Public Class FrmProveedor
         LblRelacionClienteVenta.Text = "0"
     End Sub
 
-    Private Sub CboMunicipio_DropDown(sender As Object, e As EventArgs) Handles CboMunicipio.DropDown
-        LlenarComboMunicipio()
-    End Sub
+
 
     Private Sub BtnBusquedaCliente_Click(sender As Object, e As EventArgs) Handles BtnBusquedaMunicipio.Click
         With FrmMunicipio
+            FrmMunicipio.var = 3
             .MdiParent = MenuPrincipal
             .Dock = DockStyle.Fill
             .Show()
         End With
     End Sub
+
+
 End Class

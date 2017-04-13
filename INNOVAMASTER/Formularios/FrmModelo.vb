@@ -2,7 +2,7 @@
 Public Class FrmModelo
     Dim dt As New DataTable
     Dim conec As New Conexion
-
+    Public var As Integer = 0
     Public Sub New()
 
         ' This call is required by the designer.
@@ -229,7 +229,7 @@ Public Class FrmModelo
 
     End Sub
 
-    Private Sub LlenarComboboxMarca()
+    Public Sub LlenarComboboxMarca()
         CboMarca.Items.Clear()
 
         Try
@@ -255,15 +255,21 @@ Public Class FrmModelo
 
 
 
-    Private Sub CboMarca_DropDown(sender As Object, e As EventArgs) Handles CboMarca.DropDown
-        LlenarComboboxMarca()
-    End Sub
 
     Private Sub BtnBusquedaCliente_Click(sender As Object, e As EventArgs) Handles BtnBusquedaCliente.Click
         With FrmMarca
+            FrmMarca.var = 1
             .MdiParent = MenuPrincipal
             .Dock = DockStyle.Fill
             .Show()
         End With
+    End Sub
+
+    Private Sub DgvModelo_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DgvModelo.CellContentClick
+        If var = 1 Then
+            FrmProducto.LlenarCombos()
+            FrmProducto.TxtModelo.Text = DgvModelo.CurrentRow.Cells(1).Value.ToString
+            Me.Close()
+        End If
     End Sub
 End Class

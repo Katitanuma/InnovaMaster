@@ -112,6 +112,7 @@ Public Class FrmProducto
             BtnNuevo.Visible = True
             ChkEstado.Checked = True
             Focus()
+            BtnCodigoProveedor.Visible = False
         End If
 
 
@@ -126,6 +127,7 @@ Public Class FrmProducto
             BtnNuevo.Visible = False
             BtnNuevoEditar.Visible = False
             DgvProducto.Enabled = False
+            BtnCodigoProveedor.Visible = True
         Else
             MessageBox.Show("Seleccione el Producto a Editar", "INNOVAMASTER", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
         End If
@@ -247,7 +249,7 @@ Public Class FrmProducto
 
         End If
     End Sub
-    Private Sub LlenarCombos()
+    Public Sub LlenarCombos()
         Try
             Conec.Conectarse()
             CboCategoria.Items.Clear()
@@ -296,7 +298,7 @@ Public Class FrmProducto
             MessageBox.Show("Ingrese el Precio Unitario del Producto", "INNOVAMASTER", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
         ElseIf CboCategoria.SelectedItem = Nothing Then
             MessageBox.Show("Seleccione la Categoria del Producto", "INNOVAMASTER", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
-        ElseIf TxtModelo.Text = "Seleccionar Modelo" Then
+        ElseIf TxtModelo.Text = Nothing Then
             MessageBox.Show("Ingrese el Modelo del Producto", "INNOVAMASTER", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
         ElseIf NumericUpDown1.Value <= 5 Then
             MessageBox.Show("No se Puede Ingresar Menor de 5 Productos en Existencia", "INNOVAMASTER", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
@@ -390,6 +392,7 @@ Public Class FrmProducto
                     ChkEstado.Checked = True
                     MostrarProducto()
                     PbProducto.Image = Nothing
+                    BtnCodigoProveedor.Visible = False
                 End If
 
             Catch ex As Exception
@@ -419,6 +422,7 @@ Public Class FrmProducto
 
     Private Sub BtnBusquedaCliente_Click(sender As Object, e As EventArgs) Handles BtnBusquedaCliente.Click
         With FrmCategoria
+            FrmCategoria.var = 1
             .MdiParent = MenuPrincipal
             .Dock = DockStyle.Fill
             .Show()
@@ -426,9 +430,18 @@ Public Class FrmProducto
     End Sub
 
 
-    Private Sub CboCategoria_DropDown(sender As Object, e As EventArgs) Handles CboCategoria.DropDown
-        LlenarCombos()
+
+
+    Private Sub BtnCodigoProveedor_Click(sender As Object, e As EventArgs) Handles BtnCodigoProveedor.Click
+        FrmProductoProveedor.ShowDialog()
     End Sub
 
-
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        With FrmModelo
+            FrmModelo.var = 1
+            .MdiParent = MenuPrincipal
+            .Dock = DockStyle.Fill
+            .Show()
+        End With
+    End Sub
 End Class

@@ -4,6 +4,7 @@ Public Class FrmCliente
     Dim dt As New DataTable
     Dim Conec As New Conexion
     Dim cmd As SqlCommand
+    Public Var As Integer = 0
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Focus()
         Mostrar()
@@ -482,15 +483,18 @@ Public Class FrmCliente
         LblRelacionClienteVenta.Text = "0"
     End Sub
 
-    Private Sub CboMunicipio_DropDown(sender As Object, e As EventArgs) Handles CboMunicipio.DropDown
-        LlenarComboMunicipio()
-    End Sub
+
 
     Private Sub BtnBusquedaCliente_Click(sender As Object, e As EventArgs) Handles BtnBusquedaCliente.Click
         With FrmMunicipio
+            FrmMunicipio.var = 1
             .MdiParent = MenuPrincipal
             .Dock = DockStyle.Fill
             .Show()
         End With
+    End Sub
+
+    Private Sub CboMunicipio_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CboMunicipio.SelectedIndexChanged
+
     End Sub
 End Class

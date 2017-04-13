@@ -1,5 +1,6 @@
 ﻿Public Class frmCargo
     Dim dt As New DataTable
+    Public var As Integer = 0
     Private Sub frmCargo_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         MostrarCargo()
         GbDatos.Enabled = False
@@ -163,5 +164,16 @@
         End If
 
 
+    End Sub
+
+
+
+    Private Sub DgvCargo_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles DgvCargo.CellDoubleClick
+        If var = 1 Then
+            FrmEmpleado.LlenarComboCargo()
+            FrmEmpleado.CboCargo.Text = DgvCargo.CurrentRow.Cells(1).Value.ToString
+            Me.Close()
+
+        End If
     End Sub
 End Class

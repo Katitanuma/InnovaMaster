@@ -29,6 +29,7 @@ Partial Class FrmProducto
         Me.CboBusqueda = New System.Windows.Forms.ComboBox()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.GbProducto = New System.Windows.Forms.GroupBox()
+        Me.BtnCodigoProveedor = New System.Windows.Forms.Button()
         Me.TxtGravado = New DevExpress.XtraEditors.CalcEdit()
         Me.BtnBusquedaCliente = New System.Windows.Forms.Button()
         Me.PbProducto = New System.Windows.Forms.PictureBox()
@@ -65,6 +66,7 @@ Partial Class FrmProducto
         Me.BtnInsertar = New System.Windows.Forms.Button()
         Me.BtnEditar = New System.Windows.Forms.Button()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.GbProducto.SuspendLayout()
         CType(Me.TxtGravado.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PbProducto, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -103,7 +105,7 @@ Partial Class FrmProducto
         '
         Me.CboBusqueda.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CboBusqueda.FormattingEnabled = True
-        Me.CboBusqueda.Items.AddRange(New Object() {"Identidad", "Descripcion", "Categoria", "Modelo", "Estado"})
+        Me.CboBusqueda.Items.AddRange(New Object() {"IdProducto", "Descripcion", "Categoria", "Modelo", "Estado"})
         Me.CboBusqueda.Location = New System.Drawing.Point(557, 23)
         Me.CboBusqueda.Name = "CboBusqueda"
         Me.CboBusqueda.Size = New System.Drawing.Size(198, 23)
@@ -123,6 +125,8 @@ Partial Class FrmProducto
         'GbProducto
         '
         Me.GbProducto.BackColor = System.Drawing.Color.Transparent
+        Me.GbProducto.Controls.Add(Me.Button1)
+        Me.GbProducto.Controls.Add(Me.BtnCodigoProveedor)
         Me.GbProducto.Controls.Add(Me.TxtGravado)
         Me.GbProducto.Controls.Add(Me.BtnBusquedaCliente)
         Me.GbProducto.Controls.Add(Me.PbProducto)
@@ -154,6 +158,16 @@ Partial Class FrmProducto
         Me.GbProducto.Size = New System.Drawing.Size(470, 387)
         Me.GbProducto.TabIndex = 70
         Me.GbProducto.TabStop = False
+        '
+        'BtnCodigoProveedor
+        '
+        Me.BtnCodigoProveedor.Location = New System.Drawing.Point(328, 347)
+        Me.BtnCodigoProveedor.Name = "BtnCodigoProveedor"
+        Me.BtnCodigoProveedor.Size = New System.Drawing.Size(130, 29)
+        Me.BtnCodigoProveedor.TabIndex = 52
+        Me.BtnCodigoProveedor.Text = "Código Proveedor"
+        Me.BtnCodigoProveedor.UseVisualStyleBackColor = True
+        Me.BtnCodigoProveedor.Visible = False
         '
         'TxtGravado
         '
@@ -538,6 +552,16 @@ Partial Class FrmProducto
         Me.BtnEditar.UseVisualStyleBackColor = False
         Me.BtnEditar.Visible = False
         '
+        'Button1
+        '
+        Me.Button1.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.Location = New System.Drawing.Point(309, 317)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(33, 24)
+        Me.Button1.TabIndex = 53
+        Me.Button1.Text = " ..."
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'FrmProducto
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -554,11 +578,11 @@ Partial Class FrmProducto
         Me.Controls.Add(Me.BtnNuevoEditar)
         Me.Controls.Add(Me.BtnCancelar)
         Me.Controls.Add(Me.BtnNuevo)
-        Me.Controls.Add(Me.BtnInsertar)
         Me.Controls.Add(Me.GbProducto)
-        Me.Controls.Add(Me.BtnEditar)
         Me.Controls.Add(Me.LblFilas)
         Me.Controls.Add(Me.DgvProducto)
+        Me.Controls.Add(Me.BtnInsertar)
+        Me.Controls.Add(Me.BtnEditar)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Name = "FrmProducto"
         Me.Text = "FrmProducto"
@@ -619,4 +643,6 @@ Partial Class FrmProducto
     Friend WithEvents BtnBusquedaCliente As Button
     Friend WithEvents ToolTip1 As ToolTip
     Friend WithEvents TxtGravado As DevExpress.XtraEditors.CalcEdit
+    Friend WithEvents BtnCodigoProveedor As Button
+    Friend WithEvents Button1 As Button
 End Class

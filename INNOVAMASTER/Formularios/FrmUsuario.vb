@@ -53,6 +53,7 @@ Public Class FrmUsuario
         If dv.Count <> 0 Then
             LblFilas.Visible = False
             DgvUsuario.DataSource = dv
+            DgvUsuario.Columns(2).Visible = False
         Else
             LblFilas.Visible = True
             DgvUsuario.DataSource = Nothing

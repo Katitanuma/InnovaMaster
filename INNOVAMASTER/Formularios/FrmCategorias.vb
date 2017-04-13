@@ -1,7 +1,7 @@
 ﻿Imports System.Data.SqlClient
 Public Class FrmCategoria
     Dim dt As New DataTable
-
+    Public var As Integer = 0
     Private Sub FrmCategorias_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         MostrarCategoria()
         GbDatos.Enabled = False
@@ -184,4 +184,12 @@ Public Class FrmCategoria
     End Sub
 
 
+
+    Private Sub DgvCategoria_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles DgvCategoria.CellDoubleClick
+        If var = 1 Then
+            FrmProducto.LlenarCombos()
+            FrmProducto.CboCategoria.Text = DgvCategoria.CurrentRow.Cells(1).Value.ToString
+            Me.Close()
+        End If
+    End Sub
 End Class

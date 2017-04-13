@@ -2,6 +2,7 @@
 Public Class FrmMarca
 
     Dim dt As New DataTable
+    Public var As Integer = 0
     Private Sub FrmMarca_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
         MostrarMarca()
@@ -189,4 +190,11 @@ Public Class FrmMarca
     End Sub
 
 
+    Private Sub DgvMarca_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles DgvMarca.CellDoubleClick
+        If var = 1 Then
+            FrmModelo.LlenarComboboxMarca()
+            FrmModelo.CboMarca.Text = DgvMarca.CurrentRow.Cells(1).Value.ToString
+            Me.Close()
+        End If
+    End Sub
 End Class

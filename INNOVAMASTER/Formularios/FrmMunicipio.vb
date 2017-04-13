@@ -13,7 +13,7 @@ Public Class FrmMunicipio
         ' Add any initialization after the InitializeComponent() call.
 
     End Sub
-
+    Public var As Integer = 0
     Private Sub FrmModelo_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         MostrarMunicipio()
         GbMunicipio.Enabled = False
@@ -49,7 +49,7 @@ Public Class FrmMunicipio
         TxtMunicipio.Text = DgvMunicipio.SelectedCells.Item(1).Value
         CboDepartamento.Text = DgvMunicipio.SelectedCells.Item(2).Value
     End Sub
-    Private Sub LlenarComboboxDepartamento()
+    Public Sub LlenarComboboxDepartamento()
         CboDepartamento.Items.Clear()
 
         Try
@@ -248,15 +248,35 @@ Public Class FrmMunicipio
 
 
 
-    Private Sub CboDepartamento_DropDown(sender As Object, e As EventArgs) Handles CboDepartamento.DropDown
-        LlenarComboboxDepartamento()
-    End Sub
+
 
     Private Sub BtnBusquedaCliente_Click(sender As Object, e As EventArgs) Handles BtnBusquedaCliente.Click
         With FrmDepartamento
+            FrmDepartamento.var = 1
             .MdiParent = MenuPrincipal
             .Dock = DockStyle.Fill
             .Show()
         End With
     End Sub
+
+
+
+    Private Sub DgvMunicipio_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles DgvMunicipio.CellDoubleClick
+        If var = 1 Then
+            FrmCliente.LlenarComboMunicipio()
+            FrmCliente.CboMunicipio.Text = DgvMunicipio.CurrentRow.Cells(1).Value.ToString
+            Me.Close()
+        ElseIf var = 2 Then
+            FrmEmpleado.LlenarComboMunicipio()
+            FrmEmpleado.CmbMunicipio.Text = DgvMunicipio.CurrentRow.Cells(1).Value.ToString
+            Me.Close()
+        ElseIf var = 3 Then
+            FrmProveedor.LlenarComboMunicipio()
+            FrmProveedor.CboMunicipio.Text = DgvMunicipio.CurrentRow.Cells(1).Value.ToString
+            Me.Close()
+        End If
+    End Sub
+
+
+
 End Class

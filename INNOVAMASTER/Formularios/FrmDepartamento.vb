@@ -3,7 +3,7 @@ Imports System.Data.SqlClient
 Public Class FrmDepartamento
     Dim dt As New DataTable
     Dim conec As New Conexion
-
+    Public var As Integer = 0
     Private Sub FrmDepartamento_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         MostrarDepartamento()
         GbDepartamento.Enabled = False
@@ -36,7 +36,7 @@ Public Class FrmDepartamento
             MsgBox(ex.ToString)
         End Try
     End Sub
-    Private Sub LlenarComboboxPais()
+    Public Sub LlenarComboboxPais()
         CboPais.Items.Clear()
 
         Try
@@ -237,12 +237,11 @@ Public Class FrmDepartamento
 
 
 
-    Private Sub CboPais_DropDown(sender As Object, e As EventArgs) Handles CboPais.DropDown
-        LlenarComboboxPais()
-    End Sub
+
 
     Private Sub BtnBusquedaCliente_Click(sender As Object, e As EventArgs) Handles BtnBusquedaCliente.Click
         With FrmPais
+            FrmPais.var = 1
             .MdiParent = MenuPrincipal
             .Dock = DockStyle.Fill
             .Show()
@@ -250,4 +249,11 @@ Public Class FrmDepartamento
     End Sub
 
 
+    Private Sub DgvDepartamento_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles DgvDepartamento.CellDoubleClick
+        If var = 1 Then
+            FrmMunicipio.LlenarComboboxDepartamento()
+            FrmMunicipio.CboDepartamento.Text = DgvDepartamento.CurrentRow.Cells(1).Value.ToString
+            Me.Close()
+        End If
+    End Sub
 End Class

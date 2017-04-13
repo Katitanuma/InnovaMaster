@@ -2,7 +2,7 @@
 Public Class FrmPais
     Dim dt As New DataTable
     Dim conec As New Conexion
-
+    Public var As Integer = 0
     Private Sub FrmPais_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Call MostrarPais()
         GboPais.Enabled = False
@@ -181,5 +181,11 @@ Public Class FrmPais
 
 
 
-
+    Private Sub DgvPais_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles DgvPais.CellDoubleClick
+        If var = 1 Then
+            FrmDepartamento.LlenarComboboxPais()
+            FrmDepartamento.CboPais.Text = DgvPais.CurrentRow.Cells(1).Value.ToString
+            Me.Close()
+        End If
+    End Sub
 End Class

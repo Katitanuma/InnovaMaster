@@ -172,6 +172,12 @@
     <Compile Include="Formularios\FrmPresentacion.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Formularios\FrmProductoProveedor.Designer.vb">
+      <DependentUpon>FrmProductoProveedor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmProductoProveedor.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Formularios\FrmProfesiones.Designer.vb">
       <DependentUpon>FrmProfesiones.vb</DependentUpon>
     </Compile>
@@ -335,6 +341,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmPresentacion.resx">
       <DependentUpon>FrmPresentacion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmProductoProveedor.resx">
+      <DependentUpon>FrmProductoProveedor.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmProfesiones.resx">
       <DependentUpon>FrmProfesiones.vb</DependentUpon>

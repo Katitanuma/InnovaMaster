@@ -97,7 +97,12 @@ Public Class Fproducto
                 Return False
             End If
         Catch ex As Exception
-            MsgBox(ex.ToString)
+            If ex.ToString.Contains("'IdModelo'.") Then
+                MsgBox("El Modelo No esta Registrado")
+            Else
+                MsgBox(ex.ToString)
+            End If
+
             Return False
         Finally
             Desconectarse()

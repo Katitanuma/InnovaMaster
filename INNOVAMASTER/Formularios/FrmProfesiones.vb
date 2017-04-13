@@ -1,7 +1,7 @@
 ﻿Imports System.Data.SqlClient
 Public Class FrmProfesiones
     Dim dt As New DataTable
-
+    Public var As Integer = 0
     Private Sub FrmProfesiones_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         MostrarProfesiones()
         GbDatos.Enabled = False
@@ -189,5 +189,15 @@ Public Class FrmProfesiones
         End If
 
 
+    End Sub
+
+
+
+    Private Sub DgvProfesion_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles DgvProfesion.CellDoubleClick
+        If var = 1 Then
+            FrmEmpleado.LlenarComboProfesion()
+            FrmEmpleado.CboProfesion.Text = DgvProfesion.CurrentRow.Cells(1).Value.ToString
+            Me.Close()
+        End If
     End Sub
 End Class
