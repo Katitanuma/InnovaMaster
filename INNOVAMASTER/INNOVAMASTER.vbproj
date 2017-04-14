@@ -154,6 +154,12 @@
     <Compile Include="Datos\DatosProveedor.vb" />
     <Compile Include="Datos\DatosUsuario.vb" />
     <Compile Include="Datos\DatosVenta.vb" />
+    <Compile Include="Formularios\FrmCompras.Designer.vb">
+      <DependentUpon>FrmCompras.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmCompras.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Formularios\FrmFactura.Designer.vb">
       <DependentUpon>FrmFactura.vb</DependentUpon>
     </Compile>
@@ -164,6 +170,12 @@
       <DependentUpon>FrmFacturacionVenta.vb</DependentUpon>
     </Compile>
     <Compile Include="Formularios\FrmFacturacionVenta.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmPedidos.Designer.vb">
+      <DependentUpon>FrmPedidos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmPedidos.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formularios\FrmPresentacion.Designer.vb">
@@ -333,11 +345,17 @@
     <Compile Include="Settings.vb" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Formularios\FrmCompras.resx">
+      <DependentUpon>FrmCompras.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmFactura.resx">
       <DependentUpon>FrmFactura.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmFacturacionVenta.resx">
       <DependentUpon>FrmFacturacionVenta.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmPedidos.resx">
+      <DependentUpon>FrmPedidos.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmPresentacion.resx">
       <DependentUpon>FrmPresentacion.vb</DependentUpon>
@@ -883,6 +901,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\SPLASHDESAROLLO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\f15039a22a397b8d72599899f10c9cbd.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\f15039a22a397b8d72599899f10c9cbd1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ef469d7feb7cd58c486a7d18c52245e7.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

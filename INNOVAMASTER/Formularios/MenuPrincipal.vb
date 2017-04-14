@@ -124,6 +124,12 @@ Partial Public Class MenuPrincipal
         If EstaAbierto(FrmDetalleVenta) Then
             FrmDetalleVenta.Button1.PerformClick()
             e.Cancel = True
+        ElseIf EstaAbierto(FrmCompras) Then
+            FrmCompras.Button1.PerformClick()
+            e.Cancel = True
+        ElseIf EstaAbierto(FrmPedidos) Then
+            FrmPedidos.Button1.PerformClick()
+            e.Cancel = True
         ElseIf MessageBox.Show("¿Desea Salir del Sistema?", "INNOVAMASTER", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) = DialogResult.No Then
             e.Cancel = True
         Else
@@ -155,5 +161,19 @@ Partial Public Class MenuPrincipal
         FrmProveedor.MdiParent = Me
         FrmProveedor.Dock = DockStyle.Fill
         FrmProveedor.Show()
+    End Sub
+
+    Private Sub BarButtonItem3_ItemClick_1(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BarButtonItem3.ItemClick
+        FrmCompras.MdiParent = Me
+        FrmCompras.Dock = DockStyle.Fill
+        FrmCompras.Show()
+    End Sub
+
+
+
+    Private Sub BarButtonItem6_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BarButtonItem6.ItemClick
+        FrmPedidos.MdiParent = Me
+        FrmPedidos.Dock = DockStyle.Fill
+        FrmPedidos.Show()
     End Sub
 End Class

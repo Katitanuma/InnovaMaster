@@ -7,7 +7,7 @@ Public Class FrmProductoProveedor
         CboProveedor.Text = Nothing
         MostrarDatos()
     End Sub
-    Private Sub LlenarComboBox()
+    Public Sub LlenarComboBox()
         Using Cmd As New SqlCommand
             Try
                 conec.Conectarse()
@@ -99,4 +99,6 @@ Public Class FrmProductoProveedor
             MsgBox("Ingrese o seleccione los valores", MsgBoxStyle.Information, "INNOVAMASTER")
         End If
     End Sub
+
+
 End Class

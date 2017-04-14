@@ -5,6 +5,7 @@ Public Class FrmProveedor
     Dim dt As New DataTable
     Dim Conec As New Conexion
     Dim cmd As SqlCommand
+    Public var As Integer = 0
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Focus()
         Mostrar()
@@ -106,8 +107,8 @@ Public Class FrmProveedor
         TxtNombreContacto.Text = DgvProveedor.SelectedCells.Item(4).Value
         TxtApellidosContacto.Text = DgvProveedor.SelectedCells.Item(5).Value
         TxtDireccionContacto.Text = DgvProveedor.SelectedCells.Item(6).Value
-        TxtTelefono.Text = DgvProveedor.SelectedCells.Item(7).Value
-        TxtCorreo.Text = DgvProveedor.SelectedCells.Item(8).Value
+        TxtTelefono.Text = DgvProveedor.SelectedCells.Item(7).FormattedValue
+        TxtCorreo.Text = DgvProveedor.SelectedCells.Item(8).FormattedValue
         CboMunicipio.Text = DgvProveedor.SelectedCells.Item(9).Value
         If DgvProveedor.SelectedCells.Item(10).Value = "Masculino" Then
             RdbMasculino.Select()
@@ -310,16 +311,11 @@ Public Class FrmProveedor
 
     End Sub
     Private Sub DgvCliente_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles DgvProveedor.CellDoubleClick
-        'If LblRelacionClienteVenta.Text = "1" Then
-        '    FrmVenta.TxtIdCliente.Text = DgvCliente.CurrentRow.Cells(0).Value.ToString
-        '    LblRelacionClienteVenta.Text = "0"
-        '    Me.Close()
-        'ElseIf LblRelacionClienteVenta.Text = "2" Then
-        '    FrmFacturacionVenta.TxtIdCliente.Text = DgvCliente.CurrentRow.Cells(0).Value.ToString
-        '    LblRelacionClienteVenta.Text = "0"
-        '    Me.Close()
-
-        'End If
+        If var = 2 Then
+            'FrmPedidos.LlenarComboBoxProveedor()
+            FrmPedidos.CboProveedor.Text = DgvProveedor.CurrentRow.Cells(4).Value.ToString + " " + DgvProveedor.CurrentRow.Cells(5).Value.ToString
+            Me.Close()
+        End If
     End Sub
     Private Sub FrmCliente_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
         LblRelacionClienteVenta.Text = "0"

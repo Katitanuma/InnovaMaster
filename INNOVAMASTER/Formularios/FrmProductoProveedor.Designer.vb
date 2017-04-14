@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class FrmProductoProveedor
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,17 +20,17 @@ Partial Class FrmProductoProveedor
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.DgvProductoProveedor = New System.Windows.Forms.DataGridView()
+        Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.EliminarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TxtCodigoProducto = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.CboProveedor = New System.Windows.Forms.ComboBox()
-        Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
-        Me.EliminarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         CType(Me.DgvProductoProveedor, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ContextMenuStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -49,6 +49,18 @@ Partial Class FrmProductoProveedor
         Me.DgvProductoProveedor.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DgvProductoProveedor.Size = New System.Drawing.Size(511, 133)
         Me.DgvProductoProveedor.TabIndex = 0
+        '
+        'ContextMenuStrip1
+        '
+        Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EliminarToolStripMenuItem})
+        Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(118, 26)
+        '
+        'EliminarToolStripMenuItem
+        '
+        Me.EliminarToolStripMenuItem.Name = "EliminarToolStripMenuItem"
+        Me.EliminarToolStripMenuItem.Size = New System.Drawing.Size(117, 22)
+        Me.EliminarToolStripMenuItem.Text = "Eliminar"
         '
         'TxtCodigoProducto
         '
@@ -93,18 +105,6 @@ Partial Class FrmProductoProveedor
         Me.CboProveedor.Name = "CboProveedor"
         Me.CboProveedor.Size = New System.Drawing.Size(246, 21)
         Me.CboProveedor.TabIndex = 6
-        '
-        'ContextMenuStrip1
-        '
-        Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EliminarToolStripMenuItem})
-        Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
-        Me.ContextMenuStrip1.Size = New System.Drawing.Size(118, 26)
-        '
-        'EliminarToolStripMenuItem
-        '
-        Me.EliminarToolStripMenuItem.Name = "EliminarToolStripMenuItem"
-        Me.EliminarToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.EliminarToolStripMenuItem.Text = "Eliminar"
         '
         'FrmProductoProveedor
         '

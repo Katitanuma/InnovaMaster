@@ -65,6 +65,7 @@ Public Class FrmDetalleVenta
                         DgvDetalle.Rows(e.RowIndex).Cells(1).Value = Nothing
                         MsgBox("Producto no registrado", MsgBoxStyle.Information)
                         DgvDetalle.Rows(e.RowIndex).Cells(1).ErrorText = "Producto No Registrado"
+                        DgvDetalle.Rows.Remove(DgvDetalle.CurrentRow)
                     End If
                     dr.Close()
                 Else
@@ -145,7 +146,9 @@ Public Class FrmDetalleVenta
                         DgvDetalle.Rows(e.RowIndex).Cells(1).Value = Nothing
                         DgvDetalle.Rows(e.RowIndex).Cells(2).Value = Nothing
                         MsgBox("Producto no registrado", MsgBoxStyle.Information)
+                        DgvDetalle.Rows(e.RowIndex).Cells(1).ErrorText = ""
                         DgvDetalle.Rows(e.RowIndex).Cells(2).ErrorText = "Producto No Registrado"
+
                     End If
                     dr.Close()
                 Else
@@ -156,7 +159,8 @@ Public Class FrmDetalleVenta
             Catch ex As Exception
                 DgvDetalle.Rows(e.RowIndex).Cells(1).Value = Nothing
                 DgvDetalle.Rows(e.RowIndex).Cells(2).Value = Nothing
-                DgvDetalle.Rows(e.RowIndex).Cells(2).ErrorText = "Producto No Registrado"
+                MsgBox("Producto no registrado", MsgBoxStyle.Information)
+                DgvDetalle.Rows.Remove(DgvDetalle.CurrentRow)
 
             Finally
                 Conec.Desconectarse()
@@ -618,36 +622,38 @@ Public Class FrmDetalleVenta
 
     Private Sub FrmDetalleVenta_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
         If Label7.Text = "0" Then
+            Dim r As DialogResult = MessageBox.Show("¿Desea Cancelar la Venta?", "INNOVAMASTER", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+            If r = DialogResult.Yes Then
+
+                Conec.Conectarse()
+                For Each fila As DataGridViewRow In DgvDetalle.Rows
+                    Try
+                        If fila.Cells(1).Value <> Nothing Then
 
 
-            Conec.Conectarse()
-                    For Each fila As DataGridViewRow In DgvDetalle.Rows
-                        Try
-                            If fila.Cells(1).Value <> Nothing Then
+                            cmd = New SqlCommand("AumentarInventario", Conec.Con)
+                            cmd.CommandType = CommandType.StoredProcedure
+                            cmd.Parameters.AddWithValue("@IdProducto", fila.Cells(1).Value.ToString)
+                            cmd.Parameters.AddWithValue("@Cantidad", CDbl(fila.Cells(3).Value))
+                            cmd.ExecuteNonQuery()
+                        End If
 
-
-                                cmd = New SqlCommand("AumentarInventario", Conec.Con)
-                                cmd.CommandType = CommandType.StoredProcedure
-                                cmd.Parameters.AddWithValue("@IdProducto", fila.Cells(1).Value.ToString)
-                                cmd.Parameters.AddWithValue("@Cantidad", CDbl(fila.Cells(3).Value))
-                                cmd.ExecuteNonQuery()
-                            End If
-
-                        Catch ex As Exception
-                            MsgBox(ex.Message)
-                        End Try
+                    Catch ex As Exception
+                        MsgBox(ex.Message)
+                    End Try
 
 
                 Next
-            cmd = New SqlCommand("Delete from Venta Where IdVenta= '" & LblCodigoVenta.Text & "'", Conec.Con)
-            cmd.CommandType = CommandType.Text
-            cmd.ExecuteNonQuery()
+                cmd = New SqlCommand("Delete from Venta Where IdVenta= '" & LblCodigoVenta.Text & "'", Conec.Con)
+                cmd.CommandType = CommandType.Text
+                cmd.ExecuteNonQuery()
+
+            Else
+                e.Cancel = True
 
 
 
-
-
-
+            End If
         End If
 
 
@@ -680,4 +686,7 @@ Public Class FrmDetalleVenta
 
         End If
     End Sub
+
+
+
 End Class

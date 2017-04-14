@@ -162,6 +162,7 @@ Public Class FrmFacturacionVenta
                             DgvDetalle.Rows(e.RowIndex).Cells(2).Value = Nothing
                             MsgBox("Producto no registrado", MsgBoxStyle.Information)
                             DgvDetalle.Rows(e.RowIndex).Cells(2).ErrorText = "Producto No Registrado"
+                            DgvDetalle.Rows.Remove(DgvDetalle.CurrentRow)
                         End If
                         dr.Close()
                     Else
@@ -172,7 +173,8 @@ Public Class FrmFacturacionVenta
                 Catch ex As Exception
                     DgvDetalle.Rows(e.RowIndex).Cells(1).Value = Nothing
                     DgvDetalle.Rows(e.RowIndex).Cells(2).Value = Nothing
-                    DgvDetalle.Rows(e.RowIndex).Cells(2).ErrorText = "Producto No Registrado"
+                    MsgBox("Producto no registrado", MsgBoxStyle.Information)
+                    DgvDetalle.Rows.Remove(DgvDetalle.CurrentRow)
 
                 Finally
                     Conec.Desconectarse()
