@@ -176,4 +176,20 @@ Partial Public Class MenuPrincipal
         FrmPedidos.Dock = DockStyle.Fill
         FrmPedidos.Show()
     End Sub
+
+    Private Sub BarButtonItem2_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BarButtonItem2.ItemClick
+        ReporteClientes.Show()
+    End Sub
+
+    Private Sub BarButtonItem21_ItemClick_1(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BarButtonItem21.ItemClick
+        ReportePedido.Show()
+    End Sub
+
+    Private Sub BarButtonItem16_ItemClick_1(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BarButtonItem16.ItemClick
+
+    End Sub
+
+    Private Sub BarButtonItem22_ItemClick_1(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BarButtonItem22.ItemClick
+        ReporteVentas.Show()
+    End Sub
 End Class

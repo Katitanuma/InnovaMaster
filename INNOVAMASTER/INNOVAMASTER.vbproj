@@ -335,11 +335,35 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Reportes\ReporteClientes.Designer.vb">
+      <DependentUpon>ReporteClientes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\ReporteClientes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\ReportePedido.Designer.vb">
+      <DependentUpon>ReportePedido.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\ReportePedido.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\ReporteProductos.Designer.vb">
+      <DependentUpon>ReporteProductos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\ReporteProductos.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Reportes\ReporteVenta.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ReporteVenta.rpt</DependentUpon>
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\ReporteVentas.Designer.vb">
+      <DependentUpon>ReporteVentas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\ReporteVentas.vb">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Settings.vb" />
   </ItemGroup>
@@ -429,9 +453,21 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\ReporteClientes.resx">
+      <DependentUpon>ReporteClientes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\ReportePedido.resx">
+      <DependentUpon>ReportePedido.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\ReporteProductos.resx">
+      <DependentUpon>ReporteProductos.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reportes\ReporteVenta.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>ReporteVenta.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\ReporteVentas.resx">
+      <DependentUpon>ReporteVentas.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -458,7 +494,7 @@
       <CustomToolNamespace>My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
-    <None Include="App.config" />
+    <None Include="Reportes\App.config" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\business_application_addmale_useradd_insert_add_user_client_2312.png" />
@@ -520,7 +556,7 @@
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
       <Visible>False</Visible>
-      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 y x64%29</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
     <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
