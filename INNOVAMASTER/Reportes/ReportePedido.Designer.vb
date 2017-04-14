@@ -22,12 +22,17 @@ Partial Class ReportePedido
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.TxtBusqueda = New System.Windows.Forms.TextBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.DgvReportePedidos = New System.Windows.Forms.DataGridView()
+        Me.CmsReportePedidos = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.VisualizarReporteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ImprimirReporteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DgvReportePedidos, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.CmsReportePedidos.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label13
@@ -36,7 +41,7 @@ Partial Class ReportePedido
         Me.Label13.Font = New System.Drawing.Font("Monotype Corsiva", 26.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
         Me.Label13.ForeColor = System.Drawing.Color.Black
         Me.Label13.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label13.Location = New System.Drawing.Point(261, 14)
+        Me.Label13.Location = New System.Drawing.Point(261, 19)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(269, 43)
         Me.Label13.TabIndex = 62
@@ -67,27 +72,47 @@ Partial Class ReportePedido
         Me.DgvReportePedidos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DgvReportePedidos.BackgroundColor = System.Drawing.Color.White
         Me.DgvReportePedidos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DgvReportePedidos.ContextMenuStrip = Me.CmsReportePedidos
         Me.DgvReportePedidos.Location = New System.Drawing.Point(43, 122)
         Me.DgvReportePedidos.Name = "DgvReportePedidos"
         Me.DgvReportePedidos.ReadOnly = True
         Me.DgvReportePedidos.Size = New System.Drawing.Size(690, 234)
         Me.DgvReportePedidos.TabIndex = 59
         '
+        'CmsReportePedidos
+        '
+        Me.CmsReportePedidos.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.VisualizarReporteToolStripMenuItem, Me.ImprimirReporteToolStripMenuItem})
+        Me.CmsReportePedidos.Name = "CmsReportePedidos"
+        Me.CmsReportePedidos.Size = New System.Drawing.Size(168, 48)
+        '
+        'VisualizarReporteToolStripMenuItem
+        '
+        Me.VisualizarReporteToolStripMenuItem.Name = "VisualizarReporteToolStripMenuItem"
+        Me.VisualizarReporteToolStripMenuItem.Size = New System.Drawing.Size(167, 22)
+        Me.VisualizarReporteToolStripMenuItem.Text = "Visualizar Reporte"
+        '
+        'ImprimirReporteToolStripMenuItem
+        '
+        Me.ImprimirReporteToolStripMenuItem.Name = "ImprimirReporteToolStripMenuItem"
+        Me.ImprimirReporteToolStripMenuItem.Size = New System.Drawing.Size(167, 22)
+        Me.ImprimirReporteToolStripMenuItem.Text = "Imprimir Reporte"
+        '
         'ReportePedido
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.LightSeaGreen
-        Me.ClientSize = New System.Drawing.Size(776, 371)
+        Me.ClientSize = New System.Drawing.Size(776, 384)
         Me.Controls.Add(Me.Label13)
         Me.Controls.Add(Me.TxtBusqueda)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.DgvReportePedidos)
         Me.Name = "ReportePedido"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "ReportePedido"
+        Me.Text = "Pedidos"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DgvReportePedidos, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.CmsReportePedidos.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -97,4 +122,7 @@ Partial Class ReportePedido
     Friend WithEvents TxtBusqueda As TextBox
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents DgvReportePedidos As DataGridView
+    Friend WithEvents CmsReportePedidos As ContextMenuStrip
+    Friend WithEvents VisualizarReporteToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ImprimirReporteToolStripMenuItem As ToolStripMenuItem
 End Class

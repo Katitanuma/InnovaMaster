@@ -22,12 +22,17 @@ Partial Class ReporteProductos
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.TxtBusqueda = New System.Windows.Forms.TextBox()
         Me.DgvReporteProductos = New System.Windows.Forms.DataGridView()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.CmsReporteProductos = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.VisualizarReporteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ImprimirReporteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         CType(Me.DgvReporteProductos, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.CmsReporteProductos.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label13
@@ -36,7 +41,7 @@ Partial Class ReporteProductos
         Me.Label13.Font = New System.Drawing.Font("Monotype Corsiva", 26.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
         Me.Label13.ForeColor = System.Drawing.Color.Black
         Me.Label13.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label13.Location = New System.Drawing.Point(261, 14)
+        Me.Label13.Location = New System.Drawing.Point(239, 15)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(299, 43)
         Me.Label13.TabIndex = 66
@@ -54,7 +59,9 @@ Partial Class ReporteProductos
         Me.DgvReporteProductos.AllowUserToAddRows = False
         Me.DgvReporteProductos.AllowUserToDeleteRows = False
         Me.DgvReporteProductos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.DgvReporteProductos.BackgroundColor = System.Drawing.Color.White
         Me.DgvReporteProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DgvReporteProductos.ContextMenuStrip = Me.CmsReporteProductos
         Me.DgvReporteProductos.Location = New System.Drawing.Point(43, 122)
         Me.DgvReporteProductos.Name = "DgvReporteProductos"
         Me.DgvReporteProductos.ReadOnly = True
@@ -72,20 +79,39 @@ Partial Class ReporteProductos
         Me.PictureBox1.TabIndex = 64
         Me.PictureBox1.TabStop = False
         '
+        'CmsReporteProductos
+        '
+        Me.CmsReporteProductos.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.VisualizarReporteToolStripMenuItem, Me.ImprimirReporteToolStripMenuItem})
+        Me.CmsReporteProductos.Name = "CmsReporteProductos"
+        Me.CmsReporteProductos.Size = New System.Drawing.Size(168, 48)
+        '
+        'VisualizarReporteToolStripMenuItem
+        '
+        Me.VisualizarReporteToolStripMenuItem.Name = "VisualizarReporteToolStripMenuItem"
+        Me.VisualizarReporteToolStripMenuItem.Size = New System.Drawing.Size(167, 22)
+        Me.VisualizarReporteToolStripMenuItem.Text = "Visualizar Reporte"
+        '
+        'ImprimirReporteToolStripMenuItem
+        '
+        Me.ImprimirReporteToolStripMenuItem.Name = "ImprimirReporteToolStripMenuItem"
+        Me.ImprimirReporteToolStripMenuItem.Size = New System.Drawing.Size(167, 22)
+        Me.ImprimirReporteToolStripMenuItem.Text = "Imprimir Reporte"
+        '
         'ReporteProductos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.LightSeaGreen
-        Me.ClientSize = New System.Drawing.Size(776, 371)
+        Me.ClientSize = New System.Drawing.Size(776, 383)
         Me.Controls.Add(Me.Label13)
         Me.Controls.Add(Me.TxtBusqueda)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.DgvReporteProductos)
         Me.Name = "ReporteProductos"
-        Me.Text = "ReporteProductos"
+        Me.Text = "Productos"
         CType(Me.DgvReporteProductos, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.CmsReporteProductos.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -95,4 +121,7 @@ Partial Class ReporteProductos
     Friend WithEvents TxtBusqueda As TextBox
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents DgvReporteProductos As DataGridView
+    Friend WithEvents CmsReporteProductos As ContextMenuStrip
+    Friend WithEvents VisualizarReporteToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ImprimirReporteToolStripMenuItem As ToolStripMenuItem
 End Class

@@ -341,6 +341,12 @@
     <Compile Include="Reportes\ReporteClientes.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Reportes\ReporteCompras.Designer.vb">
+      <DependentUpon>ReporteCompras.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\ReporteCompras.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Reportes\ReportePedido.Designer.vb">
       <DependentUpon>ReportePedido.vb</DependentUpon>
     </Compile>
@@ -456,6 +462,9 @@
     <EmbeddedResource Include="Reportes\ReporteClientes.resx">
       <DependentUpon>ReporteClientes.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\ReporteCompras.resx">
+      <DependentUpon>ReporteCompras.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reportes\ReportePedido.resx">
       <DependentUpon>ReportePedido.vb</DependentUpon>
     </EmbeddedResource>
@@ -556,7 +565,7 @@
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
       <Visible>False</Visible>
-      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 y x64%29</ProductName>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
     <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
