@@ -312,7 +312,7 @@ Public Class FrmProveedor
     End Sub
     Private Sub DgvCliente_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles DgvProveedor.CellDoubleClick
         If var = 2 Then
-            'FrmPedidos.LlenarComboBoxProveedor()
+            FrmPedidos.LlenarComboBoxProveedor()
             FrmPedidos.CboProveedor.Text = DgvProveedor.CurrentRow.Cells(4).Value.ToString + " " + DgvProveedor.CurrentRow.Cells(5).Value.ToString
             Me.Close()
         End If
