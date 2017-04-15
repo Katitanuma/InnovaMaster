@@ -153,6 +153,12 @@
     <Compile Include="Datos\DatosProveedor.vb" />
     <Compile Include="Datos\DatosUsuario.vb" />
     <Compile Include="Datos\DatosVenta.vb" />
+    <Compile Include="Formularios\Acerca de InnovaMaster.Designer.vb">
+      <DependentUpon>Acerca de InnovaMaster.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Acerca de InnovaMaster.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Formularios\FrmCompras.Designer.vb">
       <DependentUpon>FrmCompras.vb</DependentUpon>
     </Compile>
@@ -374,6 +380,9 @@
     <Compile Include="Settings.vb" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Formularios\Acerca de InnovaMaster.resx">
+      <DependentUpon>Acerca de InnovaMaster.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmCompras.resx">
       <DependentUpon>FrmCompras.vb</DependentUpon>
     </EmbeddedResource>
@@ -972,6 +981,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\LOGOINNOVAMASTERINTENTO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\facebook-logo-png-9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\350.NOS_.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

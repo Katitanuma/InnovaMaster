@@ -113,6 +113,16 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property _350_NOS_() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("350.NOS_", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property actualizar1() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("actualizar1", resourceCulture)
@@ -436,6 +446,16 @@ Namespace My.Resources
         Friend ReadOnly Property f15039a22a397b8d72599899f10c9cbd1() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("f15039a22a397b8d72599899f10c9cbd1", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property facebook_logo_png_9() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("facebook-logo-png-9", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
