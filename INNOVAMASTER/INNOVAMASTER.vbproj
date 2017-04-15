@@ -970,6 +970,9 @@
   <ItemGroup>
     <None Include="Resources\business_salesreport_salesreport_negocio_2353.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LOGOINNOVAMASTERINTENTO.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

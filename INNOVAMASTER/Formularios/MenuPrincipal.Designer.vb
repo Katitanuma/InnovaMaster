@@ -60,6 +60,10 @@
         Me.BarButtonItem3 = New DevExpress.XtraBars.BarButtonItem()
         Me.BarButtonItem5 = New DevExpress.XtraBars.BarButtonItem()
         Me.BarButtonItem6 = New DevExpress.XtraBars.BarButtonItem()
+        Me.BarButtonItem11 = New DevExpress.XtraBars.BarButtonItem()
+        Me.BarButtonItem16 = New DevExpress.XtraBars.BarButtonItem()
+        Me.BarButtonItem21 = New DevExpress.XtraBars.BarButtonItem()
+        Me.BarButtonItem22 = New DevExpress.XtraBars.BarButtonItem()
         Me.mainRibbonPage = New DevExpress.XtraBars.Ribbon.RibbonPage()
         Me.mainRibbonPageGroup = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
         Me.RibbonPage6 = New DevExpress.XtraBars.Ribbon.RibbonPage()
@@ -86,10 +90,7 @@
         Me.Label1 = New System.Windows.Forms.Label()
         Me.LblIdUsuario = New System.Windows.Forms.Label()
         Me.RibbonPageGroup3 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
-        Me.BarButtonItem11 = New DevExpress.XtraBars.BarButtonItem()
-        Me.BarButtonItem16 = New DevExpress.XtraBars.BarButtonItem()
-        Me.BarButtonItem21 = New DevExpress.XtraBars.BarButtonItem()
-        Me.BarButtonItem22 = New DevExpress.XtraBars.BarButtonItem()
+        Me.Panel1 = New System.Windows.Forms.Panel()
         CType(Me.mainRibbonControl, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -157,7 +158,7 @@
         '
         'BarButtonItem2
         '
-        Me.BarButtonItem2.Caption = "Reportes Clientes"
+        Me.BarButtonItem2.Caption = "Reporte Clientes"
         Me.BarButtonItem2.Id = 11
         Me.BarButtonItem2.ImageUri.Uri = "Chart"
         Me.BarButtonItem2.Name = "BarButtonItem2"
@@ -351,6 +352,38 @@
         Me.BarButtonItem6.LargeGlyph = Global.INNOVAMASTER.My.Resources.Resources.ef469d7feb7cd58c486a7d18c52245e7
         Me.BarButtonItem6.Name = "BarButtonItem6"
         '
+        'BarButtonItem11
+        '
+        Me.BarButtonItem11.Caption = "Reporte Productos"
+        Me.BarButtonItem11.Glyph = CType(resources.GetObject("BarButtonItem11.Glyph"), System.Drawing.Image)
+        Me.BarButtonItem11.Id = 39
+        Me.BarButtonItem11.LargeGlyph = CType(resources.GetObject("BarButtonItem11.LargeGlyph"), System.Drawing.Image)
+        Me.BarButtonItem11.Name = "BarButtonItem11"
+        '
+        'BarButtonItem16
+        '
+        Me.BarButtonItem16.Caption = "Reporte Compras"
+        Me.BarButtonItem16.Glyph = CType(resources.GetObject("BarButtonItem16.Glyph"), System.Drawing.Image)
+        Me.BarButtonItem16.Id = 40
+        Me.BarButtonItem16.LargeGlyph = CType(resources.GetObject("BarButtonItem16.LargeGlyph"), System.Drawing.Image)
+        Me.BarButtonItem16.Name = "BarButtonItem16"
+        '
+        'BarButtonItem21
+        '
+        Me.BarButtonItem21.Caption = "Reporte Pedidos"
+        Me.BarButtonItem21.Glyph = CType(resources.GetObject("BarButtonItem21.Glyph"), System.Drawing.Image)
+        Me.BarButtonItem21.Id = 41
+        Me.BarButtonItem21.LargeGlyph = CType(resources.GetObject("BarButtonItem21.LargeGlyph"), System.Drawing.Image)
+        Me.BarButtonItem21.Name = "BarButtonItem21"
+        '
+        'BarButtonItem22
+        '
+        Me.BarButtonItem22.Caption = "Reporte Ventas"
+        Me.BarButtonItem22.Glyph = CType(resources.GetObject("BarButtonItem22.Glyph"), System.Drawing.Image)
+        Me.BarButtonItem22.Id = 42
+        Me.BarButtonItem22.LargeGlyph = CType(resources.GetObject("BarButtonItem22.LargeGlyph"), System.Drawing.Image)
+        Me.BarButtonItem22.Name = "BarButtonItem22"
+        '
         'mainRibbonPage
         '
         Me.mainRibbonPage.Groups.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPageGroup() {Me.mainRibbonPageGroup})
@@ -364,7 +397,7 @@
         Me.mainRibbonPageGroup.ItemLinks.Add(Me.BtnCambiarUsuario)
         Me.mainRibbonPageGroup.Name = "mainRibbonPageGroup"
         Me.mainRibbonPageGroup.ShowCaptionButton = False
-        Me.mainRibbonPageGroup.Text = "Tasks"
+        Me.mainRibbonPageGroup.Text = "Tareas"
         '
         'RibbonPage6
         '
@@ -531,37 +564,15 @@
         Me.RibbonPageGroup3.Name = "RibbonPageGroup3"
         Me.RibbonPageGroup3.Text = "Acciones"
         '
-        'BarButtonItem11
+        'Panel1
         '
-        Me.BarButtonItem11.Caption = "Reporte Productos"
-        Me.BarButtonItem11.Glyph = CType(resources.GetObject("BarButtonItem11.Glyph"), System.Drawing.Image)
-        Me.BarButtonItem11.Id = 39
-        Me.BarButtonItem11.LargeGlyph = CType(resources.GetObject("BarButtonItem11.LargeGlyph"), System.Drawing.Image)
-        Me.BarButtonItem11.Name = "BarButtonItem11"
-        '
-        'BarButtonItem16
-        '
-        Me.BarButtonItem16.Caption = "Reporte Compras"
-        Me.BarButtonItem16.Glyph = CType(resources.GetObject("BarButtonItem16.Glyph"), System.Drawing.Image)
-        Me.BarButtonItem16.Id = 40
-        Me.BarButtonItem16.LargeGlyph = CType(resources.GetObject("BarButtonItem16.LargeGlyph"), System.Drawing.Image)
-        Me.BarButtonItem16.Name = "BarButtonItem16"
-        '
-        'BarButtonItem21
-        '
-        Me.BarButtonItem21.Caption = "Reporte Pedidos"
-        Me.BarButtonItem21.Glyph = CType(resources.GetObject("BarButtonItem21.Glyph"), System.Drawing.Image)
-        Me.BarButtonItem21.Id = 41
-        Me.BarButtonItem21.LargeGlyph = CType(resources.GetObject("BarButtonItem21.LargeGlyph"), System.Drawing.Image)
-        Me.BarButtonItem21.Name = "BarButtonItem21"
-        '
-        'BarButtonItem22
-        '
-        Me.BarButtonItem22.Caption = "Reporte Ventas"
-        Me.BarButtonItem22.Glyph = CType(resources.GetObject("BarButtonItem22.Glyph"), System.Drawing.Image)
-        Me.BarButtonItem22.Id = 42
-        Me.BarButtonItem22.LargeGlyph = CType(resources.GetObject("BarButtonItem22.LargeGlyph"), System.Drawing.Image)
-        Me.BarButtonItem22.Name = "BarButtonItem22"
+        Me.Panel1.BackColor = System.Drawing.Color.DarkGray
+        Me.Panel1.BackgroundImage = Global.INNOVAMASTER.My.Resources.Resources.LOGOINNOVAMASTERINTENTO
+        Me.Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Panel1.Location = New System.Drawing.Point(271, 215)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(363, 385)
+        Me.Panel1.TabIndex = 6
         '
         'MenuPrincipal
         '
@@ -571,6 +582,7 @@
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange
         Me.ClientSize = New System.Drawing.Size(798, 599)
+        Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.LblIdUsuario)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.mainRibbonControl)
@@ -652,4 +664,5 @@
     Friend WithEvents BarButtonItem16 As DevExpress.XtraBars.BarButtonItem
     Friend WithEvents BarButtonItem21 As DevExpress.XtraBars.BarButtonItem
     Friend WithEvents BarButtonItem22 As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents Panel1 As Panel
 End Class
