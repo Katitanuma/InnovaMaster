@@ -122,6 +122,7 @@ Partial Class ReporteCompras
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.DgvReporteClientes)
         Me.Name = "ReporteCompras"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Compras"
         CType(Me.DgvReporteClientes, System.ComponentModel.ISupportInitialize).EndInit()
         Me.CmsReporteCompras.ResumeLayout(False)

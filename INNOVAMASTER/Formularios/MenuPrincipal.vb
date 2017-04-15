@@ -197,26 +197,37 @@ Partial Public Class MenuPrincipal
 
     Private Sub BarButtonItem2_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BarButtonItem2.ItemClick
         Panel1.Visible = False
+        ReporteClientes.MdiParent = Me
         ReporteClientes.Show()
     End Sub
 
     Private Sub BarButtonItem21_ItemClick_1(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BarButtonItem21.ItemClick
         Panel1.Visible = False
+        ReportePedido.MdiParent = Me
         ReportePedido.Show()
     End Sub
 
     Private Sub BarButtonItem16_ItemClick_1(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BarButtonItem16.ItemClick
         Panel1.Visible = False
+        ReporteCompras.MdiParent = Me
         ReporteCompras.Show()
     End Sub
 
     Private Sub BarButtonItem22_ItemClick_1(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BarButtonItem22.ItemClick
         Panel1.Visible = False
+        ReporteVentas.MdiParent = Me
         ReporteVentas.Show()
     End Sub
 
     Private Sub BarButtonItem11_ItemClick_1(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BarButtonItem11.ItemClick
         Panel1.Visible = False
+        ReporteProductos.MdiParent = Me
         ReporteProductos.Show()
+    End Sub
+
+    Private Sub BarButtonItem25_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BarButtonItem25.ItemClick
+        Panel1.Visible = False
+        Acerca_de_InnovaMaster.MdiParent = Me
+        Acerca_de_InnovaMaster.Show()
     End Sub
 End Class

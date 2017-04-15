@@ -25,8 +25,10 @@ Partial Class ReporteVentas
         Me.Label13 = New System.Windows.Forms.Label()
         Me.TxtBusqueda = New System.Windows.Forms.TextBox()
         Me.DgvReporteVentas = New System.Windows.Forms.DataGridView()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         CType(Me.DgvReporteVentas, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -36,7 +38,7 @@ Partial Class ReporteVentas
         Me.Label13.Font = New System.Drawing.Font("Monotype Corsiva", 26.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
         Me.Label13.ForeColor = System.Drawing.Color.Black
         Me.Label13.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label13.Location = New System.Drawing.Point(261, 14)
+        Me.Label13.Location = New System.Drawing.Point(283, 16)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(261, 43)
         Me.Label13.TabIndex = 66
@@ -44,7 +46,7 @@ Partial Class ReporteVentas
         '
         'TxtBusqueda
         '
-        Me.TxtBusqueda.Location = New System.Drawing.Point(81, 83)
+        Me.TxtBusqueda.Location = New System.Drawing.Point(81, 87)
         Me.TxtBusqueda.Name = "TxtBusqueda"
         Me.TxtBusqueda.Size = New System.Drawing.Size(652, 20)
         Me.TxtBusqueda.TabIndex = 65
@@ -54,19 +56,31 @@ Partial Class ReporteVentas
         Me.DgvReporteVentas.AllowUserToAddRows = False
         Me.DgvReporteVentas.AllowUserToDeleteRows = False
         Me.DgvReporteVentas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.DgvReporteVentas.BackgroundColor = System.Drawing.Color.White
         Me.DgvReporteVentas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DgvReporteVentas.Location = New System.Drawing.Point(43, 122)
+        Me.DgvReporteVentas.Location = New System.Drawing.Point(43, 126)
         Me.DgvReporteVentas.Name = "DgvReporteVentas"
         Me.DgvReporteVentas.ReadOnly = True
         Me.DgvReporteVentas.Size = New System.Drawing.Size(690, 234)
         Me.DgvReporteVentas.TabIndex = 63
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox2.BackgroundImage = Global.INNOVAMASTER.My.Resources.Resources._1492256193_4
+        Me.PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox2.Location = New System.Drawing.Point(224, 5)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(59, 65)
+        Me.PictureBox2.TabIndex = 70
+        Me.PictureBox2.TabStop = False
         '
         'PictureBox1
         '
         Me.PictureBox1.BackgroundImage = Global.INNOVAMASTER.My.Resources.Resources.search
         Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.PictureBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.PictureBox1.Location = New System.Drawing.Point(43, 71)
+        Me.PictureBox1.Location = New System.Drawing.Point(43, 75)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(32, 32)
         Me.PictureBox1.TabIndex = 64
@@ -77,15 +91,18 @@ Partial Class ReporteVentas
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.LightSeaGreen
-        Me.ClientSize = New System.Drawing.Size(776, 371)
+        Me.ClientSize = New System.Drawing.Size(776, 392)
+        Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.Label13)
         Me.Controls.Add(Me.TxtBusqueda)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.DgvReporteVentas)
         Me.Name = "ReporteVentas"
         Me.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.Text = "ReporteVentas"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.Text = "Ventas"
         CType(Me.DgvReporteVentas, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -96,4 +113,5 @@ Partial Class ReporteVentas
     Friend WithEvents TxtBusqueda As TextBox
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents DgvReporteVentas As DataGridView
+    Friend WithEvents PictureBox2 As PictureBox
 End Class
