@@ -26,13 +26,15 @@ Partial Class ReporteProductos
         Me.Label13 = New System.Windows.Forms.Label()
         Me.TxtBusqueda = New System.Windows.Forms.TextBox()
         Me.DgvReporteProductos = New System.Windows.Forms.DataGridView()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.CmsReporteProductos = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.VisualizarReporteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ImprimirReporteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         CType(Me.DgvReporteProductos, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.CmsReporteProductos.SuspendLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label13
@@ -41,7 +43,7 @@ Partial Class ReporteProductos
         Me.Label13.Font = New System.Drawing.Font("Monotype Corsiva", 26.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
         Me.Label13.ForeColor = System.Drawing.Color.Black
         Me.Label13.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label13.Location = New System.Drawing.Point(239, 15)
+        Me.Label13.Location = New System.Drawing.Point(248, 15)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(299, 43)
         Me.Label13.TabIndex = 66
@@ -68,17 +70,6 @@ Partial Class ReporteProductos
         Me.DgvReporteProductos.Size = New System.Drawing.Size(690, 234)
         Me.DgvReporteProductos.TabIndex = 63
         '
-        'PictureBox1
-        '
-        Me.PictureBox1.BackgroundImage = Global.INNOVAMASTER.My.Resources.Resources.search
-        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.PictureBox1.Location = New System.Drawing.Point(43, 71)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(32, 32)
-        Me.PictureBox1.TabIndex = 64
-        Me.PictureBox1.TabStop = False
-        '
         'CmsReporteProductos
         '
         Me.CmsReporteProductos.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.VisualizarReporteToolStripMenuItem, Me.ImprimirReporteToolStripMenuItem})
@@ -97,12 +88,34 @@ Partial Class ReporteProductos
         Me.ImprimirReporteToolStripMenuItem.Size = New System.Drawing.Size(167, 22)
         Me.ImprimirReporteToolStripMenuItem.Text = "Imprimir Reporte"
         '
+        'PictureBox2
+        '
+        Me.PictureBox2.BackgroundImage = Global.INNOVAMASTER.My.Resources.Resources.stock
+        Me.PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox2.Location = New System.Drawing.Point(200, 12)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(50, 51)
+        Me.PictureBox2.TabIndex = 67
+        Me.PictureBox2.TabStop = False
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackgroundImage = Global.INNOVAMASTER.My.Resources.Resources.search
+        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.PictureBox1.Location = New System.Drawing.Point(43, 71)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(32, 32)
+        Me.PictureBox1.TabIndex = 64
+        Me.PictureBox1.TabStop = False
+        '
         'ReporteProductos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.LightSeaGreen
         Me.ClientSize = New System.Drawing.Size(776, 383)
+        Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.Label13)
         Me.Controls.Add(Me.TxtBusqueda)
         Me.Controls.Add(Me.PictureBox1)
@@ -110,8 +123,9 @@ Partial Class ReporteProductos
         Me.Name = "ReporteProductos"
         Me.Text = "Productos"
         CType(Me.DgvReporteProductos, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.CmsReporteProductos.ResumeLayout(False)
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -124,4 +138,5 @@ Partial Class ReporteProductos
     Friend WithEvents CmsReporteProductos As ContextMenuStrip
     Friend WithEvents VisualizarReporteToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ImprimirReporteToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents PictureBox2 As PictureBox
 End Class

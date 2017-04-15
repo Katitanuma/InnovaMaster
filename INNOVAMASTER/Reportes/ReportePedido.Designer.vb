@@ -30,9 +30,11 @@ Partial Class ReportePedido
         Me.CmsReportePedidos = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.VisualizarReporteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ImprimirReporteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DgvReportePedidos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.CmsReportePedidos.SuspendLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label13
@@ -97,12 +99,24 @@ Partial Class ReportePedido
         Me.ImprimirReporteToolStripMenuItem.Size = New System.Drawing.Size(167, 22)
         Me.ImprimirReporteToolStripMenuItem.Text = "Imprimir Reporte"
         '
+        'PictureBox2
+        '
+        Me.PictureBox2.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox2.BackgroundImage = Global.INNOVAMASTER.My.Resources.Resources.business_salesreport_salesreport_negocio_2353
+        Me.PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox2.Location = New System.Drawing.Point(217, 14)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(50, 51)
+        Me.PictureBox2.TabIndex = 69
+        Me.PictureBox2.TabStop = False
+        '
         'ReportePedido
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.LightSeaGreen
         Me.ClientSize = New System.Drawing.Size(776, 384)
+        Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.Label13)
         Me.Controls.Add(Me.TxtBusqueda)
         Me.Controls.Add(Me.PictureBox1)
@@ -113,6 +127,7 @@ Partial Class ReportePedido
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DgvReportePedidos, System.ComponentModel.ISupportInitialize).EndInit()
         Me.CmsReportePedidos.ResumeLayout(False)
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -125,4 +140,5 @@ Partial Class ReportePedido
     Friend WithEvents CmsReportePedidos As ContextMenuStrip
     Friend WithEvents VisualizarReporteToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ImprimirReporteToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents PictureBox2 As PictureBox
 End Class
