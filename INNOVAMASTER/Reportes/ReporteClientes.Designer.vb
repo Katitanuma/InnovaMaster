@@ -23,6 +23,7 @@ Partial Class ReporteClientes
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ReporteClientes))
         Me.Label13 = New System.Windows.Forms.Label()
         Me.TxtBusqueda = New System.Windows.Forms.TextBox()
         Me.DgvReporteClientes = New System.Windows.Forms.DataGridView()
@@ -121,8 +122,9 @@ Partial Class ReporteClientes
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.DgvReporteClientes)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "ReporteClientes"
-        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.Manual
         Me.Text = "Clientes"
         CType(Me.DgvReporteClientes, System.ComponentModel.ISupportInitialize).EndInit()
         Me.CmsReporteCliente.ResumeLayout(False)

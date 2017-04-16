@@ -512,7 +512,7 @@
       <CustomToolNamespace>My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
-    <None Include="Reportes\App.config" />
+    <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\business_application_addmale_useradd_insert_add_user_client_2312.png" />
@@ -574,7 +574,7 @@
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
       <Visible>False</Visible>
-      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 y x64%29</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
     <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
@@ -990,6 +990,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\1492256193_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\splashDesarrollo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logito.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logito2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logito3.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

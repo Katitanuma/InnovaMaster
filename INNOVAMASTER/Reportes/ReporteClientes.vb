@@ -35,7 +35,7 @@ Public Class ReporteClientes
             Try
                 Connect.Conectarse()
                 With cmd
-                    .CommandText = "BusquedaReporteCliente"
+                    .CommandText = "BusquedaClienteReporte"
                     .CommandType = CommandType.StoredProcedure
                     .Parameters.Add("@Parametro", SqlDbType.NVarChar, 50).Value = TxtBusqueda.Text.Trim
                     .Connection = Connect.Con

@@ -534,11 +534,15 @@ Public Class FrmDetalleVenta
                     MsgBox("Productos facturados con éxito, Vamos a Imprimir la Factura", MsgBoxStyle.Information)
                     Dim r As DialogResult = MessageBox.Show("¿Desea Visualizar la Factura", "INNOVAMASTER", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
                 If r = DialogResult.Yes Then
+                    FrmFactura.var = 2
+                    EditarCambio(CDbl(LblCambio.Text))
                     FrmFactura.ShowDialog()
+
                 Else
                     Dim ds As New DsReportes
                     Dim rpt As New ReporteVenta
                     Try
+                        EditarCambio(CDbl(LblCambio.Text))
                         Conec.Conectarse()
                         cmd = New SqlCommand("ReporteVenta", Conec.Con)
                         cmd.CommandType = CommandType.StoredProcedure
@@ -571,7 +575,25 @@ Public Class FrmDetalleVenta
 
             End If
     End Sub
+    Private Sub EditarCambio(ByVal Cambio As Double)
+        Using cmd As New SqlCommand
+            Try
+                Conec.Desconectarse()
+                With cmd
+                    .CommandText = "EditarCambio"
+                    .CommandType = CommandType.StoredProcedure
+                    .Connection = Conec.Con
+                    .Parameters.Add("@IdVenta", SqlDbType.NVarChar, 50).Value = LblCodigoVenta.Text.Trim
+                    .Parameters.Add("@Cambio", SqlDbType.Money).Value = Cambio
+                    .ExecuteNonQuery()
+                End With
 
+            Catch ex As Exception
+                MsgBox(ex.Message)
+            End Try
+        End Using
+
+    End Sub
     Private Sub FrmDetalleVenta_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         DgvDetalle.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Sunken
 

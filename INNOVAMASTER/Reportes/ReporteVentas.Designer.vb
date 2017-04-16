@@ -22,14 +22,20 @@ Partial Class ReporteVentas
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ReporteVentas))
         Me.Label13 = New System.Windows.Forms.Label()
         Me.TxtBusqueda = New System.Windows.Forms.TextBox()
         Me.DgvReporteVentas = New System.Windows.Forms.DataGridView()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.VerReporeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ImprimirToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         CType(Me.DgvReporteVentas, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.ContextMenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label13
@@ -58,9 +64,11 @@ Partial Class ReporteVentas
         Me.DgvReporteVentas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DgvReporteVentas.BackgroundColor = System.Drawing.Color.White
         Me.DgvReporteVentas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DgvReporteVentas.ContextMenuStrip = Me.ContextMenuStrip1
         Me.DgvReporteVentas.Location = New System.Drawing.Point(43, 126)
         Me.DgvReporteVentas.Name = "DgvReporteVentas"
         Me.DgvReporteVentas.ReadOnly = True
+        Me.DgvReporteVentas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DgvReporteVentas.Size = New System.Drawing.Size(690, 234)
         Me.DgvReporteVentas.TabIndex = 63
         '
@@ -86,6 +94,24 @@ Partial Class ReporteVentas
         Me.PictureBox1.TabIndex = 64
         Me.PictureBox1.TabStop = False
         '
+        'ContextMenuStrip1
+        '
+        Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.VerReporeToolStripMenuItem, Me.ImprimirToolStripMenuItem})
+        Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(153, 70)
+        '
+        'VerReporeToolStripMenuItem
+        '
+        Me.VerReporeToolStripMenuItem.Name = "VerReporeToolStripMenuItem"
+        Me.VerReporeToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.VerReporeToolStripMenuItem.Text = "Ver repore"
+        '
+        'ImprimirToolStripMenuItem
+        '
+        Me.ImprimirToolStripMenuItem.Name = "ImprimirToolStripMenuItem"
+        Me.ImprimirToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ImprimirToolStripMenuItem.Text = "Imprimir"
+        '
         'ReporteVentas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -97,13 +123,15 @@ Partial Class ReporteVentas
         Me.Controls.Add(Me.TxtBusqueda)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.DgvReporteVentas)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "ReporteVentas"
         Me.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.Manual
         Me.Text = "Ventas"
         CType(Me.DgvReporteVentas, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.ContextMenuStrip1.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -114,4 +142,7 @@ Partial Class ReporteVentas
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents DgvReporteVentas As DataGridView
     Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents ContextMenuStrip1 As ContextMenuStrip
+    Friend WithEvents VerReporeToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ImprimirToolStripMenuItem As ToolStripMenuItem
 End Class

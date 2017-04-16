@@ -4,6 +4,8 @@ Public Class ReporteVentas
         Call MostrarDatosReporteVentas()
     End Sub
     Dim Connect As New Conexion
+    Dim conec As New Conexion
+    Dim cmd As New SqlCommand
 
     Private Sub MostrarDatosReporteVentas()
 
@@ -20,6 +22,7 @@ Public Class ReporteVentas
                 Dim dt As New DataTable
                 AdaptadorReporteVentas.Fill(dt)
                 DgvReporteVentas.DataSource = dt
+                DgvReporteVentas.Columns(7).Visible = False
 
             Catch ex As Exception
                 MessageBox.Show("Error al mostrar el reporte de las ventas " + ex.Message)
@@ -35,7 +38,7 @@ Public Class ReporteVentas
             Try
                 Connect.Conectarse()
                 With cmd
-                    .CommandText = "Sp_BusquedaCiudad"
+                    .CommandText = "BusquedaVentaReporte"
                     .CommandType = CommandType.StoredProcedure
                     .Parameters.Add("@Parametro", SqlDbType.NVarChar, 50).Value = TxtBusqueda.Text.Trim
                     .Connection = Connect.Con
@@ -45,7 +48,7 @@ Public Class ReporteVentas
                 Dim dt As New DataTable
                 AdaptadorBusqueda.Fill(dt)
                 DgvReporteVentas.DataSource = dt
-
+                DgvReporteVentas.Columns(7).Visible = False
 
             Catch ex As Exception
                 MessageBox.Show("Error al mostrar los datos " + ex.Message)
@@ -64,4 +67,34 @@ Public Class ReporteVentas
         End If
     End Sub
 
+    Private Sub ImprimirToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ImprimirToolStripMenuItem.Click
+        Dim ds As New DsReportes
+        Dim rpt As New ReporteVenta
+        Try
+
+            conec.Conectarse()
+            cmd = New SqlCommand("ReporteVenta", Conec.Con)
+            cmd.CommandType = CommandType.StoredProcedure
+            cmd.Parameters.Add("@IdVenta", SqlDbType.NVarChar, 50).Value = DgvReporteVentas.CurrentRow.Cells(0).Value.ToString
+            cmd.ExecuteNonQuery()
+            Dim da As New SqlDataAdapter(cmd)
+            da.Fill(ds, "ReporteVenta")
+            rpt.SetDataSource(ds)
+            If DgvReporteVentas.CurrentRow.Cells(7).Value.ToString <> Nothing Then
+                rpt.SetParameterValue("Cambio", DgvReporteVentas.CurrentRow.Cells(7).Value.ToString)
+            Else
+                rpt.SetParameterValue("Cambio", "0.00")
+            End If
+
+            rpt.PrintToPrinter(1, False, 0, 0)
+
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
+    Private Sub VerReporeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles VerReporeToolStripMenuItem.Click
+        FrmFactura.var = 3
+        FrmFactura.ShowDialog()
+    End Sub
 End Class

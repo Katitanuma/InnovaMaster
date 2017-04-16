@@ -571,12 +571,14 @@ Public Class FrmFacturacionVenta
                     MsgBox("Productos facturados con éxito, Vamos a Imprimir la Factura", MsgBoxStyle.Information)
                     Dim r As DialogResult = MessageBox.Show("¿Desea Visualizar la Factura", "INNOVAMASTER", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
                     If r = DialogResult.Yes Then
-                        Label12.Text = "1"
+                        FrmFactura.var = 1
+                        EditarCambio(CDbl(LblCambio.Text))
                         FrmFactura.ShowDialog()
                     Else
                         Dim ds As New DsReportes
                         Dim rpt As New ReporteVenta
                         Try
+                            EditarCambio(CDbl(LblCambio.Text))
                             Conec.Conectarse()
                             cmd = New SqlCommand("ReporteVenta", Conec.Con)
                             cmd.CommandType = CommandType.StoredProcedure
@@ -688,12 +690,14 @@ Public Class FrmFacturacionVenta
                         MsgBox("Productos facturados con éxito, Vamos a Imprimir la Factura", MsgBoxStyle.Information)
                         Dim r As DialogResult = MessageBox.Show("¿Desea Visualizar la Factura", "INNOVAMASTER", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
                         If r = DialogResult.Yes Then
-                            Label12.Text = "1"
+                            FrmFactura.var = 1
+                            EditarCambio(CDbl(LblCambio.Text))
                             FrmFactura.ShowDialog()
                         Else
                             Dim ds As New DsReportes
                             Dim rpt As New ReporteVenta
                             Try
+                                EditarCambio(CDbl(LblCambio.Text))
                                 Conec.Conectarse()
                                 cmd = New SqlCommand("ReporteVenta", Conec.Con)
                                 cmd.CommandType = CommandType.StoredProcedure
@@ -1006,7 +1010,25 @@ Public Class FrmFacturacionVenta
         End If
         Return estado
     End Function
+    Private Sub EditarCambio(ByVal Cambio As Double)
+        Using cmd As New SqlCommand
+            Try
+                Conec.Desconectarse()
+                With cmd
+                    .CommandText = "EditarCambio"
+                    .CommandType = CommandType.StoredProcedure
+                    .Connection = Conec.Con
+                    .Parameters.Add("@IdVenta", SqlDbType.NVarChar, 50).Value = TxtIdVenta.Text.Trim
+                    .Parameters.Add("@Cambio", SqlDbType.Money).Value = Cambio
+                    .ExecuteNonQuery()
+                End With
 
+            Catch ex As Exception
+                MsgBox(ex.Message)
+            End Try
+        End Using
+
+    End Sub
     Private Function EditarVenta() As Boolean
         Dim estado As Boolean
         If TxtIdVenta.Text = Nothing Then
@@ -1093,8 +1115,8 @@ Public Class FrmFacturacionVenta
 
                 Conec.Conectarse()
                 Dim dr As SqlDataReader
-                cmd = New SqlCommand("Select IdProducto,Gravado,Gravado,PrecioUnitario, PrecioMayorista, Existencia, Estado from Producto Where IdProducto='" & Fila.Cells(1).Value & "'")
-                cmd.CommandType = CommandType.Text
+                cmd = New SqlCommand("Select IdProducto, Gravado, Gravado, PrecioUnitario, PrecioMayorista, Existencia, Estado from Producto Where IdProducto='" & Fila.Cells(1).Value & "'")
+                    cmd.CommandType = CommandType.Text
                 cmd.Connection = Conec.Con
                 dr = cmd.ExecuteReader
 

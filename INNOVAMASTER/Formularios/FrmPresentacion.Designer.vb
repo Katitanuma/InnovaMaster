@@ -31,11 +31,11 @@ Partial Class FrmPresentacion
         '
         Me.LblProgreso.AutoSize = True
         Me.LblProgreso.BackColor = System.Drawing.Color.Transparent
-        Me.LblProgreso.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblProgreso.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblProgreso.ForeColor = System.Drawing.Color.White
-        Me.LblProgreso.Location = New System.Drawing.Point(12, 303)
+        Me.LblProgreso.Location = New System.Drawing.Point(12, 290)
         Me.LblProgreso.Name = "LblProgreso"
-        Me.LblProgreso.Size = New System.Drawing.Size(173, 15)
+        Me.LblProgreso.Size = New System.Drawing.Size(190, 16)
         Me.LblProgreso.TabIndex = 0
         Me.LblProgreso.Text = "Estableciendo Procesos..."
         '
@@ -46,9 +46,9 @@ Partial Class FrmPresentacion
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackgroundImage = Global.INNOVAMASTER.My.Resources.Resources.SPLASHDESAROLLO
+        Me.BackgroundImage = Global.INNOVAMASTER.My.Resources.Resources.splashDesarrollo
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(670, 337)
+        Me.ClientSize = New System.Drawing.Size(645, 318)
         Me.Controls.Add(Me.LblProgreso)
         Me.DoubleBuffered = True
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
