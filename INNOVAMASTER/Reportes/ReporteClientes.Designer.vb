@@ -32,6 +32,8 @@ Partial Class ReporteClientes
         Me.ImprimirReporteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
         CType(Me.DgvReporteClientes, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.CmsReporteCliente.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -110,12 +112,36 @@ Partial Class ReporteClientes
         Me.PictureBox2.TabIndex = 68
         Me.PictureBox2.TabStop = False
         '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.Button1.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.Location = New System.Drawing.Point(615, 360)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(117, 32)
+        Me.Button1.TabIndex = 69
+        Me.Button1.Text = "Ver Reporte"
+        Me.Button1.UseVisualStyleBackColor = False
+        '
+        'Button2
+        '
+        Me.Button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.Button2.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.Location = New System.Drawing.Point(492, 360)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(117, 32)
+        Me.Button2.TabIndex = 70
+        Me.Button2.Text = "Imprimir"
+        Me.Button2.UseVisualStyleBackColor = False
+        '
         'ReporteClientes
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.LightSeaGreen
         Me.ClientSize = New System.Drawing.Size(776, 396)
+        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.Label13)
         Me.Controls.Add(Me.TxtBusqueda)
@@ -143,4 +169,6 @@ Partial Class ReporteClientes
     Friend WithEvents VisualizarReporteToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ImprimirReporteToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents Button1 As Button
+    Friend WithEvents Button2 As Button
 End Class

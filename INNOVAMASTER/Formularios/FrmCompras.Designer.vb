@@ -58,6 +58,7 @@ Partial Class FrmCompras
         Me.Precio = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ISV = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Total = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.LblId = New System.Windows.Forms.Label()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -423,12 +424,23 @@ Partial Class FrmCompras
         Me.Total.Name = "Total"
         Me.Total.ReadOnly = True
         '
+        'LblId
+        '
+        Me.LblId.AutoSize = True
+        Me.LblId.Location = New System.Drawing.Point(418, 26)
+        Me.LblId.Name = "LblId"
+        Me.LblId.Size = New System.Drawing.Size(39, 13)
+        Me.LblId.TabIndex = 111
+        Me.LblId.Text = "Label5"
+        Me.LblId.Visible = False
+        '
         'FrmCompras
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.LightSeaGreen
-        Me.ClientSize = New System.Drawing.Size(1362, 573)
+        Me.ClientSize = New System.Drawing.Size(1354, 573)
+        Me.Controls.Add(Me.LblId)
         Me.Controls.Add(Me.LblNombre)
         Me.Controls.Add(Me.LblCambio)
         Me.Controls.Add(Me.Button2)
@@ -495,4 +507,5 @@ Partial Class FrmCompras
     Friend WithEvents Precio As DataGridViewTextBoxColumn
     Friend WithEvents ISV As DataGridViewTextBoxColumn
     Friend WithEvents Total As DataGridViewTextBoxColumn
+    Friend WithEvents LblId As Label
 End Class

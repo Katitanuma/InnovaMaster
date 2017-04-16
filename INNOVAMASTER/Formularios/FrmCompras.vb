@@ -5,7 +5,7 @@ Public Class FrmCompras
     Dim Conec As New Conexion
     Dim cmd As SqlCommand
     Dim x As Integer = 0
-    Dim var As Integer = 1
+    Public var As Integer = 1
     Dim s As Integer = 0
 
     Private Sub DataGridView1_CellEndEdit(sender As Object, e As DataGridViewCellEventArgs) Handles DgvDetalle.CellEndEdit
@@ -447,6 +447,7 @@ Public Class FrmCompras
                 Catch ex As Exception
                     MsgBox(ex.Message)
                 End Try
+                LblId.Text = a
 
                 For Each fila As DataGridViewRow In DgvDetalle.Rows
                     Try
@@ -471,12 +472,38 @@ Public Class FrmCompras
                 Next
                 MsgBox("Compra realizada correctamente", MsgBoxStyle.Information, "INNOVAMASTER")
                 var = 0
-                If MessageBox.Show("¿Desea visualizar el reporte", "INNOVAMASTER", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) = DialogResult.Yes Then
-                    MsgBox("CERRAR ESTO")
-                    Me.Close()
+                If MessageBox.Show("¿Desea imprimir el reporte de la compra", "INNOVAMASTER", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) = DialogResult.Yes Then
+                    If MessageBox.Show("¿Desea visualizar el reporte", "INNOVAMASTER", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) = DialogResult.Yes Then
+
+                        FrmRptCompra.var = 2
+                        FrmRptCompra.ShowDialog()
+                    Else
+                        Dim ds As New DsReportes
+                        Dim rpt As New RptCompra
+                        Try
+
+                            Conec.Conectarse()
+                            Dim cmd As New SqlCommand
+                            cmd = New SqlCommand("ReporteCompra", Conec.Con)
+                            cmd.CommandType = CommandType.StoredProcedure
+                            cmd.Parameters.Add("@IdCompra", SqlDbType.Int).Value = CInt(LblId.Text)
+                            cmd.ExecuteNonQuery()
+                            Dim da As New SqlDataAdapter(cmd)
+                            da.Fill(ds, "ReporteCompra")
+                            rpt.SetDataSource(ds)
+                            rpt.PrintToPrinter(1, False, 0, 0)
+                        Catch ex As Exception
+
+                        End Try
+                        var = 0
+                        Me.Close()
+
+                    End If
                 Else
-                    Me.Close()
+                    var = 0
+                    Close()
                 End If
+
             End If
         End If
 

@@ -273,6 +273,30 @@
     <Compile Include="Formularios\FrmProveedor.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Formularios\FrmRptCliente.Designer.vb">
+      <DependentUpon>FrmRptCliente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmRptCliente.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmRptCompra.Designer.vb">
+      <DependentUpon>FrmRptCompra.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmRptCompra.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmRptPedido.Designer.vb">
+      <DependentUpon>FrmRptPedido.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmRptPedido.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmRptProducto.Designer.vb">
+      <DependentUpon>FrmRptProducto.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmRptProducto.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Formularios\FrmUsuario.Designer.vb">
       <DependentUpon>FrmUsuario.vb</DependentUpon>
     </Compile>
@@ -365,6 +389,12 @@
     <Compile Include="Reportes\ReporteProductos.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Reportes\RptCompra.vb">
+      <DependentUpon>RptCompra.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="Reportes\ReporteVenta.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -376,6 +406,24 @@
     </Compile>
     <Compile Include="Reportes\ReporteVentas.vb">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\RptProducto.vb">
+      <DependentUpon>RptProducto.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reportes\RptCliente.vb">
+      <DependentUpon>RptCliente.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reportes\RptPedido.vb">
+      <DependentUpon>RptPedido.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="Settings.vb" />
   </ItemGroup>
@@ -452,6 +500,18 @@
     <EmbeddedResource Include="Formularios\FrmProveedor.resx">
       <DependentUpon>FrmProveedor.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmRptCliente.resx">
+      <DependentUpon>FrmRptCliente.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmRptCompra.resx">
+      <DependentUpon>FrmRptCompra.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmRptPedido.resx">
+      <DependentUpon>FrmRptPedido.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmRptProducto.resx">
+      <DependentUpon>FrmRptProducto.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmUsuario.resx">
       <DependentUpon>FrmUsuario.vb</DependentUpon>
     </EmbeddedResource>
@@ -480,12 +540,28 @@
     <EmbeddedResource Include="Reportes\ReporteProductos.resx">
       <DependentUpon>ReporteProductos.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\RptCompra.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RptCompra.vb</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reportes\ReporteVenta.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>ReporteVenta.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\ReporteVentas.resx">
       <DependentUpon>ReporteVentas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\RptProducto.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RptProducto.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\RptCliente.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RptCliente.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\RptPedido.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RptPedido.vb</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

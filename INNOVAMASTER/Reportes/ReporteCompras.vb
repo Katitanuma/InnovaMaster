@@ -1,9 +1,11 @@
 ﻿Imports System.Data.SqlClient
+
 Public Class ReporteCompras
     Private Sub ReporteClientes_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Call MostrarDatosReporteClientes()
     End Sub
     Dim Connect As New Conexion
+    Dim conec As New Conexion
 
     Private Sub MostrarDatosReporteClientes()
 
@@ -19,7 +21,7 @@ Public Class ReporteCompras
                 Dim AdaptadorReporteClientes As New SqlDataAdapter(cmd)
                 Dim dt As New DataTable
                 AdaptadorReporteClientes.Fill(dt)
-                DgvReporteClientes.DataSource = dt
+                DgvReporteCompra.DataSource = dt
 
             Catch ex As Exception
                 MessageBox.Show("Error al mostrar el reporte de los clientes " + ex.Message)
@@ -44,7 +46,7 @@ Public Class ReporteCompras
                 Dim AdaptadorBusqueda As New SqlDataAdapter(cmd)
                 Dim dt As New DataTable
                 AdaptadorBusqueda.Fill(dt)
-                DgvReporteClientes.DataSource = dt
+                DgvReporteCompra.DataSource = dt
 
 
             Catch ex As Exception
@@ -62,5 +64,30 @@ Public Class ReporteCompras
         Else
             BusquedaFiltradaClientes()
         End If
+    End Sub
+
+    Private Sub VisualizarReporteToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles VisualizarReporteToolStripMenuItem.Click
+        FrmRptCompra.var = 1
+        FrmRptCompra.ShowDialog()
+    End Sub
+
+    Private Sub ImprimirReporteToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ImprimirReporteToolStripMenuItem.Click
+        Dim ds As New DsReportes
+        Dim rpt As New RptCompra
+        Try
+
+            conec.Conectarse()
+            Dim cmd As New SqlCommand
+            cmd = New SqlCommand("ReporteCompra", conec.Con)
+            cmd.CommandType = CommandType.StoredProcedure
+            cmd.Parameters.Add("@IdCompra", SqlDbType.Int).Value = CInt(DgvReporteCompra.CurrentRow.Cells(0).Value.ToString)
+            cmd.ExecuteNonQuery()
+            Dim da As New SqlDataAdapter(cmd)
+            da.Fill(ds, "ReporteCompra")
+            rpt.SetDataSource(ds)
+            rpt.PrintToPrinter(1, False, 0, 0)
+        Catch ex As Exception
+
+        End Try
     End Sub
 End Class

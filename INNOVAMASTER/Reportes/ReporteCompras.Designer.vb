@@ -26,13 +26,13 @@ Partial Class ReporteCompras
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ReporteCompras))
         Me.Label13 = New System.Windows.Forms.Label()
         Me.TxtBusqueda = New System.Windows.Forms.TextBox()
-        Me.DgvReporteClientes = New System.Windows.Forms.DataGridView()
+        Me.DgvReporteCompra = New System.Windows.Forms.DataGridView()
         Me.CmsReporteCompras = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.VisualizarReporteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ImprimirReporteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        CType(Me.DgvReporteClientes, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DgvReporteCompra, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.CmsReporteCompras.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -57,37 +57,38 @@ Partial Class ReporteCompras
         Me.TxtBusqueda.Size = New System.Drawing.Size(652, 20)
         Me.TxtBusqueda.TabIndex = 61
         '
-        'DgvReporteClientes
+        'DgvReporteCompra
         '
-        Me.DgvReporteClientes.AllowUserToAddRows = False
-        Me.DgvReporteClientes.AllowUserToDeleteRows = False
-        Me.DgvReporteClientes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.DgvReporteClientes.BackgroundColor = System.Drawing.Color.White
-        Me.DgvReporteClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DgvReporteClientes.ContextMenuStrip = Me.CmsReporteCompras
-        Me.DgvReporteClientes.Location = New System.Drawing.Point(43, 135)
-        Me.DgvReporteClientes.Name = "DgvReporteClientes"
-        Me.DgvReporteClientes.ReadOnly = True
-        Me.DgvReporteClientes.Size = New System.Drawing.Size(690, 234)
-        Me.DgvReporteClientes.TabIndex = 59
+        Me.DgvReporteCompra.AllowUserToAddRows = False
+        Me.DgvReporteCompra.AllowUserToDeleteRows = False
+        Me.DgvReporteCompra.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.DgvReporteCompra.BackgroundColor = System.Drawing.Color.White
+        Me.DgvReporteCompra.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DgvReporteCompra.ContextMenuStrip = Me.CmsReporteCompras
+        Me.DgvReporteCompra.Location = New System.Drawing.Point(43, 135)
+        Me.DgvReporteCompra.Name = "DgvReporteCompra"
+        Me.DgvReporteCompra.ReadOnly = True
+        Me.DgvReporteCompra.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.DgvReporteCompra.Size = New System.Drawing.Size(690, 234)
+        Me.DgvReporteCompra.TabIndex = 59
         '
         'CmsReporteCompras
         '
         Me.CmsReporteCompras.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.VisualizarReporteToolStripMenuItem, Me.ImprimirReporteToolStripMenuItem})
         Me.CmsReporteCompras.Name = "CmsReporteCompras"
-        Me.CmsReporteCompras.Size = New System.Drawing.Size(168, 48)
+        Me.CmsReporteCompras.Size = New System.Drawing.Size(162, 70)
         '
         'VisualizarReporteToolStripMenuItem
         '
         Me.VisualizarReporteToolStripMenuItem.Name = "VisualizarReporteToolStripMenuItem"
-        Me.VisualizarReporteToolStripMenuItem.Size = New System.Drawing.Size(167, 22)
-        Me.VisualizarReporteToolStripMenuItem.Text = "Visualizar Reporte"
+        Me.VisualizarReporteToolStripMenuItem.Size = New System.Drawing.Size(161, 22)
+        Me.VisualizarReporteToolStripMenuItem.Text = "Ver reporte"
         '
         'ImprimirReporteToolStripMenuItem
         '
         Me.ImprimirReporteToolStripMenuItem.Name = "ImprimirReporteToolStripMenuItem"
-        Me.ImprimirReporteToolStripMenuItem.Size = New System.Drawing.Size(167, 22)
-        Me.ImprimirReporteToolStripMenuItem.Text = "Imprimir Reporte"
+        Me.ImprimirReporteToolStripMenuItem.Size = New System.Drawing.Size(161, 22)
+        Me.ImprimirReporteToolStripMenuItem.Text = "Imprimir reporte"
         '
         'PictureBox2
         '
@@ -115,18 +116,18 @@ Partial Class ReporteCompras
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.BackColor = System.Drawing.Color.LightSeaGreen
         Me.ClientSize = New System.Drawing.Size(776, 396)
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.Label13)
         Me.Controls.Add(Me.TxtBusqueda)
         Me.Controls.Add(Me.PictureBox1)
-        Me.Controls.Add(Me.DgvReporteClientes)
+        Me.Controls.Add(Me.DgvReporteCompra)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "ReporteCompras"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.Manual
         Me.Text = "Compras"
-        CType(Me.DgvReporteClientes, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DgvReporteCompra, System.ComponentModel.ISupportInitialize).EndInit()
         Me.CmsReporteCompras.ResumeLayout(False)
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -138,7 +139,7 @@ Partial Class ReporteCompras
     Friend WithEvents Label13 As Label
     Friend WithEvents TxtBusqueda As TextBox
     Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents DgvReporteClientes As DataGridView
+    Friend WithEvents DgvReporteCompra As DataGridView
     Friend WithEvents CmsReporteCompras As ContextMenuStrip
     Friend WithEvents VisualizarReporteToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ImprimirReporteToolStripMenuItem As ToolStripMenuItem

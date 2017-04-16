@@ -27,15 +27,15 @@ Partial Class ReporteVentas
         Me.Label13 = New System.Windows.Forms.Label()
         Me.TxtBusqueda = New System.Windows.Forms.TextBox()
         Me.DgvReporteVentas = New System.Windows.Forms.DataGridView()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.VerReporeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ImprimirToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         CType(Me.DgvReporteVentas, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.ContextMenuStrip1.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.ContextMenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label13
@@ -72,6 +72,24 @@ Partial Class ReporteVentas
         Me.DgvReporteVentas.Size = New System.Drawing.Size(690, 234)
         Me.DgvReporteVentas.TabIndex = 63
         '
+        'ContextMenuStrip1
+        '
+        Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.VerReporeToolStripMenuItem, Me.ImprimirToolStripMenuItem})
+        Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(162, 48)
+        '
+        'VerReporeToolStripMenuItem
+        '
+        Me.VerReporeToolStripMenuItem.Name = "VerReporeToolStripMenuItem"
+        Me.VerReporeToolStripMenuItem.Size = New System.Drawing.Size(161, 22)
+        Me.VerReporeToolStripMenuItem.Text = "Ver reporte"
+        '
+        'ImprimirToolStripMenuItem
+        '
+        Me.ImprimirToolStripMenuItem.Name = "ImprimirToolStripMenuItem"
+        Me.ImprimirToolStripMenuItem.Size = New System.Drawing.Size(161, 22)
+        Me.ImprimirToolStripMenuItem.Text = "Imprimir reporte"
+        '
         'PictureBox2
         '
         Me.PictureBox2.BackColor = System.Drawing.Color.Transparent
@@ -94,24 +112,6 @@ Partial Class ReporteVentas
         Me.PictureBox1.TabIndex = 64
         Me.PictureBox1.TabStop = False
         '
-        'ContextMenuStrip1
-        '
-        Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.VerReporeToolStripMenuItem, Me.ImprimirToolStripMenuItem})
-        Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
-        Me.ContextMenuStrip1.Size = New System.Drawing.Size(153, 70)
-        '
-        'VerReporeToolStripMenuItem
-        '
-        Me.VerReporeToolStripMenuItem.Name = "VerReporeToolStripMenuItem"
-        Me.VerReporeToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.VerReporeToolStripMenuItem.Text = "Ver repore"
-        '
-        'ImprimirToolStripMenuItem
-        '
-        Me.ImprimirToolStripMenuItem.Name = "ImprimirToolStripMenuItem"
-        Me.ImprimirToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.ImprimirToolStripMenuItem.Text = "Imprimir"
-        '
         'ReporteVentas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -129,9 +129,9 @@ Partial Class ReporteVentas
         Me.StartPosition = System.Windows.Forms.FormStartPosition.Manual
         Me.Text = "Ventas"
         CType(Me.DgvReporteVentas, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.ContextMenuStrip1.ResumeLayout(False)
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.ContextMenuStrip1.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
