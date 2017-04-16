@@ -1079,6 +1079,15 @@
   <ItemGroup>
     <None Include="Resources\Logito3.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\documento.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_checklist.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imprimir.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -76,18 +76,20 @@ Partial Class ReporteCompras
         '
         Me.CmsReporteCompras.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.VisualizarReporteToolStripMenuItem, Me.ImprimirReporteToolStripMenuItem})
         Me.CmsReporteCompras.Name = "CmsReporteCompras"
-        Me.CmsReporteCompras.Size = New System.Drawing.Size(162, 70)
+        Me.CmsReporteCompras.Size = New System.Drawing.Size(165, 48)
         '
         'VisualizarReporteToolStripMenuItem
         '
+        Me.VisualizarReporteToolStripMenuItem.Image = Global.INNOVAMASTER.My.Resources.Resources.icon_checklist
         Me.VisualizarReporteToolStripMenuItem.Name = "VisualizarReporteToolStripMenuItem"
-        Me.VisualizarReporteToolStripMenuItem.Size = New System.Drawing.Size(161, 22)
-        Me.VisualizarReporteToolStripMenuItem.Text = "Ver reporte"
+        Me.VisualizarReporteToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
+        Me.VisualizarReporteToolStripMenuItem.Text = "Visualizar reporte"
         '
         'ImprimirReporteToolStripMenuItem
         '
+        Me.ImprimirReporteToolStripMenuItem.Image = Global.INNOVAMASTER.My.Resources.Resources.imprimir
         Me.ImprimirReporteToolStripMenuItem.Name = "ImprimirReporteToolStripMenuItem"
-        Me.ImprimirReporteToolStripMenuItem.Size = New System.Drawing.Size(161, 22)
+        Me.ImprimirReporteToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
         Me.ImprimirReporteToolStripMenuItem.Text = "Imprimir reporte"
         '
         'PictureBox2

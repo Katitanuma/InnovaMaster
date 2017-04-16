@@ -54,6 +54,7 @@ Partial Class FrmPedidos
         Me.Total = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ChIdProductoProveedor = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.LblId = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         Me.Panel1.SuspendLayout()
         CType(Me.DgvDetalle, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -364,12 +365,23 @@ Partial Class FrmPedidos
         Me.PictureBox2.TabIndex = 123
         Me.PictureBox2.TabStop = False
         '
+        'LblId
+        '
+        Me.LblId.AutoSize = True
+        Me.LblId.Location = New System.Drawing.Point(394, 22)
+        Me.LblId.Name = "LblId"
+        Me.LblId.Size = New System.Drawing.Size(39, 13)
+        Me.LblId.TabIndex = 128
+        Me.LblId.Text = "Label2"
+        Me.LblId.Visible = False
+        '
         'FrmPedidos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.LightSeaGreen
-        Me.ClientSize = New System.Drawing.Size(1358, 573)
+        Me.ClientSize = New System.Drawing.Size(1354, 573)
+        Me.Controls.Add(Me.LblId)
         Me.Controls.Add(Me.LblNombre)
         Me.Controls.Add(Me.LblCambio)
         Me.Controls.Add(Me.Button2)
@@ -429,4 +441,5 @@ Partial Class FrmPedidos
     Friend WithEvents ISV As DataGridViewTextBoxColumn
     Friend WithEvents Total As DataGridViewTextBoxColumn
     Friend WithEvents ChIdProductoProveedor As DataGridViewTextBoxColumn
+    Friend WithEvents LblId As Label
 End Class

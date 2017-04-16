@@ -56,6 +56,7 @@ Public Class FrmFacturacionVenta
                                     cmd.ExecuteNonQuery()
                                     DgvDetalle.CurrentRow.Cells(1).ReadOnly = True
                                     DgvDetalle.CurrentRow.Cells(2).ReadOnly = True
+
                                 End If
                             Else
                                 MsgBox("El estado del producto está inactivo", MsgBoxStyle.Exclamation)
@@ -148,6 +149,7 @@ Public Class FrmFacturacionVenta
                                     cmd.ExecuteNonQuery()
                                     DgvDetalle.CurrentRow.Cells(1).ReadOnly = True
                                     DgvDetalle.CurrentRow.Cells(2).ReadOnly = True
+
                                 End If
                             Else
                                 MsgBox("El estado del producto está inactivo", MsgBoxStyle.Exclamation)

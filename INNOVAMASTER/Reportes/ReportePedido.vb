@@ -6,6 +6,7 @@ Public Class ReportePedido
 
     End Sub
     Dim Connect As New Conexion
+    Dim conec As New Conexion
 
     Private Sub MostrarDatosReportePedidos()
 
@@ -64,5 +65,31 @@ Public Class ReportePedido
         Else
             BusquedaFiltradaPedidos()
         End If
+    End Sub
+
+    Private Sub VisualizarReporteToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles VisualizarReporteToolStripMenuItem.Click
+        FrmRptPedido.var = 1
+        FrmRptPedido.Show()
+    End Sub
+
+    Private Sub ImprimirReporteToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ImprimirReporteToolStripMenuItem.Click
+        Dim ds As New DsReportes
+        Dim rpt As New RptPedido
+        Try
+
+            conec.Conectarse()
+            Dim cmd As New SqlCommand
+            cmd = New SqlCommand("ReportePedido", conec.Con)
+            cmd.CommandType = CommandType.StoredProcedure
+            cmd.Parameters.Add("@IdPedido", SqlDbType.Int).Value = CInt(DgvReportePedidos.CurrentRow.Cells(0).Value.ToString)
+            cmd.ExecuteNonQuery()
+            Dim da As New SqlDataAdapter(cmd)
+            da.Fill(ds, "ReportePedido")
+            rpt.SetDataSource(ds)
+            rpt.PrintToPrinter(1, False, 0, 0)
+
+        Catch ex As Exception
+
+        End Try
     End Sub
 End Class

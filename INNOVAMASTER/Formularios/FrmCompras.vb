@@ -43,6 +43,7 @@ Public Class FrmCompras
                             DgvDetalle.CurrentRow.Cells(2).ReadOnly = True
                             DgvDetalle.Rows(e.RowIndex).Cells(2).ErrorText = ""
                             DgvDetalle.Rows(e.RowIndex).Cells(1).ErrorText = ""
+
                         Else
                             MsgBox("El estado del producto está inactivo", MsgBoxStyle.Exclamation)
                             DgvDetalle.Rows.Remove(DgvDetalle.CurrentRow)
@@ -106,6 +107,7 @@ Public Class FrmCompras
                             DgvDetalle.CurrentRow.Cells(2).ReadOnly = True
                             DgvDetalle.Rows(e.RowIndex).Cells(2).ErrorText = ""
                             DgvDetalle.Rows(e.RowIndex).Cells(1).ErrorText = ""
+
                         Else
                             MsgBox("El estado del producto está inactivo", MsgBoxStyle.Exclamation)
                             DgvDetalle.Rows.Remove(DgvDetalle.CurrentRow)

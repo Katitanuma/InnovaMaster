@@ -4,7 +4,7 @@ Public Class FrmPedidos
     Dim Conec As New Conexion
     Dim cmd As SqlCommand
     Dim x As Integer = 0
-    Dim var As Integer = 1
+    Public var As Integer = 1
     Dim s As Integer = 0
 
     Private Sub DataGridView1_CellEndEdit(sender As Object, e As DataGridViewCellEventArgs) Handles DgvDetalle.CellEndEdit
@@ -181,6 +181,7 @@ Public Class FrmPedidos
                                     DgvDetalle.CurrentRow.Cells(2).ReadOnly = True
                                     DgvDetalle.Rows(e.RowIndex).Cells(2).ErrorText = ""
                                     DgvDetalle.Rows(e.RowIndex).Cells(1).ErrorText = ""
+
                                 Else
                                     MsgBox("El estado del producto está inactivo", MsgBoxStyle.Exclamation)
                                     Dim a, b As Integer
@@ -471,7 +472,7 @@ Public Class FrmPedidos
                     cmd.Connection = Conec.Con
                     a = cmd.ExecuteScalar
 
-
+                    LblId.Text = a
                     For Each fila As DataGridViewRow In DgvDetalle.Rows
                         Try
                             If fila.Cells(1).Value <> Nothing Then
@@ -495,9 +496,29 @@ Public Class FrmPedidos
                     MsgBox("Pedido registrado correctamente", MsgBoxStyle.Information, "INNOVAMASTER")
                     var = 0
                     If MessageBox.Show("¿Desea visualizar el reporte", "INNOVAMASTER", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) = DialogResult.Yes Then
-                        MsgBox("CERRAR ESTO")
-                        Me.Close()
+                        FrmRptPedido.var = 2
+                        FrmRptPedido.ShowDialog()
                     Else
+                        Dim ds As New DsReportes
+                        Dim rpt As New RptPedido
+                        Try
+
+                            Conec.Conectarse()
+                            Dim cmd As New SqlCommand
+                            cmd = New SqlCommand("ReportePedido", Conec.Con)
+                            cmd.CommandType = CommandType.StoredProcedure
+                            cmd.Parameters.Add("@IdPedido", SqlDbType.Int).Value = CInt(LblId.Text.ToString)
+                            cmd.ExecuteNonQuery()
+                            Dim da As New SqlDataAdapter(cmd)
+                            da.Fill(ds, "ReportePedido")
+                            rpt.SetDataSource(ds)
+                            rpt.PrintToPrinter(1, False, 0, 0)
+
+                        Catch ex As Exception
+
+                        End Try
+
+                        var = 0
                         Me.Close()
                     End If
                 End If

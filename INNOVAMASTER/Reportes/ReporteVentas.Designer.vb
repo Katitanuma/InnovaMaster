@@ -76,18 +76,20 @@ Partial Class ReporteVentas
         '
         Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.VerReporeToolStripMenuItem, Me.ImprimirToolStripMenuItem})
         Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
-        Me.ContextMenuStrip1.Size = New System.Drawing.Size(162, 48)
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(165, 70)
         '
         'VerReporeToolStripMenuItem
         '
+        Me.VerReporeToolStripMenuItem.Image = Global.INNOVAMASTER.My.Resources.Resources.icon_checklist
         Me.VerReporeToolStripMenuItem.Name = "VerReporeToolStripMenuItem"
-        Me.VerReporeToolStripMenuItem.Size = New System.Drawing.Size(161, 22)
-        Me.VerReporeToolStripMenuItem.Text = "Ver reporte"
+        Me.VerReporeToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
+        Me.VerReporeToolStripMenuItem.Text = "Visualizar reporte"
         '
         'ImprimirToolStripMenuItem
         '
+        Me.ImprimirToolStripMenuItem.Image = Global.INNOVAMASTER.My.Resources.Resources.imprimir
         Me.ImprimirToolStripMenuItem.Name = "ImprimirToolStripMenuItem"
-        Me.ImprimirToolStripMenuItem.Size = New System.Drawing.Size(161, 22)
+        Me.ImprimirToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
         Me.ImprimirToolStripMenuItem.Text = "Imprimir reporte"
         '
         'PictureBox2

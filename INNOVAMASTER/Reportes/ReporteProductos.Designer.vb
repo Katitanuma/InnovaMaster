@@ -22,19 +22,14 @@ Partial Class ReporteProductos
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.TxtBusqueda = New System.Windows.Forms.TextBox()
         Me.DgvReporteProductos = New System.Windows.Forms.DataGridView()
-        Me.CmsReporteProductos = New System.Windows.Forms.ContextMenuStrip(Me.components)
-        Me.VisualizarReporteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ImprimirReporteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         CType(Me.DgvReporteProductos, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.CmsReporteProductos.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -65,30 +60,11 @@ Partial Class ReporteProductos
         Me.DgvReporteProductos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DgvReporteProductos.BackgroundColor = System.Drawing.Color.White
         Me.DgvReporteProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DgvReporteProductos.ContextMenuStrip = Me.CmsReporteProductos
         Me.DgvReporteProductos.Location = New System.Drawing.Point(43, 111)
         Me.DgvReporteProductos.Name = "DgvReporteProductos"
         Me.DgvReporteProductos.ReadOnly = True
         Me.DgvReporteProductos.Size = New System.Drawing.Size(690, 234)
         Me.DgvReporteProductos.TabIndex = 63
-        '
-        'CmsReporteProductos
-        '
-        Me.CmsReporteProductos.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.VisualizarReporteToolStripMenuItem, Me.ImprimirReporteToolStripMenuItem})
-        Me.CmsReporteProductos.Name = "CmsReporteProductos"
-        Me.CmsReporteProductos.Size = New System.Drawing.Size(168, 48)
-        '
-        'VisualizarReporteToolStripMenuItem
-        '
-        Me.VisualizarReporteToolStripMenuItem.Name = "VisualizarReporteToolStripMenuItem"
-        Me.VisualizarReporteToolStripMenuItem.Size = New System.Drawing.Size(167, 22)
-        Me.VisualizarReporteToolStripMenuItem.Text = "Visualizar Reporte"
-        '
-        'ImprimirReporteToolStripMenuItem
-        '
-        Me.ImprimirReporteToolStripMenuItem.Name = "ImprimirReporteToolStripMenuItem"
-        Me.ImprimirReporteToolStripMenuItem.Size = New System.Drawing.Size(167, 22)
-        Me.ImprimirReporteToolStripMenuItem.Text = "Imprimir Reporte"
         '
         'PictureBox2
         '
@@ -150,7 +126,6 @@ Partial Class ReporteProductos
         Me.StartPosition = System.Windows.Forms.FormStartPosition.Manual
         Me.Text = "Productos"
         CType(Me.DgvReporteProductos, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.CmsReporteProductos.ResumeLayout(False)
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -162,9 +137,6 @@ Partial Class ReporteProductos
     Friend WithEvents TxtBusqueda As TextBox
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents DgvReporteProductos As DataGridView
-    Friend WithEvents CmsReporteProductos As ContextMenuStrip
-    Friend WithEvents VisualizarReporteToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ImprimirReporteToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents Button2 As Button
     Friend WithEvents Button1 As Button

@@ -79,6 +79,7 @@ Partial Class ReportePedido
         Me.DgvReportePedidos.Location = New System.Drawing.Point(43, 122)
         Me.DgvReportePedidos.Name = "DgvReportePedidos"
         Me.DgvReportePedidos.ReadOnly = True
+        Me.DgvReportePedidos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DgvReportePedidos.Size = New System.Drawing.Size(690, 234)
         Me.DgvReportePedidos.TabIndex = 59
         '
@@ -86,19 +87,21 @@ Partial Class ReportePedido
         '
         Me.CmsReportePedidos.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.VisualizarReporteToolStripMenuItem, Me.ImprimirReporteToolStripMenuItem})
         Me.CmsReportePedidos.Name = "CmsReportePedidos"
-        Me.CmsReportePedidos.Size = New System.Drawing.Size(168, 48)
+        Me.CmsReportePedidos.Size = New System.Drawing.Size(165, 70)
         '
         'VisualizarReporteToolStripMenuItem
         '
+        Me.VisualizarReporteToolStripMenuItem.Image = Global.INNOVAMASTER.My.Resources.Resources.icon_checklist
         Me.VisualizarReporteToolStripMenuItem.Name = "VisualizarReporteToolStripMenuItem"
-        Me.VisualizarReporteToolStripMenuItem.Size = New System.Drawing.Size(167, 22)
-        Me.VisualizarReporteToolStripMenuItem.Text = "Visualizar Reporte"
+        Me.VisualizarReporteToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
+        Me.VisualizarReporteToolStripMenuItem.Text = "Visualizar reporte"
         '
         'ImprimirReporteToolStripMenuItem
         '
+        Me.ImprimirReporteToolStripMenuItem.Image = Global.INNOVAMASTER.My.Resources.Resources.imprimir
         Me.ImprimirReporteToolStripMenuItem.Name = "ImprimirReporteToolStripMenuItem"
-        Me.ImprimirReporteToolStripMenuItem.Size = New System.Drawing.Size(167, 22)
-        Me.ImprimirReporteToolStripMenuItem.Text = "Imprimir Reporte"
+        Me.ImprimirReporteToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
+        Me.ImprimirReporteToolStripMenuItem.Text = "Imprimir reporte"
         '
         'PictureBox2
         '

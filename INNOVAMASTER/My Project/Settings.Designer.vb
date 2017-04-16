@@ -69,17 +69,6 @@ Namespace My
         <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=MARCIOMARTINEZ\SQLEXPRESS;Initial Catalog=INNOVAMASTERBD;Integrated S"& _ 
-            "ecurity=True")>  _
-        Public ReadOnly Property INNOVAMASTERBDConnectionString() As String
-            Get
-                Return CType(Me("INNOVAMASTERBDConnectionString"),String)
-            End Get
-        End Property
-        
-        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
          Global.System.Configuration.DefaultSettingValueAttribute("Data Source=MARCIOMARTINEZ\SQLEXPRESS;Initial Catalog=INNOVAMASTERBD;User ID=Usua"& _ 
             "rio;Password=master17")>  _
         Public ReadOnly Property Conect() As String
