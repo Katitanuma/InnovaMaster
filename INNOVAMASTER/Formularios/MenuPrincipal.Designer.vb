@@ -65,8 +65,14 @@
         Me.BarButtonItem21 = New DevExpress.XtraBars.BarButtonItem()
         Me.BarButtonItem22 = New DevExpress.XtraBars.BarButtonItem()
         Me.BarButtonItem25 = New DevExpress.XtraBars.BarButtonItem()
+        Me.BarButtonItem26 = New DevExpress.XtraBars.BarButtonItem()
+        Me.BarButtonItem27 = New DevExpress.XtraBars.BarButtonItem()
+        Me.BarButtonItem28 = New DevExpress.XtraBars.BarButtonItem()
+        Me.BarButtonItem29 = New DevExpress.XtraBars.BarButtonItem()
         Me.mainRibbonPage = New DevExpress.XtraBars.Ribbon.RibbonPage()
         Me.mainRibbonPageGroup = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
+        Me.RibbonPage12 = New DevExpress.XtraBars.Ribbon.RibbonPage()
+        Me.RibbonPageGroup7 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
         Me.RibbonPage1 = New DevExpress.XtraBars.Ribbon.RibbonPage()
         Me.RibbonPageGroup1 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
         Me.RibbonPage2 = New DevExpress.XtraBars.Ribbon.RibbonPage()
@@ -76,15 +82,17 @@
         Me.RibbonPage5 = New DevExpress.XtraBars.Ribbon.RibbonPage()
         Me.PagProductos = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
         Me.RibbonPage9 = New DevExpress.XtraBars.Ribbon.RibbonPage()
-        Me.RibbonPageGroup2 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
+        Me.PgCompra = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
         Me.RibbonPage10 = New DevExpress.XtraBars.Ribbon.RibbonPage()
-        Me.RibbonPageGroup4 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
+        Me.PgPedido = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
         Me.RibbonPage4 = New DevExpress.XtraBars.Ribbon.RibbonPage()
         Me.PgProveedores = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
         Me.RibbonPage8 = New DevExpress.XtraBars.Ribbon.RibbonPage()
         Me.PagUbicacion = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
         Me.RibbonPage7 = New DevExpress.XtraBars.Ribbon.RibbonPage()
         Me.PagConfiguracion = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
+        Me.PgAuditoria = New DevExpress.XtraBars.Ribbon.RibbonPage()
+        Me.RibbonPageGroup8 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
         Me.RibbonPage11 = New DevExpress.XtraBars.Ribbon.RibbonPage()
         Me.RibbonPageGroup5 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
         Me.DefaultLookAndFeel1 = New DevExpress.LookAndFeel.DefaultLookAndFeel(Me.components)
@@ -99,11 +107,6 @@
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.RibbonPageGroup6 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
         Me.RibbonPage6 = New DevExpress.XtraBars.Ribbon.RibbonPage()
-        Me.RibbonPage12 = New DevExpress.XtraBars.Ribbon.RibbonPage()
-        Me.RibbonPageGroup7 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
-        Me.BarButtonItem26 = New DevExpress.XtraBars.BarButtonItem()
-        Me.BarButtonItem27 = New DevExpress.XtraBars.BarButtonItem()
-        Me.BarButtonItem28 = New DevExpress.XtraBars.BarButtonItem()
         CType(Me.mainRibbonControl, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BarManager1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -111,11 +114,11 @@
         'mainRibbonControl
         '
         Me.mainRibbonControl.ExpandCollapseItem.Id = 0
-        Me.mainRibbonControl.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.mainRibbonControl.ExpandCollapseItem, Me.bbiSave, Me.bbiSaveAndClose, Me.bbiSaveAndNew, Me.bbiReset, Me.bbiDelete, Me.bbiClose, Me.BtnRegistroClientes, Me.BarButtonItem2, Me.BtnRegistroEmpleado, Me.BarButtonItem4, Me.BtnRegistroUsuarios, Me.BtnReportesUsuarios, Me.BarButtonItem7, Me.BarButtonItem8, Me.BarButtonItem9, Me.BarButtonItem10, Me.BtnRegistroVenta, Me.BarButtonItem12, Me.BarButtonItem13, Me.BarButtonItem14, Me.BarButtonItem15, Me.BtnCambiarUsuario, Me.BarButtonItem17, Me.BarButtonItem18, Me.BarButtonItem19, Me.BarButtonItem20, Me.BtnProfesion, Me.BtnCargo, Me.BarButtonItem23, Me.BarButtonItem24, Me.BtnF, Me.BarButtonItem1, Me.BarButtonItem3, Me.BarButtonItem5, Me.BarButtonItem6, Me.BarButtonItem11, Me.BarButtonItem16, Me.BarButtonItem21, Me.BarButtonItem22, Me.BarButtonItem25, Me.BarButtonItem26, Me.BarButtonItem27, Me.BarButtonItem28})
+        Me.mainRibbonControl.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.mainRibbonControl.ExpandCollapseItem, Me.bbiSave, Me.bbiSaveAndClose, Me.bbiSaveAndNew, Me.bbiReset, Me.bbiDelete, Me.bbiClose, Me.BtnRegistroClientes, Me.BarButtonItem2, Me.BtnRegistroEmpleado, Me.BarButtonItem4, Me.BtnRegistroUsuarios, Me.BtnReportesUsuarios, Me.BarButtonItem7, Me.BarButtonItem8, Me.BarButtonItem9, Me.BarButtonItem10, Me.BtnRegistroVenta, Me.BarButtonItem12, Me.BarButtonItem13, Me.BarButtonItem14, Me.BarButtonItem15, Me.BtnCambiarUsuario, Me.BarButtonItem17, Me.BarButtonItem18, Me.BarButtonItem19, Me.BarButtonItem20, Me.BtnProfesion, Me.BtnCargo, Me.BarButtonItem23, Me.BarButtonItem24, Me.BtnF, Me.BarButtonItem1, Me.BarButtonItem3, Me.BarButtonItem5, Me.BarButtonItem6, Me.BarButtonItem11, Me.BarButtonItem16, Me.BarButtonItem21, Me.BarButtonItem22, Me.BarButtonItem25, Me.BarButtonItem26, Me.BarButtonItem27, Me.BarButtonItem28, Me.BarButtonItem29})
         Me.mainRibbonControl.Location = New System.Drawing.Point(0, 0)
-        Me.mainRibbonControl.MaxItemId = 47
+        Me.mainRibbonControl.MaxItemId = 48
         Me.mainRibbonControl.Name = "mainRibbonControl"
-        Me.mainRibbonControl.Pages.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPage() {Me.mainRibbonPage, Me.RibbonPage12, Me.RibbonPage1, Me.RibbonPage2, Me.RibbonPage3, Me.RibbonPage5, Me.RibbonPage9, Me.RibbonPage10, Me.RibbonPage4, Me.RibbonPage8, Me.RibbonPage7, Me.RibbonPage11})
+        Me.mainRibbonControl.Pages.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPage() {Me.mainRibbonPage, Me.RibbonPage12, Me.RibbonPage1, Me.RibbonPage2, Me.RibbonPage3, Me.RibbonPage5, Me.RibbonPage9, Me.RibbonPage10, Me.RibbonPage4, Me.RibbonPage8, Me.RibbonPage7, Me.PgAuditoria, Me.RibbonPage11})
         Me.mainRibbonControl.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2013
         Me.mainRibbonControl.ShowApplicationButton = DevExpress.Utils.DefaultBoolean.[False]
         Me.mainRibbonControl.Size = New System.Drawing.Size(798, 147)
@@ -406,6 +409,35 @@
         Me.BarButtonItem25.LargeGlyph = CType(resources.GetObject("BarButtonItem25.LargeGlyph"), System.Drawing.Image)
         Me.BarButtonItem25.Name = "BarButtonItem25"
         '
+        'BarButtonItem26
+        '
+        Me.BarButtonItem26.Caption = "Facturación"
+        Me.BarButtonItem26.Id = 44
+        Me.BarButtonItem26.LargeGlyph = Global.INNOVAMASTER.My.Resources.Resources.electronic_billing_machine_256
+        Me.BarButtonItem26.Name = "BarButtonItem26"
+        '
+        'BarButtonItem27
+        '
+        Me.BarButtonItem27.Caption = "Registro Ventas"
+        Me.BarButtonItem27.Id = 45
+        Me.BarButtonItem27.LargeGlyph = Global.INNOVAMASTER.My.Resources.Resources.factur
+        Me.BarButtonItem27.Name = "BarButtonItem27"
+        '
+        'BarButtonItem28
+        '
+        Me.BarButtonItem28.Caption = "Reporte Ventas"
+        Me.BarButtonItem28.Glyph = CType(resources.GetObject("BarButtonItem28.Glyph"), System.Drawing.Image)
+        Me.BarButtonItem28.Id = 46
+        Me.BarButtonItem28.LargeGlyph = CType(resources.GetObject("BarButtonItem28.LargeGlyph"), System.Drawing.Image)
+        Me.BarButtonItem28.Name = "BarButtonItem28"
+        '
+        'BarButtonItem29
+        '
+        Me.BarButtonItem29.Caption = "Registros Auditoría"
+        Me.BarButtonItem29.Id = 47
+        Me.BarButtonItem29.LargeGlyph = Global.INNOVAMASTER.My.Resources.Resources.chart_icon
+        Me.BarButtonItem29.Name = "BarButtonItem29"
+        '
         'mainRibbonPage
         '
         Me.mainRibbonPage.Groups.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPageGroup() {Me.mainRibbonPageGroup})
@@ -420,6 +452,20 @@
         Me.mainRibbonPageGroup.Name = "mainRibbonPageGroup"
         Me.mainRibbonPageGroup.ShowCaptionButton = False
         Me.mainRibbonPageGroup.Text = "Tareas"
+        '
+        'RibbonPage12
+        '
+        Me.RibbonPage12.Groups.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPageGroup() {Me.RibbonPageGroup7})
+        Me.RibbonPage12.Name = "RibbonPage12"
+        Me.RibbonPage12.Text = "Ventas"
+        '
+        'RibbonPageGroup7
+        '
+        Me.RibbonPageGroup7.ItemLinks.Add(Me.BarButtonItem26)
+        Me.RibbonPageGroup7.ItemLinks.Add(Me.BarButtonItem27)
+        Me.RibbonPageGroup7.ItemLinks.Add(Me.BarButtonItem28)
+        Me.RibbonPageGroup7.Name = "RibbonPageGroup7"
+        Me.RibbonPageGroup7.Text = "Acciones"
         '
         'RibbonPage1
         '
@@ -478,29 +524,29 @@
         '
         'RibbonPage9
         '
-        Me.RibbonPage9.Groups.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPageGroup() {Me.RibbonPageGroup2})
+        Me.RibbonPage9.Groups.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPageGroup() {Me.PgCompra})
         Me.RibbonPage9.Name = "RibbonPage9"
         Me.RibbonPage9.Text = "Compras"
         '
-        'RibbonPageGroup2
+        'PgCompra
         '
-        Me.RibbonPageGroup2.ItemLinks.Add(Me.BarButtonItem3)
-        Me.RibbonPageGroup2.ItemLinks.Add(Me.BarButtonItem16)
-        Me.RibbonPageGroup2.Name = "RibbonPageGroup2"
-        Me.RibbonPageGroup2.Text = "Acciones"
+        Me.PgCompra.ItemLinks.Add(Me.BarButtonItem3)
+        Me.PgCompra.ItemLinks.Add(Me.BarButtonItem16)
+        Me.PgCompra.Name = "PgCompra"
+        Me.PgCompra.Text = "Acciones"
         '
         'RibbonPage10
         '
-        Me.RibbonPage10.Groups.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPageGroup() {Me.RibbonPageGroup4})
+        Me.RibbonPage10.Groups.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPageGroup() {Me.PgPedido})
         Me.RibbonPage10.Name = "RibbonPage10"
         Me.RibbonPage10.Text = "Pedidos"
         '
-        'RibbonPageGroup4
+        'PgPedido
         '
-        Me.RibbonPageGroup4.ItemLinks.Add(Me.BarButtonItem6)
-        Me.RibbonPageGroup4.ItemLinks.Add(Me.BarButtonItem21)
-        Me.RibbonPageGroup4.Name = "RibbonPageGroup4"
-        Me.RibbonPageGroup4.Text = "Acciones"
+        Me.PgPedido.ItemLinks.Add(Me.BarButtonItem6)
+        Me.PgPedido.ItemLinks.Add(Me.BarButtonItem21)
+        Me.PgPedido.Name = "PgPedido"
+        Me.PgPedido.Text = "Acciones"
         '
         'RibbonPage4
         '
@@ -541,11 +587,23 @@
         Me.PagConfiguracion.Name = "PagConfiguracion"
         Me.PagConfiguracion.Text = "Acciones"
         '
+        'PgAuditoria
+        '
+        Me.PgAuditoria.Groups.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPageGroup() {Me.RibbonPageGroup8})
+        Me.PgAuditoria.Name = "PgAuditoria"
+        Me.PgAuditoria.Text = "Auditoría"
+        '
+        'RibbonPageGroup8
+        '
+        Me.RibbonPageGroup8.ItemLinks.Add(Me.BarButtonItem29)
+        Me.RibbonPageGroup8.Name = "RibbonPageGroup8"
+        Me.RibbonPageGroup8.Text = "Acciones"
+        '
         'RibbonPage11
         '
         Me.RibbonPage11.Groups.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPageGroup() {Me.RibbonPageGroup5})
         Me.RibbonPage11.Name = "RibbonPage11"
-        Me.RibbonPage11.Text = "Acerca de Nosotros"
+        Me.RibbonPage11.Text = "Acerca de nosotros"
         '
         'RibbonPageGroup5
         '
@@ -642,42 +700,6 @@
         Me.RibbonPage6.Name = "RibbonPage6"
         Me.RibbonPage6.Text = "Ventas"
         '
-        'RibbonPage12
-        '
-        Me.RibbonPage12.Groups.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPageGroup() {Me.RibbonPageGroup7})
-        Me.RibbonPage12.Name = "RibbonPage12"
-        Me.RibbonPage12.Text = "Ventas"
-        '
-        'RibbonPageGroup7
-        '
-        Me.RibbonPageGroup7.ItemLinks.Add(Me.BarButtonItem26)
-        Me.RibbonPageGroup7.ItemLinks.Add(Me.BarButtonItem27)
-        Me.RibbonPageGroup7.ItemLinks.Add(Me.BarButtonItem28)
-        Me.RibbonPageGroup7.Name = "RibbonPageGroup7"
-        Me.RibbonPageGroup7.Text = "Acciones"
-        '
-        'BarButtonItem26
-        '
-        Me.BarButtonItem26.Caption = "Facturación"
-        Me.BarButtonItem26.Id = 44
-        Me.BarButtonItem26.LargeGlyph = Global.INNOVAMASTER.My.Resources.Resources.electronic_billing_machine_256
-        Me.BarButtonItem26.Name = "BarButtonItem26"
-        '
-        'BarButtonItem27
-        '
-        Me.BarButtonItem27.Caption = "Registro Ventas"
-        Me.BarButtonItem27.Id = 45
-        Me.BarButtonItem27.LargeGlyph = Global.INNOVAMASTER.My.Resources.Resources.factur
-        Me.BarButtonItem27.Name = "BarButtonItem27"
-        '
-        'BarButtonItem28
-        '
-        Me.BarButtonItem28.Caption = "Reporte Ventas"
-        Me.BarButtonItem28.Glyph = CType(resources.GetObject("BarButtonItem28.Glyph"), System.Drawing.Image)
-        Me.BarButtonItem28.Id = 46
-        Me.BarButtonItem28.LargeGlyph = CType(resources.GetObject("BarButtonItem28.LargeGlyph"), System.Drawing.Image)
-        Me.BarButtonItem28.Name = "BarButtonItem28"
-        '
         'MenuPrincipal
         '
         Me.Appearance.BackColor = System.Drawing.Color.White
@@ -763,11 +785,11 @@
     Friend WithEvents PgProveedores As DevExpress.XtraBars.Ribbon.RibbonPageGroup
     Friend WithEvents BarButtonItem3 As DevExpress.XtraBars.BarButtonItem
     Friend WithEvents RibbonPage9 As DevExpress.XtraBars.Ribbon.RibbonPage
-    Friend WithEvents RibbonPageGroup2 As DevExpress.XtraBars.Ribbon.RibbonPageGroup
+    Friend WithEvents PgCompra As DevExpress.XtraBars.Ribbon.RibbonPageGroup
     Friend WithEvents BarButtonItem5 As DevExpress.XtraBars.BarButtonItem
     Friend WithEvents BarButtonItem6 As DevExpress.XtraBars.BarButtonItem
     Friend WithEvents RibbonPage10 As DevExpress.XtraBars.Ribbon.RibbonPage
-    Friend WithEvents RibbonPageGroup4 As DevExpress.XtraBars.Ribbon.RibbonPageGroup
+    Friend WithEvents PgPedido As DevExpress.XtraBars.Ribbon.RibbonPageGroup
     Friend WithEvents RibbonPageGroup3 As DevExpress.XtraBars.Ribbon.RibbonPageGroup
     Friend WithEvents BarButtonItem11 As DevExpress.XtraBars.BarButtonItem
     Friend WithEvents BarButtonItem16 As DevExpress.XtraBars.BarButtonItem
@@ -789,4 +811,7 @@
     Friend WithEvents RibbonPageGroup7 As DevExpress.XtraBars.Ribbon.RibbonPageGroup
     Friend WithEvents RibbonPageGroup6 As DevExpress.XtraBars.Ribbon.RibbonPageGroup
     Friend WithEvents RibbonPage6 As DevExpress.XtraBars.Ribbon.RibbonPage
+    Friend WithEvents BarButtonItem29 As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents PgAuditoria As DevExpress.XtraBars.Ribbon.RibbonPage
+    Friend WithEvents RibbonPageGroup8 As DevExpress.XtraBars.Ribbon.RibbonPageGroup
 End Class

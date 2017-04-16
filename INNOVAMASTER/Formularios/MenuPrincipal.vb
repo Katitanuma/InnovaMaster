@@ -241,4 +241,9 @@ Partial Public Class MenuPrincipal
         FrmVenta.Dock = DockStyle.Fill
         FrmVenta.Show()
     End Sub
+
+    Private Sub BarButtonItem29_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BarButtonItem29.ItemClick
+        FrmLogAuditoria.Location = New Point(285, 220)
+        FrmLogAuditoria.Show()
+    End Sub
 End Class

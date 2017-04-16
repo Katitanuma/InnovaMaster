@@ -68,7 +68,13 @@ Public Class FrmLogin
                             MenuPrincipal.PagUbicacion.Enabled = True
                             MenuPrincipal.PagConfiguracion.Enabled = True
                             MenuPrincipal.PgProveedores.Enabled = True
+                            MenuPrincipal.PgAuditoria.Visible = True
+                            MenuPrincipal.PgCompra.Enabled = True
+                            MenuPrincipal.PgPedido.Enabled = True
                         Else
+                            MenuPrincipal.PgAuditoria.Visible = False
+                            MenuPrincipal.PgCompra.Enabled = False
+                            MenuPrincipal.PgPedido.Enabled = False
                             MenuPrincipal.PagEmpleados.Enabled = False
                             MenuPrincipal.PagUsuarios.Enabled = False
                             MenuPrincipal.PagProductos.Enabled = False

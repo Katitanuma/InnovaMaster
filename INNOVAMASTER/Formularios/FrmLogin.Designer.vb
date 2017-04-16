@@ -85,7 +85,7 @@ Partial Class FrmLogin
         'TxtContrasena
         '
         Me.TxtContrasena.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TxtContrasena.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtContrasena.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtContrasena.Location = New System.Drawing.Point(399, 157)
         Me.TxtContrasena.Name = "TxtContrasena"
         Me.TxtContrasena.Size = New System.Drawing.Size(176, 19)
@@ -95,7 +95,7 @@ Partial Class FrmLogin
         'TxtUsuario
         '
         Me.TxtUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TxtUsuario.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtUsuario.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtUsuario.Location = New System.Drawing.Point(399, 102)
         Me.TxtUsuario.Name = "TxtUsuario"
         Me.TxtUsuario.Size = New System.Drawing.Size(176, 19)

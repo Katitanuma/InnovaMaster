@@ -177,6 +177,12 @@
     <Compile Include="Formularios\FrmFacturacionVenta.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Formularios\FrmLogAuditoria.Designer.vb">
+      <DependentUpon>FrmLogAuditoria.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmLogAuditoria.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Formularios\FrmPedidos.Designer.vb">
       <DependentUpon>FrmPedidos.vb</DependentUpon>
     </Compile>
@@ -439,6 +445,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmFacturacionVenta.resx">
       <DependentUpon>FrmFacturacionVenta.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmLogAuditoria.resx">
+      <DependentUpon>FrmLogAuditoria.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmPedidos.resx">
       <DependentUpon>FrmPedidos.vb</DependentUpon>
@@ -1087,6 +1096,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\imprimir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\remove_256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\x-mark-3-xxl.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chart-icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
