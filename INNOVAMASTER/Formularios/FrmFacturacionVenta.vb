@@ -986,7 +986,7 @@ Public Class FrmFacturacionVenta
                 Else
                     datos.gIdFormaVenta = 2
                 End If
-
+                datos.gCambio = 0
                 If CboTipoVenta.Text = "Contado" Then
                     datos.gIdTipoVenta = 1
                 Else
@@ -1015,7 +1015,7 @@ Public Class FrmFacturacionVenta
     Private Sub EditarCambio(ByVal Cambio As Double)
         Using cmd As New SqlCommand
             Try
-                Conec.Desconectarse()
+                Conec.Conectarse()
                 With cmd
                     .CommandText = "EditarCambio"
                     .CommandType = CommandType.StoredProcedure

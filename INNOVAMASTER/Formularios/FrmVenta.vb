@@ -186,6 +186,7 @@ Public Class FrmVenta
                 Else
                     datos.gIdTipoVenta = 2
                 End If
+                datos.gCambio = 0
 
                 datos.gDescuentoExtra = CDbl(TxtDescuentoExtra.Text)
                 datos.gIdUsuario = Int(MenuPrincipal.LblIdUsuario.Text)

@@ -2,7 +2,7 @@
     Dim IdVenta, IdCliente As String
     Dim FechaVenta, FechaVencimiento As Date
     Dim IdFormaVenta, IdTipoVenta, IdUsuario As Integer
-    Dim DescuentoExtra As Double
+    Dim DescuentoExtra, Cambio As Double
 
     Public Property gIdVenta
         Get
@@ -71,10 +71,20 @@
         End Set
     End Property
 
+    Public Property gCambio
+        Get
+            Return Cambio
+        End Get
+        Set(value)
+            Cambio = value
+        End Set
+    End Property
+
+
     Public Sub New()
 
     End Sub
-    Public Sub New(ByVal IdVenta As String, ByVal IdCliente As String, ByVal FechaVenta As Date, ByVal FechaVencimiento As Date, ByVal IdFormaVenta As Integer, ByVal IdTipoVenta As Integer, ByVal IdUsuario As Integer, ByVal DescuentoExtra As Double)
+    Public Sub New(ByVal IdVenta As String, ByVal IdCliente As String, ByVal FechaVenta As Date, ByVal FechaVencimiento As Date, ByVal IdFormaVenta As Integer, ByVal IdTipoVenta As Integer, ByVal IdUsuario As Integer, ByVal DescuentoExtra As Double, ByVal Cambio As Double)
         gIdVenta = IdVenta
         gIdCliente = IdCliente
         gFechaVenta = FechaVenta
@@ -83,6 +93,7 @@
         gIdTipoVenta = IdTipoVenta
         gIdUsuario = IdUsuario
         gDescuentoExtra = DescuentoExtra
+        gCambio = Cambio
     End Sub
 
 

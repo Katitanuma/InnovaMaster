@@ -18,6 +18,7 @@ Public Class Fventa
             cmd.Parameters.AddWithValue("@IdTipoVenta", Datos.gIdTipoVenta)
             cmd.Parameters.AddWithValue("@IdUsuario", Datos.gIdUsuario)
             cmd.Parameters.AddWithValue("@DescuentoExtra", Datos.gDescuentoExtra)
+            cmd.Parameters.AddWithValue("@Cambio", Datos.gCambio)
 
             If cmd.ExecuteNonQuery Then
                 Return True
