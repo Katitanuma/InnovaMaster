@@ -254,7 +254,7 @@ Public Class FrmUsuario
                 If TxtContra.Text = Nothing And TxtContra2.Text = TxtContra.Text Then
                     datos.gContrasena = LblRespaldo.Text
                 Else
-                    datos.gContrasena = TxtContra.Text
+                    datos.gContrasena = SHA1(TxtContra.Text)
                 End If
                 datos.gIdEmpleado = CboId.Items(CboEmpleado.SelectedIndex)
                 If RdbActivo.Checked = True Then
