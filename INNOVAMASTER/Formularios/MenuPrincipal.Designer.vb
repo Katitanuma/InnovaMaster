@@ -107,8 +107,12 @@
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.RibbonPageGroup6 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
         Me.RibbonPage6 = New DevExpress.XtraBars.Ribbon.RibbonPage()
+        Me.XtraTabbedMdiManager1 = New DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(Me.components)
+        Me.pcFondo = New DevExpress.XtraEditors.PanelControl()
         CType(Me.mainRibbonControl, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BarManager1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.XtraTabbedMdiManager1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pcFondo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'mainRibbonControl
@@ -121,7 +125,7 @@
         Me.mainRibbonControl.Pages.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPage() {Me.mainRibbonPage, Me.RibbonPage12, Me.RibbonPage1, Me.RibbonPage2, Me.RibbonPage3, Me.RibbonPage5, Me.RibbonPage9, Me.RibbonPage10, Me.RibbonPage4, Me.RibbonPage8, Me.RibbonPage7, Me.PgAuditoria, Me.RibbonPage11})
         Me.mainRibbonControl.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2013
         Me.mainRibbonControl.ShowApplicationButton = DevExpress.Utils.DefaultBoolean.[False]
-        Me.mainRibbonControl.Size = New System.Drawing.Size(798, 147)
+        Me.mainRibbonControl.Size = New System.Drawing.Size(871, 147)
         Me.mainRibbonControl.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Hidden
         '
         'bbiSave
@@ -656,28 +660,28 @@
         Me.barDockControlTop.CausesValidation = False
         Me.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top
         Me.barDockControlTop.Location = New System.Drawing.Point(0, 0)
-        Me.barDockControlTop.Size = New System.Drawing.Size(798, 0)
+        Me.barDockControlTop.Size = New System.Drawing.Size(871, 0)
         '
         'barDockControlBottom
         '
         Me.barDockControlBottom.CausesValidation = False
         Me.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.barDockControlBottom.Location = New System.Drawing.Point(0, 599)
-        Me.barDockControlBottom.Size = New System.Drawing.Size(798, 0)
+        Me.barDockControlBottom.Location = New System.Drawing.Point(0, 416)
+        Me.barDockControlBottom.Size = New System.Drawing.Size(871, 0)
         '
         'barDockControlLeft
         '
         Me.barDockControlLeft.CausesValidation = False
         Me.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left
         Me.barDockControlLeft.Location = New System.Drawing.Point(0, 0)
-        Me.barDockControlLeft.Size = New System.Drawing.Size(0, 599)
+        Me.barDockControlLeft.Size = New System.Drawing.Size(0, 416)
         '
         'barDockControlRight
         '
         Me.barDockControlRight.CausesValidation = False
         Me.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right
-        Me.barDockControlRight.Location = New System.Drawing.Point(798, 0)
-        Me.barDockControlRight.Size = New System.Drawing.Size(0, 599)
+        Me.barDockControlRight.Location = New System.Drawing.Point(871, 0)
+        Me.barDockControlRight.Size = New System.Drawing.Size(0, 416)
         '
         'Panel1
         '
@@ -700,6 +704,22 @@
         Me.RibbonPage6.Name = "RibbonPage6"
         Me.RibbonPage6.Text = "Ventas"
         '
+        'XtraTabbedMdiManager1
+        '
+        Me.XtraTabbedMdiManager1.ClosePageButtonShowMode = DevExpress.XtraTab.ClosePageButtonShowMode.InActiveTabPageAndTabControlHeader
+        Me.XtraTabbedMdiManager1.MdiParent = Me
+        '
+        'pcFondo
+        '
+        Me.pcFondo.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.pcFondo.ContentImage = Global.INNOVAMASTER.My.Resources.Resources.Logito3
+        Me.pcFondo.Location = New System.Drawing.Point(12, 153)
+        Me.pcFondo.Name = "pcFondo"
+        Me.pcFondo.Size = New System.Drawing.Size(847, 251)
+        Me.pcFondo.TabIndex = 17
+        '
         'MenuPrincipal
         '
         Me.Appearance.BackColor = System.Drawing.Color.White
@@ -707,9 +727,8 @@
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange
-        Me.BackgroundImageLayoutStore = System.Windows.Forms.ImageLayout.Center
-        Me.BackgroundImageStore = Global.INNOVAMASTER.My.Resources.Resources.Logito3
-        Me.ClientSize = New System.Drawing.Size(798, 599)
+        Me.ClientSize = New System.Drawing.Size(871, 416)
+        Me.Controls.Add(Me.pcFondo)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.LblIdUsuario)
         Me.Controls.Add(Me.Label1)
@@ -725,6 +744,8 @@
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         CType(Me.mainRibbonControl, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BarManager1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.XtraTabbedMdiManager1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pcFondo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -814,4 +835,6 @@
     Friend WithEvents BarButtonItem29 As DevExpress.XtraBars.BarButtonItem
     Friend WithEvents PgAuditoria As DevExpress.XtraBars.Ribbon.RibbonPage
     Friend WithEvents RibbonPageGroup8 As DevExpress.XtraBars.Ribbon.RibbonPageGroup
+    Friend WithEvents pcFondo As DevExpress.XtraEditors.PanelControl
+    Friend WithEvents XtraTabbedMdiManager1 As DevExpress.XtraTabbedMdi.XtraTabbedMdiManager
 End Class

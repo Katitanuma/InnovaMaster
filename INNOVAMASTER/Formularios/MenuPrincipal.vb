@@ -81,17 +81,18 @@ Partial Public Class MenuPrincipal
     End Sub
 
     Private Sub BarButtonItem18_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BarButtonItem18.ItemClick
-
+        'Formulario de Pais
         FrmPais.MdiParent = Me
-        FrmPais.Dock = DockStyle.Fill
         FrmPais.Show()
+        FrmPais.Focus()
     End Sub
 
     Private Sub BarButtonItem19_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BarButtonItem19.ItemClick
 
         FrmDepartamento.MdiParent = Me
-        FrmDepartamento.Dock = DockStyle.Fill
+
         FrmDepartamento.Show()
+        FrmDepartamento.Focus()
     End Sub
 
     Private Sub BarButtonItem20_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BarButtonItem20.ItemClick
@@ -245,5 +246,13 @@ Partial Public Class MenuPrincipal
     Private Sub BarButtonItem29_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BarButtonItem29.ItemClick
         FrmLogAuditoria.Location = New Point(285, 220)
         FrmLogAuditoria.Show()
+    End Sub
+
+    Private Sub GestionarForms(sender As Object, e As DevExpress.XtraTabbedMdi.MdiTabPageEventArgs) Handles XtraTabbedMdiManager1.PageAdded, XtraTabbedMdiManager1.PageRemoved
+        If XtraTabbedMdiManager1.Pages.Count = 0 Then
+            pcFondo.Visible = True
+        Else
+            pcFondo.Visible = False
+        End If
     End Sub
 End Class
