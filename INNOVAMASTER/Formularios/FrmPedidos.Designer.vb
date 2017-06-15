@@ -85,7 +85,7 @@ Partial Class FrmPedidos
         '
         Me.Button2.BackColor = System.Drawing.Color.White
         Me.Button2.Font = New System.Drawing.Font("Comic Sans MS", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(980, 531)
+        Me.Button2.Location = New System.Drawing.Point(981, 521)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(206, 27)
         Me.Button2.TabIndex = 125
@@ -96,7 +96,7 @@ Partial Class FrmPedidos
         '
         Me.Button1.BackColor = System.Drawing.Color.White
         Me.Button1.Font = New System.Drawing.Font("Comic Sans MS", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(1192, 531)
+        Me.Button1.Location = New System.Drawing.Point(1193, 521)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(123, 27)
         Me.Button1.TabIndex = 124
@@ -119,7 +119,7 @@ Partial Class FrmPedidos
         '
         Me.BtnFacturar.BackColor = System.Drawing.Color.White
         Me.BtnFacturar.Font = New System.Drawing.Font("Comic Sans MS", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnFacturar.Location = New System.Drawing.Point(880, 532)
+        Me.BtnFacturar.Location = New System.Drawing.Point(881, 522)
         Me.BtnFacturar.Name = "BtnFacturar"
         Me.BtnFacturar.Size = New System.Drawing.Size(85, 27)
         Me.BtnFacturar.TabIndex = 121
@@ -203,7 +203,7 @@ Partial Class FrmPedidos
         'TxtTotal
         '
         Me.TxtTotal.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtTotal.Location = New System.Drawing.Point(389, 535)
+        Me.TxtTotal.Location = New System.Drawing.Point(390, 525)
         Me.TxtTotal.Name = "TxtTotal"
         Me.TxtTotal.ReadOnly = True
         Me.TxtTotal.Size = New System.Drawing.Size(164, 21)
@@ -215,7 +215,7 @@ Partial Class FrmPedidos
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Comic Sans MS", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(386, 515)
+        Me.Label4.Location = New System.Drawing.Point(387, 505)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(42, 19)
         Me.Label4.TabIndex = 118
@@ -224,7 +224,7 @@ Partial Class FrmPedidos
         'TxtImpuesto
         '
         Me.TxtImpuesto.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtImpuesto.Location = New System.Drawing.Point(201, 535)
+        Me.TxtImpuesto.Location = New System.Drawing.Point(202, 525)
         Me.TxtImpuesto.Name = "TxtImpuesto"
         Me.TxtImpuesto.ReadOnly = True
         Me.TxtImpuesto.Size = New System.Drawing.Size(164, 21)
@@ -236,7 +236,7 @@ Partial Class FrmPedidos
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Comic Sans MS", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(198, 515)
+        Me.Label3.Location = New System.Drawing.Point(199, 505)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(66, 19)
         Me.Label3.TabIndex = 116
@@ -245,7 +245,7 @@ Partial Class FrmPedidos
         'TxtSubtotal
         '
         Me.TxtSubtotal.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtSubtotal.Location = New System.Drawing.Point(13, 537)
+        Me.TxtSubtotal.Location = New System.Drawing.Point(14, 527)
         Me.TxtSubtotal.Name = "TxtSubtotal"
         Me.TxtSubtotal.ReadOnly = True
         Me.TxtSubtotal.Size = New System.Drawing.Size(164, 21)
@@ -257,7 +257,7 @@ Partial Class FrmPedidos
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Comic Sans MS", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(10, 517)
+        Me.Label1.Location = New System.Drawing.Point(11, 507)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(63, 19)
         Me.Label1.TabIndex = 112

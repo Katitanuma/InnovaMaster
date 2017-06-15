@@ -90,7 +90,7 @@ Partial Class FrmCompras
         '
         Me.Button2.BackColor = System.Drawing.Color.White
         Me.Button2.Font = New System.Drawing.Font("Comic Sans MS", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(977, 530)
+        Me.Button2.Location = New System.Drawing.Point(977, 522)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(206, 27)
         Me.Button2.TabIndex = 108
@@ -101,7 +101,7 @@ Partial Class FrmCompras
         '
         Me.Button1.BackColor = System.Drawing.Color.White
         Me.Button1.Font = New System.Drawing.Font("Comic Sans MS", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(1189, 530)
+        Me.Button1.Location = New System.Drawing.Point(1189, 522)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(123, 27)
         Me.Button1.TabIndex = 106
@@ -135,7 +135,7 @@ Partial Class FrmCompras
         '
         Me.BtnFacturar.BackColor = System.Drawing.Color.White
         Me.BtnFacturar.Font = New System.Drawing.Font("Comic Sans MS", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnFacturar.Location = New System.Drawing.Point(830, 531)
+        Me.BtnFacturar.Location = New System.Drawing.Point(830, 523)
         Me.BtnFacturar.Name = "BtnFacturar"
         Me.BtnFacturar.Size = New System.Drawing.Size(85, 27)
         Me.BtnFacturar.TabIndex = 102
@@ -262,7 +262,7 @@ Partial Class FrmCompras
         'TxtTotal
         '
         Me.TxtTotal.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtTotal.Location = New System.Drawing.Point(629, 536)
+        Me.TxtTotal.Location = New System.Drawing.Point(629, 528)
         Me.TxtTotal.Name = "TxtTotal"
         Me.TxtTotal.ReadOnly = True
         Me.TxtTotal.Size = New System.Drawing.Size(164, 21)
@@ -274,7 +274,7 @@ Partial Class FrmCompras
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Comic Sans MS", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(626, 516)
+        Me.Label4.Location = New System.Drawing.Point(626, 508)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(42, 19)
         Me.Label4.TabIndex = 99
@@ -283,7 +283,7 @@ Partial Class FrmCompras
         'TxtImpuesto
         '
         Me.TxtImpuesto.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtImpuesto.Location = New System.Drawing.Point(423, 536)
+        Me.TxtImpuesto.Location = New System.Drawing.Point(423, 528)
         Me.TxtImpuesto.Name = "TxtImpuesto"
         Me.TxtImpuesto.ReadOnly = True
         Me.TxtImpuesto.Size = New System.Drawing.Size(164, 21)
@@ -295,7 +295,7 @@ Partial Class FrmCompras
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Comic Sans MS", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(420, 516)
+        Me.Label3.Location = New System.Drawing.Point(420, 508)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(66, 19)
         Me.Label3.TabIndex = 97
@@ -304,7 +304,7 @@ Partial Class FrmCompras
         'TxtDescuento
         '
         Me.TxtDescuento.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtDescuento.Location = New System.Drawing.Point(216, 536)
+        Me.TxtDescuento.Location = New System.Drawing.Point(216, 528)
         Me.TxtDescuento.Name = "TxtDescuento"
         Me.TxtDescuento.ReadOnly = True
         Me.TxtDescuento.Size = New System.Drawing.Size(164, 21)
@@ -316,7 +316,7 @@ Partial Class FrmCompras
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Comic Sans MS", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(213, 516)
+        Me.Label2.Location = New System.Drawing.Point(213, 508)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(72, 19)
         Me.Label2.TabIndex = 95
@@ -325,7 +325,7 @@ Partial Class FrmCompras
         'TxtSubtotal
         '
         Me.TxtSubtotal.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtSubtotal.Location = New System.Drawing.Point(10, 536)
+        Me.TxtSubtotal.Location = New System.Drawing.Point(10, 528)
         Me.TxtSubtotal.Name = "TxtSubtotal"
         Me.TxtSubtotal.ReadOnly = True
         Me.TxtSubtotal.Size = New System.Drawing.Size(164, 21)
@@ -337,7 +337,7 @@ Partial Class FrmCompras
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Comic Sans MS", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(7, 516)
+        Me.Label1.Location = New System.Drawing.Point(7, 508)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(63, 19)
         Me.Label1.TabIndex = 93

@@ -715,9 +715,9 @@
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.pcFondo.ContentImage = Global.INNOVAMASTER.My.Resources.Resources.Logito3
-        Me.pcFondo.Location = New System.Drawing.Point(12, 153)
+        Me.pcFondo.Location = New System.Drawing.Point(0, 153)
         Me.pcFondo.Name = "pcFondo"
-        Me.pcFondo.Size = New System.Drawing.Size(847, 251)
+        Me.pcFondo.Size = New System.Drawing.Size(871, 251)
         Me.pcFondo.TabIndex = 17
         '
         'MenuPrincipal

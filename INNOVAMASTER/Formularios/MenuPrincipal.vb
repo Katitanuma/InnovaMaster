@@ -21,20 +21,20 @@ Partial Public Class MenuPrincipal
     Private Sub BarButtonItem1_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BtnRegistroClientes.ItemClick
 
         FrmCliente.MdiParent = Me
-        FrmCliente.Dock = DockStyle.Fill
+        FrmCliente.Focus()
         FrmCliente.Show()
         FrmCliente.Focus()
     End Sub
     Private Sub BarButtonItem3_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BtnRegistroEmpleado.ItemClick
 
         FrmEmpleado.MdiParent = Me
-        FrmEmpleado.Dock = DockStyle.Fill
+        FrmEmpleado.Focus()
         FrmEmpleado.Show()
     End Sub
     Private Sub BarButtonItem5_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BtnRegistroUsuarios.ItemClick
 
         FrmUsuario.MdiParent = Me
-        FrmUsuario.Dock = DockStyle.Fill
+        FrmUsuario.Focus()
         FrmUsuario.Show()
     End Sub
     Private Sub BarButtonItem7_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BarButtonItem7.ItemClick
@@ -43,7 +43,7 @@ Partial Public Class MenuPrincipal
     Private Sub BarButtonItem9_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BarButtonItem9.ItemClick
 
         FrmProducto.MdiParent = Me
-        FrmProducto.Dock = DockStyle.Fill
+        FrmProducto.Focus()
         FrmProducto.Show()
     End Sub
     Private Sub BarButtonItem11_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BtnRegistroVenta.ItemClick
@@ -76,7 +76,7 @@ Partial Public Class MenuPrincipal
     Private Sub BarButtonItem17_ItemClick_1(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BarButtonItem17.ItemClick
 
         FrmCategoria.MdiParent = Me
-        FrmCategoria.Dock = DockStyle.Fill
+        FrmCategoria.Focus()
         FrmCategoria.Show()
     End Sub
 
@@ -98,35 +98,35 @@ Partial Public Class MenuPrincipal
     Private Sub BarButtonItem20_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BarButtonItem20.ItemClick
 
         FrmMunicipio.MdiParent = Me
-        FrmMunicipio.Dock = DockStyle.Fill
+        FrmMunicipio.Focus()
         FrmMunicipio.Show()
     End Sub
 
     Private Sub BarButtonItem22_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BtnCargo.ItemClick
 
         frmCargo.MdiParent = Me
-        frmCargo.Dock = DockStyle.Fill
+        frmCargo.Focus()
         frmCargo.Show()
     End Sub
 
     Private Sub BarButtonItem21_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BtnProfesion.ItemClick
 
         FrmProfesiones.MdiParent = Me
-        FrmProfesiones.Dock = DockStyle.Fill
+        FrmProfesiones.Focus()
         FrmProfesiones.Show()
     End Sub
 
     Private Sub BarButtonItem23_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BarButtonItem23.ItemClick
 
         FrmMarca.MdiParent = Me
-        FrmMarca.Dock = DockStyle.Fill
+        FrmMarca.Focus()
         FrmMarca.Show()
     End Sub
 
     Private Sub BarButtonItem24_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BarButtonItem24.ItemClick
 
         FrmModelo.MdiParent = Me
-        FrmModelo.Dock = DockStyle.Fill
+        FrmModelo.Focus()
         FrmModelo.Show()
     End Sub
 
@@ -170,14 +170,14 @@ Partial Public Class MenuPrincipal
     Private Sub BarButtonItem1_ItemClick_1(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BarButtonItem1.ItemClick
 
         FrmProveedor.MdiParent = Me
-        FrmProveedor.Dock = DockStyle.Fill
+        FrmProveedor.Focus()
         FrmProveedor.Show()
     End Sub
 
     Private Sub BarButtonItem3_ItemClick_1(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BarButtonItem3.ItemClick
 
         FrmCompras.MdiParent = Me
-        FrmCompras.Dock = DockStyle.Fill
+        FrmCompras.Focus()
         FrmCompras.Show()
     End Sub
 
@@ -186,7 +186,7 @@ Partial Public Class MenuPrincipal
     Private Sub BarButtonItem6_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BarButtonItem6.ItemClick
 
         FrmPedidos.MdiParent = Me
-        FrmPedidos.Dock = DockStyle.Fill
+        FrmPedidos.Focus()
         FrmPedidos.Show()
     End Sub
 
@@ -228,7 +228,7 @@ Partial Public Class MenuPrincipal
 
     Private Sub BarButtonItem26_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BarButtonItem26.ItemClick
         FrmFacturacionVenta.MdiParent = Me
-        FrmFacturacionVenta.Dock = DockStyle.Fill
+        FrmFacturacionVenta.Focus()
         FrmFacturacionVenta.Show()
     End Sub
 
@@ -239,7 +239,7 @@ Partial Public Class MenuPrincipal
 
     Private Sub BarButtonItem27_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BarButtonItem27.ItemClick
         FrmVenta.MdiParent = Me
-        FrmVenta.Dock = DockStyle.Fill
+        FrmVenta.Focus()
         FrmVenta.Show()
     End Sub
 
