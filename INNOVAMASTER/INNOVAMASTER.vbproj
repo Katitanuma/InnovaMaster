@@ -24,14 +24,14 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <InstallUrl>http://localhost/sistemaINNOVAMASTER/</InstallUrl>
+    <InstallUrl>http://localhost/SISTEMAINNOVAMASTER/</InstallUrl>
     <UpdateUrl>http://localhost/SISTEMAINNOVAMASTER/</UpdateUrl>
     <ProductName>INNOVAMASTER</ProductName>
     <PublisherName>MegaInventors</PublisherName>
     <SuiteName>MegaInventors Sistemas</SuiteName>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>Index.html</WebPage>
-    <ApplicationRevision>3</ApplicationRevision>
+    <ApplicationRevision>5</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -74,10 +74,10 @@
     <SignManifests>false</SignManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>49C58B71FB120E8424592AA9F523DD2CAEBAB9A6</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>7F697B6B75E1EB6EBEA790941E61419AE22A47F2</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestKeyFile>INNOVAMASTER_1_TemporaryKey.pfx</ManifestKeyFile>
+    <ManifestKeyFile>INNOVAMASTER_2_TemporaryKey.pfx</ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
     <GenerateManifests>true</GenerateManifests>
@@ -587,6 +587,7 @@
       <DependentUpon>DsReportes.xsd</DependentUpon>
     </None>
     <None Include="INNOVAMASTER_1_TemporaryKey.pfx" />
+    <None Include="INNOVAMASTER_2_TemporaryKey.pfx" />
     <None Include="INNOVAMASTER_TemporaryKey.pfx" />
     <None Include="My Project\app.manifest" />
     <None Include="My Project\Application.myapp">
@@ -1106,6 +1107,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\chart-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ImagenNula.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NULLA.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -39,10 +39,7 @@ Partial Class FrmEmpleado
         Me.TxtNombres = New System.Windows.Forms.TextBox()
         Me.TxtCelular = New System.Windows.Forms.MaskedTextBox()
         Me.TxtTelefono = New System.Windows.Forms.MaskedTextBox()
-        Me.PbEmpleado = New System.Windows.Forms.PictureBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.BtnEliminarImagen = New System.Windows.Forms.Button()
-        Me.BtnAgregarImagen = New System.Windows.Forms.Button()
         Me.CboProfesion = New System.Windows.Forms.ComboBox()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.CboSucursal = New System.Windows.Forms.ComboBox()
@@ -71,22 +68,25 @@ Partial Class FrmEmpleado
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.BtnNuevoEditar = New System.Windows.Forms.Button()
         Me.BtnCancelar = New System.Windows.Forms.Button()
         Me.BtnNuevo = New System.Windows.Forms.Button()
-        Me.BtnInsertar = New System.Windows.Forms.Button()
         Me.BtnEditar = New System.Windows.Forms.Button()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
+        Me.PbEmpleado = New System.Windows.Forms.PictureBox()
+        Me.BtnEliminarImagen = New System.Windows.Forms.Button()
+        Me.BtnAgregarImagen = New System.Windows.Forms.Button()
+        Me.BtnInsertar = New System.Windows.Forms.Button()
         CType(Me.DgvEmpleado, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GbEmpleado.SuspendLayout()
-        CType(Me.PbEmpleado, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PbEmpleado, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'OpenFileDialog1
@@ -284,16 +284,6 @@ Partial Class FrmEmpleado
         Me.TxtTelefono.Size = New System.Drawing.Size(107, 21)
         Me.TxtTelefono.TabIndex = 5
         '
-        'PbEmpleado
-        '
-        Me.PbEmpleado.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.PbEmpleado.Location = New System.Drawing.Point(388, 23)
-        Me.PbEmpleado.Name = "PbEmpleado"
-        Me.PbEmpleado.Size = New System.Drawing.Size(130, 131)
-        Me.PbEmpleado.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PbEmpleado.TabIndex = 47
-        Me.PbEmpleado.TabStop = False
-        '
         'Panel1
         '
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
@@ -303,29 +293,6 @@ Partial Class FrmEmpleado
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(130, 39)
         Me.Panel1.TabIndex = 47
-        '
-        'BtnEliminarImagen
-        '
-        Me.BtnEliminarImagen.BackgroundImage = Global.INNOVAMASTER.My.Resources.Resources.image_remove
-        Me.BtnEliminarImagen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.BtnEliminarImagen.Location = New System.Drawing.Point(76, 3)
-        Me.BtnEliminarImagen.Name = "BtnEliminarImagen"
-        Me.BtnEliminarImagen.Size = New System.Drawing.Size(30, 30)
-        Me.BtnEliminarImagen.TabIndex = 46
-        Me.ToolTip1.SetToolTip(Me.BtnEliminarImagen, "Eliminar Imagen")
-        Me.BtnEliminarImagen.UseVisualStyleBackColor = True
-        '
-        'BtnAgregarImagen
-        '
-        Me.BtnAgregarImagen.BackgroundImage = Global.INNOVAMASTER.My.Resources.Resources.image_add1
-        Me.BtnAgregarImagen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.BtnAgregarImagen.Location = New System.Drawing.Point(23, 3)
-        Me.BtnAgregarImagen.Name = "BtnAgregarImagen"
-        Me.BtnAgregarImagen.Size = New System.Drawing.Size(30, 30)
-        Me.BtnAgregarImagen.TabIndex = 45
-        Me.BtnAgregarImagen.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.ToolTip1.SetToolTip(Me.BtnAgregarImagen, "Agregar Imagen")
-        Me.BtnAgregarImagen.UseVisualStyleBackColor = True
         '
         'CboProfesion
         '
@@ -614,6 +581,15 @@ Partial Class FrmEmpleado
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Código Empleado"
         '
+        'PictureBox2
+        '
+        Me.PictureBox2.BackgroundImage = Global.INNOVAMASTER.My.Resources.Resources._2
+        Me.PictureBox2.Location = New System.Drawing.Point(18, 1)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(59, 59)
+        Me.PictureBox2.TabIndex = 64
+        Me.PictureBox2.TabStop = False
+        '
         'PictureBox3
         '
         Me.PictureBox3.BackgroundImage = Global.INNOVAMASTER.My.Resources.Resources.lapiz1
@@ -685,23 +661,6 @@ Partial Class FrmEmpleado
         Me.BtnNuevo.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.BtnNuevo.UseVisualStyleBackColor = False
         '
-        'BtnInsertar
-        '
-        Me.BtnInsertar.BackColor = System.Drawing.Color.LightSeaGreen
-        Me.BtnInsertar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.BtnInsertar.FlatAppearance.BorderSize = 0
-        Me.BtnInsertar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnInsertar.Font = New System.Drawing.Font("Comic Sans MS", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnInsertar.Image = Global.INNOVAMASTER.My.Resources.Resources.guardar
-        Me.BtnInsertar.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.BtnInsertar.Location = New System.Drawing.Point(282, 496)
-        Me.BtnInsertar.Name = "BtnInsertar"
-        Me.BtnInsertar.Size = New System.Drawing.Size(82, 86)
-        Me.BtnInsertar.TabIndex = 52
-        Me.BtnInsertar.Text = "&Guardar"
-        Me.BtnInsertar.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.BtnInsertar.UseVisualStyleBackColor = False
-        '
         'BtnEditar
         '
         Me.BtnEditar.BackColor = System.Drawing.Color.LightSeaGreen
@@ -719,14 +678,55 @@ Partial Class FrmEmpleado
         Me.BtnEditar.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.BtnEditar.UseVisualStyleBackColor = False
         '
-        'PictureBox2
+        'PbEmpleado
         '
-        Me.PictureBox2.BackgroundImage = Global.INNOVAMASTER.My.Resources.Resources._2
-        Me.PictureBox2.Location = New System.Drawing.Point(18, 1)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(59, 59)
-        Me.PictureBox2.TabIndex = 64
-        Me.PictureBox2.TabStop = False
+        Me.PbEmpleado.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.PbEmpleado.Location = New System.Drawing.Point(388, 23)
+        Me.PbEmpleado.Name = "PbEmpleado"
+        Me.PbEmpleado.Size = New System.Drawing.Size(130, 131)
+        Me.PbEmpleado.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PbEmpleado.TabIndex = 47
+        Me.PbEmpleado.TabStop = False
+        '
+        'BtnEliminarImagen
+        '
+        Me.BtnEliminarImagen.BackgroundImage = Global.INNOVAMASTER.My.Resources.Resources.image_remove
+        Me.BtnEliminarImagen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BtnEliminarImagen.Location = New System.Drawing.Point(76, 3)
+        Me.BtnEliminarImagen.Name = "BtnEliminarImagen"
+        Me.BtnEliminarImagen.Size = New System.Drawing.Size(30, 30)
+        Me.BtnEliminarImagen.TabIndex = 46
+        Me.ToolTip1.SetToolTip(Me.BtnEliminarImagen, "Eliminar Imagen")
+        Me.BtnEliminarImagen.UseVisualStyleBackColor = True
+        '
+        'BtnAgregarImagen
+        '
+        Me.BtnAgregarImagen.BackgroundImage = Global.INNOVAMASTER.My.Resources.Resources.image_add1
+        Me.BtnAgregarImagen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BtnAgregarImagen.Location = New System.Drawing.Point(23, 3)
+        Me.BtnAgregarImagen.Name = "BtnAgregarImagen"
+        Me.BtnAgregarImagen.Size = New System.Drawing.Size(30, 30)
+        Me.BtnAgregarImagen.TabIndex = 45
+        Me.BtnAgregarImagen.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.ToolTip1.SetToolTip(Me.BtnAgregarImagen, "Agregar Imagen")
+        Me.BtnAgregarImagen.UseVisualStyleBackColor = True
+        '
+        'BtnInsertar
+        '
+        Me.BtnInsertar.BackColor = System.Drawing.Color.LightSeaGreen
+        Me.BtnInsertar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BtnInsertar.FlatAppearance.BorderSize = 0
+        Me.BtnInsertar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnInsertar.Font = New System.Drawing.Font("Comic Sans MS", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnInsertar.Image = Global.INNOVAMASTER.My.Resources.Resources.guardar
+        Me.BtnInsertar.ImageAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.BtnInsertar.Location = New System.Drawing.Point(282, 496)
+        Me.BtnInsertar.Name = "BtnInsertar"
+        Me.BtnInsertar.Size = New System.Drawing.Size(82, 86)
+        Me.BtnInsertar.TabIndex = 52
+        Me.BtnInsertar.Text = "&Guardar"
+        Me.BtnInsertar.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.BtnInsertar.UseVisualStyleBackColor = False
         '
         'FrmEmpleado
         '
@@ -757,11 +757,11 @@ Partial Class FrmEmpleado
         CType(Me.DgvEmpleado, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GbEmpleado.ResumeLayout(False)
         Me.GbEmpleado.PerformLayout()
-        CType(Me.PbEmpleado, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PbEmpleado, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

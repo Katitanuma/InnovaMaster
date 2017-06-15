@@ -350,7 +350,7 @@ Public Class FrmEmpleado
                 Dim ms As New System.IO.MemoryStream
 
                 If PbEmpleado.Image Is Nothing Then
-                    PbEmpleado.Image = Image.FromFile("C:\Archivo.PNG")
+                    PbEmpleado.Image = INNOVAMASTER.My.Resources.NULLA
                 End If
                 PbEmpleado.Image.Save(ms, PbEmpleado.Image.RawFormat)
 
@@ -605,7 +605,8 @@ Public Class FrmEmpleado
                 Dim ms As New System.IO.MemoryStream
 
                 If PbEmpleado.Image Is Nothing Then
-                    PbEmpleado.Image = Image.FromFile("C:\Archivo.PNG")
+                    'PbEmpleado.Image = Image.FromFile("C:\Archivo.PNG")
+                    PbEmpleado.Image = INNOVAMASTER.My.Resources.NULLA
 
 
                 End If
