@@ -59,6 +59,15 @@ Public Class FrmCompras
                     dr.Close()
                 Else
                     DgvDetalle.Rows(e.RowIndex).Cells(1).ErrorText = "Ingrese el Codigo del Producto"
+                    Dim a, b As Integer
+                    a = DgvDetalle.Rows.Count
+                    b = e.RowIndex + 1
+
+                    If a = b Then
+                    Else
+                        DgvDetalle.Rows.Remove(DgvDetalle.CurrentRow)
+                        LlenarTextBox()
+                    End If
                 End If
 
             Catch ex As Exception
@@ -126,7 +135,15 @@ Public Class FrmCompras
                     dr.Close()
                 Else
                     DgvDetalle.Rows(e.RowIndex).Cells(2).ErrorText = "Ingrese el Nombre del Producto"
+                    Dim a, b As Integer
+                    a = DgvDetalle.Rows.Count
+                    b = e.RowIndex + 1
 
+                    If a = b Then
+                    Else
+                        DgvDetalle.Rows.Remove(DgvDetalle.CurrentRow)
+                        LlenarTextBox()
+                    End If
                 End If
 
             Catch ex As Exception
