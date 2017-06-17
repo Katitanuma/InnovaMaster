@@ -309,9 +309,6 @@
   <data name="CboBusqueda.TabIndex" type="System.Int32, mscorlib">
     <value>45</value>
   </data>
-  <data name="CboBusqueda.Text" xml:space="preserve">
-    <value>Identidad</value>
-  </data>
   <data name="&gt;&gt;CboBusqueda.Name" xml:space="preserve">
     <value>CboBusqueda</value>
   </data>
@@ -349,7 +346,7 @@
     <value>Arial, 9pt, style=Bold</value>
   </data>
   <data name="BtnBusquedaCliente.Location" type="System.Drawing.Point, System.Drawing">
-    <value>347, 308</value>
+    <value>347, 295</value>
   </data>
   <data name="BtnBusquedaCliente.Size" type="System.Drawing.Size, System.Drawing">
     <value>33, 24</value>
@@ -406,7 +403,7 @@
     <value>Arial, 9pt</value>
   </data>
   <data name="TxtTelefono.Location" type="System.Drawing.Point, System.Drawing">
-    <value>133, 200</value>
+    <value>133, 187</value>
   </data>
   <data name="TxtTelefono.Mask" xml:space="preserve">
     <value>0000-0000</value>
@@ -436,7 +433,7 @@
     <value>Arial, 9pt</value>
   </data>
   <data name="CboEstadoCivil.Location" type="System.Drawing.Point, System.Drawing">
-    <value>133, 347</value>
+    <value>133, 334</value>
   </data>
   <data name="CboEstadoCivil.Size" type="System.Drawing.Size, System.Drawing">
     <value>208, 23</value>
@@ -466,7 +463,7 @@
     <value>NoControl</value>
   </data>
   <data name="RdbFemenino.Location" type="System.Drawing.Point, System.Drawing">
-    <value>227, 382</value>
+    <value>227, 369</value>
   </data>
   <data name="RdbFemenino.Size" type="System.Drawing.Size, System.Drawing">
     <value>81, 19</value>
@@ -493,7 +490,7 @@
     <value>Arial, 9pt</value>
   </data>
   <data name="CboAño.Location" type="System.Drawing.Point, System.Drawing">
-    <value>316, 271</value>
+    <value>316, 258</value>
   </data>
   <data name="CboAño.Size" type="System.Drawing.Size, System.Drawing">
     <value>73, 23</value>
@@ -526,7 +523,7 @@
     <value>NoControl</value>
   </data>
   <data name="RdbMasculino.Location" type="System.Drawing.Point, System.Drawing">
-    <value>141, 382</value>
+    <value>141, 369</value>
   </data>
   <data name="RdbMasculino.Size" type="System.Drawing.Size, System.Drawing">
     <value>81, 19</value>
@@ -589,7 +586,7 @@
     <value>Diciembre</value>
   </data>
   <data name="CboMes.Location" type="System.Drawing.Point, System.Drawing">
-    <value>197, 271</value>
+    <value>197, 258</value>
   </data>
   <data name="CboMes.Size" type="System.Drawing.Size, System.Drawing">
     <value>113, 23</value>
@@ -622,7 +619,7 @@
     <value>NoControl</value>
   </data>
   <data name="Label5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>90, 381</value>
+    <value>90, 368</value>
   </data>
   <data name="Label5.Size" type="System.Drawing.Size, System.Drawing">
     <value>40, 19</value>
@@ -742,7 +739,7 @@
     <value>31</value>
   </data>
   <data name="CboDia.Location" type="System.Drawing.Point, System.Drawing">
-    <value>133, 271</value>
+    <value>133, 258</value>
   </data>
   <data name="CboDia.Size" type="System.Drawing.Size, System.Drawing">
     <value>58, 23</value>
@@ -769,7 +766,7 @@
     <value>Arial, 9pt</value>
   </data>
   <data name="CboMunicipio.Location" type="System.Drawing.Point, System.Drawing">
-    <value>133, 309</value>
+    <value>133, 296</value>
   </data>
   <data name="CboMunicipio.Size" type="System.Drawing.Size, System.Drawing">
     <value>208, 23</value>
@@ -799,7 +796,7 @@
     <value>NoControl</value>
   </data>
   <data name="Label10.Location" type="System.Drawing.Point, System.Drawing">
-    <value>47, 347</value>
+    <value>47, 334</value>
   </data>
   <data name="Label10.Size" type="System.Drawing.Size, System.Drawing">
     <value>83, 19</value>
@@ -832,7 +829,7 @@
     <value>NoControl</value>
   </data>
   <data name="Label9.Location" type="System.Drawing.Point, System.Drawing">
-    <value>63, 310</value>
+    <value>63, 297</value>
   </data>
   <data name="Label9.Size" type="System.Drawing.Size, System.Drawing">
     <value>67, 19</value>
@@ -865,7 +862,7 @@
     <value>NoControl</value>
   </data>
   <data name="Label6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 271</value>
+    <value>10, 258</value>
   </data>
   <data name="Label6.Size" type="System.Drawing.Size, System.Drawing">
     <value>122, 19</value>
@@ -892,7 +889,7 @@
     <value>Arial, 9pt</value>
   </data>
   <data name="TxtCorreo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>133, 234</value>
+    <value>133, 221</value>
   </data>
   <data name="TxtCorreo.Size" type="System.Drawing.Size, System.Drawing">
     <value>291, 21</value>
@@ -922,7 +919,7 @@
     <value>NoControl</value>
   </data>
   <data name="Label7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>81, 233</value>
+    <value>81, 220</value>
   </data>
   <data name="Label7.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 19</value>
@@ -955,7 +952,7 @@
     <value>NoControl</value>
   </data>
   <data name="Label8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>68, 199</value>
+    <value>68, 186</value>
   </data>
   <data name="Label8.Size" type="System.Drawing.Size, System.Drawing">
     <value>64, 19</value>
@@ -988,7 +985,7 @@
     <value>True</value>
   </data>
   <data name="TxtDireccion.Size" type="System.Drawing.Size, System.Drawing">
-    <value>291, 60</value>
+    <value>291, 48</value>
   </data>
   <data name="TxtDireccion.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -1195,7 +1192,7 @@
     <value>32, 62</value>
   </data>
   <data name="GbCliente.Size" type="System.Drawing.Size, System.Drawing">
-    <value>440, 410</value>
+    <value>440, 395</value>
   </data>
   <data name="GbCliente.TabIndex" type="System.Int32, mscorlib">
     <value>39</value>
@@ -1306,7 +1303,7 @@
     <value>NoControl</value>
   </data>
   <data name="BtnNuevoEditar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>153, 479</value>
+    <value>153, 456</value>
   </data>
   <data name="BtnNuevoEditar.Size" type="System.Drawing.Size, System.Drawing">
     <value>82, 86</value>
@@ -1348,7 +1345,7 @@
     <value>NoControl</value>
   </data>
   <data name="BtnCancelar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>339, 480</value>
+    <value>339, 457</value>
   </data>
   <data name="BtnCancelar.Size" type="System.Drawing.Size, System.Drawing">
     <value>82, 86</value>
@@ -1390,7 +1387,7 @@
     <value>NoControl</value>
   </data>
   <data name="BtnNuevo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>58, 479</value>
+    <value>58, 456</value>
   </data>
   <data name="BtnNuevo.Size" type="System.Drawing.Size, System.Drawing">
     <value>82, 86</value>
@@ -1432,7 +1429,7 @@
     <value>NoControl</value>
   </data>
   <data name="BtnEditar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>249, 479</value>
+    <value>249, 456</value>
   </data>
   <data name="BtnEditar.Size" type="System.Drawing.Size, System.Drawing">
     <value>82, 86</value>
@@ -1474,7 +1471,7 @@
     <value>NoControl</value>
   </data>
   <data name="BtnInsertar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>249, 479</value>
+    <value>249, 456</value>
   </data>
   <data name="BtnInsertar.Size" type="System.Drawing.Size, System.Drawing">
     <value>82, 86</value>

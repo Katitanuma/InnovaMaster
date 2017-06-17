@@ -39,7 +39,10 @@ Partial Class FrmEmpleado
         Me.TxtNombres = New System.Windows.Forms.TextBox()
         Me.TxtCelular = New System.Windows.Forms.MaskedTextBox()
         Me.TxtTelefono = New System.Windows.Forms.MaskedTextBox()
+        Me.PbEmpleado = New System.Windows.Forms.PictureBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.BtnEliminarImagen = New System.Windows.Forms.Button()
+        Me.BtnAgregarImagen = New System.Windows.Forms.Button()
         Me.CboProfesion = New System.Windows.Forms.ComboBox()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.CboSucursal = New System.Windows.Forms.ComboBox()
@@ -76,17 +79,14 @@ Partial Class FrmEmpleado
         Me.BtnCancelar = New System.Windows.Forms.Button()
         Me.BtnNuevo = New System.Windows.Forms.Button()
         Me.BtnEditar = New System.Windows.Forms.Button()
-        Me.PbEmpleado = New System.Windows.Forms.PictureBox()
-        Me.BtnEliminarImagen = New System.Windows.Forms.Button()
-        Me.BtnAgregarImagen = New System.Windows.Forms.Button()
         Me.BtnInsertar = New System.Windows.Forms.Button()
         CType(Me.DgvEmpleado, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GbEmpleado.SuspendLayout()
+        CType(Me.PbEmpleado, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PbEmpleado, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'OpenFileDialog1
@@ -114,6 +114,7 @@ Partial Class FrmEmpleado
         '
         'CboBusqueda
         '
+        Me.CboBusqueda.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.CboBusqueda.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CboBusqueda.FormattingEnabled = True
         Me.CboBusqueda.Items.AddRange(New Object() {"IdEmpleado", "NombreEmpleado", "ApellidoEmpleado", "Municipio", "Cargo", "Profesion", "Sexo"})
@@ -121,13 +122,12 @@ Partial Class FrmEmpleado
         Me.CboBusqueda.Name = "CboBusqueda"
         Me.CboBusqueda.Size = New System.Drawing.Size(203, 23)
         Me.CboBusqueda.TabIndex = 53
-        Me.CboBusqueda.Text = "IdEmpleado"
         '
         'Label16
         '
         Me.Label16.AutoSize = True
         Me.Label16.Font = New System.Drawing.Font("Monotype Corsiva", 26.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label16.Location = New System.Drawing.Point(69, 7)
+        Me.Label16.Location = New System.Drawing.Point(69, 2)
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(280, 43)
         Me.Label16.TabIndex = 59
@@ -155,7 +155,7 @@ Partial Class FrmEmpleado
         Me.DgvEmpleado.Name = "DgvEmpleado"
         Me.DgvEmpleado.ReadOnly = True
         Me.DgvEmpleado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DgvEmpleado.Size = New System.Drawing.Size(779, 500)
+        Me.DgvEmpleado.Size = New System.Drawing.Size(779, 485)
         Me.DgvEmpleado.TabIndex = 56
         '
         'GbEmpleado
@@ -201,16 +201,16 @@ Partial Class FrmEmpleado
         Me.GbEmpleado.Controls.Add(Me.Label1)
         Me.GbEmpleado.Font = New System.Drawing.Font("Comic Sans MS", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GbEmpleado.ForeColor = System.Drawing.Color.Black
-        Me.GbEmpleado.Location = New System.Drawing.Point(16, 52)
+        Me.GbEmpleado.Location = New System.Drawing.Point(16, 42)
         Me.GbEmpleado.Name = "GbEmpleado"
-        Me.GbEmpleado.Size = New System.Drawing.Size(530, 444)
+        Me.GbEmpleado.Size = New System.Drawing.Size(530, 430)
         Me.GbEmpleado.TabIndex = 55
         Me.GbEmpleado.TabStop = False
         '
         'Button2
         '
         Me.Button2.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(292, 347)
+        Me.Button2.Location = New System.Drawing.Point(292, 341)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(33, 24)
         Me.Button2.TabIndex = 53
@@ -220,7 +220,7 @@ Partial Class FrmEmpleado
         'Button1
         '
         Me.Button1.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(495, 274)
+        Me.Button1.Location = New System.Drawing.Point(495, 268)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(33, 24)
         Me.Button1.TabIndex = 52
@@ -230,7 +230,7 @@ Partial Class FrmEmpleado
         'BtnBusquedaCliente
         '
         Me.BtnBusquedaCliente.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnBusquedaCliente.Location = New System.Drawing.Point(298, 275)
+        Me.BtnBusquedaCliente.Location = New System.Drawing.Point(298, 269)
         Me.BtnBusquedaCliente.Name = "BtnBusquedaCliente"
         Me.BtnBusquedaCliente.Size = New System.Drawing.Size(33, 24)
         Me.BtnBusquedaCliente.TabIndex = 51
@@ -267,7 +267,7 @@ Partial Class FrmEmpleado
         'TxtCelular
         '
         Me.TxtCelular.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtCelular.Location = New System.Drawing.Point(386, 205)
+        Me.TxtCelular.Location = New System.Drawing.Point(386, 199)
         Me.TxtCelular.Mask = "0000-0000"
         Me.TxtCelular.Name = "TxtCelular"
         Me.TxtCelular.PromptChar = Global.Microsoft.VisualBasic.ChrW(32)
@@ -277,12 +277,22 @@ Partial Class FrmEmpleado
         'TxtTelefono
         '
         Me.TxtTelefono.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtTelefono.Location = New System.Drawing.Point(154, 205)
+        Me.TxtTelefono.Location = New System.Drawing.Point(154, 199)
         Me.TxtTelefono.Mask = "0000-0000"
         Me.TxtTelefono.Name = "TxtTelefono"
         Me.TxtTelefono.PromptChar = Global.Microsoft.VisualBasic.ChrW(32)
         Me.TxtTelefono.Size = New System.Drawing.Size(107, 21)
         Me.TxtTelefono.TabIndex = 5
+        '
+        'PbEmpleado
+        '
+        Me.PbEmpleado.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.PbEmpleado.Location = New System.Drawing.Point(388, 23)
+        Me.PbEmpleado.Name = "PbEmpleado"
+        Me.PbEmpleado.Size = New System.Drawing.Size(130, 131)
+        Me.PbEmpleado.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PbEmpleado.TabIndex = 47
+        Me.PbEmpleado.TabStop = False
         '
         'Panel1
         '
@@ -294,12 +304,35 @@ Partial Class FrmEmpleado
         Me.Panel1.Size = New System.Drawing.Size(130, 39)
         Me.Panel1.TabIndex = 47
         '
+        'BtnEliminarImagen
+        '
+        Me.BtnEliminarImagen.BackgroundImage = Global.INNOVAMASTER.My.Resources.Resources.image_remove
+        Me.BtnEliminarImagen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BtnEliminarImagen.Location = New System.Drawing.Point(76, 3)
+        Me.BtnEliminarImagen.Name = "BtnEliminarImagen"
+        Me.BtnEliminarImagen.Size = New System.Drawing.Size(30, 30)
+        Me.BtnEliminarImagen.TabIndex = 46
+        Me.ToolTip1.SetToolTip(Me.BtnEliminarImagen, "Eliminar Imagen")
+        Me.BtnEliminarImagen.UseVisualStyleBackColor = True
+        '
+        'BtnAgregarImagen
+        '
+        Me.BtnAgregarImagen.BackgroundImage = Global.INNOVAMASTER.My.Resources.Resources.image_add1
+        Me.BtnAgregarImagen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BtnAgregarImagen.Location = New System.Drawing.Point(23, 3)
+        Me.BtnAgregarImagen.Name = "BtnAgregarImagen"
+        Me.BtnAgregarImagen.Size = New System.Drawing.Size(30, 30)
+        Me.BtnAgregarImagen.TabIndex = 45
+        Me.BtnAgregarImagen.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.ToolTip1.SetToolTip(Me.BtnAgregarImagen, "Agregar Imagen")
+        Me.BtnAgregarImagen.UseVisualStyleBackColor = True
+        '
         'CboProfesion
         '
         Me.CboProfesion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.CboProfesion.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CboProfesion.FormattingEnabled = True
-        Me.CboProfesion.Location = New System.Drawing.Point(154, 348)
+        Me.CboProfesion.Location = New System.Drawing.Point(154, 342)
         Me.CboProfesion.Name = "CboProfesion"
         Me.CboProfesion.Size = New System.Drawing.Size(132, 23)
         Me.CboProfesion.TabIndex = 15
@@ -308,7 +341,7 @@ Partial Class FrmEmpleado
         '
         Me.Label15.AutoSize = True
         Me.Label15.Font = New System.Drawing.Font("Comic Sans MS", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label15.Location = New System.Drawing.Point(86, 349)
+        Me.Label15.Location = New System.Drawing.Point(86, 343)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(67, 19)
         Me.Label15.TabIndex = 39
@@ -319,7 +352,7 @@ Partial Class FrmEmpleado
         Me.CboSucursal.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.CboSucursal.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CboSucursal.FormattingEnabled = True
-        Me.CboSucursal.Location = New System.Drawing.Point(386, 349)
+        Me.CboSucursal.Location = New System.Drawing.Point(386, 343)
         Me.CboSucursal.Name = "CboSucursal"
         Me.CboSucursal.Size = New System.Drawing.Size(133, 23)
         Me.CboSucursal.TabIndex = 16
@@ -329,7 +362,7 @@ Partial Class FrmEmpleado
         Me.CboCargo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.CboCargo.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CboCargo.FormattingEnabled = True
-        Me.CboCargo.Location = New System.Drawing.Point(386, 275)
+        Me.CboCargo.Location = New System.Drawing.Point(386, 269)
         Me.CboCargo.Name = "CboCargo"
         Me.CboCargo.Size = New System.Drawing.Size(105, 23)
         Me.CboCargo.TabIndex = 11
@@ -338,7 +371,7 @@ Partial Class FrmEmpleado
         '
         Me.Label13.AutoSize = True
         Me.Label13.Font = New System.Drawing.Font("Comic Sans MS", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.Location = New System.Drawing.Point(324, 349)
+        Me.Label13.Location = New System.Drawing.Point(324, 343)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(62, 19)
         Me.Label13.TabIndex = 36
@@ -348,7 +381,7 @@ Partial Class FrmEmpleado
         '
         Me.Label14.AutoSize = True
         Me.Label14.Font = New System.Drawing.Font("Comic Sans MS", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label14.Location = New System.Drawing.Point(341, 277)
+        Me.Label14.Location = New System.Drawing.Point(341, 271)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(44, 19)
         Me.Label14.TabIndex = 35
@@ -358,7 +391,7 @@ Partial Class FrmEmpleado
         '
         Me.CboAñoC.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CboAñoC.FormattingEnabled = True
-        Me.CboAñoC.Location = New System.Drawing.Point(337, 312)
+        Me.CboAñoC.Location = New System.Drawing.Point(337, 306)
         Me.CboAñoC.Name = "CboAñoC"
         Me.CboAñoC.Size = New System.Drawing.Size(73, 23)
         Me.CboAñoC.TabIndex = 14
@@ -369,7 +402,7 @@ Partial Class FrmEmpleado
         Me.CboMesC.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CboMesC.FormattingEnabled = True
         Me.CboMesC.Items.AddRange(New Object() {"Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"})
-        Me.CboMesC.Location = New System.Drawing.Point(218, 312)
+        Me.CboMesC.Location = New System.Drawing.Point(218, 306)
         Me.CboMesC.Name = "CboMesC"
         Me.CboMesC.Size = New System.Drawing.Size(113, 23)
         Me.CboMesC.TabIndex = 13
@@ -380,7 +413,7 @@ Partial Class FrmEmpleado
         Me.CboDiaC.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CboDiaC.FormattingEnabled = True
         Me.CboDiaC.Items.AddRange(New Object() {"01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31"})
-        Me.CboDiaC.Location = New System.Drawing.Point(154, 312)
+        Me.CboDiaC.Location = New System.Drawing.Point(154, 306)
         Me.CboDiaC.Name = "CboDiaC"
         Me.CboDiaC.Size = New System.Drawing.Size(58, 23)
         Me.CboDiaC.TabIndex = 12
@@ -390,7 +423,7 @@ Partial Class FrmEmpleado
         '
         Me.Label12.AutoSize = True
         Me.Label12.Font = New System.Drawing.Font("Comic Sans MS", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.Location = New System.Drawing.Point(2, 312)
+        Me.Label12.Location = New System.Drawing.Point(2, 306)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(152, 19)
         Me.Label12.TabIndex = 31
@@ -400,7 +433,7 @@ Partial Class FrmEmpleado
         '
         Me.RdbFemenino.AutoSize = True
         Me.RdbFemenino.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RdbFemenino.Location = New System.Drawing.Point(247, 416)
+        Me.RdbFemenino.Location = New System.Drawing.Point(247, 406)
         Me.RdbFemenino.Name = "RdbFemenino"
         Me.RdbFemenino.Size = New System.Drawing.Size(81, 19)
         Me.RdbFemenino.TabIndex = 19
@@ -412,7 +445,7 @@ Partial Class FrmEmpleado
         '
         Me.CmbAñoN.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CmbAñoN.FormattingEnabled = True
-        Me.CmbAñoN.Location = New System.Drawing.Point(337, 239)
+        Me.CmbAñoN.Location = New System.Drawing.Point(337, 233)
         Me.CmbAñoN.Name = "CmbAñoN"
         Me.CmbAñoN.Size = New System.Drawing.Size(73, 23)
         Me.CmbAñoN.TabIndex = 9
@@ -422,7 +455,7 @@ Partial Class FrmEmpleado
         '
         Me.RdbMasculino.AutoSize = True
         Me.RdbMasculino.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RdbMasculino.Location = New System.Drawing.Point(160, 416)
+        Me.RdbMasculino.Location = New System.Drawing.Point(160, 406)
         Me.RdbMasculino.Name = "RdbMasculino"
         Me.RdbMasculino.Size = New System.Drawing.Size(81, 19)
         Me.RdbMasculino.TabIndex = 18
@@ -435,7 +468,7 @@ Partial Class FrmEmpleado
         Me.CmbMesN.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CmbMesN.FormattingEnabled = True
         Me.CmbMesN.Items.AddRange(New Object() {"Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"})
-        Me.CmbMesN.Location = New System.Drawing.Point(218, 239)
+        Me.CmbMesN.Location = New System.Drawing.Point(218, 233)
         Me.CmbMesN.Name = "CmbMesN"
         Me.CmbMesN.Size = New System.Drawing.Size(113, 23)
         Me.CmbMesN.TabIndex = 8
@@ -445,7 +478,7 @@ Partial Class FrmEmpleado
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Comic Sans MS", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(114, 415)
+        Me.Label5.Location = New System.Drawing.Point(114, 405)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(40, 19)
         Me.Label5.TabIndex = 28
@@ -456,7 +489,7 @@ Partial Class FrmEmpleado
         Me.CmbDiaN.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CmbDiaN.FormattingEnabled = True
         Me.CmbDiaN.Items.AddRange(New Object() {"01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31"})
-        Me.CmbDiaN.Location = New System.Drawing.Point(154, 239)
+        Me.CmbDiaN.Location = New System.Drawing.Point(154, 233)
         Me.CmbDiaN.Name = "CmbDiaN"
         Me.CmbDiaN.Size = New System.Drawing.Size(58, 23)
         Me.CmbDiaN.TabIndex = 7
@@ -467,7 +500,7 @@ Partial Class FrmEmpleado
         Me.CmbEstadoCivil.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.CmbEstadoCivil.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CmbEstadoCivil.FormattingEnabled = True
-        Me.CmbEstadoCivil.Location = New System.Drawing.Point(155, 384)
+        Me.CmbEstadoCivil.Location = New System.Drawing.Point(155, 378)
         Me.CmbEstadoCivil.Name = "CmbEstadoCivil"
         Me.CmbEstadoCivil.Size = New System.Drawing.Size(149, 23)
         Me.CmbEstadoCivil.TabIndex = 17
@@ -477,7 +510,7 @@ Partial Class FrmEmpleado
         Me.CmbMunicipio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.CmbMunicipio.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CmbMunicipio.FormattingEnabled = True
-        Me.CmbMunicipio.Location = New System.Drawing.Point(154, 275)
+        Me.CmbMunicipio.Location = New System.Drawing.Point(154, 269)
         Me.CmbMunicipio.Name = "CmbMunicipio"
         Me.CmbMunicipio.Size = New System.Drawing.Size(138, 23)
         Me.CmbMunicipio.TabIndex = 10
@@ -486,7 +519,7 @@ Partial Class FrmEmpleado
         '
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Comic Sans MS", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(72, 385)
+        Me.Label10.Location = New System.Drawing.Point(72, 379)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(83, 19)
         Me.Label10.TabIndex = 18
@@ -496,7 +529,7 @@ Partial Class FrmEmpleado
         '
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Comic Sans MS", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(86, 275)
+        Me.Label9.Location = New System.Drawing.Point(86, 269)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(67, 19)
         Me.Label9.TabIndex = 16
@@ -506,7 +539,7 @@ Partial Class FrmEmpleado
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Comic Sans MS", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(11, 240)
+        Me.Label6.Location = New System.Drawing.Point(11, 234)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(143, 19)
         Me.Label6.TabIndex = 12
@@ -516,7 +549,7 @@ Partial Class FrmEmpleado
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Comic Sans MS", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(334, 205)
+        Me.Label7.Location = New System.Drawing.Point(334, 199)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(52, 19)
         Me.Label7.TabIndex = 10
@@ -526,7 +559,7 @@ Partial Class FrmEmpleado
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Comic Sans MS", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(89, 205)
+        Me.Label8.Location = New System.Drawing.Point(89, 199)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(64, 19)
         Me.Label8.TabIndex = 8
@@ -584,9 +617,9 @@ Partial Class FrmEmpleado
         'PictureBox2
         '
         Me.PictureBox2.BackgroundImage = Global.INNOVAMASTER.My.Resources.Resources._2
-        Me.PictureBox2.Location = New System.Drawing.Point(18, 1)
+        Me.PictureBox2.Location = New System.Drawing.Point(16, -1)
         Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(59, 59)
+        Me.PictureBox2.Size = New System.Drawing.Size(59, 51)
         Me.PictureBox2.TabIndex = 64
         Me.PictureBox2.TabStop = False
         '
@@ -619,7 +652,7 @@ Partial Class FrmEmpleado
         Me.BtnNuevoEditar.Font = New System.Drawing.Font("Comic Sans MS", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnNuevoEditar.Image = Global.INNOVAMASTER.My.Resources.Resources.editar1
         Me.BtnNuevoEditar.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.BtnNuevoEditar.Location = New System.Drawing.Point(186, 496)
+        Me.BtnNuevoEditar.Location = New System.Drawing.Point(186, 473)
         Me.BtnNuevoEditar.Name = "BtnNuevoEditar"
         Me.BtnNuevoEditar.Size = New System.Drawing.Size(82, 86)
         Me.BtnNuevoEditar.TabIndex = 50
@@ -636,7 +669,7 @@ Partial Class FrmEmpleado
         Me.BtnCancelar.Font = New System.Drawing.Font("Comic Sans MS", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnCancelar.Image = Global.INNOVAMASTER.My.Resources.Resources.cancelb
         Me.BtnCancelar.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.BtnCancelar.Location = New System.Drawing.Point(376, 496)
+        Me.BtnCancelar.Location = New System.Drawing.Point(376, 473)
         Me.BtnCancelar.Name = "BtnCancelar"
         Me.BtnCancelar.Size = New System.Drawing.Size(82, 86)
         Me.BtnCancelar.TabIndex = 51
@@ -653,7 +686,7 @@ Partial Class FrmEmpleado
         Me.BtnNuevo.Font = New System.Drawing.Font("Comic Sans MS", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnNuevo.Image = Global.INNOVAMASTER.My.Resources.Resources.nuevo
         Me.BtnNuevo.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.BtnNuevo.Location = New System.Drawing.Point(91, 496)
+        Me.BtnNuevo.Location = New System.Drawing.Point(91, 473)
         Me.BtnNuevo.Name = "BtnNuevo"
         Me.BtnNuevo.Size = New System.Drawing.Size(82, 86)
         Me.BtnNuevo.TabIndex = 49
@@ -670,46 +703,13 @@ Partial Class FrmEmpleado
         Me.BtnEditar.Font = New System.Drawing.Font("Comic Sans MS", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnEditar.Image = Global.INNOVAMASTER.My.Resources.Resources.actualizarb
         Me.BtnEditar.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.BtnEditar.Location = New System.Drawing.Point(282, 496)
+        Me.BtnEditar.Location = New System.Drawing.Point(282, 473)
         Me.BtnEditar.Name = "BtnEditar"
         Me.BtnEditar.Size = New System.Drawing.Size(82, 86)
         Me.BtnEditar.TabIndex = 58
         Me.BtnEditar.Text = "&Actualizar"
         Me.BtnEditar.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.BtnEditar.UseVisualStyleBackColor = False
-        '
-        'PbEmpleado
-        '
-        Me.PbEmpleado.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.PbEmpleado.Location = New System.Drawing.Point(388, 23)
-        Me.PbEmpleado.Name = "PbEmpleado"
-        Me.PbEmpleado.Size = New System.Drawing.Size(130, 131)
-        Me.PbEmpleado.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PbEmpleado.TabIndex = 47
-        Me.PbEmpleado.TabStop = False
-        '
-        'BtnEliminarImagen
-        '
-        Me.BtnEliminarImagen.BackgroundImage = Global.INNOVAMASTER.My.Resources.Resources.image_remove
-        Me.BtnEliminarImagen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.BtnEliminarImagen.Location = New System.Drawing.Point(76, 3)
-        Me.BtnEliminarImagen.Name = "BtnEliminarImagen"
-        Me.BtnEliminarImagen.Size = New System.Drawing.Size(30, 30)
-        Me.BtnEliminarImagen.TabIndex = 46
-        Me.ToolTip1.SetToolTip(Me.BtnEliminarImagen, "Eliminar Imagen")
-        Me.BtnEliminarImagen.UseVisualStyleBackColor = True
-        '
-        'BtnAgregarImagen
-        '
-        Me.BtnAgregarImagen.BackgroundImage = Global.INNOVAMASTER.My.Resources.Resources.image_add1
-        Me.BtnAgregarImagen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.BtnAgregarImagen.Location = New System.Drawing.Point(23, 3)
-        Me.BtnAgregarImagen.Name = "BtnAgregarImagen"
-        Me.BtnAgregarImagen.Size = New System.Drawing.Size(30, 30)
-        Me.BtnAgregarImagen.TabIndex = 45
-        Me.BtnAgregarImagen.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.ToolTip1.SetToolTip(Me.BtnAgregarImagen, "Agregar Imagen")
-        Me.BtnAgregarImagen.UseVisualStyleBackColor = True
         '
         'BtnInsertar
         '
@@ -720,7 +720,7 @@ Partial Class FrmEmpleado
         Me.BtnInsertar.Font = New System.Drawing.Font("Comic Sans MS", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnInsertar.Image = Global.INNOVAMASTER.My.Resources.Resources.guardar
         Me.BtnInsertar.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.BtnInsertar.Location = New System.Drawing.Point(282, 496)
+        Me.BtnInsertar.Location = New System.Drawing.Point(282, 473)
         Me.BtnInsertar.Name = "BtnInsertar"
         Me.BtnInsertar.Size = New System.Drawing.Size(82, 86)
         Me.BtnInsertar.TabIndex = 52
@@ -757,11 +757,11 @@ Partial Class FrmEmpleado
         CType(Me.DgvEmpleado, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GbEmpleado.ResumeLayout(False)
         Me.GbEmpleado.PerformLayout()
+        CType(Me.PbEmpleado, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PbEmpleado, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

@@ -53,7 +53,7 @@ Public Class FrmConfiguracion
 
             End If
         Catch ex As Exception
-            MessageBox.Show(ex.ToString, "Error en la conexión", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show("Error en la conexion con el servidor", "INNOVAMASTER", MessageBoxButtons.OK, MessageBoxIcon.Error)
             EC = Estado_Conexion.NoEstablecida
             lblConnStatus.Text = "Error en la conexión"
         Finally

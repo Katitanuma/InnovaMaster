@@ -29,6 +29,9 @@ Partial Class FrmUsuario
         Me.LblRespaldo = New System.Windows.Forms.Label()
         Me.CboId = New System.Windows.Forms.ComboBox()
         Me.GbUsuario = New System.Windows.Forms.GroupBox()
+        Me.RdbInactivo = New System.Windows.Forms.RadioButton()
+        Me.RdbActivo = New System.Windows.Forms.RadioButton()
+        Me.Label6 = New System.Windows.Forms.Label()
         Me.ChkVer = New System.Windows.Forms.CheckBox()
         Me.CboTipoAcceso = New System.Windows.Forms.ComboBox()
         Me.CboEmpleado = New System.Windows.Forms.ComboBox()
@@ -52,9 +55,6 @@ Partial Class FrmUsuario
         Me.BtnInsertar = New System.Windows.Forms.Button()
         Me.BtnEditar = New System.Windows.Forms.Button()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.RdbActivo = New System.Windows.Forms.RadioButton()
-        Me.RdbInactivo = New System.Windows.Forms.RadioButton()
         Me.GbUsuario.SuspendLayout()
         CType(Me.DgvUsuario, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -83,6 +83,7 @@ Partial Class FrmUsuario
         '
         'CboBusqueda
         '
+        Me.CboBusqueda.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.CboBusqueda.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CboBusqueda.FormattingEnabled = True
         Me.CboBusqueda.Items.AddRange(New Object() {"Usuario", "Nombre_Completo", "TipoAcceso"})
@@ -90,7 +91,6 @@ Partial Class FrmUsuario
         Me.CboBusqueda.Name = "CboBusqueda"
         Me.CboBusqueda.Size = New System.Drawing.Size(198, 23)
         Me.CboBusqueda.TabIndex = 65
-        Me.CboBusqueda.Text = "Usuario"
         '
         'Label13
         '
@@ -147,6 +147,38 @@ Partial Class FrmUsuario
         Me.GbUsuario.Size = New System.Drawing.Size(435, 296)
         Me.GbUsuario.TabIndex = 69
         Me.GbUsuario.TabStop = False
+        '
+        'RdbInactivo
+        '
+        Me.RdbInactivo.AutoSize = True
+        Me.RdbInactivo.Location = New System.Drawing.Point(210, 254)
+        Me.RdbInactivo.Name = "RdbInactivo"
+        Me.RdbInactivo.Size = New System.Drawing.Size(73, 20)
+        Me.RdbInactivo.TabIndex = 24
+        Me.RdbInactivo.TabStop = True
+        Me.RdbInactivo.Text = "Inactivo"
+        Me.RdbInactivo.UseVisualStyleBackColor = True
+        '
+        'RdbActivo
+        '
+        Me.RdbActivo.AutoSize = True
+        Me.RdbActivo.Location = New System.Drawing.Point(142, 254)
+        Me.RdbActivo.Name = "RdbActivo"
+        Me.RdbActivo.Size = New System.Drawing.Size(62, 20)
+        Me.RdbActivo.TabIndex = 23
+        Me.RdbActivo.TabStop = True
+        Me.RdbActivo.Text = "Activo"
+        Me.RdbActivo.UseVisualStyleBackColor = True
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Comic Sans MS", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(82, 254)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(51, 19)
+        Me.Label6.TabIndex = 22
+        Me.Label6.Text = "Estado"
         '
         'ChkVer
         '
@@ -329,7 +361,7 @@ Partial Class FrmUsuario
         Me.BtnNuevoEditar.Font = New System.Drawing.Font("Comic Sans MS", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnNuevoEditar.Image = Global.INNOVAMASTER.My.Resources.Resources.editar1
         Me.BtnNuevoEditar.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.BtnNuevoEditar.Location = New System.Drawing.Point(155, 469)
+        Me.BtnNuevoEditar.Location = New System.Drawing.Point(155, 450)
         Me.BtnNuevoEditar.Name = "BtnNuevoEditar"
         Me.BtnNuevoEditar.Size = New System.Drawing.Size(82, 86)
         Me.BtnNuevoEditar.TabIndex = 62
@@ -346,7 +378,7 @@ Partial Class FrmUsuario
         Me.BtnCancelar.Font = New System.Drawing.Font("Comic Sans MS", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnCancelar.Image = Global.INNOVAMASTER.My.Resources.Resources.cancelb
         Me.BtnCancelar.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.BtnCancelar.Location = New System.Drawing.Point(336, 470)
+        Me.BtnCancelar.Location = New System.Drawing.Point(336, 451)
         Me.BtnCancelar.Name = "BtnCancelar"
         Me.BtnCancelar.Size = New System.Drawing.Size(82, 86)
         Me.BtnCancelar.TabIndex = 63
@@ -364,7 +396,7 @@ Partial Class FrmUsuario
         Me.BtnNuevo.Font = New System.Drawing.Font("Comic Sans MS", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnNuevo.Image = Global.INNOVAMASTER.My.Resources.Resources.nuevo
         Me.BtnNuevo.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.BtnNuevo.Location = New System.Drawing.Point(60, 469)
+        Me.BtnNuevo.Location = New System.Drawing.Point(60, 450)
         Me.BtnNuevo.Name = "BtnNuevo"
         Me.BtnNuevo.Size = New System.Drawing.Size(82, 86)
         Me.BtnNuevo.TabIndex = 61
@@ -381,7 +413,7 @@ Partial Class FrmUsuario
         Me.BtnInsertar.Font = New System.Drawing.Font("Comic Sans MS", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnInsertar.Image = Global.INNOVAMASTER.My.Resources.Resources.guardar
         Me.BtnInsertar.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.BtnInsertar.Location = New System.Drawing.Point(246, 469)
+        Me.BtnInsertar.Location = New System.Drawing.Point(246, 450)
         Me.BtnInsertar.Name = "BtnInsertar"
         Me.BtnInsertar.Size = New System.Drawing.Size(82, 86)
         Me.BtnInsertar.TabIndex = 64
@@ -399,7 +431,7 @@ Partial Class FrmUsuario
         Me.BtnEditar.Font = New System.Drawing.Font("Comic Sans MS", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnEditar.Image = Global.INNOVAMASTER.My.Resources.Resources.actualizarb
         Me.BtnEditar.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.BtnEditar.Location = New System.Drawing.Point(246, 469)
+        Me.BtnEditar.Location = New System.Drawing.Point(246, 450)
         Me.BtnEditar.Name = "BtnEditar"
         Me.BtnEditar.Size = New System.Drawing.Size(82, 86)
         Me.BtnEditar.TabIndex = 73
@@ -416,38 +448,6 @@ Partial Class FrmUsuario
         Me.PictureBox2.Size = New System.Drawing.Size(59, 59)
         Me.PictureBox2.TabIndex = 72
         Me.PictureBox2.TabStop = False
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Comic Sans MS", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(82, 254)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(51, 19)
-        Me.Label6.TabIndex = 22
-        Me.Label6.Text = "Estado"
-        '
-        'RdbActivo
-        '
-        Me.RdbActivo.AutoSize = True
-        Me.RdbActivo.Location = New System.Drawing.Point(142, 254)
-        Me.RdbActivo.Name = "RdbActivo"
-        Me.RdbActivo.Size = New System.Drawing.Size(62, 20)
-        Me.RdbActivo.TabIndex = 23
-        Me.RdbActivo.TabStop = True
-        Me.RdbActivo.Text = "Activo"
-        Me.RdbActivo.UseVisualStyleBackColor = True
-        '
-        'RdbInactivo
-        '
-        Me.RdbInactivo.AutoSize = True
-        Me.RdbInactivo.Location = New System.Drawing.Point(210, 254)
-        Me.RdbInactivo.Name = "RdbInactivo"
-        Me.RdbInactivo.Size = New System.Drawing.Size(73, 20)
-        Me.RdbInactivo.TabIndex = 24
-        Me.RdbInactivo.TabStop = True
-        Me.RdbInactivo.Text = "Inactivo"
-        Me.RdbInactivo.UseVisualStyleBackColor = True
         '
         'FrmUsuario
         '

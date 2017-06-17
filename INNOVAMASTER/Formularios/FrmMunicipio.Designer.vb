@@ -305,6 +305,7 @@ Partial Class FrmMunicipio
         '
         'CboBusqueda
         '
+        Me.CboBusqueda.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.CboBusqueda.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CboBusqueda.FormattingEnabled = True
         Me.CboBusqueda.Items.AddRange(New Object() {"Municipio", "Departamento"})
@@ -312,7 +313,6 @@ Partial Class FrmMunicipio
         Me.CboBusqueda.Name = "CboBusqueda"
         Me.CboBusqueda.Size = New System.Drawing.Size(217, 23)
         Me.CboBusqueda.TabIndex = 98
-        Me.CboBusqueda.Text = "Municipio"
         '
         'FrmMunicipio
         '

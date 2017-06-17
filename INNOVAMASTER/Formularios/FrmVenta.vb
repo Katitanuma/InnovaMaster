@@ -4,7 +4,7 @@ Public Class FrmVenta
     Dim Conec As New Conexion
     Dim cmd As SqlCommand
     Private Sub FrmVenta_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        CboBusqueda.Text = CboBusqueda.Items(0).ToString
         Mostrar()
         BtnInsertar.Visible = False
         BtnCancelar.Visible = False

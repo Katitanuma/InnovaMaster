@@ -102,6 +102,7 @@ Partial Class FrmCliente
         '
         'CboBusqueda
         '
+        Me.CboBusqueda.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         resources.ApplyResources(Me.CboBusqueda, "CboBusqueda")
         Me.CboBusqueda.FormattingEnabled = True
         Me.CboBusqueda.Items.AddRange(New Object() {resources.GetString("CboBusqueda.Items"), resources.GetString("CboBusqueda.Items1"), resources.GetString("CboBusqueda.Items2"), resources.GetString("CboBusqueda.Items3"), resources.GetString("CboBusqueda.Items4")})

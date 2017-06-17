@@ -4,6 +4,7 @@ Public Class FrmEmpleado
     Dim dt As New DataTable
     Dim cmd As SqlCommand
     Private Sub FrmEmpleado_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        CboBusqueda.Text = CboBusqueda.Items(0).ToString
         Mostrar()
         LlenarComboMunicipio()
         LlenarComboEstadoCivil()

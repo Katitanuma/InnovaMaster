@@ -135,7 +135,7 @@ Partial Class FrmProveedor
         Me.BtnNuevoEditar.Image = Global.INNOVAMASTER.My.Resources.Resources.editar1
         Me.BtnNuevoEditar.ImageAlign = System.Drawing.ContentAlignment.TopCenter
         Me.BtnNuevoEditar.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.BtnNuevoEditar.Location = New System.Drawing.Point(133, 472)
+        Me.BtnNuevoEditar.Location = New System.Drawing.Point(133, 466)
         Me.BtnNuevoEditar.Name = "BtnNuevoEditar"
         Me.BtnNuevoEditar.Size = New System.Drawing.Size(82, 86)
         Me.BtnNuevoEditar.TabIndex = 58
@@ -153,7 +153,7 @@ Partial Class FrmProveedor
         Me.BtnCancelar.Image = Global.INNOVAMASTER.My.Resources.Resources.cancelb
         Me.BtnCancelar.ImageAlign = System.Drawing.ContentAlignment.TopCenter
         Me.BtnCancelar.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.BtnCancelar.Location = New System.Drawing.Point(319, 473)
+        Me.BtnCancelar.Location = New System.Drawing.Point(319, 465)
         Me.BtnCancelar.Name = "BtnCancelar"
         Me.BtnCancelar.Size = New System.Drawing.Size(82, 86)
         Me.BtnCancelar.TabIndex = 60
@@ -171,7 +171,7 @@ Partial Class FrmProveedor
         Me.BtnNuevo.Image = Global.INNOVAMASTER.My.Resources.Resources.nuevo
         Me.BtnNuevo.ImageAlign = System.Drawing.ContentAlignment.TopCenter
         Me.BtnNuevo.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.BtnNuevo.Location = New System.Drawing.Point(38, 472)
+        Me.BtnNuevo.Location = New System.Drawing.Point(38, 466)
         Me.BtnNuevo.Name = "BtnNuevo"
         Me.BtnNuevo.Size = New System.Drawing.Size(82, 86)
         Me.BtnNuevo.TabIndex = 57
@@ -202,6 +202,7 @@ Partial Class FrmProveedor
         '
         'CboBusqueda
         '
+        Me.CboBusqueda.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.CboBusqueda.Font = New System.Drawing.Font("Arial", 9.0!)
         Me.CboBusqueda.FormattingEnabled = True
         Me.CboBusqueda.Items.AddRange(New Object() {"IdProveedor", "RTN", "NombreEmpresa", "NombreContacto", "Municipio"})
@@ -209,7 +210,6 @@ Partial Class FrmProveedor
         Me.CboBusqueda.Name = "CboBusqueda"
         Me.CboBusqueda.Size = New System.Drawing.Size(203, 23)
         Me.CboBusqueda.TabIndex = 61
-        Me.CboBusqueda.Text = "IdProveedor"
         '
         'DgvProveedor
         '
@@ -543,7 +543,7 @@ Partial Class FrmProveedor
         Me.BtnInsertar.Image = Global.INNOVAMASTER.My.Resources.Resources.guardar
         Me.BtnInsertar.ImageAlign = System.Drawing.ContentAlignment.TopCenter
         Me.BtnInsertar.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.BtnInsertar.Location = New System.Drawing.Point(229, 472)
+        Me.BtnInsertar.Location = New System.Drawing.Point(229, 464)
         Me.BtnInsertar.Name = "BtnInsertar"
         Me.BtnInsertar.Size = New System.Drawing.Size(82, 86)
         Me.BtnInsertar.TabIndex = 59
@@ -561,7 +561,7 @@ Partial Class FrmProveedor
         Me.BtnEditar.Image = Global.INNOVAMASTER.My.Resources.Resources.actualizarb
         Me.BtnEditar.ImageAlign = System.Drawing.ContentAlignment.TopCenter
         Me.BtnEditar.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.BtnEditar.Location = New System.Drawing.Point(229, 472)
+        Me.BtnEditar.Location = New System.Drawing.Point(229, 464)
         Me.BtnEditar.Name = "BtnEditar"
         Me.BtnEditar.Size = New System.Drawing.Size(82, 86)
         Me.BtnEditar.TabIndex = 64

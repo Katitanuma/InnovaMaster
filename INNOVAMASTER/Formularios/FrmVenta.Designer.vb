@@ -354,6 +354,7 @@ Partial Class FrmVenta
         '
         'CboBusqueda
         '
+        Me.CboBusqueda.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.CboBusqueda.Font = New System.Drawing.Font("Arial", 9.0!)
         Me.CboBusqueda.FormattingEnabled = True
         Me.CboBusqueda.Items.AddRange(New Object() {"IdVenta", "IdCliente", "FormaVenta", "TipoVenta", "Usuario"})
@@ -361,7 +362,6 @@ Partial Class FrmVenta
         Me.CboBusqueda.Name = "CboBusqueda"
         Me.CboBusqueda.Size = New System.Drawing.Size(203, 23)
         Me.CboBusqueda.TabIndex = 86
-        Me.CboBusqueda.Text = "IdVenta"
         '
         'PictureBox3
         '
@@ -404,7 +404,7 @@ Partial Class FrmVenta
         Me.BtnNuevoEditar.Font = New System.Drawing.Font("Comic Sans MS", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnNuevoEditar.Image = Global.INNOVAMASTER.My.Resources.Resources.editar1
         Me.BtnNuevoEditar.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.BtnNuevoEditar.Location = New System.Drawing.Point(153, 462)
+        Me.BtnNuevoEditar.Location = New System.Drawing.Point(153, 445)
         Me.BtnNuevoEditar.Name = "BtnNuevoEditar"
         Me.BtnNuevoEditar.Size = New System.Drawing.Size(82, 86)
         Me.BtnNuevoEditar.TabIndex = 75
@@ -421,7 +421,7 @@ Partial Class FrmVenta
         Me.BtnCancelar.Font = New System.Drawing.Font("Comic Sans MS", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnCancelar.Image = Global.INNOVAMASTER.My.Resources.Resources.cancelb
         Me.BtnCancelar.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.BtnCancelar.Location = New System.Drawing.Point(334, 463)
+        Me.BtnCancelar.Location = New System.Drawing.Point(334, 446)
         Me.BtnCancelar.Name = "BtnCancelar"
         Me.BtnCancelar.Size = New System.Drawing.Size(82, 86)
         Me.BtnCancelar.TabIndex = 76
@@ -439,7 +439,7 @@ Partial Class FrmVenta
         Me.BtnNuevo.Font = New System.Drawing.Font("Comic Sans MS", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnNuevo.Image = Global.INNOVAMASTER.My.Resources.Resources.nuevo
         Me.BtnNuevo.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.BtnNuevo.Location = New System.Drawing.Point(58, 462)
+        Me.BtnNuevo.Location = New System.Drawing.Point(58, 445)
         Me.BtnNuevo.Name = "BtnNuevo"
         Me.BtnNuevo.Size = New System.Drawing.Size(82, 86)
         Me.BtnNuevo.TabIndex = 74
@@ -456,7 +456,7 @@ Partial Class FrmVenta
         Me.BtnInsertar.Font = New System.Drawing.Font("Comic Sans MS", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnInsertar.Image = Global.INNOVAMASTER.My.Resources.Resources.guardar
         Me.BtnInsertar.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.BtnInsertar.Location = New System.Drawing.Point(244, 462)
+        Me.BtnInsertar.Location = New System.Drawing.Point(244, 445)
         Me.BtnInsertar.Name = "BtnInsertar"
         Me.BtnInsertar.Size = New System.Drawing.Size(82, 86)
         Me.BtnInsertar.TabIndex = 77
@@ -474,7 +474,7 @@ Partial Class FrmVenta
         Me.BtnEditar.Font = New System.Drawing.Font("Comic Sans MS", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnEditar.Image = Global.INNOVAMASTER.My.Resources.Resources.actualizarb
         Me.BtnEditar.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.BtnEditar.Location = New System.Drawing.Point(244, 462)
+        Me.BtnEditar.Location = New System.Drawing.Point(244, 445)
         Me.BtnEditar.Name = "BtnEditar"
         Me.BtnEditar.Size = New System.Drawing.Size(82, 86)
         Me.BtnEditar.TabIndex = 78

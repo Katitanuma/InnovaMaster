@@ -7,6 +7,7 @@ Public Class FrmProveedor
     Dim cmd As SqlCommand
     Public var As Integer = 0
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        CboBusqueda.Text = CboBusqueda.Items(0).ToString
         Focus()
         Mostrar()
         LlenarComboMunicipio()

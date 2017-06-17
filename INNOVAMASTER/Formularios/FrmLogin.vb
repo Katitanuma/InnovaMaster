@@ -33,6 +33,10 @@ Public Class FrmLogin
         Dim cone As New Conexion
         If cone.Conectarse() = False Then
             FrmConfiguracion.Label5.Text = "1"
+            FrmConfiguracion.txtUsername.Text = Nothing
+            FrmConfiguracion.txtPassword.Text = Nothing
+            FrmConfiguracion.txtDB.Text = Nothing
+            FrmConfiguracion.txtserver.Text = Nothing
             FrmConfiguracion.Show()
             Me.Close()
             Exit Sub

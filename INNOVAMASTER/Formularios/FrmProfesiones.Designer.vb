@@ -165,7 +165,7 @@ Partial Class FrmProfesiones
         Me.BtnEditar.Font = New System.Drawing.Font("Comic Sans MS", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnEditar.Image = Global.INNOVAMASTER.My.Resources.Resources.editar1
         Me.BtnEditar.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.BtnEditar.Location = New System.Drawing.Point(128, 466)
+        Me.BtnEditar.Location = New System.Drawing.Point(128, 453)
         Me.BtnEditar.Name = "BtnEditar"
         Me.BtnEditar.Size = New System.Drawing.Size(82, 86)
         Me.BtnEditar.TabIndex = 74
@@ -182,7 +182,7 @@ Partial Class FrmProfesiones
         Me.BtnNuevo.Font = New System.Drawing.Font("Comic Sans MS", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnNuevo.Image = Global.INNOVAMASTER.My.Resources.Resources.nuevo
         Me.BtnNuevo.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.BtnNuevo.Location = New System.Drawing.Point(33, 466)
+        Me.BtnNuevo.Location = New System.Drawing.Point(33, 453)
         Me.BtnNuevo.Name = "BtnNuevo"
         Me.BtnNuevo.Size = New System.Drawing.Size(82, 86)
         Me.BtnNuevo.TabIndex = 73
@@ -199,7 +199,7 @@ Partial Class FrmProfesiones
         Me.BtnCancelar.Font = New System.Drawing.Font("Comic Sans MS", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnCancelar.Image = Global.INNOVAMASTER.My.Resources.Resources.cancelb
         Me.BtnCancelar.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.BtnCancelar.Location = New System.Drawing.Point(327, 466)
+        Me.BtnCancelar.Location = New System.Drawing.Point(327, 453)
         Me.BtnCancelar.Name = "BtnCancelar"
         Me.BtnCancelar.Size = New System.Drawing.Size(82, 86)
         Me.BtnCancelar.TabIndex = 76
@@ -227,7 +227,7 @@ Partial Class FrmProfesiones
         Me.BtnActualizar.Font = New System.Drawing.Font("Comic Sans MS", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnActualizar.Image = Global.INNOVAMASTER.My.Resources.Resources.actualizarb
         Me.BtnActualizar.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.BtnActualizar.Location = New System.Drawing.Point(226, 466)
+        Me.BtnActualizar.Location = New System.Drawing.Point(226, 453)
         Me.BtnActualizar.Name = "BtnActualizar"
         Me.BtnActualizar.Size = New System.Drawing.Size(82, 86)
         Me.BtnActualizar.TabIndex = 84
@@ -245,7 +245,7 @@ Partial Class FrmProfesiones
         Me.BtnInsertar.Font = New System.Drawing.Font("Comic Sans MS", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnInsertar.Image = Global.INNOVAMASTER.My.Resources.Resources.guardar
         Me.BtnInsertar.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.BtnInsertar.Location = New System.Drawing.Point(226, 466)
+        Me.BtnInsertar.Location = New System.Drawing.Point(226, 453)
         Me.BtnInsertar.Name = "BtnInsertar"
         Me.BtnInsertar.Size = New System.Drawing.Size(82, 86)
         Me.BtnInsertar.TabIndex = 75

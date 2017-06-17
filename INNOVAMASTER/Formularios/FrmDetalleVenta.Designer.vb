@@ -169,7 +169,7 @@ Partial Class FrmDetalleVenta
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Comic Sans MS", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(22, 513)
+        Me.Label1.Location = New System.Drawing.Point(22, 503)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(63, 19)
         Me.Label1.TabIndex = 1
@@ -178,7 +178,7 @@ Partial Class FrmDetalleVenta
         'TxtSubtotal
         '
         Me.TxtSubtotal.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtSubtotal.Location = New System.Drawing.Point(25, 533)
+        Me.TxtSubtotal.Location = New System.Drawing.Point(25, 523)
         Me.TxtSubtotal.Name = "TxtSubtotal"
         Me.TxtSubtotal.ReadOnly = True
         Me.TxtSubtotal.Size = New System.Drawing.Size(164, 21)
@@ -189,7 +189,7 @@ Partial Class FrmDetalleVenta
         'TxtDescuento
         '
         Me.TxtDescuento.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtDescuento.Location = New System.Drawing.Point(231, 533)
+        Me.TxtDescuento.Location = New System.Drawing.Point(231, 523)
         Me.TxtDescuento.Name = "TxtDescuento"
         Me.TxtDescuento.ReadOnly = True
         Me.TxtDescuento.Size = New System.Drawing.Size(164, 21)
@@ -201,7 +201,7 @@ Partial Class FrmDetalleVenta
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Comic Sans MS", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(228, 513)
+        Me.Label2.Location = New System.Drawing.Point(228, 503)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(72, 19)
         Me.Label2.TabIndex = 3
@@ -210,7 +210,7 @@ Partial Class FrmDetalleVenta
         'TxtImpuesto
         '
         Me.TxtImpuesto.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtImpuesto.Location = New System.Drawing.Point(438, 533)
+        Me.TxtImpuesto.Location = New System.Drawing.Point(438, 523)
         Me.TxtImpuesto.Name = "TxtImpuesto"
         Me.TxtImpuesto.ReadOnly = True
         Me.TxtImpuesto.Size = New System.Drawing.Size(164, 21)
@@ -222,7 +222,7 @@ Partial Class FrmDetalleVenta
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Comic Sans MS", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(435, 513)
+        Me.Label3.Location = New System.Drawing.Point(435, 503)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(66, 19)
         Me.Label3.TabIndex = 5
@@ -231,7 +231,7 @@ Partial Class FrmDetalleVenta
         'TxtTotal
         '
         Me.TxtTotal.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtTotal.Location = New System.Drawing.Point(644, 533)
+        Me.TxtTotal.Location = New System.Drawing.Point(644, 523)
         Me.TxtTotal.Name = "TxtTotal"
         Me.TxtTotal.ReadOnly = True
         Me.TxtTotal.Size = New System.Drawing.Size(164, 21)
@@ -243,7 +243,7 @@ Partial Class FrmDetalleVenta
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Comic Sans MS", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(641, 513)
+        Me.Label4.Location = New System.Drawing.Point(641, 503)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(42, 19)
         Me.Label4.TabIndex = 7
@@ -428,7 +428,7 @@ Partial Class FrmDetalleVenta
         '
         Me.BtnFacturar.BackColor = System.Drawing.Color.White
         Me.BtnFacturar.Font = New System.Drawing.Font("Comic Sans MS", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnFacturar.Location = New System.Drawing.Point(845, 528)
+        Me.BtnFacturar.Location = New System.Drawing.Point(845, 518)
         Me.BtnFacturar.Name = "BtnFacturar"
         Me.BtnFacturar.Size = New System.Drawing.Size(85, 27)
         Me.BtnFacturar.TabIndex = 10
@@ -472,7 +472,7 @@ Partial Class FrmDetalleVenta
         '
         Me.Button1.BackColor = System.Drawing.Color.White
         Me.Button1.Font = New System.Drawing.Font("Comic Sans MS", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(1204, 527)
+        Me.Button1.Location = New System.Drawing.Point(1204, 517)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(123, 27)
         Me.Button1.TabIndex = 59
@@ -493,7 +493,7 @@ Partial Class FrmDetalleVenta
         '
         Me.Button2.BackColor = System.Drawing.Color.White
         Me.Button2.Font = New System.Drawing.Font("Comic Sans MS", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(992, 527)
+        Me.Button2.Location = New System.Drawing.Point(992, 517)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(206, 27)
         Me.Button2.TabIndex = 61
@@ -503,7 +503,7 @@ Partial Class FrmDetalleVenta
         'LblCambio
         '
         Me.LblCambio.AutoSize = True
-        Me.LblCambio.Location = New System.Drawing.Point(1030, 512)
+        Me.LblCambio.Location = New System.Drawing.Point(1030, 502)
         Me.LblCambio.Name = "LblCambio"
         Me.LblCambio.Size = New System.Drawing.Size(39, 13)
         Me.LblCambio.TabIndex = 62

@@ -359,7 +359,16 @@ Public Class FrmCompras
     End Sub
 
     Private Sub TxtDescuentoExtra_EditValueChanged(sender As Object, e As EventArgs) Handles TxtDescuentoExtra.EditValueChanged
-        LlenarTextBox()
+        If TxtDescuentoExtra.Text = Nothing Or TxtTotal.Text = "" Then
+        Else
+            If CDbl(TxtDescuentoExtra.Text) >= CDbl(TxtTotal.Text) Or CDbl(TxtDescuentoExtra.Text) < CDbl(TxtTotal.Text) Then
+
+            Else
+                LlenarTextBox()
+            End If
+        End If
+
+
     End Sub
 
     Private Sub RdbPorcentaje_CheckedChanged(sender As Object, e As EventArgs) Handles RdbPorcentaje.CheckedChanged

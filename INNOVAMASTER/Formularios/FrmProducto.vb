@@ -5,6 +5,7 @@ Public Class FrmProducto
     Dim Conec As New Conexion
     Dim cmd As SqlCommand
     Private Sub FrmProducto_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        CboBusqueda.Text = CboBusqueda.Items(0).ToString
         MostrarProducto()
         Focus()
         LlenarCombos()

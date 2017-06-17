@@ -5,6 +5,7 @@ Public Class FrmDepartamento
     Dim conec As New Conexion
     Public var As Integer = 0
     Private Sub FrmDepartamento_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        CboBusqueda.Text = CboBusqueda.Items(0).ToString
         MostrarDepartamento()
         GbDepartamento.Enabled = False
         TxtIdDepartamento.Enabled = False

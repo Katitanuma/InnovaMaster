@@ -29,6 +29,7 @@ Partial Class FrmProducto
         Me.CboBusqueda = New System.Windows.Forms.ComboBox()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.GbProducto = New System.Windows.Forms.GroupBox()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.BtnCodigoProveedor = New System.Windows.Forms.Button()
         Me.TxtGravado = New DevExpress.XtraEditors.CalcEdit()
         Me.BtnBusquedaCliente = New System.Windows.Forms.Button()
@@ -66,7 +67,6 @@ Partial Class FrmProducto
         Me.BtnInsertar = New System.Windows.Forms.Button()
         Me.BtnEditar = New System.Windows.Forms.Button()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.GbProducto.SuspendLayout()
         CType(Me.TxtGravado.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PbProducto, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -103,6 +103,7 @@ Partial Class FrmProducto
         '
         'CboBusqueda
         '
+        Me.CboBusqueda.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.CboBusqueda.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CboBusqueda.FormattingEnabled = True
         Me.CboBusqueda.Items.AddRange(New Object() {"IdProducto", "Descripcion", "Categoria", "Modelo", "Estado"})
@@ -110,7 +111,6 @@ Partial Class FrmProducto
         Me.CboBusqueda.Name = "CboBusqueda"
         Me.CboBusqueda.Size = New System.Drawing.Size(198, 23)
         Me.CboBusqueda.TabIndex = 75
-        Me.CboBusqueda.Text = "IdProducto"
         '
         'Label13
         '
@@ -158,6 +158,16 @@ Partial Class FrmProducto
         Me.GbProducto.Size = New System.Drawing.Size(470, 387)
         Me.GbProducto.TabIndex = 70
         Me.GbProducto.TabStop = False
+        '
+        'Button1
+        '
+        Me.Button1.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.Location = New System.Drawing.Point(309, 317)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(33, 24)
+        Me.Button1.TabIndex = 53
+        Me.Button1.Text = " ..."
+        Me.Button1.UseVisualStyleBackColor = True
         '
         'BtnCodigoProveedor
         '
@@ -428,7 +438,7 @@ Partial Class FrmProducto
         Me.DgvProducto.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DgvProducto.BackgroundColor = System.Drawing.Color.White
         Me.DgvProducto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DgvProducto.Location = New System.Drawing.Point(525, 76)
+        Me.DgvProducto.Location = New System.Drawing.Point(525, 75)
         Me.DgvProducto.Name = "DgvProducto"
         Me.DgvProducto.ReadOnly = True
         Me.DgvProducto.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
@@ -473,7 +483,7 @@ Partial Class FrmProducto
         Me.BtnNuevoEditar.Font = New System.Drawing.Font("Comic Sans MS", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnNuevoEditar.Image = Global.INNOVAMASTER.My.Resources.Resources.editar1
         Me.BtnNuevoEditar.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.BtnNuevoEditar.Location = New System.Drawing.Point(161, 472)
+        Me.BtnNuevoEditar.Location = New System.Drawing.Point(161, 458)
         Me.BtnNuevoEditar.Name = "BtnNuevoEditar"
         Me.BtnNuevoEditar.Size = New System.Drawing.Size(82, 86)
         Me.BtnNuevoEditar.TabIndex = 72
@@ -490,7 +500,7 @@ Partial Class FrmProducto
         Me.BtnCancelar.Font = New System.Drawing.Font("Comic Sans MS", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnCancelar.Image = Global.INNOVAMASTER.My.Resources.Resources.cancelb
         Me.BtnCancelar.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.BtnCancelar.Location = New System.Drawing.Point(366, 472)
+        Me.BtnCancelar.Location = New System.Drawing.Point(366, 458)
         Me.BtnCancelar.Name = "BtnCancelar"
         Me.BtnCancelar.Size = New System.Drawing.Size(82, 86)
         Me.BtnCancelar.TabIndex = 73
@@ -508,7 +518,7 @@ Partial Class FrmProducto
         Me.BtnNuevo.Font = New System.Drawing.Font("Comic Sans MS", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnNuevo.Image = Global.INNOVAMASTER.My.Resources.Resources.nuevo
         Me.BtnNuevo.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.BtnNuevo.Location = New System.Drawing.Point(66, 472)
+        Me.BtnNuevo.Location = New System.Drawing.Point(66, 458)
         Me.BtnNuevo.Name = "BtnNuevo"
         Me.BtnNuevo.Size = New System.Drawing.Size(82, 86)
         Me.BtnNuevo.TabIndex = 71
@@ -525,7 +535,7 @@ Partial Class FrmProducto
         Me.BtnInsertar.Font = New System.Drawing.Font("Comic Sans MS", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnInsertar.Image = Global.INNOVAMASTER.My.Resources.Resources.guardar
         Me.BtnInsertar.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.BtnInsertar.Location = New System.Drawing.Point(263, 472)
+        Me.BtnInsertar.Location = New System.Drawing.Point(263, 458)
         Me.BtnInsertar.Name = "BtnInsertar"
         Me.BtnInsertar.Size = New System.Drawing.Size(82, 86)
         Me.BtnInsertar.TabIndex = 74
@@ -543,7 +553,7 @@ Partial Class FrmProducto
         Me.BtnEditar.Font = New System.Drawing.Font("Comic Sans MS", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnEditar.Image = Global.INNOVAMASTER.My.Resources.Resources.actualizarb
         Me.BtnEditar.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.BtnEditar.Location = New System.Drawing.Point(257, 472)
+        Me.BtnEditar.Location = New System.Drawing.Point(257, 458)
         Me.BtnEditar.Name = "BtnEditar"
         Me.BtnEditar.Size = New System.Drawing.Size(82, 86)
         Me.BtnEditar.TabIndex = 77
@@ -551,16 +561,6 @@ Partial Class FrmProducto
         Me.BtnEditar.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.BtnEditar.UseVisualStyleBackColor = False
         Me.BtnEditar.Visible = False
-        '
-        'Button1
-        '
-        Me.Button1.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(309, 317)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(33, 24)
-        Me.Button1.TabIndex = 53
-        Me.Button1.Text = " ..."
-        Me.Button1.UseVisualStyleBackColor = True
         '
         'FrmProducto
         '

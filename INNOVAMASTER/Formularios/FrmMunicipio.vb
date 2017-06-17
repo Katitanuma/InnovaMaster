@@ -15,6 +15,7 @@ Public Class FrmMunicipio
     End Sub
     Public var As Integer = 0
     Private Sub FrmModelo_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        CboBusqueda.Text = CboBusqueda.Items(0).ToString
         MostrarMunicipio()
         GbMunicipio.Enabled = False
         TxtIdMunicipio.Enabled = False

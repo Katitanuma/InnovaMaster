@@ -44,7 +44,7 @@ Partial Class FrmLogin
         Me.BtnConfiguracion.Location = New System.Drawing.Point(229, 211)
         Me.BtnConfiguracion.Name = "BtnConfiguracion"
         Me.BtnConfiguracion.Size = New System.Drawing.Size(104, 30)
-        Me.BtnConfiguracion.TabIndex = 34
+        Me.BtnConfiguracion.TabIndex = 0
         Me.BtnConfiguracion.Text = "&Configuración"
         Me.BtnConfiguracion.UseVisualStyleBackColor = False
         Me.BtnConfiguracion.Visible = False
@@ -56,7 +56,7 @@ Partial Class FrmLogin
         Me.ChkVer.Location = New System.Drawing.Point(534, 186)
         Me.ChkVer.Name = "ChkVer"
         Me.ChkVer.Size = New System.Drawing.Size(42, 17)
-        Me.ChkVer.TabIndex = 33
+        Me.ChkVer.TabIndex = 3
         Me.ChkVer.Text = "Ver"
         Me.ChkVer.UseVisualStyleBackColor = False
         '
@@ -67,7 +67,7 @@ Partial Class FrmLogin
         Me.BtnIniciar.Location = New System.Drawing.Point(418, 210)
         Me.BtnIniciar.Name = "BtnIniciar"
         Me.BtnIniciar.Size = New System.Drawing.Size(75, 30)
-        Me.BtnIniciar.TabIndex = 32
+        Me.BtnIniciar.TabIndex = 4
         Me.BtnIniciar.Text = "&Iniciar"
         Me.BtnIniciar.UseVisualStyleBackColor = False
         '
@@ -78,7 +78,7 @@ Partial Class FrmLogin
         Me.BtnCerrar.Location = New System.Drawing.Point(499, 210)
         Me.BtnCerrar.Name = "BtnCerrar"
         Me.BtnCerrar.Size = New System.Drawing.Size(75, 30)
-        Me.BtnCerrar.TabIndex = 31
+        Me.BtnCerrar.TabIndex = 5
         Me.BtnCerrar.Text = "&Cerrar"
         Me.BtnCerrar.UseVisualStyleBackColor = False
         '
@@ -89,7 +89,7 @@ Partial Class FrmLogin
         Me.TxtContrasena.Location = New System.Drawing.Point(399, 157)
         Me.TxtContrasena.Name = "TxtContrasena"
         Me.TxtContrasena.Size = New System.Drawing.Size(176, 19)
-        Me.TxtContrasena.TabIndex = 30
+        Me.TxtContrasena.TabIndex = 2
         Me.TxtContrasena.UseSystemPasswordChar = True
         '
         'TxtUsuario
@@ -99,7 +99,7 @@ Partial Class FrmLogin
         Me.TxtUsuario.Location = New System.Drawing.Point(399, 102)
         Me.TxtUsuario.Name = "TxtUsuario"
         Me.TxtUsuario.Size = New System.Drawing.Size(176, 19)
-        Me.TxtUsuario.TabIndex = 29
+        Me.TxtUsuario.TabIndex = 1
         '
         'FrmLogin
         '
@@ -119,7 +119,6 @@ Partial Class FrmLogin
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "FrmLogin"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Login"
         Me.TransparencyKey = System.Drawing.SystemColors.Control
         CType(Me.EpMensaje, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)

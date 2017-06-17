@@ -13,6 +13,7 @@ Public Class FrmModelo
     End Sub
 
     Private Sub FrmModelo_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        CboBusqueda.Text = CboBusqueda.Items(0).ToString
         MostrarModelo()
         GbModelo.Enabled = False
         TxtIdModelo.Enabled = False

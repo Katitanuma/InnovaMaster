@@ -22,7 +22,7 @@ Public Class FrmBackup
             btnSelectDir.Enabled = True
             txtBackupName.Enabled = True
         Catch ex As Exception
-            MsgBox(ex.Message)
+            MessageBox.Show("Error al realizar el respaldo", "INNOVAMASTER", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
 
     End Sub
@@ -42,7 +42,7 @@ Public Class FrmBackup
             MessageBox.Show("Se ha respaldado la base de datos correctamente.", "Respaldo",
                                 MessageBoxButtons.OK, MessageBoxIcon.Information)
         Catch ex As Exception
-            MessageBox.Show(ex.ToString, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show("Error al realizar el respaldo, tiene que guardar el archivo en una dirección correcta", "INNOVAMASTER", MessageBoxButtons.OK, MessageBoxIcon.Error)
 
         Finally
 
