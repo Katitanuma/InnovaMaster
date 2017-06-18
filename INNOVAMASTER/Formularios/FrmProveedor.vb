@@ -131,7 +131,7 @@ Public Class FrmProveedor
 
     End Sub
     Private Sub BtnInsertar_Click(sender As Object, e As EventArgs) Handles BtnInsertar.Click
-        If TxtIdProveedor.Text = Nothing Then
+        If TxtIdProveedor.MaskFull = False Then
             MsgBox("Ingrese el Numero de Identidad del Contacto", MsgBoxStyle.Critical, "Error")
         ElseIf TxtNombreEmpresa.Text = Nothing Then
             MsgBox("Ingrese el Nombre de la Empresa", MsgBoxStyle.Critical, "Error")
@@ -153,7 +153,11 @@ Public Class FrmProveedor
                 Dim funcion As New Fproveedores
 
                 datos.gIdProveedor = TxtIdProveedor.Text
-                datos.gRTN = TxtRTN.Text
+                If TxtRTN.MaskFull = True Then
+                    datos.gRTN = TxtRTN.Text
+                Else
+                    datos.gRTN = Nothing
+                End If
                 datos.gNombreEmpresa = TxtNombreEmpresa.Text
                 datos.gDireccionEmpresa = TxtDireccionEmpresa.Text
                 datos.gNombreContacto = TxtNombreContacto.Text
@@ -240,7 +244,7 @@ Public Class FrmProveedor
 
     End Sub
     Private Sub BtnEditar_Click(sender As Object, e As EventArgs) Handles BtnEditar.Click
-        If TxtIdProveedor.Text = Nothing Then
+        If TxtIdProveedor.MaskFull = False Then
             MsgBox("Ingrese el Numero de Identidad del Contacto", MsgBoxStyle.Critical, "Error")
         ElseIf TxtNombreEmpresa.Text = Nothing Then
             MsgBox("Ingrese el Nombre de la Empresa", MsgBoxStyle.Critical, "Error")
@@ -262,7 +266,13 @@ Public Class FrmProveedor
                 Dim funcion As New Fproveedores
 
                 datos.gIdProveedor = TxtIdProveedor.Text
-                datos.gRTN = TxtRTN.Text
+
+                If TxtRTN.MaskFull = True Then
+                    datos.gRTN = TxtRTN.Text
+                Else
+                    datos.gRTN = Nothing
+                End If
+
                 datos.gNombreEmpresa = TxtNombreEmpresa.Text
                 datos.gDireccionEmpresa = TxtDireccionEmpresa.Text
                 datos.gNombreContacto = TxtNombreContacto.Text

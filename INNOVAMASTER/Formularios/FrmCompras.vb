@@ -376,14 +376,17 @@ Public Class FrmCompras
     End Sub
 
     Private Sub TxtDescuentoExtra_EditValueChanged(sender As Object, e As EventArgs) Handles TxtDescuentoExtra.EditValueChanged
-        If TxtDescuentoExtra.Text = Nothing Or TxtTotal.Text = "" Then
-        Else
-            If CDbl(TxtDescuentoExtra.Text) >= CDbl(TxtTotal.Text) Or CDbl(TxtDescuentoExtra.Text) < CDbl(TxtTotal.Text) Then
-
-            Else
+        If TxtDescuentoExtra.Text <> Nothing And TxtTotal.Text <> Nothing Then
+            If CDbl(TxtDescuentoExtra.Value) < CDbl(TxtTotal.Text) And CDbl(TxtDescuentoExtra.Value) >= 0 Then
                 LlenarTextBox()
+            Else
+                TxtDescuentoExtra.Value = 0
             End If
+        Else
+            TxtDescuentoExtra.Value = 0
         End If
+
+
 
 
     End Sub
@@ -403,18 +406,26 @@ Public Class FrmCompras
     End Sub
 
     Private Sub TxtP_TextChanged(sender As Object, e As EventArgs) Handles TxtP.TextChanged
-        Dim a, b As Double
-        If TxtP.Text = Nothing Then
-            a = 0
-        Else
+        If TxtP.Text <> Nothing Then
+            If CInt(TxtP.Text) >= 0 And CInt(TxtP.Text <= 100) Then
+                Dim a, b As Double
+                If TxtP.Text = Nothing Then
+                    a = 0
+                Else
 
-            a = CDbl(TxtP.Text)
-        End If
-        If TxtSubtotal.Text <> Nothing Then
-            b = CDbl(TxtSubtotal.Text)
+                    a = CDbl(TxtP.Text)
+                End If
+                If TxtSubtotal.Text <> Nothing Then
+                    b = CDbl(TxtSubtotal.Text)
+                End If
+
+                TxtDescuentoExtra.Value = (a / 100) * b
+            Else
+                TxtP.Text = 0
+            End If
+
         End If
 
-        TxtDescuentoExtra.Value = (a / 100) * b
 
     End Sub
 

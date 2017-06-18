@@ -327,7 +327,7 @@ Partial Class FrmProveedor
         '
         Me.TxtRTN.Font = New System.Drawing.Font("Arial", 9.0!)
         Me.TxtRTN.Location = New System.Drawing.Point(133, 54)
-        Me.TxtRTN.Mask = "0000-0000-00000"
+        Me.TxtRTN.Mask = "0000-0000-000000"
         Me.TxtRTN.Name = "TxtRTN"
         Me.TxtRTN.PromptChar = Global.Microsoft.VisualBasic.ChrW(32)
         Me.TxtRTN.Size = New System.Drawing.Size(131, 21)

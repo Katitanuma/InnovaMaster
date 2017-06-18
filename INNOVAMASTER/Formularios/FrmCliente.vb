@@ -206,7 +206,7 @@ Public Class FrmCliente
 
     End Sub
     Private Sub BtnInsertar_Click(sender As Object, e As EventArgs) Handles BtnInsertar.Click
-        If TxtIdCliente.Text = Nothing Then
+        If TxtIdCliente.MaskFull = False Then
             MsgBox("Ingrese el Numero de Identidad del Cliente", MsgBoxStyle.Critical, "Error")
         ElseIf TxtNombres.Text = Nothing Then
             MsgBox("Ingrese el Nombre del Cliente", MsgBoxStyle.Critical, "Error")
