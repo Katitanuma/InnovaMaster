@@ -367,24 +367,26 @@ Public Class FrmCompras
         End If
 
 
-        TxtDescuento.Text = FormatCurrency(d, 2)
-        TxtTotal.Text = FormatCurrency((a + c) - (d), 2)
-        TxtImpuesto.Text = FormatCurrency(c, 2)
+
+
+        If (d >= 0 And d <= CDbl(TxtTotal.Text)) Then
+            TxtDescuento.Text = FormatCurrency(d, 2)
+            TxtTotal.Text = FormatCurrency((a + c) - (d), 2)
+            TxtImpuesto.Text = FormatCurrency(c, 2)
+        Else
+            TxtDescuento.Text = FormatCurrency(d, 2)
+            TxtTotal.Text = FormatCurrency((a + c) - (0), 2)
+            TxtImpuesto.Text = FormatCurrency(c, 2)
+            TxtDescuentoExtra.Value = 0
+        End If
 
 
 
     End Sub
 
     Private Sub TxtDescuentoExtra_EditValueChanged(sender As Object, e As EventArgs) Handles TxtDescuentoExtra.EditValueChanged
-        If TxtDescuentoExtra.Text <> Nothing And TxtTotal.Text <> Nothing Then
-            If CDbl(TxtDescuentoExtra.Value) < CDbl(TxtTotal.Text) And CDbl(TxtDescuentoExtra.Value) >= 0 Then
-                LlenarTextBox()
-            Else
-                TxtDescuentoExtra.Value = 0
-            End If
-        Else
-            TxtDescuentoExtra.Value = 0
-        End If
+
+        LlenarTextBox()
 
 
 
