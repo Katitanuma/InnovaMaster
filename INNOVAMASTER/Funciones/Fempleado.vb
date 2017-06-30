@@ -2,7 +2,7 @@
 Public Class Fempleado
     Inherits Conexion
     Dim cmd As New SqlCommand
-
+    'Funciones para la manipulación y consultas a la base de datos de la relación Empleado
     Public Function InsertarEmpleado(ByVal Datos As DatosEmpleado) As Boolean
         Try
             Conectarse()

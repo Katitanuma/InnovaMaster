@@ -744,10 +744,10 @@ Partial Class FrmEmpleado
         Me.Controls.Add(Me.BtnNuevoEditar)
         Me.Controls.Add(Me.BtnCancelar)
         Me.Controls.Add(Me.BtnNuevo)
-        Me.Controls.Add(Me.BtnEditar)
         Me.Controls.Add(Me.Label11)
         Me.Controls.Add(Me.DgvEmpleado)
         Me.Controls.Add(Me.GbEmpleado)
+        Me.Controls.Add(Me.BtnEditar)
         Me.Controls.Add(Me.BtnInsertar)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Name = "FrmEmpleado"

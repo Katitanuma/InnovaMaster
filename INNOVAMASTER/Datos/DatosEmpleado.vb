@@ -1,5 +1,5 @@
 ﻿Public Class DatosEmpleado
-
+    'Miembros y metodos de la clase DatosEmpleado
     Dim IdEmpleado, NombreEmpleado, ApellidoEmpleado, DireccionEmpleado, TelefonoEmpleado, CelularEmpleado As String
     Dim FechaNacimiento, FechaContratacion As Date
     Dim IdSexo, IdMunicipio, IdEstadoCivil, IdCargo, IdSucursal, IdProfesion As Integer

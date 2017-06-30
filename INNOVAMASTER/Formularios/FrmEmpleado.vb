@@ -181,6 +181,7 @@ Public Class FrmEmpleado
         Next
     End Sub
     Private Sub BtnNuevo_Click(sender As Object, e As EventArgs) Handles BtnNuevo.Click
+        'Habilitar y deshabilitar controles del formulario
         GbEmpleado.Enabled = True
         BtnNuevo.Visible = False
         BtnInsertar.Visible = True
@@ -295,6 +296,7 @@ Public Class FrmEmpleado
         CboAñoC.Text = c2(2)
     End Sub
     Private Sub BtnCancelar_Click(sender As Object, e As EventArgs) Handles BtnCancelar.Click
+        'Cancelar el procesos realizados por el usuario
         Dim R As DialogResult
         R = MessageBox.Show("¿Desea Cancelar el Proceso?", "INNOVAMASTER", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
 
@@ -304,6 +306,7 @@ Public Class FrmEmpleado
 
     End Sub
     Private Sub BtnInsertar_Click(sender As Object, e As EventArgs) Handles BtnInsertar.Click
+        'Metodo del evento click del boton insetar, el cual realizar las operación correspondiente
         If TxtIdEmpleado.Text = Nothing Then
             MsgBox("Ingrese el Numero de Identidad del Empleado", MsgBoxStyle.Critical, "Error")
         ElseIf TxtNombres.Text = Nothing Then
@@ -337,6 +340,7 @@ Public Class FrmEmpleado
         ElseIf CboSucursal.Text = Nothing Then
             MsgBox("Seleccione el Estado Civil del Empleado", MsgBoxStyle.Critical, "Error")
         Else
+            'Envio de datos a la Clase DatosEmpleado 
             Try
                 Dim datos As New DatosEmpleado
                 Dim funcion As New Fempleado
@@ -493,7 +497,7 @@ Public Class FrmEmpleado
                 Catch ex As Exception
                     MsgBox(ex.Message)
                 End Try
-
+                'Ejecucion del proceso para la manipulación de datos de la base de datos
                 If funcion.InsertarEmpleado(datos) Then
                     MsgBox("Empleado Ingresado con Éxito", MsgBoxStyle.Information)
                     Limpiar()
@@ -511,6 +515,7 @@ Public Class FrmEmpleado
 
     End Sub
     Private Sub Limpiar()
+        'Metodo para limpiar
         GbEmpleado.Enabled = False
         BtnInsertar.Visible = False
         BtnNuevo.Visible = True
@@ -540,6 +545,7 @@ Public Class FrmEmpleado
 
     End Sub
     Private Sub BtnNuevoEditar_Click(sender As Object, e As EventArgs) Handles BtnNuevoEditar.Click
+        'Limpieza de los controles TextBox y habilitar varios controles
         If TxtNombres.Text <> Nothing Then
             GbEmpleado.Enabled = True
             BtnNuevo.Visible = False
@@ -556,7 +562,7 @@ Public Class FrmEmpleado
 
     End Sub
     Private Sub BtnEditar_Click(sender As Object, e As EventArgs) Handles BtnEditar.Click
-
+        'Metodo del evento click del boton editar, para realizar la opeacion conrrespondiente
         If TxtIdEmpleado.Text = Nothing Then
             MsgBox("Ingrese el Numero de Identidad del Empleado", MsgBoxStyle.Critical, "Error")
         ElseIf TxtNombres.Text = Nothing Then
@@ -590,7 +596,7 @@ Public Class FrmEmpleado
         ElseIf CboSucursal.Text = Nothing Then
             MsgBox("Seleccione la Sucursal del Empleado", MsgBoxStyle.Critical, "Error")
         Else
-
+            'Envio de datos a la clase DatosEmpleado
             Try
 
                 Dim datos As New DatosEmpleado
@@ -756,7 +762,7 @@ Public Class FrmEmpleado
                     MsgBox(ex.Message)
                 End Try
 
-
+                'Ejecución de la accion para la manipulación de los datos
                 If funcion.EditarEmpleado(datos) Then
                     MsgBox("Empleado editado con éxito", MsgBoxStyle.Information)
                     Limpiar()
@@ -776,6 +782,7 @@ Public Class FrmEmpleado
 
 
     Private Sub BtnAgregarImagen_Click(sender As Object, e As EventArgs) Handles BtnAgregarImagen.Click
+        'Agregar imagen al PictureBox
         OpenFileDialog1.Filter = "Imagenes JPG|*.jpg|Imagenes GIF|*.gif|Imagenes Bitmasps|*.bmp"
         If OpenFileDialog1.ShowDialog() = DialogResult.OK Then
             PbEmpleado.Image = Image.FromFile(OpenFileDialog1.FileName)
