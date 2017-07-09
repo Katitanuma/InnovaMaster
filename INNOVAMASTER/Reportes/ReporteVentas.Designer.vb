@@ -32,6 +32,7 @@ Partial Class ReporteVentas
         Me.ImprimirToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.HelpProvider1 = New System.Windows.Forms.HelpProvider()
         CType(Me.DgvReporteVentas, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ContextMenuStrip1.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -76,7 +77,7 @@ Partial Class ReporteVentas
         '
         Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.VerReporeToolStripMenuItem, Me.ImprimirToolStripMenuItem})
         Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
-        Me.ContextMenuStrip1.Size = New System.Drawing.Size(165, 70)
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(165, 48)
         '
         'VerReporeToolStripMenuItem
         '
@@ -125,9 +126,12 @@ Partial Class ReporteVentas
         Me.Controls.Add(Me.TxtBusqueda)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.DgvReporteVentas)
+        Me.HelpButton = True
+        Me.HelpProvider1.SetHelpNavigator(Me, System.Windows.Forms.HelpNavigator.TableOfContents)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "ReporteVentas"
         Me.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.HelpProvider1.SetShowHelp(Me, True)
         Me.StartPosition = System.Windows.Forms.FormStartPosition.Manual
         Me.Text = "Ventas"
         CType(Me.DgvReporteVentas, System.ComponentModel.ISupportInitialize).EndInit()
@@ -147,4 +151,5 @@ Partial Class ReporteVentas
     Friend WithEvents ContextMenuStrip1 As ContextMenuStrip
     Friend WithEvents VerReporeToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ImprimirToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents HelpProvider1 As HelpProvider
 End Class

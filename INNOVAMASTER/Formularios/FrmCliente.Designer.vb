@@ -65,6 +65,7 @@ Partial Class FrmCliente
         Me.BtnNuevo = New System.Windows.Forms.Button()
         Me.BtnEditar = New System.Windows.Forms.Button()
         Me.BtnInsertar = New System.Windows.Forms.Button()
+        Me.HelpProvider1 = New System.Windows.Forms.HelpProvider()
         CType(Me.DgvCliente, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GbCliente.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -385,7 +386,10 @@ Partial Class FrmCliente
         Me.Controls.Add(Me.BtnInsertar)
         Me.Controls.Add(Me.BtnEditar)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.HelpButton = True
+        Me.HelpProvider1.SetHelpNavigator(Me, CType(resources.GetObject("$this.HelpNavigator"), System.Windows.Forms.HelpNavigator))
         Me.Name = "FrmCliente"
+        Me.HelpProvider1.SetShowHelp(Me, CType(resources.GetObject("$this.ShowHelp"), Boolean))
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         CType(Me.DgvCliente, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GbCliente.ResumeLayout(False)
@@ -438,4 +442,5 @@ Partial Class FrmCliente
     Friend WithEvents BtnInsertar As Button
     Friend WithEvents BtnEditar As Button
     Friend WithEvents BtnBusquedaCliente As Button
+    Friend WithEvents HelpProvider1 As HelpProvider
 End Class

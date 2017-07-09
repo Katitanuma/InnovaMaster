@@ -20,6 +20,12 @@ Public Class FrmEmpleado
         DgvEmpleado.AlternatingRowsDefaultCellStyle.BackColor = Color.PapayaWhip
         DgvEmpleado.RowsDefaultCellStyle.BackColor = Color.Honeydew
         DgvEmpleado.RowsDefaultCellStyle.SelectionBackColor = Color.Coral
+
+        Dim NombreArchivo As String = HTMLHelpClass.GetLocalHelpFileName("InnovaMasterAyuda2017.chm")
+        HelpProvider1.HelpNamespace = NombreArchivo
+        HelpProvider1.SetHelpNavigator(Me, HelpNavigator.KeywordIndex)
+        HelpProvider1.SetHelpKeyword(Me, "Registro Empleado")
+
     End Sub
     Private Sub Mostrar()
         Try

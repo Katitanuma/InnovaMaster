@@ -55,6 +55,7 @@ Partial Class FrmUsuario
         Me.BtnInsertar = New System.Windows.Forms.Button()
         Me.BtnEditar = New System.Windows.Forms.Button()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.HelpProvider1 = New System.Windows.Forms.HelpProvider()
         Me.GbUsuario.SuspendLayout()
         CType(Me.DgvUsuario, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -454,7 +455,7 @@ Partial Class FrmUsuario
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.LightSeaGreen
-        Me.ClientSize = New System.Drawing.Size(1362, 573)
+        Me.ClientSize = New System.Drawing.Size(1354, 573)
         Me.Controls.Add(Me.PictureBox3)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Label12)
@@ -521,4 +522,5 @@ Partial Class FrmUsuario
     Friend WithEvents RdbInactivo As RadioButton
     Friend WithEvents RdbActivo As RadioButton
     Friend WithEvents Label6 As Label
+    Friend WithEvents HelpProvider1 As HelpProvider
 End Class

@@ -55,6 +55,7 @@ Partial Class FrmVenta
         Me.BtnNuevo = New System.Windows.Forms.Button()
         Me.BtnInsertar = New System.Windows.Forms.Button()
         Me.BtnEditar = New System.Windows.Forms.Button()
+        Me.HelpProvider1 = New System.Windows.Forms.HelpProvider()
         CType(Me.DgvVenta, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GbVenta.SuspendLayout()
         CType(Me.TxtDescuentoExtra.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -505,7 +506,10 @@ Partial Class FrmVenta
         Me.Controls.Add(Me.DgvVenta)
         Me.Controls.Add(Me.GbVenta)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.HelpButton = True
+        Me.HelpProvider1.SetHelpNavigator(Me, System.Windows.Forms.HelpNavigator.TableOfContents)
         Me.Name = "FrmVenta"
+        Me.HelpProvider1.SetShowHelp(Me, True)
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Venta"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
@@ -553,4 +557,5 @@ Partial Class FrmVenta
     Friend WithEvents TxtBusqueda As TextBox
     Friend WithEvents CboBusqueda As ComboBox
     Friend WithEvents Button1 As Button
+    Friend WithEvents HelpProvider1 As HelpProvider
 End Class

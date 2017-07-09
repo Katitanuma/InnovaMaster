@@ -30,6 +30,7 @@ Partial Class FrmLogin
         Me.BtnCerrar = New System.Windows.Forms.Button()
         Me.TxtContrasena = New System.Windows.Forms.TextBox()
         Me.TxtUsuario = New System.Windows.Forms.TextBox()
+        Me.HelpProvider1 = New System.Windows.Forms.HelpProvider()
         CType(Me.EpMensaje, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -117,7 +118,10 @@ Partial Class FrmLogin
         Me.Controls.Add(Me.TxtUsuario)
         Me.DoubleBuffered = True
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.HelpButton = True
+        Me.HelpProvider1.SetHelpNavigator(Me, System.Windows.Forms.HelpNavigator.TableOfContents)
         Me.Name = "FrmLogin"
+        Me.HelpProvider1.SetShowHelp(Me, True)
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.TransparencyKey = System.Drawing.SystemColors.Control
         CType(Me.EpMensaje, System.ComponentModel.ISupportInitialize).EndInit()
@@ -132,4 +136,5 @@ Partial Class FrmLogin
     Friend WithEvents BtnCerrar As Button
     Friend WithEvents TxtContrasena As TextBox
     Friend WithEvents TxtUsuario As TextBox
+    Friend WithEvents HelpProvider1 As HelpProvider
 End Class

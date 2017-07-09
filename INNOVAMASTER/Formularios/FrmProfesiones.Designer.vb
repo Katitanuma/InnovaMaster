@@ -39,6 +39,7 @@ Partial Class FrmProfesiones
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.BtnActualizar = New System.Windows.Forms.Button()
         Me.BtnInsertar = New System.Windows.Forms.Button()
+        Me.HelpProvider1 = New System.Windows.Forms.HelpProvider()
         Me.GbDatos.SuspendLayout()
         CType(Me.DgvProfesion, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -273,7 +274,10 @@ Partial Class FrmProfesiones
         Me.Controls.Add(Me.DgvProfesion)
         Me.Controls.Add(Me.BtnActualizar)
         Me.Controls.Add(Me.BtnInsertar)
+        Me.HelpButton = True
+        Me.HelpProvider1.SetHelpNavigator(Me, System.Windows.Forms.HelpNavigator.TableOfContents)
         Me.Name = "FrmProfesiones"
+        Me.HelpProvider1.SetShowHelp(Me, True)
         Me.Text = "Profesion"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.GbDatos.ResumeLayout(False)
@@ -303,4 +307,5 @@ Partial Class FrmProfesiones
     Friend WithEvents Label1 As Label
     Friend WithEvents LblFilas As Label
     Friend WithEvents DgvProfesion As DataGridView
+    Friend WithEvents HelpProvider1 As HelpProvider
 End Class

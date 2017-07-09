@@ -765,6 +765,11 @@ Public Class FrmFacturacionVenta
         CboTipoVenta.Text = Nothing
         TxtDescuentoExtra.Text = Nothing
 
+        Dim NombreArchivo As String = HTMLHelpClass.GetLocalHelpFileName("InnovaMasterAyuda2017.chm")
+        HelpProvider1.HelpNamespace = NombreArchivo
+        HelpProvider1.SetHelpNavigator(Me, HelpNavigator.KeywordIndex)
+        HelpProvider1.SetHelpKeyword(Me, "Factura")
+
     End Sub
     Private Sub LlenarIdCliente()
         Try

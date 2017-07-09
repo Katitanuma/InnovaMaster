@@ -342,6 +342,321 @@
   <data name="&gt;&gt;DgvCliente.ZOrder" xml:space="preserve">
     <value>11</value>
   </data>
+  <data name="&gt;&gt;BtnBusquedaCliente.Name" xml:space="preserve">
+    <value>BtnBusquedaCliente</value>
+  </data>
+  <data name="&gt;&gt;BtnBusquedaCliente.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;BtnBusquedaCliente.Parent" xml:space="preserve">
+    <value>GbCliente</value>
+  </data>
+  <data name="&gt;&gt;BtnBusquedaCliente.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;TxtIdCliente.Name" xml:space="preserve">
+    <value>TxtIdCliente</value>
+  </data>
+  <data name="&gt;&gt;TxtIdCliente.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MaskedTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TxtIdCliente.Parent" xml:space="preserve">
+    <value>GbCliente</value>
+  </data>
+  <data name="&gt;&gt;TxtIdCliente.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;TxtTelefono.Name" xml:space="preserve">
+    <value>TxtTelefono</value>
+  </data>
+  <data name="&gt;&gt;TxtTelefono.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MaskedTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TxtTelefono.Parent" xml:space="preserve">
+    <value>GbCliente</value>
+  </data>
+  <data name="&gt;&gt;TxtTelefono.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;CboEstadoCivil.Name" xml:space="preserve">
+    <value>CboEstadoCivil</value>
+  </data>
+  <data name="&gt;&gt;CboEstadoCivil.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;CboEstadoCivil.Parent" xml:space="preserve">
+    <value>GbCliente</value>
+  </data>
+  <data name="&gt;&gt;CboEstadoCivil.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;RdbFemenino.Name" xml:space="preserve">
+    <value>RdbFemenino</value>
+  </data>
+  <data name="&gt;&gt;RdbFemenino.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;RdbFemenino.Parent" xml:space="preserve">
+    <value>GbCliente</value>
+  </data>
+  <data name="&gt;&gt;RdbFemenino.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;CboAño.Name" xml:space="preserve">
+    <value>CboAño</value>
+  </data>
+  <data name="&gt;&gt;CboAño.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;CboAño.Parent" xml:space="preserve">
+    <value>GbCliente</value>
+  </data>
+  <data name="&gt;&gt;CboAño.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;RdbMasculino.Name" xml:space="preserve">
+    <value>RdbMasculino</value>
+  </data>
+  <data name="&gt;&gt;RdbMasculino.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;RdbMasculino.Parent" xml:space="preserve">
+    <value>GbCliente</value>
+  </data>
+  <data name="&gt;&gt;RdbMasculino.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;CboMes.Name" xml:space="preserve">
+    <value>CboMes</value>
+  </data>
+  <data name="&gt;&gt;CboMes.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;CboMes.Parent" xml:space="preserve">
+    <value>GbCliente</value>
+  </data>
+  <data name="&gt;&gt;CboMes.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;Label5.Name" xml:space="preserve">
+    <value>Label5</value>
+  </data>
+  <data name="&gt;&gt;Label5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label5.Parent" xml:space="preserve">
+    <value>GbCliente</value>
+  </data>
+  <data name="&gt;&gt;Label5.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;CboDia.Name" xml:space="preserve">
+    <value>CboDia</value>
+  </data>
+  <data name="&gt;&gt;CboDia.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;CboDia.Parent" xml:space="preserve">
+    <value>GbCliente</value>
+  </data>
+  <data name="&gt;&gt;CboDia.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;CboMunicipio.Name" xml:space="preserve">
+    <value>CboMunicipio</value>
+  </data>
+  <data name="&gt;&gt;CboMunicipio.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;CboMunicipio.Parent" xml:space="preserve">
+    <value>GbCliente</value>
+  </data>
+  <data name="&gt;&gt;CboMunicipio.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;Label10.Name" xml:space="preserve">
+    <value>Label10</value>
+  </data>
+  <data name="&gt;&gt;Label10.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label10.Parent" xml:space="preserve">
+    <value>GbCliente</value>
+  </data>
+  <data name="&gt;&gt;Label10.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;Label9.Name" xml:space="preserve">
+    <value>Label9</value>
+  </data>
+  <data name="&gt;&gt;Label9.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label9.Parent" xml:space="preserve">
+    <value>GbCliente</value>
+  </data>
+  <data name="&gt;&gt;Label9.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;Label6.Name" xml:space="preserve">
+    <value>Label6</value>
+  </data>
+  <data name="&gt;&gt;Label6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label6.Parent" xml:space="preserve">
+    <value>GbCliente</value>
+  </data>
+  <data name="&gt;&gt;Label6.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;TxtCorreo.Name" xml:space="preserve">
+    <value>TxtCorreo</value>
+  </data>
+  <data name="&gt;&gt;TxtCorreo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TxtCorreo.Parent" xml:space="preserve">
+    <value>GbCliente</value>
+  </data>
+  <data name="&gt;&gt;TxtCorreo.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="&gt;&gt;Label7.Name" xml:space="preserve">
+    <value>Label7</value>
+  </data>
+  <data name="&gt;&gt;Label7.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label7.Parent" xml:space="preserve">
+    <value>GbCliente</value>
+  </data>
+  <data name="&gt;&gt;Label7.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="&gt;&gt;Label8.Name" xml:space="preserve">
+    <value>Label8</value>
+  </data>
+  <data name="&gt;&gt;Label8.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label8.Parent" xml:space="preserve">
+    <value>GbCliente</value>
+  </data>
+  <data name="&gt;&gt;Label8.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="&gt;&gt;TxtDireccion.Name" xml:space="preserve">
+    <value>TxtDireccion</value>
+  </data>
+  <data name="&gt;&gt;TxtDireccion.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TxtDireccion.Parent" xml:space="preserve">
+    <value>GbCliente</value>
+  </data>
+  <data name="&gt;&gt;TxtDireccion.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="&gt;&gt;Label3.Name" xml:space="preserve">
+    <value>Label3</value>
+  </data>
+  <data name="&gt;&gt;Label3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label3.Parent" xml:space="preserve">
+    <value>GbCliente</value>
+  </data>
+  <data name="&gt;&gt;Label3.ZOrder" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="&gt;&gt;TxtApellidos.Name" xml:space="preserve">
+    <value>TxtApellidos</value>
+  </data>
+  <data name="&gt;&gt;TxtApellidos.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TxtApellidos.Parent" xml:space="preserve">
+    <value>GbCliente</value>
+  </data>
+  <data name="&gt;&gt;TxtApellidos.ZOrder" xml:space="preserve">
+    <value>19</value>
+  </data>
+  <data name="&gt;&gt;Label4.Name" xml:space="preserve">
+    <value>Label4</value>
+  </data>
+  <data name="&gt;&gt;Label4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label4.Parent" xml:space="preserve">
+    <value>GbCliente</value>
+  </data>
+  <data name="&gt;&gt;Label4.ZOrder" xml:space="preserve">
+    <value>20</value>
+  </data>
+  <data name="&gt;&gt;TxtNombres.Name" xml:space="preserve">
+    <value>TxtNombres</value>
+  </data>
+  <data name="&gt;&gt;TxtNombres.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TxtNombres.Parent" xml:space="preserve">
+    <value>GbCliente</value>
+  </data>
+  <data name="&gt;&gt;TxtNombres.ZOrder" xml:space="preserve">
+    <value>21</value>
+  </data>
+  <data name="&gt;&gt;Label2.Name" xml:space="preserve">
+    <value>Label2</value>
+  </data>
+  <data name="&gt;&gt;Label2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label2.Parent" xml:space="preserve">
+    <value>GbCliente</value>
+  </data>
+  <data name="&gt;&gt;Label2.ZOrder" xml:space="preserve">
+    <value>22</value>
+  </data>
+  <data name="&gt;&gt;Label1.Name" xml:space="preserve">
+    <value>Label1</value>
+  </data>
+  <data name="&gt;&gt;Label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label1.Parent" xml:space="preserve">
+    <value>GbCliente</value>
+  </data>
+  <data name="&gt;&gt;Label1.ZOrder" xml:space="preserve">
+    <value>23</value>
+  </data>
+  <data name="GbCliente.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="GbCliente.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Comic Sans MS, 9.75pt, style=Bold</value>
+  </data>
+  <data name="GbCliente.Location" type="System.Drawing.Point, System.Drawing">
+    <value>32, 62</value>
+  </data>
+  <data name="GbCliente.Size" type="System.Drawing.Size, System.Drawing">
+    <value>440, 395</value>
+  </data>
+  <data name="GbCliente.TabIndex" type="System.Int32, mscorlib">
+    <value>39</value>
+  </data>
+  <data name="&gt;&gt;GbCliente.Name" xml:space="preserve">
+    <value>GbCliente</value>
+  </data>
+  <data name="&gt;&gt;GbCliente.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GbCliente.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;GbCliente.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
   <data name="BtnBusquedaCliente.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial, 9pt, style=Bold</value>
   </data>
@@ -1182,33 +1497,6 @@
   <data name="&gt;&gt;Label1.ZOrder" xml:space="preserve">
     <value>23</value>
   </data>
-  <data name="GbCliente.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="GbCliente.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Comic Sans MS, 9.75pt, style=Bold</value>
-  </data>
-  <data name="GbCliente.Location" type="System.Drawing.Point, System.Drawing">
-    <value>32, 62</value>
-  </data>
-  <data name="GbCliente.Size" type="System.Drawing.Size, System.Drawing">
-    <value>440, 395</value>
-  </data>
-  <data name="GbCliente.TabIndex" type="System.Int32, mscorlib">
-    <value>39</value>
-  </data>
-  <data name="&gt;&gt;GbCliente.Name" xml:space="preserve">
-    <value>GbCliente</value>
-  </data>
-  <data name="&gt;&gt;GbCliente.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;GbCliente.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;GbCliente.ZOrder" xml:space="preserve">
-    <value>12</value>
-  </data>
   <data name="PictureBox2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -1497,6 +1785,9 @@
   <data name="&gt;&gt;BtnInsertar.ZOrder" xml:space="preserve">
     <value>14</value>
   </data>
+  <metadata name="HelpProvider1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>116, 17</value>
+  </metadata>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -1510,7 +1801,13 @@
     <value>Stretch</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1362, 579</value>
+    <value>1354, 579</value>
+  </data>
+  <data name="$this.HelpNavigator" type="System.Windows.Forms.HelpNavigator, System.Windows.Forms">
+    <value>TableOfContents</value>
+  </data>
+  <data name="$this.ShowHelp" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>
@@ -1523,6 +1820,12 @@
   </data>
   <data name="&gt;&gt;ToolTip1.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolTip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;HelpProvider1.Name" xml:space="preserve">
+    <value>HelpProvider1</value>
+  </data>
+  <data name="&gt;&gt;HelpProvider1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.HelpProvider, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>FrmCliente</value>

@@ -8,6 +8,12 @@ Public Class FrmUsuario
         CboBusqueda.Text = CboBusqueda.Items(0).ToString
         MostrarUsuario()
         LlenarCombos()
+
+        Dim NombreArchivo As String = HTMLHelpClass.GetLocalHelpFileName("InnovaMasterAyuda2017.chm")
+        HelpProvider1.HelpNamespace = NombreArchivo
+        HelpProvider1.SetHelpNavigator(Me, HelpNavigator.KeywordIndex)
+        HelpProvider1.SetHelpKeyword(Me, "Registro Usuario")
+
     End Sub
     Private Sub MostrarUsuario()
         Try

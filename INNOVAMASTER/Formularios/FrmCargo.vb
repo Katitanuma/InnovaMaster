@@ -6,6 +6,12 @@
         GbDatos.Enabled = False
         TxtIdCargo.Enabled = False
         DgvCargo.Enabled = True
+
+        Dim NombreArchivo As String = HTMLHelpClass.GetLocalHelpFileName("InnovaMasterAyuda2017.chm")
+        HelpProvider1.HelpNamespace = NombreArchivo
+        HelpProvider1.SetHelpNavigator(Me, HelpNavigator.KeywordIndex)
+        HelpProvider1.SetHelpKeyword(Me, "Cargo Empleado")
+
     End Sub
     Private Sub MostrarCargo()
         Try

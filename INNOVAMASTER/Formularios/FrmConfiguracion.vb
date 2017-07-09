@@ -72,6 +72,11 @@ Public Class FrmConfiguracion
         Dim n As String = Replace(c(2), "User ID=", "")
         txtUsername.Text = Replace(n, " ", "")
         txtPassword.Text = Replace(c(3), "Password=", "")
+
+        Dim NombreArchivo As String = HTMLHelpClass.GetLocalHelpFileName("InnovaMasterAyuda2017.chm")
+        HelpProvider1.HelpNamespace = NombreArchivo
+        HelpProvider1.SetHelpNavigator(Me, HelpNavigator.KeywordIndex)
+        HelpProvider1.SetHelpKeyword(Me, "Configuración")
     End Sub
     Private Sub FrmConfiguracion_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
         My.Settings.Save()

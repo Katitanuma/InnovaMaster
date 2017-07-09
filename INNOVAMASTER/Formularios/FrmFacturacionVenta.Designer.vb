@@ -76,6 +76,7 @@ Partial Class FrmFacturacionVenta
         Me.LblNombre = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
+        Me.HelpProvider1 = New System.Windows.Forms.HelpProvider()
         Me.GroupBox1.SuspendLayout()
         Me.Panel1.SuspendLayout()
         CType(Me.TxtDescuentoExtra.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -664,7 +665,10 @@ Partial Class FrmFacturacionVenta
         Me.Controls.Add(Me.TxtSubtotal)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.DgvDetalle)
+        Me.HelpButton = True
+        Me.HelpProvider1.SetHelpNavigator(Me, System.Windows.Forms.HelpNavigator.TableOfContents)
         Me.Name = "FrmFacturacionVenta"
+        Me.HelpProvider1.SetShowHelp(Me, True)
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Facturación de Venta"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
@@ -731,4 +735,5 @@ Partial Class FrmFacturacionVenta
     Friend WithEvents Label10 As Label
     Friend WithEvents Button3 As Button
     Friend WithEvents Label12 As Label
+    Friend WithEvents HelpProvider1 As HelpProvider
 End Class

@@ -109,6 +109,7 @@
         Me.RibbonPage6 = New DevExpress.XtraBars.Ribbon.RibbonPage()
         Me.XtraTabbedMdiManager1 = New DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(Me.components)
         Me.pcFondo = New DevExpress.XtraEditors.PanelControl()
+        Me.HelpProvider1 = New System.Windows.Forms.HelpProvider()
         CType(Me.mainRibbonControl, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BarManager1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.XtraTabbedMdiManager1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -132,127 +133,127 @@
         '
         Me.bbiSave.Caption = "Save"
         Me.bbiSave.Id = 2
-        Me.bbiSave.ImageUri.Uri = "Save"
+        Me.bbiSave.ImageOptions.ImageUri.Uri = "Save"
         Me.bbiSave.Name = "bbiSave"
         '
         'bbiSaveAndClose
         '
         Me.bbiSaveAndClose.Caption = "Save And Close"
         Me.bbiSaveAndClose.Id = 3
-        Me.bbiSaveAndClose.ImageUri.Uri = "SaveAndClose"
+        Me.bbiSaveAndClose.ImageOptions.ImageUri.Uri = "SaveAndClose"
         Me.bbiSaveAndClose.Name = "bbiSaveAndClose"
         '
         'bbiSaveAndNew
         '
         Me.bbiSaveAndNew.Caption = "Save And New"
         Me.bbiSaveAndNew.Id = 4
-        Me.bbiSaveAndNew.ImageUri.Uri = "SaveAndNew"
+        Me.bbiSaveAndNew.ImageOptions.ImageUri.Uri = "SaveAndNew"
         Me.bbiSaveAndNew.Name = "bbiSaveAndNew"
         '
         'bbiReset
         '
         Me.bbiReset.Caption = "Reset Changes"
         Me.bbiReset.Id = 5
-        Me.bbiReset.ImageUri.Uri = "Reset"
+        Me.bbiReset.ImageOptions.ImageUri.Uri = "Reset"
         Me.bbiReset.Name = "bbiReset"
         '
         'bbiDelete
         '
         Me.bbiDelete.Caption = "Delete"
         Me.bbiDelete.Id = 6
-        Me.bbiDelete.ImageUri.Uri = "Delete"
+        Me.bbiDelete.ImageOptions.ImageUri.Uri = "Delete"
         Me.bbiDelete.Name = "bbiDelete"
         '
         'bbiClose
         '
         Me.bbiClose.Caption = "Close"
         Me.bbiClose.Id = 7
-        Me.bbiClose.ImageUri.Uri = "Close"
+        Me.bbiClose.ImageOptions.ImageUri.Uri = "Close"
         Me.bbiClose.Name = "bbiClose"
         '
         'BtnRegistroClientes
         '
         Me.BtnRegistroClientes.Caption = "Registro Clientes"
         Me.BtnRegistroClientes.Id = 10
-        Me.BtnRegistroClientes.LargeGlyph = Global.INNOVAMASTER.My.Resources.Resources.user
+        Me.BtnRegistroClientes.ImageOptions.LargeImage = Global.INNOVAMASTER.My.Resources.Resources.user
         Me.BtnRegistroClientes.Name = "BtnRegistroClientes"
         '
         'BarButtonItem2
         '
         Me.BarButtonItem2.Caption = "Reporte Clientes"
         Me.BarButtonItem2.Id = 11
-        Me.BarButtonItem2.ImageUri.Uri = "Chart"
+        Me.BarButtonItem2.ImageOptions.ImageUri.Uri = "Chart"
         Me.BarButtonItem2.Name = "BarButtonItem2"
         '
         'BtnRegistroEmpleado
         '
         Me.BtnRegistroEmpleado.Caption = "Registro Empleados"
         Me.BtnRegistroEmpleado.Id = 12
-        Me.BtnRegistroEmpleado.LargeGlyph = Global.INNOVAMASTER.My.Resources.Resources._2
+        Me.BtnRegistroEmpleado.ImageOptions.LargeImage = Global.INNOVAMASTER.My.Resources.Resources._2
         Me.BtnRegistroEmpleado.Name = "BtnRegistroEmpleado"
         '
         'BarButtonItem4
         '
         Me.BarButtonItem4.Caption = "Cargo"
         Me.BarButtonItem4.Id = 13
-        Me.BarButtonItem4.ImageUri.Uri = "Chart"
-        Me.BarButtonItem4.LargeGlyph = Global.INNOVAMASTER.My.Resources.Resources._3
+        Me.BarButtonItem4.ImageOptions.ImageUri.Uri = "Chart"
+        Me.BarButtonItem4.ImageOptions.LargeImage = Global.INNOVAMASTER.My.Resources.Resources._3
         Me.BarButtonItem4.Name = "BarButtonItem4"
         '
         'BtnRegistroUsuarios
         '
         Me.BtnRegistroUsuarios.Caption = "Registro Usuarios"
         Me.BtnRegistroUsuarios.Id = 14
-        Me.BtnRegistroUsuarios.LargeGlyph = Global.INNOVAMASTER.My.Resources.Resources.users
+        Me.BtnRegistroUsuarios.ImageOptions.LargeImage = Global.INNOVAMASTER.My.Resources.Resources.users
         Me.BtnRegistroUsuarios.Name = "BtnRegistroUsuarios"
         '
         'BtnReportesUsuarios
         '
         Me.BtnReportesUsuarios.Caption = "Reportes Usuarios"
         Me.BtnReportesUsuarios.Id = 15
-        Me.BtnReportesUsuarios.ImageUri.Uri = "Chart"
+        Me.BtnReportesUsuarios.ImageOptions.ImageUri.Uri = "Chart"
         Me.BtnReportesUsuarios.Name = "BtnReportesUsuarios"
         '
         'BarButtonItem7
         '
         Me.BarButtonItem7.Caption = "Registro Proveedores"
         Me.BarButtonItem7.Id = 16
-        Me.BarButtonItem7.ImageUri.Uri = "CustomizeGrid"
+        Me.BarButtonItem7.ImageOptions.ImageUri.Uri = "CustomizeGrid"
         Me.BarButtonItem7.Name = "BarButtonItem7"
         '
         'BarButtonItem8
         '
         Me.BarButtonItem8.Caption = "Reportes Proveedores"
         Me.BarButtonItem8.Id = 17
-        Me.BarButtonItem8.ImageUri.Uri = "Chart"
+        Me.BarButtonItem8.ImageOptions.ImageUri.Uri = "Chart"
         Me.BarButtonItem8.Name = "BarButtonItem8"
         '
         'BarButtonItem9
         '
         Me.BarButtonItem9.Caption = "Registro Productos"
         Me.BarButtonItem9.Id = 18
-        Me.BarButtonItem9.LargeGlyph = Global.INNOVAMASTER.My.Resources.Resources.WhatsApp_Image_2017_03_10_at_6311
+        Me.BarButtonItem9.ImageOptions.LargeImage = Global.INNOVAMASTER.My.Resources.Resources.WhatsApp_Image_2017_03_10_at_6311
         Me.BarButtonItem9.Name = "BarButtonItem9"
         '
         'BarButtonItem10
         '
         Me.BarButtonItem10.Caption = "Marca"
         Me.BarButtonItem10.Id = 19
-        Me.BarButtonItem10.ImageUri.Uri = "Chart"
+        Me.BarButtonItem10.ImageOptions.ImageUri.Uri = "Chart"
         Me.BarButtonItem10.Name = "BarButtonItem10"
         '
         'BtnRegistroVenta
         '
         Me.BtnRegistroVenta.Caption = "Registro de Ventas"
         Me.BtnRegistroVenta.Id = 20
-        Me.BtnRegistroVenta.LargeGlyph = Global.INNOVAMASTER.My.Resources.Resources.factur
+        Me.BtnRegistroVenta.ImageOptions.LargeImage = Global.INNOVAMASTER.My.Resources.Resources.factur
         Me.BtnRegistroVenta.Name = "BtnRegistroVenta"
         '
         'BarButtonItem12
         '
         Me.BarButtonItem12.Caption = "Detalle Venta"
         Me.BarButtonItem12.Id = 21
-        Me.BarButtonItem12.ImageUri.Uri = "Edit"
+        Me.BarButtonItem12.ImageOptions.ImageUri.Uri = "Edit"
         Me.BarButtonItem12.Name = "BarButtonItem12"
         '
         'BarButtonItem13
@@ -265,181 +266,181 @@
         '
         Me.BarButtonItem14.Caption = "Servidor"
         Me.BarButtonItem14.Id = 23
-        Me.BarButtonItem14.LargeGlyph = Global.INNOVAMASTER.My.Resources.Resources.base_de_datos
+        Me.BarButtonItem14.ImageOptions.LargeImage = Global.INNOVAMASTER.My.Resources.Resources.base_de_datos
         Me.BarButtonItem14.Name = "BarButtonItem14"
         '
         'BarButtonItem15
         '
         Me.BarButtonItem15.Caption = "Raspaldo Base de Datos"
         Me.BarButtonItem15.Id = 24
-        Me.BarButtonItem15.LargeGlyph = Global.INNOVAMASTER.My.Resources.Resources.backup
+        Me.BarButtonItem15.ImageOptions.LargeImage = Global.INNOVAMASTER.My.Resources.Resources.backup
         Me.BarButtonItem15.Name = "BarButtonItem15"
         '
         'BtnCambiarUsuario
         '
         Me.BtnCambiarUsuario.Caption = "Cambiar Usuario"
         Me.BtnCambiarUsuario.Id = 25
-        Me.BtnCambiarUsuario.LargeGlyph = Global.INNOVAMASTER.My.Resources.Resources.cambiar_de_usuario
+        Me.BtnCambiarUsuario.ImageOptions.LargeImage = Global.INNOVAMASTER.My.Resources.Resources.cambiar_de_usuario
         Me.BtnCambiarUsuario.Name = "BtnCambiarUsuario"
         '
         'BarButtonItem17
         '
         Me.BarButtonItem17.Caption = "Categoría"
         Me.BarButtonItem17.Id = 26
-        Me.BarButtonItem17.LargeGlyph = Global.INNOVAMASTER.My.Resources.Resources.image52
+        Me.BarButtonItem17.ImageOptions.LargeImage = Global.INNOVAMASTER.My.Resources.Resources.image52
         Me.BarButtonItem17.Name = "BarButtonItem17"
         '
         'BarButtonItem18
         '
         Me.BarButtonItem18.Caption = "País"
         Me.BarButtonItem18.Id = 27
-        Me.BarButtonItem18.LargeGlyph = Global.INNOVAMASTER.My.Resources.Resources._03a_photo_NewsBriefs2
+        Me.BarButtonItem18.ImageOptions.LargeImage = Global.INNOVAMASTER.My.Resources.Resources._03a_photo_NewsBriefs2
         Me.BarButtonItem18.Name = "BarButtonItem18"
         '
         'BarButtonItem19
         '
         Me.BarButtonItem19.Caption = "Departamento"
         Me.BarButtonItem19.Id = 28
-        Me.BarButtonItem19.LargeGlyph = Global.INNOVAMASTER.My.Resources.Resources.Francisco_Morazan
+        Me.BarButtonItem19.ImageOptions.LargeImage = Global.INNOVAMASTER.My.Resources.Resources.Francisco_Morazan
         Me.BarButtonItem19.Name = "BarButtonItem19"
         '
         'BarButtonItem20
         '
         Me.BarButtonItem20.Caption = "Municipio"
         Me.BarButtonItem20.Id = 29
-        Me.BarButtonItem20.LargeGlyph = Global.INNOVAMASTER.My.Resources.Resources.aguascalientes
+        Me.BarButtonItem20.ImageOptions.LargeImage = Global.INNOVAMASTER.My.Resources.Resources.aguascalientes
         Me.BarButtonItem20.Name = "BarButtonItem20"
         '
         'BtnProfesion
         '
         Me.BtnProfesion.Caption = "Profesión"
         Me.BtnProfesion.Id = 30
-        Me.BtnProfesion.LargeGlyph = Global.INNOVAMASTER.My.Resources.Resources.egresado1
+        Me.BtnProfesion.ImageOptions.LargeImage = Global.INNOVAMASTER.My.Resources.Resources.egresado1
         Me.BtnProfesion.Name = "BtnProfesion"
         '
         'BtnCargo
         '
         Me.BtnCargo.Caption = "Cargo"
         Me.BtnCargo.Id = 31
-        Me.BtnCargo.LargeGlyph = Global.INNOVAMASTER.My.Resources.Resources._3
+        Me.BtnCargo.ImageOptions.LargeImage = Global.INNOVAMASTER.My.Resources.Resources._3
         Me.BtnCargo.Name = "BtnCargo"
         '
         'BarButtonItem23
         '
         Me.BarButtonItem23.Caption = "Marca"
         Me.BarButtonItem23.Id = 32
-        Me.BarButtonItem23.LargeGlyph = Global.INNOVAMASTER.My.Resources.Resources.box1
+        Me.BarButtonItem23.ImageOptions.LargeImage = Global.INNOVAMASTER.My.Resources.Resources.box1
         Me.BarButtonItem23.Name = "BarButtonItem23"
         '
         'BarButtonItem24
         '
         Me.BarButtonItem24.Caption = "Modelo"
         Me.BarButtonItem24.Id = 33
-        Me.BarButtonItem24.LargeGlyph = Global.INNOVAMASTER.My.Resources.Resources.product_icon1
+        Me.BarButtonItem24.ImageOptions.LargeImage = Global.INNOVAMASTER.My.Resources.Resources.product_icon1
         Me.BarButtonItem24.Name = "BarButtonItem24"
         '
         'BtnF
         '
         Me.BtnF.Caption = "Facturación"
         Me.BtnF.Id = 34
-        Me.BtnF.LargeGlyph = Global.INNOVAMASTER.My.Resources.Resources.electronic_billing_machine_256
+        Me.BtnF.ImageOptions.LargeImage = Global.INNOVAMASTER.My.Resources.Resources.electronic_billing_machine_256
         Me.BtnF.Name = "BtnF"
         '
         'BarButtonItem1
         '
         Me.BarButtonItem1.Caption = "Registro Proveedores"
         Me.BarButtonItem1.Id = 35
-        Me.BarButtonItem1.LargeGlyph = Global.INNOVAMASTER.My.Resources.Resources.user
+        Me.BarButtonItem1.ImageOptions.LargeImage = Global.INNOVAMASTER.My.Resources.Resources.user
         Me.BarButtonItem1.Name = "BarButtonItem1"
         '
         'BarButtonItem3
         '
         Me.BarButtonItem3.Caption = "Registro de Compras"
         Me.BarButtonItem3.Id = 36
-        Me.BarButtonItem3.LargeGlyph = Global.INNOVAMASTER.My.Resources.Resources.f15039a22a397b8d72599899f10c9cbd1
+        Me.BarButtonItem3.ImageOptions.LargeImage = Global.INNOVAMASTER.My.Resources.Resources.f15039a22a397b8d72599899f10c9cbd1
         Me.BarButtonItem3.Name = "BarButtonItem3"
         '
         'BarButtonItem5
         '
         Me.BarButtonItem5.Caption = "Registro de Pedidos"
         Me.BarButtonItem5.Id = 37
-        Me.BarButtonItem5.LargeGlyph = Global.INNOVAMASTER.My.Resources.Resources.ef469d7feb7cd58c486a7d18c52245e7
+        Me.BarButtonItem5.ImageOptions.LargeImage = Global.INNOVAMASTER.My.Resources.Resources.ef469d7feb7cd58c486a7d18c52245e7
         Me.BarButtonItem5.Name = "BarButtonItem5"
         '
         'BarButtonItem6
         '
         Me.BarButtonItem6.Caption = "Registro de Pedidos"
         Me.BarButtonItem6.Id = 38
-        Me.BarButtonItem6.LargeGlyph = Global.INNOVAMASTER.My.Resources.Resources.ef469d7feb7cd58c486a7d18c52245e7
+        Me.BarButtonItem6.ImageOptions.LargeImage = Global.INNOVAMASTER.My.Resources.Resources.ef469d7feb7cd58c486a7d18c52245e7
         Me.BarButtonItem6.Name = "BarButtonItem6"
         '
         'BarButtonItem11
         '
         Me.BarButtonItem11.Caption = "Reporte Productos"
-        Me.BarButtonItem11.Glyph = CType(resources.GetObject("BarButtonItem11.Glyph"), System.Drawing.Image)
         Me.BarButtonItem11.Id = 39
-        Me.BarButtonItem11.LargeGlyph = CType(resources.GetObject("BarButtonItem11.LargeGlyph"), System.Drawing.Image)
+        Me.BarButtonItem11.ImageOptions.Image = CType(resources.GetObject("BarButtonItem11.ImageOptions.Image"), System.Drawing.Image)
+        Me.BarButtonItem11.ImageOptions.LargeImage = CType(resources.GetObject("BarButtonItem11.ImageOptions.LargeImage"), System.Drawing.Image)
         Me.BarButtonItem11.Name = "BarButtonItem11"
         '
         'BarButtonItem16
         '
         Me.BarButtonItem16.Caption = "Reporte Compras"
-        Me.BarButtonItem16.Glyph = CType(resources.GetObject("BarButtonItem16.Glyph"), System.Drawing.Image)
         Me.BarButtonItem16.Id = 40
-        Me.BarButtonItem16.LargeGlyph = CType(resources.GetObject("BarButtonItem16.LargeGlyph"), System.Drawing.Image)
+        Me.BarButtonItem16.ImageOptions.Image = CType(resources.GetObject("BarButtonItem16.ImageOptions.Image"), System.Drawing.Image)
+        Me.BarButtonItem16.ImageOptions.LargeImage = CType(resources.GetObject("BarButtonItem16.ImageOptions.LargeImage"), System.Drawing.Image)
         Me.BarButtonItem16.Name = "BarButtonItem16"
         '
         'BarButtonItem21
         '
         Me.BarButtonItem21.Caption = "Reporte Pedidos"
-        Me.BarButtonItem21.Glyph = CType(resources.GetObject("BarButtonItem21.Glyph"), System.Drawing.Image)
         Me.BarButtonItem21.Id = 41
-        Me.BarButtonItem21.LargeGlyph = CType(resources.GetObject("BarButtonItem21.LargeGlyph"), System.Drawing.Image)
+        Me.BarButtonItem21.ImageOptions.Image = CType(resources.GetObject("BarButtonItem21.ImageOptions.Image"), System.Drawing.Image)
+        Me.BarButtonItem21.ImageOptions.LargeImage = CType(resources.GetObject("BarButtonItem21.ImageOptions.LargeImage"), System.Drawing.Image)
         Me.BarButtonItem21.Name = "BarButtonItem21"
         '
         'BarButtonItem22
         '
         Me.BarButtonItem22.Caption = "Reporte Ventas"
-        Me.BarButtonItem22.Glyph = CType(resources.GetObject("BarButtonItem22.Glyph"), System.Drawing.Image)
         Me.BarButtonItem22.Id = 42
-        Me.BarButtonItem22.LargeGlyph = CType(resources.GetObject("BarButtonItem22.LargeGlyph"), System.Drawing.Image)
+        Me.BarButtonItem22.ImageOptions.Image = CType(resources.GetObject("BarButtonItem22.ImageOptions.Image"), System.Drawing.Image)
+        Me.BarButtonItem22.ImageOptions.LargeImage = CType(resources.GetObject("BarButtonItem22.ImageOptions.LargeImage"), System.Drawing.Image)
         Me.BarButtonItem22.Name = "BarButtonItem22"
         '
         'BarButtonItem25
         '
         Me.BarButtonItem25.Caption = "Información"
-        Me.BarButtonItem25.Glyph = CType(resources.GetObject("BarButtonItem25.Glyph"), System.Drawing.Image)
         Me.BarButtonItem25.Id = 43
-        Me.BarButtonItem25.LargeGlyph = CType(resources.GetObject("BarButtonItem25.LargeGlyph"), System.Drawing.Image)
+        Me.BarButtonItem25.ImageOptions.Image = CType(resources.GetObject("BarButtonItem25.ImageOptions.Image"), System.Drawing.Image)
+        Me.BarButtonItem25.ImageOptions.LargeImage = CType(resources.GetObject("BarButtonItem25.ImageOptions.LargeImage"), System.Drawing.Image)
         Me.BarButtonItem25.Name = "BarButtonItem25"
         '
         'BarButtonItem26
         '
         Me.BarButtonItem26.Caption = "Facturación"
         Me.BarButtonItem26.Id = 44
-        Me.BarButtonItem26.LargeGlyph = Global.INNOVAMASTER.My.Resources.Resources.electronic_billing_machine_256
+        Me.BarButtonItem26.ImageOptions.LargeImage = Global.INNOVAMASTER.My.Resources.Resources.electronic_billing_machine_256
         Me.BarButtonItem26.Name = "BarButtonItem26"
         '
         'BarButtonItem27
         '
         Me.BarButtonItem27.Caption = "Registro Ventas"
         Me.BarButtonItem27.Id = 45
-        Me.BarButtonItem27.LargeGlyph = Global.INNOVAMASTER.My.Resources.Resources.factur
+        Me.BarButtonItem27.ImageOptions.LargeImage = Global.INNOVAMASTER.My.Resources.Resources.factur
         Me.BarButtonItem27.Name = "BarButtonItem27"
         '
         'BarButtonItem28
         '
         Me.BarButtonItem28.Caption = "Reporte Ventas"
-        Me.BarButtonItem28.Glyph = CType(resources.GetObject("BarButtonItem28.Glyph"), System.Drawing.Image)
         Me.BarButtonItem28.Id = 46
-        Me.BarButtonItem28.LargeGlyph = CType(resources.GetObject("BarButtonItem28.LargeGlyph"), System.Drawing.Image)
+        Me.BarButtonItem28.ImageOptions.Image = CType(resources.GetObject("BarButtonItem28.ImageOptions.Image"), System.Drawing.Image)
+        Me.BarButtonItem28.ImageOptions.LargeImage = CType(resources.GetObject("BarButtonItem28.ImageOptions.LargeImage"), System.Drawing.Image)
         Me.BarButtonItem28.Name = "BarButtonItem28"
         '
         'BarButtonItem29
         '
         Me.BarButtonItem29.Caption = "Registros Auditoría"
         Me.BarButtonItem29.Id = 47
-        Me.BarButtonItem29.LargeGlyph = Global.INNOVAMASTER.My.Resources.Resources.chart_icon
+        Me.BarButtonItem29.ImageOptions.LargeImage = Global.INNOVAMASTER.My.Resources.Resources.chart_icon
         Me.BarButtonItem29.Name = "BarButtonItem29"
         '
         'mainRibbonPage
@@ -660,6 +661,7 @@
         Me.barDockControlTop.CausesValidation = False
         Me.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top
         Me.barDockControlTop.Location = New System.Drawing.Point(0, 0)
+        Me.barDockControlTop.Manager = Me.BarManager1
         Me.barDockControlTop.Size = New System.Drawing.Size(871, 0)
         '
         'barDockControlBottom
@@ -667,6 +669,7 @@
         Me.barDockControlBottom.CausesValidation = False
         Me.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.barDockControlBottom.Location = New System.Drawing.Point(0, 416)
+        Me.barDockControlBottom.Manager = Me.BarManager1
         Me.barDockControlBottom.Size = New System.Drawing.Size(871, 0)
         '
         'barDockControlLeft
@@ -674,6 +677,7 @@
         Me.barDockControlLeft.CausesValidation = False
         Me.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left
         Me.barDockControlLeft.Location = New System.Drawing.Point(0, 0)
+        Me.barDockControlLeft.Manager = Me.BarManager1
         Me.barDockControlLeft.Size = New System.Drawing.Size(0, 416)
         '
         'barDockControlRight
@@ -681,6 +685,7 @@
         Me.barDockControlRight.CausesValidation = False
         Me.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right
         Me.barDockControlRight.Location = New System.Drawing.Point(871, 0)
+        Me.barDockControlRight.Manager = Me.BarManager1
         Me.barDockControlRight.Size = New System.Drawing.Size(0, 416)
         '
         'Panel1
@@ -737,10 +742,13 @@
         Me.Controls.Add(Me.barDockControlRight)
         Me.Controls.Add(Me.barDockControlBottom)
         Me.Controls.Add(Me.barDockControlTop)
+        Me.HelpButton = True
+        Me.HelpProvider1.SetHelpNavigator(Me, System.Windows.Forms.HelpNavigator.TableOfContents)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.IsMdiContainer = True
         Me.Name = "MenuPrincipal"
         Me.Ribbon = Me.mainRibbonControl
+        Me.HelpProvider1.SetShowHelp(Me, True)
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         CType(Me.mainRibbonControl, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BarManager1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -837,4 +845,5 @@
     Friend WithEvents RibbonPageGroup8 As DevExpress.XtraBars.Ribbon.RibbonPageGroup
     Friend WithEvents pcFondo As DevExpress.XtraEditors.PanelControl
     Friend WithEvents XtraTabbedMdiManager1 As DevExpress.XtraTabbedMdi.XtraTabbedMdiManager
+    Friend WithEvents HelpProvider1 As HelpProvider
 End Class

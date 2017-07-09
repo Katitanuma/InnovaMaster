@@ -39,6 +39,7 @@ Partial Class frmCargo
         Me.BtnInsertar = New System.Windows.Forms.Button()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.HelpProvider1 = New System.Windows.Forms.HelpProvider()
         Me.GbDatos.SuspendLayout()
         CType(Me.DgvCargo, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -272,7 +273,10 @@ Partial Class frmCargo
         Me.Controls.Add(Me.GbDatos)
         Me.Controls.Add(Me.LblFilas)
         Me.Controls.Add(Me.DgvCargo)
+        Me.HelpButton = True
+        Me.HelpProvider1.SetHelpNavigator(Me, System.Windows.Forms.HelpNavigator.TableOfContents)
         Me.Name = "frmCargo"
+        Me.HelpProvider1.SetShowHelp(Me, True)
         Me.Text = "Cargo"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.GbDatos.ResumeLayout(False)
@@ -302,4 +306,5 @@ Partial Class frmCargo
     Friend WithEvents BtnActualizar As Button
     Friend WithEvents BtnInsertar As Button
     Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents HelpProvider1 As HelpProvider
 End Class

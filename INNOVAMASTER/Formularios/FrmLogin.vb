@@ -42,6 +42,12 @@ Public Class FrmLogin
             Exit Sub
         End If
         Me.Focus()
+
+        Dim NombreArchivo As String = HTMLHelpClass.GetLocalHelpFileName("InnovaMasterAyuda2017.chm")
+        HelpProvider1.HelpNamespace = NombreArchivo
+
+        HelpProvider1.SetHelpNavigator(Me, HelpNavigator.KeywordIndex)
+        HelpProvider1.SetHelpKeyword(Me, "Inicio de Sesión")
     End Sub
 
 

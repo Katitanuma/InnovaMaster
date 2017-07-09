@@ -30,6 +30,7 @@ Partial Class ReporteClientes
         Me.Button2 = New System.Windows.Forms.Button()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.HelpProvider1 = New System.Windows.Forms.HelpProvider()
         CType(Me.DgvReporteClientes, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -124,8 +125,11 @@ Partial Class ReporteClientes
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.DgvReporteClientes)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.HelpButton = True
+        Me.HelpProvider1.SetHelpNavigator(Me, System.Windows.Forms.HelpNavigator.TableOfContents)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "ReporteClientes"
+        Me.HelpProvider1.SetShowHelp(Me, True)
         Me.StartPosition = System.Windows.Forms.FormStartPosition.Manual
         Me.Text = "Clientes"
         CType(Me.DgvReporteClientes, System.ComponentModel.ISupportInitialize).EndInit()
@@ -143,4 +147,5 @@ Partial Class ReporteClientes
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents Button1 As Button
     Friend WithEvents Button2 As Button
+    Friend WithEvents HelpProvider1 As HelpProvider
 End Class
