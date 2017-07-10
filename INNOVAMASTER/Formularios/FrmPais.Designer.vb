@@ -39,6 +39,7 @@ Partial Class FrmPais
         Me.BtnCancelar = New System.Windows.Forms.Button()
         Me.BtnActualizar = New System.Windows.Forms.Button()
         Me.BtnInsertar = New System.Windows.Forms.Button()
+        Me.HelpProvider1 = New System.Windows.Forms.HelpProvider()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GboPais.SuspendLayout()
@@ -270,7 +271,10 @@ Partial Class FrmPais
         Me.Controls.Add(Me.GboPais)
         Me.Controls.Add(Me.LblFilas)
         Me.Controls.Add(Me.DgvPais)
+        Me.HelpButton = True
+        Me.HelpProvider1.SetHelpNavigator(Me, System.Windows.Forms.HelpNavigator.TableOfContents)
         Me.Name = "FrmPais"
+        Me.HelpProvider1.SetShowHelp(Me, True)
         Me.Text = "Pais"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -300,4 +304,5 @@ Partial Class FrmPais
     Friend WithEvents BtnCancelar As Button
     Friend WithEvents BtnActualizar As Button
     Friend WithEvents BtnInsertar As Button
+    Friend WithEvents HelpProvider1 As HelpProvider
 End Class

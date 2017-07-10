@@ -25,6 +25,11 @@ Public Class FrmBackup
             MessageBox.Show("Error al realizar el respaldo", "INNOVAMASTER", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
 
+        Dim NombreArchivo As String = HTMLHelpClass.GetLocalHelpFileName("InnovaMasterAyuda2017.chm")
+        HelpProvider1.HelpNamespace = NombreArchivo
+        HelpProvider1.SetHelpNavigator(Me, HelpNavigator.KeywordIndex)
+        HelpProvider1.SetHelpKeyword(Me, "Respaldo")
+
     End Sub
     Private Sub btnBackup_Click(sender As Object, e As EventArgs) Handles btnBackup.Click
         btnBackup.Text = "Respaldando..."

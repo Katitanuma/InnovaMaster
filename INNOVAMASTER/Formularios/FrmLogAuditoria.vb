@@ -65,5 +65,10 @@ Public Class FrmLogAuditoria
 
     Private Sub FrmLogAuditoria_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         MostrarTodosLogAuditoria()
+        Dim NombreArchivo As String = HTMLHelpClass.GetLocalHelpFileName("InnovaMasterAyuda2017.chm")
+        HelpProvider1.HelpNamespace = NombreArchivo
+        HelpProvider1.SetHelpNavigator(Me, HelpNavigator.KeywordIndex)
+        HelpProvider1.SetHelpKeyword(Me, "Auditoría")
+
     End Sub
 End Class

@@ -6,6 +6,12 @@ Public Class FrmPais
     Private Sub FrmPais_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Call MostrarPais()
         GboPais.Enabled = False
+
+        Dim NombreArchivo As String = HTMLHelpClass.GetLocalHelpFileName("InnovaMasterAyuda2017.chm")
+        HelpProvider1.HelpNamespace = NombreArchivo
+        HelpProvider1.SetHelpNavigator(Me, HelpNavigator.KeywordIndex)
+        HelpProvider1.SetHelpKeyword(Me, "País")
+
     End Sub
     Private Sub MostrarPais()
         Try

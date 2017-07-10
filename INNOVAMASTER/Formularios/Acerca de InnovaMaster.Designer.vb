@@ -35,6 +35,7 @@ Partial Class Acerca_de_InnovaMaster
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
+        Me.HelpProvider1 = New System.Windows.Forms.HelpProvider()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -185,8 +186,11 @@ Partial Class Acerca_de_InnovaMaster
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.PictureBox1)
+        Me.HelpButton = True
+        Me.HelpProvider1.SetHelpNavigator(Me, System.Windows.Forms.HelpNavigator.TableOfContents)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Acerca_de_InnovaMaster"
+        Me.HelpProvider1.SetShowHelp(Me, True)
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Acerca de InnovaMaster"
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
@@ -209,4 +213,5 @@ Partial Class Acerca_de_InnovaMaster
     Friend WithEvents Label5 As Label
     Friend WithEvents Label6 As Label
     Friend WithEvents RichTextBox1 As RichTextBox
+    Friend WithEvents HelpProvider1 As HelpProvider
 End Class

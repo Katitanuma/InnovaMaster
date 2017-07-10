@@ -44,6 +44,7 @@ Partial Class FrmDepartamento
         Me.BtnCancelar = New System.Windows.Forms.Button()
         Me.BtnActualizar = New System.Windows.Forms.Button()
         Me.BtnInsertar = New System.Windows.Forms.Button()
+        Me.HelpProvider1 = New System.Windows.Forms.HelpProvider()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -335,7 +336,10 @@ Partial Class FrmDepartamento
         Me.Controls.Add(Me.GbDepartamento)
         Me.Controls.Add(Me.LblFilas)
         Me.Controls.Add(Me.DgvDepartamento)
+        Me.HelpButton = True
+        Me.HelpProvider1.SetHelpNavigator(Me, System.Windows.Forms.HelpNavigator.TableOfContents)
         Me.Name = "FrmDepartamento"
+        Me.HelpProvider1.SetShowHelp(Me, True)
         Me.Text = "Departamento"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
@@ -371,4 +375,5 @@ Partial Class FrmDepartamento
     Friend WithEvents BtnActualizar As Button
     Friend WithEvents BtnInsertar As Button
     Friend WithEvents BtnBusquedaCliente As Button
+    Friend WithEvents HelpProvider1 As HelpProvider
 End Class

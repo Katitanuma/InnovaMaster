@@ -1,4 +1,5 @@
-﻿Imports System.Data.SqlClient
+﻿
+Imports System.Data.SqlClient
 Public Class Fventa
     Inherits Conexion
     Dim cmd As New SqlCommand

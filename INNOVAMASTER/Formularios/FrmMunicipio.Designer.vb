@@ -44,6 +44,7 @@ Partial Class FrmMunicipio
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.TxtBusqueda = New System.Windows.Forms.TextBox()
         Me.CboBusqueda = New System.Windows.Forms.ComboBox()
+        Me.HelpProvider1 = New System.Windows.Forms.HelpProvider()
         Me.GbMunicipio.SuspendLayout()
         CType(Me.DgvMunicipio, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -335,7 +336,10 @@ Partial Class FrmMunicipio
         Me.Controls.Add(Me.BtnCancelar)
         Me.Controls.Add(Me.BtnActualizar)
         Me.Controls.Add(Me.BtnInsertar)
+        Me.HelpButton = True
+        Me.HelpProvider1.SetHelpNavigator(Me, System.Windows.Forms.HelpNavigator.TableOfContents)
         Me.Name = "FrmMunicipio"
+        Me.HelpProvider1.SetShowHelp(Me, True)
         Me.Text = "Municipio"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.GbMunicipio.ResumeLayout(False)
@@ -371,4 +375,5 @@ Partial Class FrmMunicipio
     Friend WithEvents TxtBusqueda As TextBox
     Friend WithEvents CboBusqueda As ComboBox
     Friend WithEvents BtnBusquedaCliente As Button
+    Friend WithEvents HelpProvider1 As HelpProvider
 End Class

@@ -39,6 +39,7 @@ Partial Class FrmBackup
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.HelpProvider1 = New System.Windows.Forms.HelpProvider()
         Me.gbDBInfo.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -233,8 +234,11 @@ Partial Class FrmBackup
         Me.Controls.Add(Me.gbDBInfo)
         Me.Controls.Add(Me.Label13)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.HelpButton = True
+        Me.HelpProvider1.SetHelpNavigator(Me, System.Windows.Forms.HelpNavigator.TableOfContents)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "FrmBackup"
+        Me.HelpProvider1.SetShowHelp(Me, True)
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "BackUp"
         Me.gbDBInfo.ResumeLayout(False)
@@ -262,4 +266,5 @@ Partial Class FrmBackup
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents Label13 As Label
     Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents HelpProvider1 As HelpProvider
 End Class

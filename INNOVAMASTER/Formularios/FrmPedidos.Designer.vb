@@ -55,6 +55,7 @@ Partial Class FrmPedidos
         Me.ChIdProductoProveedor = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.LblId = New System.Windows.Forms.Label()
+        Me.HelpProvider1 = New System.Windows.Forms.HelpProvider()
         Me.GroupBox1.SuspendLayout()
         Me.Panel1.SuspendLayout()
         CType(Me.DgvDetalle, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -398,7 +399,10 @@ Partial Class FrmPedidos
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.DgvDetalle)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.HelpButton = True
+        Me.HelpProvider1.SetHelpNavigator(Me, System.Windows.Forms.HelpNavigator.TableOfContents)
         Me.Name = "FrmPedidos"
+        Me.HelpProvider1.SetShowHelp(Me, True)
         Me.Text = "Pedidos"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.GroupBox1.ResumeLayout(False)
@@ -442,4 +446,5 @@ Partial Class FrmPedidos
     Friend WithEvents Total As DataGridViewTextBoxColumn
     Friend WithEvents ChIdProductoProveedor As DataGridViewTextBoxColumn
     Friend WithEvents LblId As Label
+    Friend WithEvents HelpProvider1 As HelpProvider
 End Class

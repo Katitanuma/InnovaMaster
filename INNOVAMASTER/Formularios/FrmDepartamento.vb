@@ -11,6 +11,11 @@ Public Class FrmDepartamento
         TxtIdDepartamento.Enabled = False
         DgvDepartamento.Enabled = True
         Call LlenarComboboxPais()
+
+        Dim NombreArchivo As String = HTMLHelpClass.GetLocalHelpFileName("InnovaMasterAyuda2017.chm")
+        HelpProvider1.HelpNamespace = NombreArchivo
+        HelpProvider1.SetHelpNavigator(Me, HelpNavigator.KeywordIndex)
+        HelpProvider1.SetHelpKeyword(Me, "Departamento")
     End Sub
     Private Sub DgvDepartamento_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DgvDepartamento.CellClick
         TxtIdDepartamento.Text = DgvDepartamento.SelectedCells.Item(0).Value

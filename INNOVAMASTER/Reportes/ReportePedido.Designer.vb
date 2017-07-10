@@ -32,6 +32,7 @@ Partial Class ReportePedido
         Me.VisualizarReporteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ImprimirReporteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.HelpProvider1 = New System.Windows.Forms.HelpProvider()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DgvReportePedidos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.CmsReportePedidos.SuspendLayout()
@@ -87,7 +88,7 @@ Partial Class ReportePedido
         '
         Me.CmsReportePedidos.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.VisualizarReporteToolStripMenuItem, Me.ImprimirReporteToolStripMenuItem})
         Me.CmsReportePedidos.Name = "CmsReportePedidos"
-        Me.CmsReportePedidos.Size = New System.Drawing.Size(165, 70)
+        Me.CmsReportePedidos.Size = New System.Drawing.Size(165, 48)
         '
         'VisualizarReporteToolStripMenuItem
         '
@@ -125,8 +126,11 @@ Partial Class ReportePedido
         Me.Controls.Add(Me.TxtBusqueda)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.DgvReportePedidos)
+        Me.HelpButton = True
+        Me.HelpProvider1.SetHelpNavigator(Me, System.Windows.Forms.HelpNavigator.TableOfContents)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "ReportePedido"
+        Me.HelpProvider1.SetShowHelp(Me, True)
         Me.StartPosition = System.Windows.Forms.FormStartPosition.Manual
         Me.Text = "Pedidos"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -146,4 +150,5 @@ Partial Class ReportePedido
     Friend WithEvents VisualizarReporteToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ImprimirReporteToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents HelpProvider1 As HelpProvider
 End Class

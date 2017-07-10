@@ -4,6 +4,11 @@ Public Class ReportePedido
 
         Call MostrarDatosReportePedidos()
 
+        Dim NombreArchivo As String = HTMLHelpClass.GetLocalHelpFileName("InnovaMasterAyuda2017.chm")
+        HelpProvider1.HelpNamespace = NombreArchivo
+        HelpProvider1.SetHelpNavigator(Me, HelpNavigator.KeywordIndex)
+        HelpProvider1.SetHelpKeyword(Me, "Reporte Pedidos")
+
     End Sub
     Dim Connect As New Conexion
     Dim conec As New Conexion

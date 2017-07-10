@@ -552,6 +552,12 @@ Public Class FrmPedidos
         TxtFechaPedido.Text = DateTime.Now.ToString("dd/MM/yyyy")
         LlenarComboBoxProveedor()
         CboProveedor.Text = Nothing
+
+        Dim NombreArchivo As String = HTMLHelpClass.GetLocalHelpFileName("InnovaMasterAyuda2017.chm")
+        HelpProvider1.HelpNamespace = NombreArchivo
+        HelpProvider1.SetHelpNavigator(Me, HelpNavigator.KeywordIndex)
+        HelpProvider1.SetHelpKeyword(Me, "Registro Pedidos")
+
     End Sub
 
 
